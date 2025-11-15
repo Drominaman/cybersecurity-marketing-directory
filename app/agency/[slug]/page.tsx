@@ -4,6 +4,42 @@ import Script from 'next/script';
 import { getAllAgencies } from '@/lib/agencies';
 import type { Metadata } from 'next';
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const agency = getAllAgencies().find(a => a.id === slug);
+
+  if (!agency) {
+    return {
+      title: 'Agency Not Found',
+    };
+  }
+
+  const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+  const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
+
+  return {
+    title: `${agency.name} - Cybersecurity Marketing Agency${badgeText}`,
+    description: `${agency.name} is a specialized cybersecurity marketing agency${badgeText}. ${agency.shortDescription} Compare with other cybersecurity marketing agencies.`,
+    keywords: [
+      'cybersecurity marketing agencies',
+      agency.name,
+      'cybersecurity marketing',
+      'security marketing agency',
+      ...agency.services,
+      ...badges
+    ],
+    openGraph: {
+      title: `${agency.name} - Cybersecurity Marketing Agency`,
+      description: `${agency.shortDescription} Part of the cybersecurity marketing agencies directory.`,
+      type: 'website',
+      url: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
+    },
+    alternates: {
+      canonical: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
+    },
+  };
+}
+
 export default async function AgencyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const agency = getAllAgencies().find(a => a.id === slug);

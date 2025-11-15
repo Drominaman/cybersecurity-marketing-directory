@@ -18,12 +18,13 @@ export default function Home() {
     new Set(allAgencies.flatMap(a => a.services))
   ).sort();
 
-  // Schema.org structured data
+  // Schema.org structured data for ItemList
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Cybersecurity Marketing Agencies",
-    "description": "A curated directory of top cybersecurity marketing agencies",
+    "name": "Cybersecurity Marketing Agencies Directory",
+    "description": "The ultimate directory of specialized cybersecurity marketing agencies offering SEO, AI Visibility, content marketing, PPC, PR, and demand generation services for security companies.",
+    "numberOfItems": getAllAgencies().length,
     "itemListElement": getAllAgencies().map((agency, index) => ({
       "@type": "ListItem",
       "position": index + 1,
@@ -41,6 +42,20 @@ export default function Home() {
         })
       }
     }))
+  };
+
+  // WebSite schema for better search appearance
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cybersecurity Marketing Agencies",
+    "url": "https://cybersecuritymarketingagencies.com",
+    "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://cybersecuritymarketingagencies.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   };
 
   // Filter agencies
@@ -62,6 +77,11 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <div className="min-h-screen bg-black">
         {/* Header */}
         <header className="bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 border-b-8 border-cyan-500 relative">
@@ -70,12 +90,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
           <div className="text-sm font-mono text-green-400 mb-4">► CYBERSEC.DIR v1.0</div>
           <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-magenta-500 tracking-wider mb-4" style={{textShadow: '3px 3px 0px rgba(0,0,0,0.5)'}}>
-            MARKETING AGENCIES
+            CYBERSECURITY MARKETING AGENCIES
           </h1>
           <div className="flex items-center gap-4 text-yellow-400 font-mono">
             <span className="animate-pulse">▶</span>
             <p className="text-base md:text-lg">
-              SELECT YOUR MARKETING PARTNER // CYBERSECURITY DOMAIN
+              The ultimate directory of specialized cybersecurity marketing agencies
             </p>
           </div>
         </div>
@@ -83,6 +103,29 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        {/* Introduction Section - Keyword Rich */}
+        <div className="mb-12 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-4 border-cyan-500 p-8">
+          <h2 className="text-3xl font-black text-cyan-400 mb-6 uppercase tracking-wider">
+            ► Find the Best Cybersecurity Marketing Agencies
+          </h2>
+          <div className="text-white space-y-4 text-lg leading-relaxed">
+            <p>
+              Welcome to the most comprehensive directory of <strong className="text-cyan-400">cybersecurity marketing agencies</strong>.
+              Whether you're a cybersecurity startup, MSSP, or enterprise security vendor, finding the right marketing partner
+              is critical to your growth. Our curated list features the top <strong className="text-cyan-400">cybersecurity marketing agencies</strong> specializing
+              in SEO, AI Visibility, content marketing, PPC, PR, and demand generation.
+            </p>
+            <p>
+              These <strong className="text-cyan-400">cybersecurity marketing agencies</strong> understand the unique challenges of marketing security products,
+              from complex technical concepts to long enterprise sales cycles. Each agency listed has proven experience working
+              with cybersecurity companies and delivering measurable results in lead generation, brand awareness, and revenue growth.
+            </p>
+            <p className="text-yellow-400 font-bold">
+              ► Browse our complete directory of cybersecurity marketing agencies below and find your perfect marketing partner.
+            </p>
+          </div>
+        </div>
 
         {/* Search and Filter */}
         <div className="mb-12 bg-gray-900 border-4 border-green-500 p-8 shadow-[8px_8px_0px_0px_rgba(34,197,94,1)]">
@@ -158,13 +201,13 @@ export default function Home() {
         <div className="mt-20 prose prose-lg max-w-none">
           <div className="bg-gray-900 border-4 border-yellow-500 p-10">
             <h2 className="text-3xl font-black text-yellow-400 mb-6 uppercase tracking-wider">
-              ► STRATEGY GUIDE
+              ► How to Choose the Best Cybersecurity Marketing Agencies
             </h2>
             <div className="text-white space-y-6 text-base">
               <p>
-                Selecting the right marketing agency for your cybersecurity company is crucial for growth and success.
-                The cybersecurity industry has unique challenges including complex products, technical audiences, and
-                stringent compliance requirements.
+                Selecting the right partner from our list of <strong className="text-yellow-400">cybersecurity marketing agencies</strong> is crucial for growth and success.
+                The best <strong className="text-yellow-400">cybersecurity marketing agencies</strong> understand unique industry challenges including complex products, technical audiences, and
+                stringent compliance requirements. When evaluating <strong className="text-yellow-400">cybersecurity marketing agencies</strong>, consider the following factors:
               </p>
 
               <h3 className="text-xl font-black text-cyan-400 mt-8 mb-4 uppercase tracking-wider border-b-2 border-cyan-500 pb-2">
@@ -210,8 +253,9 @@ export default function Home() {
               </ul>
 
               <p className="mt-8 text-white font-semibold border-t-2 border-yellow-500 pt-6">
-                <span className="text-yellow-400">►</span> Use this player directory to compare stats, review special abilities, and select your perfect
-                marketing co-op partner for the cybersecurity quest ahead.
+                <span className="text-yellow-400">►</span> Use this directory to compare the best <strong className="text-yellow-400">cybersecurity marketing agencies</strong>,
+                review their capabilities, and select your perfect marketing partner. All <strong className="text-yellow-400">cybersecurity marketing agencies</strong> listed
+                have proven track records working with security companies and delivering measurable ROI.
               </p>
             </div>
           </div>
