@@ -217,11 +217,18 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
             <p className="text-white text-lg leading-relaxed mb-6">
               {agency.description}
             </p>
-            <p className="text-gray-300 text-base">
+            <p className="text-gray-300 text-base mb-4">
               {agency.name} is a specialized cybersecurity marketing agency that helps security companies
               grow their business through strategic marketing initiatives. Based in {agency.location},
               they have {agency.yearFounded ? `been in business since ${agency.yearFounded}` : 'extensive experience'}
               working with cybersecurity vendors, MSSPs, and security service providers.
+            </p>
+            <p className="text-gray-300 text-base">
+              Looking for more options? Browse our complete directory of{' '}
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                cybersecurity marketing agencies
+              </Link>{' '}
+              to compare {agency.name} with other top-rated agencies specializing in security company marketing.
             </p>
           </div>
 
@@ -331,7 +338,11 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 ► SIMILAR AGENCIES
               </h2>
               <p className="text-gray-300 mb-8">
-                Other cybersecurity marketing agencies you might want to explore:
+                Other{' '}
+                <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                  cybersecurity marketing agencies
+                </Link>{' '}
+                you might want to explore based on similar services and location:
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 {relatedAgencies.map((related) => (

@@ -190,8 +190,13 @@ export default function Home() {
             <h2 className="text-3xl font-black text-green-400 mb-4 uppercase tracking-wider">
               ► STATS COMPARISON
             </h2>
-            <p className="text-cyan-400 mb-10 font-mono">
+            <p className="text-cyan-400 mb-4 font-mono">
               COMPARE ALL PLAYER ATTRIBUTES AND ABILITIES
+            </p>
+            <p className="text-gray-300 mb-10">
+              Compare all{' '}
+              <strong className="text-cyan-400">cybersecurity marketing agencies</strong>{' '}
+              side-by-side to find the perfect match for your security company's needs.
             </p>
             <ComparisonTable agencies={getAllAgencies()} />
           </div>
@@ -266,6 +271,9 @@ export default function Home() {
           <h2 className="text-3xl font-black text-cyan-400 mb-8 uppercase tracking-wider">
             ► BROWSE BY REGION
           </h2>
+          <p className="text-gray-300 mb-6">
+            Explore <strong className="text-cyan-400">cybersecurity marketing agencies</strong> by location to find regional experts who understand your local market.
+          </p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
               href="/location/usa"

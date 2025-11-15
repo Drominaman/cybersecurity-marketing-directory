@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
 
 const faqs = [
   {
@@ -75,7 +76,31 @@ export default function FAQ() {
               </button>
               {openIndex === index && (
                 <div className="p-6 bg-gray-800 border-t-2 border-cyan-500">
-                  <p className="text-white leading-relaxed">{faq.answer}</p>
+                  <p className="text-white leading-relaxed">
+                    {faq.answer}
+                    {index === 0 && (
+                      <>
+                        {' '}
+                        <Link href="/agency/content-visit" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                          Learn more about Content Visit
+                        </Link>
+                        {' or '}
+                        <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                          compare all cybersecurity marketing agencies
+                        </Link>
+                        .
+                      </>
+                    )}
+                    {index === 4 && (
+                      <>
+                        {' '}
+                        <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                          Browse our full directory of cybersecurity marketing agencies
+                        </Link>
+                        {' to compare these factors across different firms.'}
+                      </>
+                    )}
+                  </p>
                 </div>
               )}
             </div>

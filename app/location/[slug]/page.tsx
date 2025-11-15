@@ -46,10 +46,21 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <h2 className="text-2xl font-black text-cyan-400 mb-4 uppercase">
             ► {agencies.length} AGENCIES FOUND
           </h2>
-          <p className="text-white mb-8">
-            Browse top-rated cybersecurity marketing agencies serving {location.name}.
+          <p className="text-white mb-4">
+            Browse top-rated{' '}
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+              cybersecurity marketing agencies
+            </Link>{' '}
+            serving {location.name}.
             These specialized firms understand the unique challenges of marketing security products and services
             to businesses in the {location.name} market.
+          </p>
+          <p className="text-gray-300">
+            Want to explore all options? View our complete directory of{' '}
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+              cybersecurity marketing agencies
+            </Link>{' '}
+            across all regions and compare services, pricing, and specializations.
           </p>
         </div>
 
@@ -73,11 +84,18 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <div className="text-white space-y-4">
             <p>
               The cybersecurity industry in {location.name} continues to grow rapidly, driven by increasing
-              cyber threats and regulatory requirements. Marketing agencies specializing in this sector
-              understand the unique challenges of reaching security decision-makers.
+              cyber threats and regulatory requirements. The{' '}
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                cybersecurity marketing agencies
+              </Link>{' '}
+              specializing in this sector understand the unique challenges of reaching security decision-makers.
             </p>
             <p>
-              When selecting a cybersecurity marketing agency in {location.name}, consider their:
+              When selecting from{' '}
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                cybersecurity marketing agencies
+              </Link>{' '}
+              in {location.name}, consider their:
             </p>
             <ul className="list-none space-y-2 text-gray-300">
               <li className="text-gray-300"><span className="text-yellow-400">▶</span> Local market knowledge and connections</li>
