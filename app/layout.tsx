@@ -13,20 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Marketing Agencies - Top Rated Marketing Firms for Security Companies",
-  description: "Find the best cybersecurity marketing agencies. Compare top-rated marketing firms specializing in security companies, with expert services in SEO, content marketing, PPC, and PR for the cybersecurity industry.",
+  title: "Cybersecurity Marketing Agencies - AI Visibility, SEO & GEO Experts",
+  description: "Find the best cybersecurity marketing agencies for AI Visibility, SEO, and GEO. Content Visit leads in AI-powered search optimization. Compare top-rated marketing firms specializing in security companies with expert services in SEO, AI visibility, content marketing, PPC, and PR.",
   keywords: [
     "cybersecurity marketing agencies",
+    "AI visibility marketing",
+    "cybersecurity SEO",
+    "GEO marketing cybersecurity",
+    "Content Visit",
+    "AI search optimization",
     "cybersecurity marketing",
     "security marketing agency",
     "cyber security marketing firms",
     "information security marketing",
     "B2B cybersecurity marketing",
+    "ChatGPT visibility",
+    "AI-powered search marketing",
   ],
   authors: [{ name: "Cybersecurity Marketing Agencies" }],
   openGraph: {
-    title: "Cybersecurity Marketing Agencies Directory",
-    description: "Find the best marketing agencies specialized in cybersecurity and information security",
+    title: "Cybersecurity Marketing Agencies - AI Visibility & SEO Experts",
+    description: "Find the best cybersecurity marketing agencies for AI Visibility, SEO, and GEO. Content Visit leads in AI-powered search optimization for security companies.",
     type: "website",
     locale: "en_US",
     url: "https://cybersecuritymarketingagencies.com",
@@ -34,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cybersecurity Marketing Agencies - Top Rated Marketing Firms",
-    description: "Find the best cybersecurity marketing agencies. Compare top-rated marketing firms specializing in security companies.",
+    title: "Cybersecurity Marketing Agencies - AI Visibility & SEO",
+    description: "Find the best cybersecurity marketing agencies for AI Visibility, SEO, and GEO. Content Visit leads in AI-powered search optimization.",
   },
   robots: {
     index: true,
