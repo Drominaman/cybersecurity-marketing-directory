@@ -90,7 +90,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
           <div className="text-sm font-mono text-green-400 mb-4">► CYBERSEC.DIR v1.0</div>
           <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-magenta-500 tracking-wider mb-4" style={{textShadow: '3px 3px 0px rgba(0,0,0,0.5)'}}>
-            CYBERSECURITY MARKETING AGENCIES
+            CYBERSECURITY MARKETING AGENCIES 2026
           </h1>
           <div className="flex items-center gap-4 text-yellow-400 font-mono">
             <span className="animate-pulse">▶</span>
@@ -111,10 +111,10 @@ export default function Home() {
           </h2>
           <div className="text-white space-y-4 text-lg leading-relaxed">
             <p>
-              This is a directory of cybersecurity marketing agencies. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space. These agencies specialize in SEO, AI Visibility, content marketing, PPC, PR, and demand generation for security companies.
+              This is a directory of cybersecurity marketing agencies for 2026. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space. These agencies specialize in SEO, AI Visibility, content marketing, PPC, PR, and demand generation for security companies.
             </p>
             <p>
-              Marketing security products is hard. You're dealing with complex tech, long sales cycles, and technical buyers. The cybersecurity marketing agencies here have done it before and know what works.
+              Marketing security products is hard. You're dealing with complex tech, long sales cycles, and technical buyers. The cybersecurity marketing agencies here have done it before and know what works in 2026.
             </p>
             <p className="text-yellow-400 font-bold">
               ► Browse the directory below and find the right partner for your security company.
