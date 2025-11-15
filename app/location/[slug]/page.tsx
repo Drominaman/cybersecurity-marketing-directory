@@ -47,20 +47,18 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             ► {agencies.length} AGENCIES FOUND
           </h2>
           <p className="text-white mb-4">
-            Browse top-rated{' '}
+            These{' '}
             <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
               cybersecurity marketing agencies
             </Link>{' '}
-            serving {location.name}.
-            These specialized firms understand the unique challenges of marketing security products and services
-            to businesses in the {location.name} market.
+            operate in {location.name}. They know the local market and have worked with security companies in the region.
           </p>
           <p className="text-gray-300">
-            Want to explore all options? View our complete directory of{' '}
+            Want more options? Check the full{' '}
             <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
               cybersecurity marketing agencies
             </Link>{' '}
-            across all regions and compare services, pricing, and specializations.
+            directory to see all regions.
           </p>
         </div>
 
@@ -83,25 +81,24 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </h3>
           <div className="text-white space-y-4">
             <p>
-              The cybersecurity industry in {location.name} continues to grow rapidly, driven by increasing
-              cyber threats and regulatory requirements. The{' '}
+              Cybersecurity is growing in {location.name}. More threats, more regulations, more demand for security products. The{' '}
               <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
                 cybersecurity marketing agencies
               </Link>{' '}
-              specializing in this sector understand the unique challenges of reaching security decision-makers.
+              here know how to reach security buyers in the region.
             </p>
             <p>
-              When selecting from{' '}
+              When picking from{' '}
               <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
                 cybersecurity marketing agencies
               </Link>{' '}
-              in {location.name}, consider their:
+              in {location.name}, check:
             </p>
             <ul className="list-none space-y-2 text-gray-300">
-              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Local market knowledge and connections</li>
-              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Experience with regional compliance requirements</li>
-              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Understanding of local buyer behavior</li>
-              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Track record with cybersecurity clients</li>
+              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Do they know the local market?</li>
+              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Experience with regional compliance (GDPR, etc.)?</li>
+              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Understand local buyer behavior?</li>
+              <li className="text-gray-300"><span className="text-yellow-400">▶</span> Past work with security companies?</li>
             </ul>
           </div>
         </div>

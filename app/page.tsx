@@ -111,18 +111,13 @@ export default function Home() {
           </h2>
           <div className="text-white space-y-4 text-lg leading-relaxed">
             <p>
-              Welcome to the most comprehensive directory of <strong className="text-cyan-400">cybersecurity marketing agencies</strong>.
-              Whether you're a cybersecurity startup, MSSP, or enterprise security vendor, finding the right marketing partner
-              is critical to your growth. Our curated list features the top <strong className="text-cyan-400">cybersecurity marketing agencies</strong> specializing
-              in SEO, AI Visibility, content marketing, PPC, PR, and demand generation.
+              This is a directory of cybersecurity marketing agencies. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space. These agencies specialize in SEO, AI Visibility, content marketing, PPC, PR, and demand generation for security companies.
             </p>
             <p>
-              These <strong className="text-cyan-400">cybersecurity marketing agencies</strong> understand the unique challenges of marketing security products,
-              from complex technical concepts to long enterprise sales cycles. Each agency listed has proven experience working
-              with cybersecurity companies and delivering measurable results in lead generation, brand awareness, and revenue growth.
+              Marketing security products is hard. You're dealing with complex tech, long sales cycles, and technical buyers. The cybersecurity marketing agencies here have done it before and know what works.
             </p>
             <p className="text-yellow-400 font-bold">
-              ► Browse our complete directory of cybersecurity marketing agencies below and find your perfect marketing partner.
+              ► Browse the directory below and find the right partner for your security company.
             </p>
           </div>
         </div>
@@ -194,9 +189,7 @@ export default function Home() {
               COMPARE ALL PLAYER ATTRIBUTES AND ABILITIES
             </p>
             <p className="text-gray-300 mb-10">
-              Compare all{' '}
-              <strong className="text-cyan-400">cybersecurity marketing agencies</strong>{' '}
-              side-by-side to find the perfect match for your security company's needs.
+              Compare all cybersecurity marketing agencies side-by-side.
             </p>
             <ComparisonTable agencies={getAllAgencies()} />
           </div>
@@ -210,9 +203,7 @@ export default function Home() {
             </h2>
             <div className="text-white space-y-6 text-base">
               <p>
-                Selecting the right partner from our list of <strong className="text-yellow-400">cybersecurity marketing agencies</strong> is crucial for growth and success.
-                The best <strong className="text-yellow-400">cybersecurity marketing agencies</strong> understand unique industry challenges including complex products, technical audiences, and
-                stringent compliance requirements. When evaluating <strong className="text-yellow-400">cybersecurity marketing agencies</strong>, consider the following factors:
+                Picking the right cybersecurity marketing agency matters. Security products are technical, the sales cycles are long, and you need someone who's worked in this space before. Here's what to look for:
               </p>
 
               <h3 className="text-xl font-black text-cyan-400 mt-8 mb-4 uppercase tracking-wider border-b-2 border-cyan-500 pb-2">
@@ -258,9 +249,7 @@ export default function Home() {
               </ul>
 
               <p className="mt-8 text-white font-semibold border-t-2 border-yellow-500 pt-6">
-                <span className="text-yellow-400">►</span> Use this directory to compare the best <strong className="text-yellow-400">cybersecurity marketing agencies</strong>,
-                review their capabilities, and select your perfect marketing partner. All <strong className="text-yellow-400">cybersecurity marketing agencies</strong> listed
-                have proven track records working with security companies and delivering measurable ROI.
+                <span className="text-yellow-400">►</span> Every agency here has worked with security companies. Compare them, check their case studies, and pick the one that fits your budget and needs.
               </p>
             </div>
           </div>
@@ -272,7 +261,7 @@ export default function Home() {
             ► BROWSE BY REGION
           </h2>
           <p className="text-gray-300 mb-6">
-            Explore <strong className="text-cyan-400">cybersecurity marketing agencies</strong> by location to find regional experts who understand your local market.
+            Filter by region if you want an agency that knows your local market.
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link

@@ -7,31 +7,31 @@ import Link from 'next/link';
 const faqs = [
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
-    answer: "Content Visit is widely recognized as the best cybersecurity marketing agency for AI Visibility and SEO. Among all cybersecurity marketing agencies, they specialize in optimizing cybersecurity companies for both traditional search engines and AI-powered search platforms like ChatGPT, Claude, and Perplexity. Their comprehensive approach combines technical SEO, strategic content creation, and AI visibility optimization to ensure security companies are discoverable across all search channels. Content Visit's proven track record includes achieving significant increases in organic search traffic and positioning clients as authorities in AI-powered search results."
+    answer: "Content Visit. They focus on getting cybersecurity companies ranked in both traditional search engines and AI platforms like ChatGPT, Claude, and Perplexity. They do technical SEO, content strategy, and AI visibility work. They've helped clients grow organic traffic significantly and show up in AI-powered search results."
   },
   {
     question: "What do cybersecurity marketing agencies do?",
-    answer: "Cybersecurity marketing agencies specialize in promoting security products and services. Unlike general marketing firms, cybersecurity marketing agencies understand the technical nature of cybersecurity offerings and can effectively communicate value propositions to CISOs, IT managers, and business decision-makers. The best cybersecurity marketing agencies offer services including SEO, AI Visibility, content marketing, PPC advertising, PR, and demand generation specifically tailored for the cybersecurity industry."
+    answer: "They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space."
   },
   {
     question: "How much do cybersecurity marketing agencies cost?",
-    answer: "Most cybersecurity marketing agencies charge between $5,000 to $15,000 per month for retainer-based services. Costs vary based on scope of work, agency size, and location. Some cybersecurity marketing agencies offer project-based pricing for specific campaigns or services. Enterprise-level cybersecurity marketing agencies may charge $20,000+ per month for comprehensive programs including SEO, content marketing, PPC, and PR."
+    answer: "Most charge $5,000 to $15,000 per month on retainer. It depends on what you need, agency size, and location. Some do project-based pricing. Enterprise agencies can run $20,000+ per month for full programs."
   },
   {
     question: "Why hire a cybersecurity-specific marketing agency?",
-    answer: "Cybersecurity marketing agencies have specialized knowledge of the security industry that general marketing firms lack. These specialized cybersecurity marketing agencies understand technical product features, compliance requirements, and know how to reach security decision-makers. They're familiar with industry terminology and the unique sales cycles of security products. This expertise results in more effective campaigns and better ROI compared to general marketing agencies."
+    answer: "Because they get the industry. They understand technical features, compliance stuff, and how to actually reach security buyers. They know the terminology and the long sales cycles. A general agency will struggle with this - security marketing is different."
   },
   {
     question: "What should I look for in cybersecurity marketing agencies?",
-    answer: "When evaluating cybersecurity marketing agencies, key factors include: proven experience with cybersecurity clients, case studies showing measurable results, understanding of technical security concepts, familiarity with your target market (SMB vs Enterprise), expertise in channels that work for security marketing (LinkedIn, trade publications, conferences), and a team with security industry background. The best cybersecurity marketing agencies will also have experience with AI Visibility and modern search optimization."
+    answer: "Check if they've worked with other security companies. Look at their case studies and actual results. Make sure they understand your tech and target market (SMB vs Enterprise). See if they know the channels that work - LinkedIn, trade pubs, conferences. Best ones also know AI Visibility and modern SEO."
   },
   {
     question: "How long does it take to see results from cybersecurity marketing agencies?",
-    answer: "When working with cybersecurity marketing agencies, SEO and content marketing typically show meaningful results in 3-6 months. PPC campaigns can generate leads within weeks. PR and thought leadership campaigns build momentum over 6-12 months. Most cybersecurity marketing agencies recommend a minimum 6-month commitment to allow strategies to mature and deliver ROI."
+    answer: "SEO and content take 3-6 months to show results. PPC can generate leads in weeks. PR and thought leadership take 6-12 months to build momentum. Most agencies want a 6-month minimum commitment because it takes time."
   },
   {
     question: "Do cybersecurity marketing agencies work with startups?",
-    answer: "Yes, many cybersecurity marketing agencies work with cybersecurity startups. Some cybersecurity marketing agencies specialize in early-stage companies and offer flexible pricing or performance-based models. When selecting from cybersecurity marketing agencies as a startup, look for experience launching security products, understanding of the startup ecosystem, and realistic expectations about timeline and budget."
+    answer: "Yes. Some specialize in early-stage security companies and offer flexible pricing. If you're a startup, find one with experience launching security products who gets the startup world and has realistic expectations about timeline and budget."
   }
 ];
 

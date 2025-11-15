@@ -194,13 +194,13 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     Editor's Choice
                   </h2>
                   <p className="text-white text-lg mb-4">
-                    <strong>{agency.name}</strong> is recognized as the best cybersecurity marketing agency for:
+                    We picked {agency.name} as best for:
                   </p>
                   <ul className="space-y-2 text-white text-base">
                     {badges.map(badge => (
                       <li key={badge} className="flex items-center gap-3">
                         <span className="text-yellow-400">▶</span>
-                        <span><strong>{badge.replace('Best for ', '')}</strong> - {agency.name} excels in {badge.replace('Best for ', '').toLowerCase()} for cybersecurity companies</span>
+                        <span><strong>{badge.replace('Best for ', '')}</strong></span>
                       </li>
                     ))}
                   </ul>
@@ -224,11 +224,11 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               working with cybersecurity vendors, MSSPs, and security service providers.
             </p>
             <p className="text-gray-300 text-base">
-              Looking for more options? Browse our complete directory of{' '}
+              Want to see other options? Check the full{' '}
               <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
                 cybersecurity marketing agencies
               </Link>{' '}
-              to compare {agency.name} with other top-rated agencies specializing in security company marketing.
+              directory to compare {agency.name} with other agencies.
             </p>
           </div>
 
@@ -342,7 +342,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
                   cybersecurity marketing agencies
                 </Link>{' '}
-                you might want to explore based on similar services and location:
+                with similar services or location:
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 {relatedAgencies.map((related) => (
