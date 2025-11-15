@@ -25,6 +25,26 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
   // Get badges for SEO markup
   const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
 
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cybersecuritymarketingagencies.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": agency.name,
+        "item": `https://cybersecuritymarketingagencies.com/agency/${slug}`
+      }
+    ]
+  };
+
   // Schema.org markup for the agency
   const agencySchema = {
     "@context": "https://schema.org",
@@ -54,6 +74,11 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
 
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Script
         id="agency-schema"
         type="application/ld+json"
