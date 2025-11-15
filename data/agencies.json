@@ -1,0 +1,369 @@
+[
+  {
+    "id": "content-visit",
+    "name": "Content Visit",
+    "website": "https://www.contentvisit.com",
+    "description": "Content Visit is a specialized cybersecurity content marketing agency that helps security companies build authority, generate qualified leads, and grow their market presence. With deep expertise in the cybersecurity industry, they deliver comprehensive marketing strategies including SEO-driven content, digital PR, thought leadership, and lead generation assets. Their team understands the complex technical landscape of cybersecurity and translates it into compelling narratives that resonate with CISOs, security professionals, and enterprise decision-makers. They've worked with leading global enterprises and innovative startups to drive measurable growth through data-driven content marketing.",
+    "shortDescription": "Specialized cybersecurity content marketing agency with proven SEO and lead generation results.",
+    "featured": false,
+    "editorsPick": false,
+    "editorBadges": ["Best for SEO", "Best for AI Visibility", "Best for GEO"],
+    "services": [
+      "SEO",
+      "AI Visibility",
+      "Content Marketing",
+      "PR & Media Relations",
+      "Lead Generation",
+      "Thought Leadership",
+      "Technical Content Strategy"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Enterprise Security Marketing",
+      "Security SaaS",
+      "Threat Intelligence Marketing",
+      "Compliance & GRC Marketing"
+    ],
+    "location": "Europe",
+    "yearFounded": 2018,
+    "teamSize": "10-25",
+    "minBudget": "$5,000/month",
+    "rating": 5.0,
+    "clientTypes": [
+      "Enterprise Security Vendors",
+      "Cybersecurity Startups",
+      "Security Service Providers"
+    ],
+    "caseStudies": [
+      {
+        "client": "IBM Security",
+        "results": "300% increase in organic search traffic and 200% growth in qualified leads",
+        "description": "Implemented comprehensive SEO content strategy targeting enterprise security buyers, creating thought leadership content that positioned IBM as an authority in zero-trust architecture."
+      },
+      {
+        "client": "SenseOn",
+        "results": "Secured featured coverage in TechCrunch, Dark Reading, and The Hacker News",
+        "description": "Strategic digital PR campaign for product launch that generated high-quality backlinks and increased brand awareness in the cybersecurity community."
+      },
+      {
+        "client": "Morphisec",
+        "results": "Generated 500+ MQLs in 6 months through targeted content campaigns",
+        "description": "Developed technical whitepapers, case studies, and SEO-optimized blog content targeting endpoint security decision-makers."
+      }
+    ]
+  },
+  {
+    "id": "codeless",
+    "name": "Codeless",
+    "website": "https://codeless.io",
+    "description": "High-volume content production with strong SEO focus. Notable clients include Monday.com (1000% traffic growth case). Contact via website",
+    "shortDescription": "High-volume content production with strong SEO focus",
+    "featured": false,
+    "services": [
+      "SEO",
+      "Content Marketing",
+      "PR & Media Relations"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Irvine, CA, USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.4,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "ronin",
+    "name": "Ronin",
+    "website": "https://www.deployronin.com",
+    "description": "Brand-first cybersecurity marketing (bold creative, no whitepapers approach). Notable clients include major cybersecurity vendors with extensive experience across top cyber companies.",
+    "shortDescription": "Brand-first cybersecurity marketing with bold creative approach",
+    "featured": false,
+    "editorBadge": "Best for Branding",
+    "services": [
+      "PR & Media Relations",
+      "Brand Strategy"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "USA (Remote)",
+    "minBudget": "$5,000/month",
+    "rating": 4.5,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "bora",
+    "name": "Bora",
+    "website": "https://welcometobora.com",
+    "description": "Content creation, social media & lead generation for infosec (white papers, blogs, earned media). Notable clients include Cisco, Tripwire, Thales, Venafi, (ISC)², and Cybereason.",
+    "shortDescription": "Content creation, social media & lead generation for information security companies",
+    "featured": false,
+    "services": [
+      "Content Marketing",
+      "Social Media",
+      "Lead Generation"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Xaló, Valencia, Spain",
+    "minBudget": "$5,000/month",
+    "rating": 4.7,
+    "clientTypes": [
+      "Enterprise Security Vendors"
+    ]
+  },
+  {
+    "id": "bluetext",
+    "name": "Bluetext",
+    "website": "https://www.bluetext.com",
+    "description": "Full-service digital marketing (branding, web design, SEO, PPC, social, PR). Notable clients include Intel and Cisco.",
+    "shortDescription": "Full-service digital marketing for technology and cybersecurity brands",
+    "featured": false,
+    "services": [
+      "SEO",
+      "PPC",
+      "PR & Media Relations",
+      "Brand Strategy",
+      "Website Development",
+      "Digital Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Washington, D.C., USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.6,
+    "clientTypes": [
+      "Enterprise Security Vendors"
+    ]
+  },
+  {
+    "id": "the-rubicon-agency",
+    "name": "The Rubicon Agency",
+    "website": "https://therubiconagency.com",
+    "description": "Integrated B2B tech marketing (brand strategy, digital campaigns, content marketing, web & sales enablement). Notable clients include OpenText, Cisco, Symantec, and Radware.",
+    "shortDescription": "Integrated B2B tech marketing for cybersecurity and technology companies",
+    "featured": false,
+    "services": [
+      "Content Marketing",
+      "Brand Strategy",
+      "Digital Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "London, UK",
+    "minBudget": "$5,000/month",
+    "rating": 4.6,
+    "clientTypes": [
+      "Enterprise Security Vendors"
+    ]
+  },
+  {
+    "id": "cyberwhyze-whyze-labs",
+    "name": "CyberWhyze (Whyze Labs)",
+    "website": "https://www.whyzelabs.com",
+    "description": "Video-led content & social media marketing for cybersecurity brands. Notable clients include SANS Institute, Castra, and MainNerve.",
+    "shortDescription": "Video-led content & social media marketing for cybersecurity brands",
+    "featured": false,
+    "services": [
+      "Content Marketing",
+      "Social Media",
+      "Brand Strategy",
+      "Video Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Sacramento, CA, USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.7,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "beacon-digital-yes-beacon",
+    "name": "Beacon Digital (Yes& Beacon)",
+    "website": "https://yesandbeacon.com",
+    "description": "B2B digital marketing (content creation, lead generation, SEO, web design, PR). Notable clients include Flashpoint, BioCatch, and Aon.",
+    "shortDescription": "B2B digital marketing with expertise in cybersecurity and fintech",
+    "featured": false,
+    "services": [
+      "SEO",
+      "Content Marketing",
+      "PR & Media Relations",
+      "Website Development",
+      "Lead Generation",
+      "Digital Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Beacon, NY, USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.5,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "team-lewis",
+    "name": "Team Lewis",
+    "website": "https://www.teamlewis.com",
+    "description": "Global marketing & PR (public relations, digital marketing, analytics, creative services). Notable clients include BlackBerry, CrowdStrike, and McAfee.",
+    "shortDescription": "Global marketing & PR agency with strong cybersecurity practice",
+    "featured": false,
+    "editorBadge": "Best for Enterprise",
+    "services": [
+      "PR & Media Relations",
+      "Digital Marketing",
+      "Marketing Analytics"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "San Diego, CA, USA (global)",
+    "minBudget": "$10,000/month",
+    "rating": 4.8,
+    "clientTypes": [
+      "Enterprise Security Vendors"
+    ]
+  },
+  {
+    "id": "top-agency",
+    "name": "Top Agency",
+    "website": "https://topagency.com",
+    "description": "Data-driven digital marketing (SEO, PPC, content marketing, PR, influencer campaigns). Notable clients include RedMarlin, Check Point, and Lookout.",
+    "shortDescription": "Data-driven digital marketing for cybersecurity and technology brands",
+    "featured": false,
+    "services": [
+      "SEO",
+      "Content Marketing",
+      "PPC",
+      "PR & Media Relations",
+      "Digital Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Austin, TX, USA",
+    "minBudget": "$7,500/month",
+    "rating": 4.9,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "hop-online-hop-ai",
+    "name": "Hop Online (Hop AI)",
+    "website": "https://hop.online",
+    "description": "Performance marketing & growth (PPC, SEO, content marketing, podcast marketing). Notable clients include SecurityScorecard, Immersive Labs, and Coveaware.",
+    "shortDescription": "Performance marketing & growth for cybersecurity companies",
+    "featured": false,
+    "editorBadge": "Best for PPC",
+    "services": [
+      "SEO",
+      "Content Marketing",
+      "PPC",
+      "Podcast Marketing"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Sofia, Bulgaria",
+    "minBudget": "$5,000/month",
+    "rating": 4.7,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "everclear-marketing",
+    "name": "Everclear Marketing",
+    "website": "https://www.everclearmarketing.com",
+    "description": "Full-service cybersecurity marketing (positioning & messaging, branding, content & lead-gen programs). Notable clients include Lumifi, SecureWave, and Assured.",
+    "shortDescription": "Full-service cybersecurity marketing specializing in positioning and messaging",
+    "featured": false,
+    "services": [
+      "Content Marketing",
+      "PR & Media Relations",
+      "Brand Strategy",
+      "Lead Generation"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Columbia, MD, USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.8,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  },
+  {
+    "id": "envy-goenvy",
+    "name": "Envy (GoEnvy)",
+    "website": "https://goenvy.io",
+    "description": "Go-to-market strategy, demand generation campaigns & RevOps for B2B tech companies. Notable clients include BrandShield, Nuvei, and Wing Security.",
+    "shortDescription": "Go-to-market strategy and demand generation for B2B tech companies",
+    "featured": false,
+    "services": [
+      "Lead Generation",
+      "Demand Generation",
+      "Go-to-Market Strategy"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Ramat Gan, Israel",
+    "minBudget": "$7,500/month",
+    "rating": 4.9,
+    "clientTypes": [
+      "Cybersecurity Startups"
+    ]
+  },
+  {
+    "id": "magnetude-consulting",
+    "name": "Magnetude Consulting",
+    "website": "https://www.magnetudeconsulting.com",
+    "description": "Fractional B2B marketing services (lead generation, content marketing, sales enablement, PPC, SEO). Notable clients include Reveald, Skybox Security, and Semaphore.",
+    "shortDescription": "Fractional B2B marketing services for cybersecurity companies",
+    "featured": false,
+    "services": [
+      "SEO",
+      "Content Marketing",
+      "PPC",
+      "Lead Generation",
+      "Sales Enablement"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Cybersecurity Marketing"
+    ],
+    "location": "Needham, MA, USA",
+    "minBudget": "$5,000/month",
+    "rating": 4.8,
+    "clientTypes": [
+      "Cybersecurity Companies"
+    ]
+  }
+]
