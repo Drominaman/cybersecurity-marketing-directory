@@ -255,6 +255,77 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Service Links for SEO */}
+        <div className="bg-gray-900 border-4 border-magenta-500 p-10 mt-20">
+          <h2 className="text-3xl font-black text-magenta-400 mb-8 uppercase tracking-wider">
+            ► BROWSE BY SERVICE
+          </h2>
+          <p className="text-gray-300 mb-6">
+            Find the best cybersecurity marketing agency for your specific needs.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/best-for/seo"
+              className="bg-black border-2 border-green-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(34,197,94,1)] group"
+            >
+              <div className="text-green-400 font-black text-lg group-hover:text-green-300">
+                ► BEST FOR SEO
+              </div>
+              <div className="text-gray-400 text-sm mt-1">Search engine optimization experts</div>
+            </Link>
+
+            <Link
+              href="/best-for/ai-visibility"
+              className="bg-black border-2 border-cyan-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(6,182,212,1)] group"
+            >
+              <div className="text-cyan-400 font-black text-lg group-hover:text-cyan-300">
+                ► BEST FOR AI VISIBILITY
+              </div>
+              <div className="text-gray-400 text-sm mt-1">AI search and GEO specialists</div>
+            </Link>
+
+            <Link
+              href="/best-for/content-marketing"
+              className="bg-black border-2 border-yellow-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(234,179,8,1)] group"
+            >
+              <div className="text-yellow-400 font-black text-lg group-hover:text-yellow-300">
+                ► BEST FOR CONTENT
+              </div>
+              <div className="text-gray-400 text-sm mt-1">Content marketing specialists</div>
+            </Link>
+
+            <Link
+              href="/best-for/pr-media-relations"
+              className="bg-black border-2 border-magenta-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] group"
+            >
+              <div className="text-magenta-400 font-black text-lg group-hover:text-magenta-300">
+                ► BEST FOR PR
+              </div>
+              <div className="text-gray-400 text-sm mt-1">Media relations and PR experts</div>
+            </Link>
+
+            <Link
+              href="/best-for/lead-generation"
+              className="bg-black border-2 border-green-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(34,197,94,1)] group"
+            >
+              <div className="text-green-400 font-black text-lg group-hover:text-green-300">
+                ► BEST FOR LEAD GEN
+              </div>
+              <div className="text-gray-400 text-sm mt-1">Demand generation specialists</div>
+            </Link>
+
+            <Link
+              href="/best-for/ppc"
+              className="bg-black border-2 border-cyan-500 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(6,182,212,1)] group"
+            >
+              <div className="text-cyan-400 font-black text-lg group-hover:text-cyan-300">
+                ► BEST FOR PPC
+              </div>
+              <div className="text-gray-400 text-sm mt-1">Paid advertising experts</div>
+            </Link>
+          </div>
+        </div>
+
         {/* Location Links for GEO SEO */}
         <div className="bg-gray-900 border-4 border-cyan-500 p-10 mt-20">
           <h2 className="text-3xl font-black text-cyan-400 mb-8 uppercase tracking-wider">
