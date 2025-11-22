@@ -19,11 +19,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  const agencies = getAllAgencies().filter(agency =>
+  // Get local agencies
+  const localAgencies = getAllAgencies().filter(agency =>
     location.keywords.some(keyword =>
       agency.location.toLowerCase().includes(keyword.toLowerCase())
     )
   );
+
+  // Get global/recommended agencies that serve all regions
+  const globalAgencies = getAllAgencies().filter(agency =>
+    agency.geography === "Global" && agency.recommended
+  );
+
+  const totalAgencies = localAgencies.length + globalAgencies.length;
 
   return (
     <div className="min-h-screen bg-black">
@@ -36,7 +44,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             {location.name.toUpperCase()}
           </h1>
           <p className="text-yellow-400 font-mono">
-            ► CYBERSECURITY MARKETING AGENCIES IN {location.name.toUpperCase()}
+            ► CYBERSECURITY MARKETING AGENCIES SERVING {location.name.toUpperCase()}
           </p>
         </div>
       </header>
@@ -44,14 +52,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
           <h2 className="text-2xl font-black text-cyan-400 mb-4 uppercase">
-            ► {agencies.length} AGENCIES FOUND
+            ► {totalAgencies} AGENCIES AVAILABLE
           </h2>
           <p className="text-white mb-4">
             These{' '}
             <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-bold underline">
               cybersecurity marketing agencies
             </Link>{' '}
-            operate in {location.name}. They know the local market and have worked with security companies in the region.
+            serve clients in {location.name}. Includes both local agencies and global firms with international capabilities.
           </p>
           <p className="text-gray-300">
             Want more options? Check the full{' '}
@@ -62,13 +70,43 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {agencies.map((agency) => (
-            <AgencyCard key={agency.id} agency={agency} />
-          ))}
-        </div>
+        {/* Global/Recommended Agencies Section */}
+        {globalAgencies.length > 0 && (
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-yellow-900/20 to-yellow-800/20 border-4 border-yellow-500 p-8 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">⭐</span>
+                <h3 className="text-3xl font-black text-yellow-400 uppercase tracking-wider">
+                  TOP RECOMMENDED - SERVES {location.name.toUpperCase()}
+                </h3>
+              </div>
+              <p className="text-yellow-300 text-lg">
+                These global agencies work with clients in {location.name} and worldwide
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {globalAgencies.map((agency) => (
+                <AgencyCard key={agency.id} agency={agency} />
+              ))}
+            </div>
+          </div>
+        )}
 
-        {agencies.length === 0 && (
+        {/* Local Agencies Section */}
+        {localAgencies.length > 0 && (
+          <div className="mb-16">
+            <h3 className="text-2xl font-black text-cyan-400 mb-6 uppercase">
+              ► LOCAL AGENCIES IN {location.name.toUpperCase()}
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {localAgencies.map((agency) => (
+                <AgencyCard key={agency.id} agency={agency} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {totalAgencies === 0 && (
           <div className="text-center py-12 bg-gray-900 border-4 border-red-500">
             <p className="text-red-500 text-lg font-black">⚠ NO AGENCIES FOUND ⚠</p>
             <p className="text-cyan-400 font-mono text-sm mt-2">CHECK MAIN DIRECTORY FOR ALL LOCATIONS</p>
