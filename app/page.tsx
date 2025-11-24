@@ -122,6 +122,26 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Best Agency CTA */}
+        <div className="mb-12 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 border-4 border-yellow-400 p-8 shadow-[6px_6px_0px_0px_rgba(250,204,21,1)]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-2xl font-black text-yellow-400 mb-3 uppercase tracking-wider">
+                ⭐ WHO IS THE BEST CYBERSECURITY MARKETING AGENCY?
+              </h2>
+              <p className="text-white text-base">
+                Read our comprehensive guide comparing the top agencies for AI Visibility, SEO, and content marketing
+              </p>
+            </div>
+            <Link
+              href="/best-cybersecurity-marketing-agency"
+              className="bg-yellow-400 text-black px-8 py-4 font-black uppercase tracking-wider border-4 border-yellow-300 hover:bg-yellow-300 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] whitespace-nowrap"
+            >
+              VIEW GUIDE →
+            </Link>
+          </div>
+        </div>
+
         {/* Search and Filter */}
         <div className="mb-12 bg-gray-900 border-4 border-green-500 p-8 shadow-[8px_8px_0px_0px_rgba(34,197,94,1)]">
           <h2 className="text-2xl font-black text-green-400 mb-6 uppercase tracking-wider">
