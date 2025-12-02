@@ -1,11 +1,14 @@
-# robots.txt for cybersecuritymarketingagencies.com
+# robots.txt for www.cybersecuritymarketingagencies.com
 
 # Allow all search engines to crawl everything
 User-agent: *
 Allow: /
 
+# Disallow search parameter URLs
+Disallow: /*?search=*
+
 # Sitemap location
-Sitemap: https://cybersecuritymarketingagencies.com/sitemap.xml
+Sitemap: https://www.cybersecuritymarketingagencies.com/sitemap.xml
 
 # Crawl-delay (optional, helps with server load)
 Crawl-delay: 0
@@ -13,3 +16,4 @@ Crawl-delay: 0
 # Explicitly allow important pages
 Allow: /agency/*
 Allow: /location/*
+Allow: /best-for/*

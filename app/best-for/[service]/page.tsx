@@ -43,10 +43,10 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
       title: `Best Cybersecurity Marketing Agency for ${serviceName}`,
       description: `Top-rated cybersecurity marketing agencies specializing in ${serviceName}. Compare and find the perfect agency for your security company.`,
       type: 'website',
-      url: `https://cybersecuritymarketingagencies.com/best-for/${service}`,
+      url: `https://www.cybersecuritymarketingagencies.com/best-for/${service}`,
     },
     alternates: {
-      canonical: `https://cybersecuritymarketingagencies.com/best-for/${service}`,
+      canonical: `https://www.cybersecuritymarketingagencies.com/best-for/${service}`,
     },
   };
 }
@@ -88,13 +88,13 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://cybersecuritymarketingagencies.com"
+        "item": "https://www.cybersecuritymarketingagencies.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": `Best for ${serviceName}`,
-        "item": `https://cybersecuritymarketingagencies.com/best-for/${service}`
+        "item": `https://www.cybersecuritymarketingagencies.com/best-for/${service}`
       }
     ]
   };

@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/*?search=*',
     },
-    sitemap: 'https://cybersecuritymarketingagencies.com/sitemap.xml',
+    sitemap: 'https://www.cybersecuritymarketingagencies.com/sitemap.xml',
   };
 }

@@ -32,10 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${agency.name} - Cybersecurity Marketing Agency`,
       description: `${agency.shortDescription} Part of the cybersecurity marketing agencies directory.`,
       type: 'website',
-      url: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
+      url: `https://www.cybersecuritymarketingagencies.com/agency/${slug}`,
     },
     alternates: {
-      canonical: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
+      canonical: `https://www.cybersecuritymarketingagencies.com/agency/${slug}`,
     },
   };
 }
@@ -70,13 +70,13 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://cybersecuritymarketingagencies.com"
+        "item": "https://www.cybersecuritymarketingagencies.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": agency.name,
-        "item": `https://cybersecuritymarketingagencies.com/agency/${slug}`
+        "item": `https://www.cybersecuritymarketingagencies.com/agency/${slug}`
       }
     ]
   };

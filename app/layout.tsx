@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, and content marketing. Find specialized cybersecurity marketing agencies with proven results.",
     type: "website",
     locale: "en_US",
-    url: "https://cybersecuritymarketingagencies.com",
+    url: "https://www.cybersecuritymarketingagencies.com",
     siteName: "Cybersecurity Marketing Agencies",
   },
   twitter: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://cybersecuritymarketingagencies.com",
+    canonical: "https://www.cybersecuritymarketingagencies.com",
   },
 };
 

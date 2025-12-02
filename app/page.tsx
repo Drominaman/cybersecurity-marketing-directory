@@ -49,13 +49,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Cybersecurity Marketing Agencies",
-    "url": "https://cybersecuritymarketingagencies.com",
-    "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://cybersecuritymarketingagencies.com/?search={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://www.cybersecuritymarketingagencies.com",
+    "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR."
   };
 
   // Filter agencies

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllAgencies } from '@/lib/agencies';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cybersecuritymarketingagencies.com';
+  const baseUrl = 'https://www.cybersecuritymarketingagencies.com';
   const agencies = getAllAgencies();
 
   const locations = ['usa', 'europe', 'uk', 'california', 'new-york'];

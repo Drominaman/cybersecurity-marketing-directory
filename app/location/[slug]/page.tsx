@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AgencyCard from '@/components/AgencyCard';
 import { getAllAgencies } from '@/lib/agencies';
+import type { Metadata } from 'next';
 
 const locations = {
   'usa': { name: 'United States', keywords: ['USA', 'United States', 'America', 'US'] },
@@ -10,6 +11,38 @@ const locations = {
   'california': { name: 'California', keywords: ['California', 'CA', 'San Diego', 'Irvine', 'Sacramento'] },
   'new-york': { name: 'New York', keywords: ['New York', 'NY', 'NYC'] },
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const location = locations[slug as keyof typeof locations];
+
+  if (!location) {
+    return {
+      title: 'Location Not Found',
+    };
+  }
+
+  return {
+    title: `Cybersecurity Marketing Agencies in ${location.name} - Directory 2026`,
+    description: `Find the best cybersecurity marketing agencies in ${location.name}. Compare specialized security marketing firms for SEO, AI Visibility, content marketing, and PR services.`,
+    keywords: [
+      'cybersecurity marketing agencies',
+      `cybersecurity marketing ${location.name}`,
+      `security marketing agency ${location.name}`,
+      'cybersecurity SEO',
+      'cybersecurity content marketing',
+    ],
+    openGraph: {
+      title: `Cybersecurity Marketing Agencies in ${location.name}`,
+      description: `Find the best cybersecurity marketing agencies in ${location.name}. Compare specialized security marketing firms.`,
+      type: 'website',
+      url: `https://www.cybersecuritymarketingagencies.com/location/${slug}`,
+    },
+    alternates: {
+      canonical: `https://www.cybersecuritymarketingagencies.com/location/${slug}`,
+    },
+  };
+}
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
