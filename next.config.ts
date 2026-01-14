@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
         pathname: '/api/placeholder/**',
       },
     ],
+    // Allow query strings for local API routes
+    localPatterns: [
+      {
+        pathname: '/api/placeholder/**',
+        search: '',
+      },
+    ],
     // Allow unoptimized images for local API routes
     unoptimized: process.env.NODE_ENV === 'development',
   },
