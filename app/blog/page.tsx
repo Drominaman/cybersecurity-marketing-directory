@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
-import { getAllPosts, getAllTags } from '@/lib/blog';
+import { getAllPosts, getAllTags, slugify } from '@/lib/blog';
 import BlogCard from '@/components/BlogCard';
 
 export const metadata: Metadata = {
@@ -20,9 +20,20 @@ export const metadata: Metadata = {
     description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights.',
     type: 'website',
     url: 'https://www.cybersecuritymarketingagencies.com/blog',
+    images: [
+      {
+        url: 'https://www.cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
+        width: 1200,
+        height: 630,
+        alt: 'Cybersecurity Marketing Tips & Insights',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://www.cybersecuritymarketingagencies.com/blog',
+    types: {
+      'application/rss+xml': 'https://www.cybersecuritymarketingagencies.com/feed.xml',
+    },
   },
 };
 
@@ -36,6 +47,12 @@ export default function BlogPage() {
     name: 'Cybersecurity Marketing Tips & Insights',
     description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights.',
     url: 'https://www.cybersecuritymarketingagencies.com/blog',
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://www.cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
+      width: 1200,
+      height: 630,
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Cybersecurity Marketing Agencies',
@@ -46,6 +63,8 @@ export default function BlogPage() {
       headline: post.title,
       description: post.excerpt,
       datePublished: post.publishedDate,
+      dateModified: post.updatedDate || post.publishedDate,
+      image: post.coverImage || `https://www.cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
       author: {
         '@type': 'Organization',
         name: post.author,
@@ -97,12 +116,13 @@ export default function BlogPage() {
             <div className="flex flex-wrap items-center gap-3">
               <span className="text-xs font-bold text-cyan-400 uppercase tracking-wider">► TOPICS:</span>
               {tags.map(tag => (
-                <span
+                <Link
                   key={tag}
-                  className="bg-blue-900/50 border-2 border-cyan-500/50 text-cyan-300 px-3 py-1 text-xs font-bold hover:border-magenta-500 transition-colors cursor-pointer"
+                  href={`/blog/tag/${slugify(tag)}`}
+                  className="bg-blue-900/50 border-2 border-cyan-500/50 text-cyan-300 px-3 py-1 text-xs font-bold hover:border-magenta-500 hover:bg-magenta-900/30 transition-colors"
                 >
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           </div>

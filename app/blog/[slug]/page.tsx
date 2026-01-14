@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getAllSlugs, getPostBySlug, getAllPosts } from '@/lib/blog';
+import { getAllSlugs, getPostBySlug, getAllPosts, slugify } from '@/lib/blog';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const ogImageUrl = post.coverImage ||
+    `https://www.cybersecuritymarketingagencies.com/api/placeholder/${slug}/og-image?title=${encodeURIComponent(post.title)}`;
+
   return {
     title: `${post.title} | Cybersecurity Marketing Tips`,
     description: post.metaDescription,
@@ -34,14 +37,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.metaDescription,
       type: 'article',
       publishedTime: post.publishedDate,
-      modifiedTime: post.updatedDate,
+      modifiedTime: post.updatedDate || post.publishedDate,
       authors: [post.author],
       url: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.metaDescription,
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
@@ -119,6 +131,12 @@ export default async function BlogPostPage({ params }: Props) {
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
+    image: {
+      '@type': 'ImageObject',
+      url: post.coverImage || `https://www.cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
+      width: 1200,
+      height: 630,
+    },
     datePublished: post.publishedDate,
     dateModified: post.updatedDate || post.publishedDate,
     author: {
@@ -197,7 +215,9 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Article Header */}
         <header className="mb-10">
           <div className="flex flex-wrap items-center gap-4 text-sm font-mono mb-6">
-            <span className="text-cyan-400">{formattedDate}</span>
+            <time dateTime={post.publishedDate} className="text-cyan-400">
+              {formattedDate}
+            </time>
             {post.readingTime && (
               <>
                 <span className="text-gray-600">•</span>
@@ -205,10 +225,27 @@ export default async function BlogPostPage({ params }: Props) {
               </>
             )}
             <span className="text-gray-600">•</span>
-            <span className="text-green-400">{post.author}</span>
+            <Link
+              href={`/blog/author/${slugify(post.author)}`}
+              className="text-green-400 hover:text-green-300 transition-colors"
+            >
+              {post.author}
+            </Link>
+            {post.updatedDate && post.updatedDate !== post.publishedDate && (
+              <>
+                <span className="text-gray-600">•</span>
+                <span className="text-yellow-400 text-xs">
+                  Updated: {new Date(post.updatedDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </span>
+              </>
+            )}
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-magenta-400 mb-6 uppercase leading-tight">
+          <h1 className="text-3xl md:text-5xl font-black text-cyan-400 mb-6 uppercase leading-tight">
             {post.title}
           </h1>
 
@@ -219,12 +256,13 @@ export default async function BlogPostPage({ params }: Props) {
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {post.tags.map(tag => (
-                <span
+                <Link
                   key={tag}
-                  className="bg-blue-900 border-2 border-cyan-500 text-cyan-300 px-3 py-1 text-xs font-bold"
+                  href={`/blog/tag/${slugify(tag)}`}
+                  className="bg-blue-900 border-2 border-cyan-500 text-cyan-300 px-3 py-1 text-xs font-bold hover:border-magenta-500 hover:text-magenta-400 transition-colors"
                 >
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           )}

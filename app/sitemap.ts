@@ -1,11 +1,13 @@
 import { MetadataRoute } from 'next';
 import { getAllAgencies } from '@/lib/agencies';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts, getAllTags, getAllAuthors, slugify } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cybersecuritymarketingagencies.com';
   const agencies = getAllAgencies();
   const posts = getAllPosts();
+  const tags = getAllTags();
+  const authors = getAllAuthors();
 
   const locations = ['usa', 'europe', 'uk', 'california', 'new-york'];
 
@@ -50,10 +52,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts
   const blogPages = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.publishedDate),
+    lastModified: post.updatedDate
+      ? new Date(post.updatedDate)
+      : new Date(post.publishedDate),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  return [...routes, ...agencyPages, ...locationPages, ...blogPages];
+  // Tag pages
+  const tagPages = tags.map((tag) => ({
+    url: `${baseUrl}/blog/tag/${slugify(tag)}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  // Author pages
+  const authorPages = authors.map((author) => ({
+    url: `${baseUrl}/blog/author/${author.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  return [...routes, ...agencyPages, ...locationPages, ...blogPages, ...tagPages, ...authorPages];
 }
