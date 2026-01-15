@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: 'www.cybersecuritymarketingagencies.com',
         pathname: '/api/placeholder/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
     // Allow query strings for local API routes
     localPatterns: [
