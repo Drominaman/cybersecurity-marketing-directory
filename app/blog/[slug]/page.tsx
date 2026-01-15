@@ -104,6 +104,20 @@ const mdxComponents = {
   hr: () => (
     <hr className="border-t-2 border-cyan-500/30 my-8" />
   ),
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <figure className="my-8">
+      <img
+        className="w-full border-2 border-cyan-500/50 shadow-lg"
+        loading="lazy"
+        {...props}
+      />
+      {props.alt && (
+        <figcaption className="text-center text-sm text-gray-500 mt-2 italic">
+          {props.alt}
+        </figcaption>
+      )}
+    </figure>
+  ),
 };
 
 export default async function BlogPostPage({ params }: Props) {
