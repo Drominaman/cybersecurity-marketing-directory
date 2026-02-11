@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Script from 'next/script';
 import { getAllAgencies } from '@/lib/agencies';
 import type { Metadata } from 'next';
 
@@ -88,10 +87,23 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     "name": agency.name,
     "url": agency.website,
     "description": agency.description,
+    "knowsAbout": [
+      ...agency.services,
+      ...(agency.specialties || []),
+      ...(badges.length > 0 ? badges.map(badge => badge.replace('Best for ', '')) : []),
+      "Cybersecurity Marketing"
+    ],
     ...(badges.length > 0 && {
-      "knowsAbout": badges.map(badge => badge.replace('Best for ', '')),
       "award": badges
     }),
+    "makesOffer": agency.services.map(service => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": service,
+        "description": `${service} services for cybersecurity companies`
+      }
+    })),
     ...(agency.rating && {
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -110,13 +122,11 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
 
   return (
     <>
-      <Script
-        id="breadcrumb-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
-        id="agency-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(agencySchema) }}
       />

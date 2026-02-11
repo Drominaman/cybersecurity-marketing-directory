@@ -1,8 +1,4 @@
-'use client';
-
-import { useState } from 'react';
-import Script from 'next/script';
-import AgencyCard from '@/components/AgencyCard';
+import AgencySearch from '@/components/AgencySearch';
 import ComparisonTable from '@/components/ComparisonTable';
 import FAQ from '@/components/FAQ';
 import Link from 'next/link';
@@ -10,22 +6,18 @@ import { getAllAgencies } from '@/lib/agencies';
 
 export default function Home() {
   const allAgencies = getAllAgencies();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState('');
 
-  // Get all unique services
   const allServices = Array.from(
     new Set(allAgencies.flatMap(a => a.services))
   ).sort();
 
-  // Schema.org structured data for ItemList
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Cybersecurity Marketing Agencies Directory",
     "description": "The ultimate directory of specialized cybersecurity marketing agencies offering SEO, AI Visibility, content marketing, PPC, PR, and demand generation services for security companies.",
-    "numberOfItems": getAllAgencies().length,
-    "itemListElement": getAllAgencies().map((agency, index) => ({
+    "numberOfItems": allAgencies.length,
+    "itemListElement": allAgencies.map((agency, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "item": {
@@ -44,36 +36,25 @@ export default function Home() {
     }))
   };
 
-  // WebSite schema for better search appearance
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Cybersecurity Marketing Agencies",
     "url": "https://www.cybersecuritymarketingagencies.com",
-    "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR."
+    "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR.",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".text-white"]
+    }
   };
-
-  // Filter agencies
-  const filteredAgencies = allAgencies.filter(agency => {
-    const matchesSearch = searchTerm === '' ||
-      agency.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      agency.description.toLowerCase().includes(searchTerm.toLowerCase());
-
-    const matchesService = selectedService === '' ||
-      agency.services.includes(selectedService);
-
-    return matchesSearch && matchesService;
-  });
 
   return (
     <>
-      <Script
-        id="schema-org"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <Script
-        id="website-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
@@ -145,65 +126,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Search and Filter */}
-        <div className="mb-12 bg-gray-900 border-4 border-green-500 p-8 shadow-[8px_8px_0px_0px_rgba(34,197,94,1)]">
-          <h2 className="text-2xl font-black text-green-400 mb-6 uppercase tracking-wider">
-            ► CHARACTER SELECT
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="search" className="block text-xs font-bold text-cyan-400 mb-2 uppercase tracking-wider font-mono">
-                → SEARCH DATABASE
-              </label>
-              <input
-                id="search"
-                type="text"
-                placeholder="ENTER QUERY..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 border-4 border-cyan-500 focus:border-magenta-500 outline-none bg-black text-green-400 font-mono placeholder-gray-600"
-              />
-            </div>
-            <div>
-              <label htmlFor="service" className="block text-xs font-bold text-magenta-400 mb-2 uppercase tracking-wider font-mono">
-                → FILTER BY SKILL
-              </label>
-              <select
-                id="service"
-                value={selectedService}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="w-full px-4 py-3 border-4 border-magenta-500 focus:border-cyan-500 outline-none bg-black text-magenta-400 font-mono font-bold"
-              >
-                <option value="">ALL ABILITIES</option>
-                {allServices.map(service => (
-                  <option key={service} value={service}>{service}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-          {(searchTerm || selectedService) && (
-            <div className="mt-4 text-sm text-yellow-400 font-bold font-mono animate-pulse">
-              ▶ {filteredAgencies.length} RESULTS FOUND
-            </div>
-          )}
-        </div>
-
-        {/* Agency Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredAgencies.map((agency) => (
-            <AgencyCard key={agency.id} agency={agency} />
-          ))}
-        </div>
-
-        {filteredAgencies.length === 0 && (
-          <div className="text-center py-12 bg-gray-900 border-4 border-red-500">
-            <p className="text-red-500 text-lg font-black animate-pulse">⚠ NO MATCHES FOUND ⚠</p>
-            <p className="text-cyan-400 font-mono text-sm mt-2">TRY DIFFERENT SEARCH PARAMETERS</p>
-          </div>
-        )}
+        {/* Client Island: Search/Filter + Agency Grid */}
+        <AgencySearch agencies={allAgencies} allServices={allServices} />
 
         {/* Comparison Table */}
-        {getAllAgencies().length > 0 && (
+        {allAgencies.length > 0 && (
           <div className="mt-20">
             <h2 className="text-3xl font-black text-green-400 mb-4 uppercase tracking-wider">
               ► STATS COMPARISON
@@ -214,7 +141,7 @@ export default function Home() {
             <p className="text-gray-300 mb-10">
               Compare all cybersecurity marketing agencies side-by-side.
             </p>
-            <ComparisonTable agencies={getAllAgencies()} />
+            <ComparisonTable agencies={allAgencies} />
           </div>
         )}
 

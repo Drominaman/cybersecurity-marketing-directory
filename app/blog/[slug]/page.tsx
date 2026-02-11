@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getAllSlugs, getPostBySlug, getAllPosts, slugify } from '@/lib/blog';
@@ -104,6 +103,26 @@ const mdxComponents = {
   hr: () => (
     <hr className="border-t-2 border-cyan-500/30 my-8" />
   ),
+  table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
+    <div className="overflow-x-auto my-6">
+      <table className="w-full bg-white border border-gray-300 rounded" {...props} />
+    </div>
+  ),
+  thead: (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <thead className="bg-gray-100" {...props} />
+  ),
+  tbody: (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <tbody {...props} />
+  ),
+  tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
+    <tr className="border-b border-gray-200" {...props} />
+  ),
+  th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
+    <th className="px-4 py-3 text-left text-black font-bold border border-gray-300" {...props} />
+  ),
+  td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
+    <td className="px-4 py-3 text-black border border-gray-300" {...props} />
+  ),
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <figure className="my-8">
       <img
@@ -167,6 +186,10 @@ export default async function BlogPostPage({ params }: Props) {
       '@id': `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
     },
     keywords: post.keywords.join(', '),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.text-gray-300'],
+    },
   };
 
   const breadcrumbSchema = {
@@ -196,13 +219,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="breadcrumb-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

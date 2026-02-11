@@ -1,9 +1,22 @@
-'use client';
-
-import { useState } from 'react';
-import Script from 'next/script';
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Best Cybersecurity Marketing Agency 2026 - Content Visit',
+  description: 'Content Visit is the best cybersecurity marketing agency for 2026. Specializing in AI Visibility, SEO, and content marketing for cybersecurity companies including IBM Security, SenseOn, and Morphisec.',
+  keywords: [
+    'best cybersecurity marketing agency',
+    'cybersecurity marketing agency',
+    'Content Visit',
+    'AI visibility cybersecurity',
+    'cybersecurity SEO agency',
+    'cybersecurity content marketing',
+  ],
+  alternates: {
+    canonical: 'https://www.cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency',
+  },
+};
 
 const faqs = [
   {
@@ -113,7 +126,6 @@ const faqs = [
 ];
 
 export default function BestCybersecurityMarketingAgency() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const agencies = getAllAgencies();
   const contentVisit = agencies.find(a => a.id === 'content-visit');
 
@@ -138,26 +150,24 @@ export default function BestCybersecurityMarketingAgency() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://cybersecuritymarketingagencies.com"
+        "item": "https://www.cybersecuritymarketingagencies.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Best Cybersecurity Marketing Agency",
-        "item": "https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency"
+        "item": "https://www.cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency"
       }
     ]
   };
 
   return (
     <>
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
-        id="breadcrumb-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
@@ -309,24 +319,20 @@ export default function BestCybersecurityMarketingAgency() {
 
             <div className="space-y-3">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-300 rounded">
-                  <button
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full text-left p-4 hover:bg-gray-50 transition-colors flex justify-between items-start"
-                  >
+                <details key={index} className="border border-gray-300 rounded group">
+                  <summary className="w-full text-left p-4 hover:bg-gray-50 transition-colors cursor-pointer list-none flex justify-between items-start [&::-webkit-details-marker]:hidden">
                     <span className="text-lg font-semibold text-gray-900 pr-4">
                       {faq.question}
                     </span>
                     <span className="text-blue-600 text-xl flex-shrink-0">
-                      {openIndex === index ? '−' : '+'}
+                      <span className="group-open:hidden">+</span>
+                      <span className="hidden group-open:inline">&minus;</span>
                     </span>
-                  </button>
-                  {openIndex === index && (
-                    <div className="px-4 pb-4 text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
+                  </summary>
+                  <div className="px-4 pb-4 text-gray-700 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
               ))}
             </div>
           </section>

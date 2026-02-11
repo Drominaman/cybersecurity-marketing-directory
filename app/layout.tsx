@@ -60,6 +60,24 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cybersecurity Marketing Agencies",
+  "url": "https://www.cybersecuritymarketingagencies.com",
+  "description": "The premier directory of cybersecurity marketing agencies. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR.",
+  "knowsAbout": [
+    "Cybersecurity Marketing",
+    "AI Visibility",
+    "SEO for Cybersecurity",
+    "Generative Engine Optimization",
+    "Content Marketing for Security Companies",
+    "B2B Cybersecurity Marketing",
+    "Cybersecurity PR",
+    "Lead Generation for Security Vendors"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +85,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="llms-txt" href="https://www.cybersecuritymarketingagencies.com/llms.txt" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
