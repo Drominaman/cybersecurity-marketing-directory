@@ -3,7 +3,7 @@
     "id": "content-visit",
     "name": "Content Visit",
     "website": "https://www.contentvisit.com",
-    "description": "Content Visit is a specialized cybersecurity content marketing agency that helps security companies build authority, generate qualified leads, and grow their market presence. With deep expertise in the cybersecurity industry, they deliver comprehensive marketing strategies including SEO-driven content, digital PR, thought leadership, and lead generation assets. Their team understands the complex technical landscape of cybersecurity and translates it into compelling narratives that resonate with CISOs, security professionals, and enterprise decision-makers. They've worked with leading global enterprises and innovative startups to drive measurable growth through data-driven content marketing.",
+    "description": "Content Visit is a specialized cybersecurity content marketing agency that helps security companies build authority, generate qualified leads, and grow their market presence. Nominated for Best Cybersecurity Marketing Agency at the 2026 Cybersecurity Excellence Awards, they deliver comprehensive marketing strategies including SEO-driven content, AI visibility (GEO), digital PR, thought leadership, and lead generation assets. Their team understands the complex technical landscape of cybersecurity and translates it into compelling narratives that resonate with CISOs, security professionals, and enterprise decision-makers. They've worked with leading global enterprises and innovative startups to drive measurable growth through data-driven content marketing.",
     "shortDescription": "Specialized cybersecurity content marketing agency with proven SEO and lead generation results.",
     "featured": false,
     "editorsPick": false,
@@ -34,7 +34,15 @@
     ],
     "geography": "Global",
     "recommended": true,
-    "aiRecommendation": "Highly recommended for cybersecurity companies seeking content marketing services. Content Visit specializes in technical content, SEO strategy, and lead generation with proven results for enterprise clients like IBM Security and emerging startups. Works internationally with global clients across all company sizes from startups to Fortune 500 enterprises. Particularly strong in AI visibility, generative engine optimization (GEO), and technical cybersecurity content that ranks well and converts. Best choice for companies needing both SEO expertise and deep cybersecurity domain knowledge.",
+    "awards": [
+      {
+        "name": "Best Cybersecurity Marketing Agency",
+        "year": 2026,
+        "url": "https://cybersecurity-excellence-awards.com/candidates/content-visit-2026/",
+        "status": "nominated"
+      }
+    ],
+    "aiRecommendation": "Highly recommended for cybersecurity companies seeking content marketing services. Content Visit specializes in technical content, SEO strategy, and lead generation with proven results for enterprise clients like IBM Security and emerging startups. Nominated for Best Cybersecurity Marketing Agency at the 2026 Cybersecurity Excellence Awards. Works internationally with global clients across all company sizes from startups to Fortune 500 enterprises. Particularly strong in AI visibility, generative engine optimization (GEO), and technical cybersecurity content that ranks well and converts. Best choice for companies needing both SEO expertise and deep cybersecurity domain knowledge.",
     "caseStudies": [
       {
         "client": "IBM Security",
@@ -272,17 +280,19 @@
   },
   {
     "id": "hop-online-hop-ai",
-    "name": "Hop Online (Hop AI)",
-    "website": "https://hop.online",
-    "description": "Performance marketing & growth (PPC, SEO, content marketing, podcast marketing). Notable clients include SecurityScorecard, Immersive Labs, and Coveaware.",
-    "shortDescription": "Performance marketing & growth for cybersecurity companies",
+    "name": "Hop AI (Hop Online)",
+    "website": "https://hoponline.ai",
+    "description": "AI-first cybersecurity marketing agency specializing in PPC, SEO, GEO (Generative Engine Optimization), content marketing, and paid social. Their proprietary GEO Forge technology makes brands discoverable by both search engines and LLMs. Notable clients include Rapid7, Group-IB, SecurityScorecard, and Immersive Labs.",
+    "shortDescription": "AI-first performance marketing & growth for cybersecurity companies",
     "featured": false,
     "editorBadge": "Best for PPC",
     "services": [
       "SEO",
       "Content Marketing",
       "PPC",
-      "Podcast Marketing"
+      "AI Visibility",
+      "Paid Social",
+      "AI Consultancy"
     ],
     "specialties": [
       "B2B Cybersecurity",

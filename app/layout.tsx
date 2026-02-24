@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -38,6 +33,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.cybersecuritymarketingagencies.com",
     siteName: "Cybersecurity Marketing Agencies",
+    images: [
+      {
+        url: "https://www.cybersecuritymarketingagencies.com/api/placeholder/homepage/og-image?title=Cybersecurity%20Marketing%20Agencies%20Directory%202026",
+        width: 1200,
+        height: 630,
+        alt: "Cybersecurity Marketing Agencies Directory 2026",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -87,14 +90,21 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="llms-txt" href="https://www.cybersecuritymarketingagencies.com/llms.txt" />
+        <link rel="alternate" type="application/rss+xml" title="Cybersecurity Marketing Agencies Blog" href="/feed.xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:font-bold focus:border-2 focus:border-black"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

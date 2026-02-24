@@ -5,74 +5,73 @@ import { getAllAgencies } from '@/lib/agencies';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
+import type { Agency } from '@/types/agency';
 
-// Service slug to display name mapping
-const SERVICE_MAP: { [key: string]: string } = {
-  'seo': 'SEO',
-  'ai-visibility': 'AI Visibility',
-  'content-marketing': 'Content Marketing',
-  'pr-media-relations': 'PR & Media Relations',
-  'lead-generation': 'Lead Generation',
-  'thought-leadership': 'Thought Leadership',
-  'technical-content-strategy': 'Technical Content Strategy',
-  'ppc': 'PPC',
-  'social-media': 'Social Media',
-  'brand-strategy': 'Brand Strategy',
-  'website-development': 'Website Development',
-  'digital-marketing': 'Digital Marketing',
-  'video-marketing': 'Video Marketing',
-  'podcast-marketing': 'Podcast Marketing',
-  'demand-generation': 'Demand Generation',
-  'sales-enablement': 'Sales Enablement',
-  'marketing-analytics': 'Marketing Analytics',
+// Niche/audience mapping with filters
+const NICHE_MAP: { [key: string]: { name: string; description: string; filter: (agency: Agency) => boolean } } = {
+  'startups': {
+    name: 'Cybersecurity Startups',
+    description: 'Marketing agencies that specialize in helping cybersecurity startups build brand awareness, generate leads, and scale their go-to-market strategy.',
+    filter: (agency) => agency.clientTypes?.some(t => t.toLowerCase().includes('startup')) || agency.minBudget === '$5,000/month',
+  },
+  'enterprise': {
+    name: 'Enterprise Security Vendors',
+    description: 'Marketing agencies with proven track records working with enterprise-grade cybersecurity companies, including Fortune 500 security vendors.',
+    filter: (agency) => agency.clientTypes?.some(t => t.toLowerCase().includes('enterprise')) || (agency.rating !== undefined && agency.rating >= 4.7),
+  },
+  'mssp': {
+    name: 'MSSPs & Security Service Providers',
+    description: 'Marketing agencies experienced in helping managed security service providers (MSSPs) and security service providers differentiate and generate pipeline.',
+    filter: (agency) => agency.clientTypes?.some(t => t.toLowerCase().includes('service provider')) || agency.services.includes('Lead Generation'),
+  },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ service: string }> }): Promise<Metadata> {
-  const { service } = await params;
-  const serviceName = SERVICE_MAP[service] || service;
+export async function generateMetadata({ params }: { params: Promise<{ niche: string }> }): Promise<Metadata> {
+  const { niche } = await params;
+  const nicheData = NICHE_MAP[niche];
+
+  if (!nicheData) {
+    return {};
+  }
 
   return {
-    title: `Best Cybersecurity Marketing Agency for ${serviceName} | Top Rated Agencies`,
-    description: `Find the best cybersecurity marketing agencies specializing in ${serviceName}. Compare top-rated agencies with proven expertise in security company marketing.`,
+    title: `Best Cybersecurity Marketing Agencies for ${nicheData.name} | Top Rated Agencies`,
+    description: nicheData.description,
     keywords: [
-      `cybersecurity marketing agencies`,
-      `${serviceName} for cybersecurity`,
-      `security marketing ${serviceName}`,
-      `best cybersecurity ${serviceName}`,
-      'cybersecurity marketing',
+      `cybersecurity marketing agencies for ${nicheData.name.toLowerCase()}`,
+      `${nicheData.name.toLowerCase()} marketing`,
+      `cybersecurity ${niche} marketing`,
+      'cybersecurity marketing agencies',
+      'security marketing',
     ],
     openGraph: {
-      title: `Best Cybersecurity Marketing Agency for ${serviceName}`,
-      description: `Top-rated cybersecurity marketing agencies specializing in ${serviceName}. Compare and find the perfect agency for your security company.`,
+      title: `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
+      description: nicheData.description,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/best-for/${service}`,
+      url: `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/best-for/${service}`,
+      canonical: `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
     },
   };
 }
 
-export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {
-  const { service } = await params;
-  const serviceName = SERVICE_MAP[service];
+export default async function NichePage({ params }: { params: Promise<{ niche: string }> }) {
+  const { niche } = await params;
+  const nicheData = NICHE_MAP[niche];
 
-  if (!serviceName) {
+  if (!nicheData) {
     notFound();
   }
 
-  // Filter agencies that offer this service
+  // Filter agencies matching this niche
   const allAgencies = getAllAgencies();
-  const filteredAgencies = allAgencies.filter((agency) =>
-    agency.services.some(s => s.toLowerCase() === serviceName.toLowerCase())
-  );
+  const filteredAgencies = allAgencies.filter(nicheData.filter);
 
-  // Sort by recommendation and rating
+  // Sort by recommended first, then by rating
   const sortedAgencies = [...filteredAgencies].sort((a, b) => {
-    // Recommended agencies first
     if (a.recommended && !b.recommended) return -1;
     if (!a.recommended && b.recommended) return 1;
-    // Then by rating
     if (a.rating && b.rating) return b.rating - a.rating;
     if (a.rating) return -1;
     if (b.rating) return 1;
@@ -95,28 +94,25 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       {
         "@type": "ListItem",
         "position": 2,
-        "name": `Best for ${serviceName}`,
-        "item": `https://www.cybersecuritymarketingagencies.com/best-for/${service}`
+        "name": `Best for ${nicheData.name}`,
+        "item": `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`
       }
     ]
   };
 
-  // Collection schema for service page
+  // Collection schema for niche page
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `Best Cybersecurity Marketing Agencies for ${serviceName}`,
-    "description": `Top-rated cybersecurity marketing agencies specializing in ${serviceName}`,
+    "name": `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
+    "description": nicheData.description,
     "about": {
       "@type": "Service",
-      "serviceType": serviceName,
+      "serviceType": `Cybersecurity Marketing for ${nicheData.name}`,
       "provider": sortedAgencies.slice(0, 5).map((agency) => ({
         "@type": "Organization",
         "name": agency.name,
         "url": agency.website,
-        ...(agency.aiRecommendation && {
-          "slogan": agency.aiRecommendation
-        })
       })),
     },
   };
@@ -142,20 +138,19 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
             {/* Breadcrumbs */}
             <nav className="text-sm font-mono text-gray-400 mb-6">
-              <Link href="/" className="hover:text-white">◀ HOME</Link>
+              <Link href="/" className="hover:text-white">&#9664; HOME</Link>
               <span className="text-gray-500 mx-2">/</span>
-              <span className="text-white">BEST FOR {serviceName.toUpperCase()}</span>
+              <span className="text-white">BEST FOR {nicheData.name.toUpperCase()}</span>
             </nav>
 
             <h1 className="text-4xl md:text-6xl font-black text-white tracking-wider mb-4">
-              BEST FOR {serviceName.toUpperCase()}
+              BEST FOR {nicheData.name.toUpperCase()}
             </h1>
             <p className="text-gray-300 font-mono text-xl mb-2">
-              ■ {sortedAgencies.length} CYBERSECURITY MARKETING {sortedAgencies.length === 1 ? 'AGENCY' : 'AGENCIES'}
+              &#9632; {sortedAgencies.length} CYBERSECURITY MARKETING {sortedAgencies.length === 1 ? 'AGENCY' : 'AGENCIES'}
             </p>
             <p className="text-gray-300 text-lg max-w-3xl">
-              Find the top cybersecurity marketing agencies specializing in {serviceName}.
-              Compare agencies with proven expertise in security company marketing.
+              {nicheData.description}
             </p>
           </div>
         </header>
@@ -166,16 +161,16 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           {/* Top Recommendation Box */}
           {topAgency && (
             <div className="bg-gray-900 border-4 border-white p-10 mb-12 relative overflow-hidden">
-              <div className="absolute top-0 right-0 text-9xl font-black text-white/10">★</div>
+              <div className="absolute top-0 right-0 text-9xl font-black text-white/10">&#9733;</div>
               <div className="relative z-10">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="text-5xl">⭐</div>
+                  <div className="text-5xl">&#11088;</div>
                   <div>
                     <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-wider">
-                      TOP RECOMMENDATION FOR {serviceName.toUpperCase()}
+                      TOP RECOMMENDATION FOR {nicheData.name.toUpperCase()}
                     </h2>
                     <p className="text-gray-300 text-lg font-mono">
-                      ■ EXPERT PICK // HIGHEST RATED
+                      &#9632; EXPERT PICK // HIGHEST RATED
                     </p>
                   </div>
                 </div>
@@ -188,14 +183,14 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       </h3>
                       {topAgency.rating && (
                         <div className="text-gray-200 font-bold text-2xl">
-                          {topAgency.rating} ★ EXPERT SCORE
+                          {topAgency.rating} &#9733; EXPERT SCORE
                         </div>
                       )}
                     </div>
                   </div>
 
                   <p className="text-white text-lg mb-6 leading-relaxed">
-                    {topAgency.aiRecommendation || topAgency.shortDescription}
+                    {topAgency.shortDescription}
                   </p>
 
                   {topAgency.editorBadges && topAgency.editorBadges.length > 0 && (
@@ -216,7 +211,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       href={`/agency/${topAgency.id}`}
                       className="bg-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]"
                     >
-                      ■ VIEW FULL PROFILE
+                      &#9632; VIEW FULL PROFILE
                     </Link>
                     <Link
                       href={topAgency.website}
@@ -224,7 +219,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       rel="noopener noreferrer"
                       className="bg-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]"
                     >
-                      ■ VISIT WEBSITE
+                      &#9632; VISIT WEBSITE
                     </Link>
                   </div>
                 </div>
@@ -235,7 +230,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           {/* All Agencies Grid */}
           <div className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
-              ■ ALL {serviceName.toUpperCase()} AGENCIES ({sortedAgencies.length})
+              &#9632; ALL {nicheData.name.toUpperCase()} AGENCIES ({sortedAgencies.length})
             </h2>
 
             {sortedAgencies.length > 0 ? (
@@ -257,7 +252,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       </h3>
                       {agency.rating && (
                         <div className="bg-gray-800 border-2 border-white px-3 py-1">
-                          <span className="text-gray-200 font-black">{agency.rating} ★</span>
+                          <span className="text-gray-200 font-black">{agency.rating} &#9733;</span>
                         </div>
                       )}
                     </div>
@@ -280,7 +275,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       <div className="text-gray-400 text-xs font-bold uppercase mb-2">LOCATION:</div>
                       <div className="text-white">{agency.location}</div>
                       {agency.geography && (
-                        <div className="text-gray-400 text-sm font-mono mt-1">◆ {agency.geography}</div>
+                        <div className="text-gray-400 text-sm font-mono mt-1">&#9670; {agency.geography}</div>
                       )}
                     </div>
 
@@ -289,7 +284,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                         href={`/agency/${agency.id}`}
                         className="flex-1 bg-white text-black px-6 py-3 font-black hover:bg-gray-200 transition-all text-center uppercase text-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]"
                       >
-                        ■ VIEW PROFILE
+                        &#9632; VIEW PROFILE
                       </Link>
                       <Link
                         href={agency.website}
@@ -297,7 +292,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                         rel="noopener noreferrer"
                         className="bg-white text-black px-6 py-3 font-black hover:bg-gray-200 transition-all text-center uppercase text-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]"
                       >
-                        ■ WEBSITE
+                        &#9632; WEBSITE
                       </Link>
                     </div>
                   </div>
@@ -306,50 +301,54 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             ) : (
               <div className="text-center py-16">
                 <p className="text-gray-400 text-xl mb-6">
-                  NO AGENCIES FOUND FOR {serviceName.toUpperCase()}
+                  NO AGENCIES FOUND FOR {nicheData.name.toUpperCase()}
                 </p>
                 <Link
                   href="/"
                   className="bg-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]"
                 >
-                  ◀ BACK TO ALL AGENCIES
+                  &#9664; BACK TO ALL AGENCIES
                 </Link>
               </div>
             )}
           </div>
 
-          {/* Why Choose Section */}
+          {/* About Section - Why This Niche Needs Specialized Marketing */}
           <div className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
-              ■ WHY CHOOSE A {serviceName.toUpperCase()} SPECIALIST?
+              &#9632; WHY {nicheData.name.toUpperCase()} NEED SPECIALIZED MARKETING
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-white">
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">INDUSTRY EXPERTISE</h3>
+                <h3 className="text-xl font-bold text-white mb-3">AUDIENCE UNDERSTANDING</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Cybersecurity marketing agencies specializing in {serviceName} understand the unique challenges
-                  of security companies, from complex technical concepts to compliance requirements.
+                  {nicheData.name} have unique buyer personas, sales cycles, and competitive dynamics.
+                  A marketing agency that understands these nuances can craft messaging that resonates
+                  with the right decision-makers and drives qualified pipeline.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">PROVEN RESULTS</h3>
+                <h3 className="text-xl font-bold text-white mb-3">MARKET POSITIONING</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  These agencies have track records working with security vendors, MSSPs, and enterprise
-                  security companies to deliver measurable growth.
+                  Standing out in the crowded cybersecurity market requires precise positioning.
+                  Agencies experienced with {nicheData.name.toLowerCase()} know how to differentiate
+                  your offering and communicate value to your specific target audience.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">TECHNICAL KNOWLEDGE</h3>
+                <h3 className="text-xl font-bold text-white mb-3">GO-TO-MARKET STRATEGY</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Teams fluent in security technologies, threat landscapes, and cybersecurity buyer personas
-                  can create more effective {serviceName} campaigns.
+                  From product launches to demand generation campaigns, {nicheData.name.toLowerCase()} require
+                  marketing strategies tailored to their stage, budget, and growth objectives.
+                  Specialized agencies bring playbooks proven in this segment.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">GLOBAL REACH</h3>
+                <h3 className="text-xl font-bold text-white mb-3">INDUSTRY CREDIBILITY</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Many agencies offer international capabilities for companies serving global markets,
-                  with expertise across different regions and compliance frameworks.
+                  Building trust in cybersecurity requires deep technical knowledge and industry relationships.
+                  Agencies that have worked with {nicheData.name.toLowerCase()} can leverage existing
+                  credibility and connections to accelerate your growth.
                 </p>
               </div>
             </div>
@@ -358,7 +357,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           {/* CTA Section */}
           <div className="bg-gray-950 border-4 border-white p-10 text-center">
             <h2 className="text-3xl font-black text-white mb-4 uppercase">
-              ■ EXPLORE MORE AGENCIES
+              &#9632; EXPLORE MORE AGENCIES
             </h2>
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
               Browse the full directory to compare all cybersecurity marketing agencies
@@ -367,7 +366,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
               href="/"
               className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]"
             >
-              ◀ BACK TO DIRECTORY
+              &#9664; BACK TO DIRECTORY
             </Link>
           </div>
 
@@ -380,7 +379,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 }
 
 export function generateStaticParams() {
-  return Object.keys(SERVICE_MAP).map((service) => ({
-    service,
+  return Object.keys(NICHE_MAP).map((niche) => ({
+    niche,
   }));
 }

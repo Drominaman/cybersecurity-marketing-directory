@@ -1,15 +1,35 @@
 import { MetadataRoute } from 'next';
 import { getAllAgencies } from '@/lib/agencies';
-import { getAllPosts, getAllTags, getAllAuthors, slugify } from '@/lib/blog';
+import { getAllPosts, getAllTags, slugify } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cybersecuritymarketingagencies.com';
   const agencies = getAllAgencies();
   const posts = getAllPosts();
   const tags = getAllTags();
-  const authors = getAllAuthors();
 
   const locations = ['usa', 'europe', 'uk', 'california', 'new-york'];
+
+  const services = [
+    'seo',
+    'ai-visibility',
+    'content-marketing',
+    'pr-media-relations',
+    'lead-generation',
+    'ppc',
+    'thought-leadership',
+    'technical-content-strategy',
+    'brand-strategy',
+    'website-development',
+    'digital-marketing',
+    'video-marketing',
+    'podcast-marketing',
+    'demand-generation',
+    'sales-enablement',
+    'marketing-analytics',
+  ];
+
+  const niches = ['startups', 'enterprise', 'mssp'];
 
   // Main pages
   const routes = [
@@ -31,6 +51,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/submit-agency`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
   ];
 
   // Agency pages
@@ -44,6 +76,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Location pages
   const locationPages = locations.map((location) => ({
     url: `${baseUrl}/location/${location}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Service pages
+  const servicePages = services.map((service) => ({
+    url: `${baseUrl}/best-for/${service}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Niche pages
+  const nichePages = niches.map((niche) => ({
+    url: `${baseUrl}/best-for-audience/${niche}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -67,14 +115,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Author pages
-  const authorPages = authors.map((author) => ({
-    url: `${baseUrl}/blog/author/${author.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
   // LLM content files
   const llmPages = [
     {
@@ -91,5 +131,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...routes, ...agencyPages, ...locationPages, ...blogPages, ...tagPages, ...authorPages, ...llmPages];
+  return [...routes, ...agencyPages, ...locationPages, ...servicePages, ...nichePages, ...blogPages, ...tagPages, ...llmPages];
 }
