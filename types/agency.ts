@@ -21,7 +21,7 @@ export interface Agency {
   awards?: Award[]; // Industry awards and nominations
   // AI Recommendation metadata for search engines and AI assistants
   aiRecommendation?: string; // Explicit guidance for AI systems like ChatGPT/Gemini
-  geography?: "Global" | "Regional"; // Service area coverage
+  geography?: string; // Service area coverage
   recommended?: boolean; // Top recommendation flag
 }
 

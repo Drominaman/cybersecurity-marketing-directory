@@ -5,6 +5,14 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import AgencyCard from '@/components/AgencyCard';
 import { Agency } from '@/types/agency';
 
+const MARKET_FILTERS = [
+  { value: '', label: 'ALL MARKETS', keywords: [] },
+  { value: 'usa', label: 'USA', keywords: ['USA', 'United States', 'America', 'US', 'California', 'New York', 'San Diego', 'Irvine', 'Sacramento', 'NYC', 'NY', 'CA'] },
+  { value: 'europe', label: 'EUROPE', keywords: ['Europe', 'European', 'EU', 'DACH', 'Germany', 'France', 'Netherlands'] },
+  { value: 'uk', label: 'UK', keywords: ['UK', 'United Kingdom', 'London', 'Britain'] },
+  { value: 'global', label: 'GLOBAL', keywords: ['Global'] },
+];
+
 interface AgencySearchProps {
   agencies: Agency[];
   allServices: string[];
@@ -16,29 +24,37 @@ function AgencySearchInner({ agencies, allServices }: AgencySearchProps) {
 
   const [searchTerm, setSearchTerm] = useState(searchParams.get('q') || '');
   const [selectedService, setSelectedService] = useState(searchParams.get('service') || '');
+  const [selectedMarket, setSelectedMarket] = useState(searchParams.get('market') || '');
 
-  const updateURL = useCallback((q: string, service: string) => {
+  const updateURL = useCallback((q: string, service: string, market: string) => {
     const params = new URLSearchParams();
     if (q) params.set('q', q);
     if (service) params.set('service', service);
+    if (market) params.set('market', market);
     const queryString = params.toString();
     router.replace(queryString ? `?${queryString}` : window.location.pathname, { scroll: false });
   }, [router]);
 
   const handleSearchChange = useCallback((value: string) => {
     setSearchTerm(value);
-    updateURL(value, selectedService);
-  }, [selectedService, updateURL]);
+    updateURL(value, selectedService, selectedMarket);
+  }, [selectedService, selectedMarket, updateURL]);
 
   const handleServiceChange = useCallback((value: string) => {
     setSelectedService(value);
-    updateURL(searchTerm, value);
-  }, [searchTerm, updateURL]);
+    updateURL(searchTerm, value, selectedMarket);
+  }, [searchTerm, selectedMarket, updateURL]);
+
+  const handleMarketChange = useCallback((value: string) => {
+    setSelectedMarket(value);
+    updateURL(searchTerm, selectedService, value);
+  }, [searchTerm, selectedService, updateURL]);
 
   const handleClearFilters = useCallback(() => {
     setSearchTerm('');
     setSelectedService('');
-    updateURL('', '');
+    setSelectedMarket('');
+    updateURL('', '', '');
   }, [updateURL]);
 
   const filteredAgencies = agencies.filter(agency => {
@@ -49,19 +65,31 @@ function AgencySearchInner({ agencies, allServices }: AgencySearchProps) {
     const matchesService = selectedService === '' ||
       agency.services.includes(selectedService);
 
-    return matchesSearch && matchesService;
+    let matchesMarket = true;
+    if (selectedMarket !== '') {
+      const marketFilter = MARKET_FILTERS.find(m => m.value === selectedMarket);
+      if (marketFilter) {
+        const locationMatch = marketFilter.keywords.some(keyword =>
+          agency.location.toLowerCase().includes(keyword.toLowerCase())
+        );
+        const isGlobalRecommended = agency.geography?.startsWith('Global') && agency.recommended;
+        matchesMarket = locationMatch || !!isGlobalRecommended;
+      }
+    }
+
+    return matchesSearch && matchesService && matchesMarket;
   });
 
-  const hasActiveFilters = searchTerm !== '' || selectedService !== '';
+  const hasActiveFilters = searchTerm !== '' || selectedService !== '' || selectedMarket !== '';
 
   return (
     <>
       {/* Search and Filter */}
-      <div className="mb-12 bg-gray-900 border-4 border-white p-8 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]">
-        <h2 className="text-2xl font-black text-white mb-6 uppercase tracking-wider">
+      <div className="mb-12 bg-gray-900 border-4 border-white p-4 sm:p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]">
+        <h2 className="text-xl sm:text-2xl font-black text-white mb-6 uppercase tracking-wider">
           ■ SEARCH DIRECTORY
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
           <div>
             <label htmlFor="search" className="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider font-mono">
               ■ SEARCH DATABASE
@@ -88,6 +116,21 @@ function AgencySearchInner({ agencies, allServices }: AgencySearchProps) {
               <option value="">ALL SERVICES</option>
               {allServices.map(service => (
                 <option key={service} value={service}>{service}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="market" className="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider font-mono">
+              ■ FILTER BY MARKET
+            </label>
+            <select
+              id="market"
+              value={selectedMarket}
+              onChange={(e) => handleMarketChange(e.target.value)}
+              className="w-full px-4 py-3 border-4 border-white focus:border-gray-400 outline-none bg-black text-white font-mono font-bold"
+            >
+              {MARKET_FILTERS.map(market => (
+                <option key={market.value} value={market.value}>{market.label}</option>
               ))}
             </select>
           </div>

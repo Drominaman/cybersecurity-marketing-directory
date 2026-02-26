@@ -11,68 +11,71 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+    <div className="bg-gray-900 border-4 border-white overflow-hidden">
+      <p className="md:hidden text-center text-xs font-mono text-gray-400 py-2 border-b border-white/20">
+        ← SCROLL HORIZONTALLY →
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200">
+          <thead className="bg-black border-b-4 border-white">
             <tr>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 sticky left-0 bg-gray-50 z-10">
+              <th className="px-6 py-4 text-left text-sm font-black text-white uppercase tracking-wider sticky left-0 bg-black z-10">
                 Agency
               </th>
               {agencies.map((agency) => (
                 <th key={agency.id} className="px-6 py-4 text-center min-w-[200px]">
-                  <div className="font-bold text-gray-900">{agency.name}</div>
+                  <div className="font-black text-white uppercase">{agency.name}</div>
                   {agency.rating && (
-                    <div className="text-sm text-blue-600 mt-1">★ {agency.rating}</div>
+                    <div className="text-sm text-gray-300 mt-1">★ {agency.rating}</div>
                   )}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
-            <tr className="hover:bg-gray-50">
-              <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-white">
+          <tbody className="divide-y divide-white/20">
+            <tr className="hover:bg-gray-800">
+              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900">
                 Location
               </td>
               {agencies.map((agency) => (
-                <td key={agency.id} className="px-6 py-4 text-sm text-gray-700 text-center">
+                <td key={agency.id} className="px-6 py-4 text-sm text-gray-300 text-center">
                   {agency.location || '-'}
                 </td>
               ))}
             </tr>
 
-            <tr className="hover:bg-gray-50">
-              <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-white">
+            <tr className="hover:bg-gray-800">
+              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900">
                 Team Size
               </td>
               {agencies.map((agency) => (
-                <td key={agency.id} className="px-6 py-4 text-sm text-gray-700 text-center">
+                <td key={agency.id} className="px-6 py-4 text-sm text-gray-300 text-center">
                   {agency.teamSize || '-'}
                 </td>
               ))}
             </tr>
 
-            <tr className="hover:bg-gray-50">
-              <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-white">
+            <tr className="hover:bg-gray-800">
+              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900">
                 Year Founded
               </td>
               {agencies.map((agency) => (
-                <td key={agency.id} className="px-6 py-4 text-sm text-gray-700 text-center">
+                <td key={agency.id} className="px-6 py-4 text-sm text-gray-300 text-center">
                   {agency.yearFounded || '-'}
                 </td>
               ))}
             </tr>
 
-            <tr className="hover:bg-gray-50">
-              <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-white">
+            <tr className="hover:bg-gray-800">
+              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900">
                 Services
               </td>
               {agencies.map((agency) => (
-                <td key={agency.id} className="px-6 py-4 text-sm text-gray-700">
+                <td key={agency.id} className="px-6 py-4 text-sm text-gray-300">
                   <ul className="text-left space-y-1">
                     {agency.services.slice(0, 5).map((service) => (
                       <li key={service} className="flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-white mr-2">✓</span>
                         {service}
                       </li>
                     ))}
@@ -85,18 +88,18 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
             </tr>
 
             {agencies.some(a => a.specialties && a.specialties.length > 0) && (
-              <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-white">
+              <tr className="hover:bg-gray-800">
+                <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900">
                   Specialties
                 </td>
                 {agencies.map((agency) => (
-                  <td key={agency.id} className="px-6 py-4 text-sm text-gray-700">
+                  <td key={agency.id} className="px-6 py-4 text-sm text-gray-300">
                     {agency.specialties && agency.specialties.length > 0 ? (
                       <div className="flex flex-wrap gap-1 justify-center">
                         {agency.specialties.map((specialty) => (
                           <span
                             key={specialty}
-                            className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+                            className="bg-gray-800 border border-white/40 text-gray-300 px-2 py-1 text-xs font-bold"
                           >
                             {specialty}
                           </span>
@@ -110,8 +113,8 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
               </tr>
             )}
 
-            <tr className="bg-gray-50">
-              <td className="px-6 py-4 text-sm font-medium text-gray-900 sticky left-0 bg-gray-50">
+            <tr className="bg-black">
+              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-black">
                 Website
               </td>
               {agencies.map((agency) => (
@@ -120,7 +123,7 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
                     href={agency.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                    className="inline-block bg-white text-black px-6 py-2 text-sm font-black hover:bg-gray-200 transition-colors uppercase border-2 border-white"
                   >
                     Visit Website
                   </Link>

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getAllPosts, getAllTags, slugify } from '@/lib/blog';
 import BlogCard from '@/components/BlogCard';
+import SiteNav from '@/components/SiteNav';
+import SiteFooter from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Marketing Tips & Insights | Blog',
@@ -81,28 +83,19 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      {/* Header */}
-      <header className="border-b-4 border-cyan-500 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-black text-cyan-400 hover:text-magenta-400 transition-colors">
-              ◄ BACK TO DIRECTORY
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteNav />
 
       {/* Hero Section */}
-      <section className="border-b-8 border-magenta-500 bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16">
+      <section className="border-b-8 border-white bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-magenta-400 to-cyan-400 mb-6 uppercase tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
             Cybersecurity Marketing Tips
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Expert insights on SEO, AI visibility, content marketing, and growth strategies for cybersecurity companies.
           </p>
-          <div className="inline-block border-4 border-cyan-500 bg-black px-6 py-3">
-            <span className="text-cyan-400 font-mono text-lg">
+          <div className="inline-block border-4 border-white bg-black px-6 py-3">
+            <span className="text-white font-mono text-lg">
               {posts.length} ARTICLES LOADED
             </span>
           </div>
@@ -111,15 +104,15 @@ export default function BlogPage() {
 
       {/* Tags Section */}
       {tags.length > 0 && (
-        <section className="border-b-4 border-cyan-500 bg-gray-900/50 py-6">
+        <section className="border-b-4 border-white bg-gray-900/50 py-6">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-wider">► TOPICS:</span>
+              <span className="text-xs font-bold text-white uppercase tracking-wider">■ TOPICS:</span>
               {tags.map(tag => (
                 <Link
                   key={tag}
                   href={`/blog/tag/${slugify(tag)}`}
-                  className="bg-blue-900/50 border-2 border-cyan-500/50 text-cyan-300 px-3 py-1 text-xs font-bold hover:border-magenta-500 hover:bg-magenta-900/30 transition-colors"
+                  className="bg-gray-800 border-2 border-white/20 text-gray-300 px-3 py-1 text-xs font-bold hover:border-gray-400 hover:bg-gray-800 transition-colors"
                 >
                   {tag}
                 </Link>
@@ -134,7 +127,7 @@ export default function BlogPage() {
         {posts.length === 0 ? (
           <div className="text-center py-20">
             <div className="text-6xl mb-6">📝</div>
-            <h2 className="text-2xl font-black text-cyan-400 mb-4 uppercase">
+            <h2 className="text-2xl font-black text-white mb-4 uppercase">
               Coming Soon
             </h2>
             <p className="text-gray-400 max-w-md mx-auto">
@@ -151,9 +144,9 @@ export default function BlogPage() {
       </main>
 
       {/* CTA Section */}
-      <section className="border-t-4 border-cyan-500 bg-gray-900 py-12">
+      <section className="border-t-4 border-white bg-gray-900 py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black text-cyan-400 mb-4 uppercase">
+          <h2 className="text-2xl font-black text-white mb-4 uppercase">
             Need Help With Your Cybersecurity Marketing?
           </h2>
           <p className="text-gray-300 mb-6">
@@ -161,21 +154,14 @@ export default function BlogPage() {
           </p>
           <Link
             href="/"
-            className="inline-block bg-magenta-600 border-4 border-magenta-400 text-white px-8 py-4 font-black hover:bg-magenta-500 transition-all uppercase tracking-wide shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+            className="inline-block bg-white border-4 border-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all uppercase tracking-wide shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
           >
-            ► Browse Agencies
+            ■ Browse Agencies
           </Link>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t-4 border-cyan-500 bg-black py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Cybersecurity Marketing Agencies. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

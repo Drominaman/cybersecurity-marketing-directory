@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getPostsByTag, getAllTags, slugify } from '@/lib/blog';
 import BlogCard from '@/components/BlogCard';
+import SiteNav from '@/components/SiteNav';
+import SiteFooter from '@/components/SiteFooter';
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -118,32 +120,34 @@ export default async function TagPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
 
-      {/* Header */}
-      <header className="border-b-4 border-cyan-500 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 py-6">
+      <SiteNav />
+
+      {/* Breadcrumb */}
+      <div className="bg-gray-900 border-b-2 border-white/20">
+        <div className="max-w-7xl mx-auto px-4 py-3">
           <nav className="flex items-center gap-4 text-sm font-mono">
-            <Link href="/" className="text-cyan-400 hover:text-magenta-400 transition-colors">
+            <Link href="/" className="text-white hover:text-gray-300 transition-colors">
               HOME
             </Link>
-            <span className="text-gray-600">►</span>
-            <Link href="/blog" className="text-cyan-400 hover:text-magenta-400 transition-colors">
+            <span className="text-gray-600">■</span>
+            <Link href="/blog" className="text-white hover:text-gray-300 transition-colors">
               BLOG
             </Link>
-            <span className="text-gray-600">►</span>
+            <span className="text-gray-600">■</span>
             <span className="text-gray-400">{tagName}</span>
           </nav>
         </div>
-      </header>
+      </div>
 
       {/* Hero Section */}
-      <section className="border-b-8 border-magenta-500 bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16">
+      <section className="border-b-8 border-white bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="inline-block border-4 border-cyan-500 bg-black px-6 py-3 mb-6">
-            <span className="text-cyan-400 font-mono text-sm uppercase">
-              ► TAG
+          <div className="inline-block border-4 border-white bg-black px-6 py-3 mb-6">
+            <span className="text-white font-mono text-sm uppercase">
+              ■ TAG
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-magenta-400 to-cyan-400 mb-6 uppercase tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
             {tagName}
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -163,21 +167,14 @@ export default async function TagPage({ params }: Props) {
         <div className="mt-12 text-center">
           <Link
             href="/blog"
-            className="inline-block bg-cyan-600 border-4 border-cyan-400 text-white px-8 py-4 font-black hover:bg-cyan-500 transition-all uppercase tracking-wide shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+            className="inline-block bg-white border-4 border-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all uppercase tracking-wide shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
           >
             ◄ All Articles
           </Link>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t-4 border-cyan-500 bg-black py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Cybersecurity Marketing Agencies. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

@@ -64,7 +64,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   // Get global/recommended agencies that serve all regions
   const globalAgencies = getAllAgencies().filter(agency =>
-    agency.geography === "Global" && agency.recommended
+    agency.geography?.startsWith("Global") && agency.recommended
   );
 
   const totalAgencies = localAgencies.length + globalAgencies.length;

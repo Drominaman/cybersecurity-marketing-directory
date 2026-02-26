@@ -74,7 +74,7 @@ export default function Home() {
         <header className="bg-gray-950 border-b-8 border-white relative">
           <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px)'}}></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-            <h1 className="text-4xl md:text-6xl font-black text-white tracking-wider mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-black text-white tracking-wider mb-4">
               CYBERSECURITY MARKETING AGENCIES 2026
             </h1>
             <div className="flex items-center gap-4 text-white font-mono">
