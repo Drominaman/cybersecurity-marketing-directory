@@ -83,6 +83,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Irvine, CA, USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.4,
     "clientTypes": [
@@ -106,6 +107,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "USA (Remote)",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.5,
     "clientTypes": [
@@ -129,6 +131,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Xaló, Valencia, Spain",
+    "geography": "Regional — Europe",
     "minBudget": "$5,000/month",
     "rating": 4.7,
     "clientTypes": [
@@ -155,6 +158,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Washington, D.C., USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.6,
     "clientTypes": [
@@ -178,6 +182,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "London, UK",
+    "geography": "Regional — UK",
     "minBudget": "$5,000/month",
     "rating": 4.6,
     "clientTypes": [
@@ -202,6 +207,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Sacramento, CA, USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.7,
     "clientTypes": [
@@ -228,6 +234,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Beacon, NY, USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.5,
     "clientTypes": [
@@ -252,6 +259,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "San Diego, CA, USA (global)",
+    "geography": "Global — HQ in USA with offices worldwide",
     "minBudget": "$10,000/month",
     "rating": 4.8,
     "clientTypes": [
@@ -277,6 +285,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Austin, TX, USA",
+    "geography": "Regional — USA",
     "minBudget": "$7,500/month",
     "rating": 4.9,
     "clientTypes": [
@@ -304,6 +313,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Sofia, Bulgaria",
+    "geography": "Regional — Europe",
     "minBudget": "$5,000/month",
     "rating": 4.7,
     "clientTypes": [
@@ -328,6 +338,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Columbia, MD, USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.8,
     "clientTypes": [
@@ -351,6 +362,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Ramat Gan, Israel",
+    "geography": "Regional — Israel",
     "minBudget": "$7,500/month",
     "rating": 4.9,
     "clientTypes": [
@@ -376,6 +388,7 @@
       "Cybersecurity Marketing"
     ],
     "location": "Needham, MA, USA",
+    "geography": "Regional — USA",
     "minBudget": "$5,000/month",
     "rating": 4.8,
     "clientTypes": [
