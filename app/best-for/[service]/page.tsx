@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import { getAllAgencies } from '@/lib/agencies';
+import AuthorByline from '@/components/AuthorByline';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -157,6 +158,9 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
               Find the top cybersecurity marketing agencies specializing in {serviceName}.
               Compare agencies with proven expertise in security company marketing.
             </p>
+            <div className="mt-4">
+              <AuthorByline variant="reviewed-by" />
+            </div>
           </div>
         </header>
 

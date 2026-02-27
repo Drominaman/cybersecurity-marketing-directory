@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "ChatGPT visibility",
     "AI-powered search marketing",
   ],
-  authors: [{ name: "Cybersecurity Marketing Agencies" }],
+  authors: [{ name: "Laura Martisiute", url: "https://ie.linkedin.com/in/laura-martisiute-b152a5129" }],
   openGraph: {
     title: "Cybersecurity Marketing Agencies - Find the Best SEO & AI Visibility Experts",
     description: "Cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, and content marketing. Find specialized cybersecurity marketing agencies with proven results.",
@@ -63,6 +63,20 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Laura Martisiute",
+  "jobTitle": "Content Strategist",
+  "url": "https://ie.linkedin.com/in/laura-martisiute-b152a5129",
+  "sameAs": ["https://ie.linkedin.com/in/laura-martisiute-b152a5129"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Content Visit",
+    "url": "https://www.contentvisit.com"
+  }
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -94,6 +108,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
       <body

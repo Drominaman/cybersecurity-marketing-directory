@@ -1,4 +1,6 @@
 import { Agency } from '@/types/agency';
+import { getAgencyLogoUrl } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ComparisonTableProps {
@@ -43,11 +45,26 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
               <th className="px-6 py-4 text-left text-sm font-black text-white uppercase tracking-wider sticky left-0 bg-black z-10">
                 Agency
               </th>
-              {agencies.map((agency) => (
-                <th key={agency.id} className="px-6 py-4 text-center min-w-[200px]">
-                  <div className="font-black text-white uppercase">{agency.name}</div>
-                </th>
-              ))}
+              {agencies.map((agency) => {
+                const logoUrl = getAgencyLogoUrl(agency.website);
+                return (
+                  <th key={agency.id} className="px-6 py-4 text-center min-w-[200px]">
+                    {logoUrl && (
+                      <div className="flex justify-center mb-2">
+                        <Image
+                          src={logoUrl}
+                          alt={`${agency.name} logo`}
+                          width={28}
+                          height={28}
+                          className="bg-white rounded-sm"
+                          unoptimized
+                        />
+                      </div>
+                    )}
+                    <div className="font-black text-white uppercase">{agency.name}</div>
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody className="divide-y divide-white/20">

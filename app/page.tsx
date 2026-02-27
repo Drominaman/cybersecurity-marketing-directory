@@ -1,4 +1,5 @@
 import AgencySearch from '@/components/AgencySearch';
+import AuthorByline from '@/components/AuthorByline';
 import ComparisonTable from '@/components/ComparisonTable';
 import FAQ from '@/components/FAQ';
 import SiteNav from '@/components/SiteNav';
@@ -83,6 +84,7 @@ export default function Home() {
                 The ultimate directory of specialized cybersecurity marketing agencies
               </p>
             </div>
+            <AuthorByline variant="full" lastUpdated="February 2026" />
           </div>
         </header>
 
@@ -96,10 +98,13 @@ export default function Home() {
           </h2>
           <div className="text-white space-y-4 text-lg leading-relaxed">
             <p>
-              This is a directory of cybersecurity marketing agencies for 2026. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space. These agencies specialize in SEO, AI Visibility, content marketing, PPC, PR, and demand generation for security companies.
+              This is a directory of cybersecurity marketing agencies for 2026. The cybersecurity market is projected to reach{' '}
+              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">$10.5 trillion in annual cybercrime costs by 2025</a> according to Cybersecurity Ventures, making effective marketing critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
             </p>
             <p>
-              Marketing security products is hard. You're dealing with complex tech, long sales cycles, and technical buyers. The cybersecurity marketing agencies here have done it before and know what works in 2026.
+              Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. The agencies in this directory have been vetted through{' '}
+              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="underline hover:text-gray-300">third-party review platforms like Clutch</a>,{' '}
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" className="underline hover:text-gray-300">LinkedIn company profiles</a>, and documented client results.
             </p>
             <p className="text-white font-bold">
               &#9632; Browse the directory below and find the right partner for your security company.

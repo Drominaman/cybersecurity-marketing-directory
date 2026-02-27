@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
+import { getAgencyLogoUrl } from '@/lib/utils';
+import AuthorByline from '@/components/AuthorByline';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -82,6 +85,15 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     ]
   };
 
+  // Collect sameAs URLs for schema
+  const sameAsUrls: string[] = [
+    ...(agency.linkedinUrl ? [agency.linkedinUrl] : []),
+    ...(agency.clutchUrl ? [agency.clutchUrl] : []),
+    ...(agency.g2Url ? [agency.g2Url] : []),
+  ];
+
+  const logoUrl = getAgencyLogoUrl(agency.website);
+
   // Schema.org markup for the agency
   const agencySchema = {
     "@context": "https://schema.org",
@@ -89,6 +101,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     "name": agency.name,
     "url": agency.website,
     "description": agency.description,
+    ...(sameAsUrls.length > 0 && { "sameAs": sameAsUrls }),
     "knowsAbout": [
       ...agency.services,
       ...(agency.specialties || []),
@@ -113,8 +126,9 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
       "review": {
         "@type": "Review",
         "author": {
-          "@type": "Organization",
-          "name": "Cybersecurity Marketing Agencies"
+          "@type": "Person",
+          "name": "Laura Martisiute",
+          "url": "https://ie.linkedin.com/in/laura-martisiute-b152a5129"
         },
         "reviewRating": {
           "@type": "Rating",
@@ -163,12 +177,25 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     RECOMMENDED PARTNER
                   </div>
                 )}
-                <h1 className="text-4xl md:text-6xl font-black text-white tracking-wider mb-4">
-                  {agency.name.toUpperCase()}
-                </h1>
+                <div className="flex items-center gap-4 mb-4">
+                  {logoUrl && (
+                    <Image
+                      src={logoUrl}
+                      alt={`${agency.name} logo`}
+                      width={48}
+                      height={48}
+                      className="bg-white rounded-sm"
+                      unoptimized
+                    />
+                  )}
+                  <h1 className="text-4xl md:text-6xl font-black text-white tracking-wider">
+                    {agency.name.toUpperCase()}
+                  </h1>
+                </div>
                 <p className="text-gray-300 font-mono text-lg">
                   ■ CYBERSECURITY MARKETING AGENCY
                 </p>
+                <AuthorByline variant="reviewed-by" />
               </div>
 
               {agency.rating && (
@@ -396,6 +423,47 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     <div className="text-gray-300 font-bold">{type}</div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* External Profiles */}
+          {(agency.linkedinUrl || agency.clutchUrl || agency.g2Url) && (
+            <div className="bg-gray-900 border-4 border-white p-10 mb-12">
+              <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+                ■ EXTERNAL PROFILES
+              </h2>
+              <div className="flex flex-wrap gap-4">
+                {agency.linkedinUrl && (
+                  <a
+                    href={agency.linkedinUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
+                  >
+                    LinkedIn →
+                  </a>
+                )}
+                {agency.clutchUrl && (
+                  <a
+                    href={agency.clutchUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
+                  >
+                    Clutch →
+                  </a>
+                )}
+                {agency.g2Url && (
+                  <a
+                    href={agency.g2Url}
+                    target="_blank"
+                    rel="noopener"
+                    className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
+                  >
+                    G2 Reviews →
+                  </a>
+                )}
               </div>
             </div>
           )}

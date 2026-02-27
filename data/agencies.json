@@ -55,6 +55,7 @@
       "No PPC or paid media capabilities in-house",
       "Less suited for companies needing brand design or full creative services"
     ],
+    "linkedinUrl": "https://www.linkedin.com/company/content-visit/",
     "caseStudies": [
       {
         "client": "IBM Security",
@@ -110,7 +111,9 @@
       "Not cybersecurity-exclusive — serves multiple industries",
       "Volume-first approach may sacrifice technical depth",
       "Limited public case studies specific to security clients"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/codeless-io/",
+    "clutchUrl": "https://clutch.co/profile/codeless"
   },
   {
     "id": "ronin",
@@ -144,7 +147,8 @@
       "Brand-first approach — not the pick if you need lead gen or SEO",
       "Anti-whitepaper philosophy may not suit all B2B security buyers",
       "Limited service range compared to full-service agencies"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/deployronin/"
   },
   {
     "id": "bora",
@@ -178,7 +182,8 @@
       "Based in Spain — may be a timezone consideration for US clients",
       "No SEO or PPC capabilities listed",
       "Less visible online presence compared to some competitors"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/bora-design/"
   },
   {
     "id": "bluetext",
@@ -215,7 +220,9 @@
       "Not cybersecurity-exclusive — serves broader B2B tech market",
       "Full-service breadth may mean less depth in any single channel",
       "Likely higher budgets needed for enterprise-level engagements"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/bluetext/",
+    "clutchUrl": "https://clutch.co/profile/bluetext"
   },
   {
     "id": "the-rubicon-agency",
@@ -249,7 +256,8 @@
       "Not cybersecurity-exclusive — broader B2B tech focus",
       "No SEO or PPC services listed",
       "UK-focused — may be less suited for US-centric campaigns"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/the-rubicon-agency/"
   },
   {
     "id": "cyberwhyze-whyze-labs",
@@ -284,7 +292,8 @@
       "Narrow service offering — no SEO, PPC, or lead gen capabilities",
       "Video-led strategy requires charismatic in-house experts from the client",
       "Smaller agency — may have capacity limitations"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/whyze-labs/"
   },
   {
     "id": "beacon-digital-yes-beacon",
@@ -321,7 +330,8 @@
       "Not cybersecurity-exclusive — also serves fintech and other B2B verticals",
       "Recently rebranded (Yes& Beacon) — may cause some market confusion",
       "Less specialized in any single channel compared to niche agencies"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/beacon-digital-marketing/"
   },
   {
     "id": "team-lewis",
@@ -356,7 +366,8 @@
       "Higher minimum budget ($10k/month) — not startup-friendly",
       "Not cybersecurity-exclusive — large agency serving many verticals",
       "No dedicated SEO or content marketing services listed"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/teamlewis/"
   },
   {
     "id": "top-agency",
@@ -392,7 +403,9 @@
       "Not cybersecurity-exclusive — serves broader tech market",
       "Higher minimum budget ($7,500/month) than some competitors",
       "Generic agency name makes it harder to assess cybersecurity depth"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/topagency/",
+    "clutchUrl": "https://clutch.co/profile/top-agency"
   },
   {
     "id": "hop-online-hop-ai",
@@ -430,7 +443,10 @@
       "Based in Bulgaria — potential timezone and communication considerations",
       "Not cybersecurity-exclusive — broader tech marketing background",
       "Proprietary tools mean less transparency into methodology"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/hop-online/",
+    "clutchUrl": "https://clutch.co/profile/hop-online",
+    "g2Url": "https://www.g2.com/products/hop-online/reviews"
   },
   {
     "id": "everclear-marketing",
@@ -465,7 +481,9 @@
       "Smaller client portfolio compared to larger agencies",
       "No SEO or PPC capabilities listed",
       "US-focused — less suited for companies targeting European markets"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/everclear-marketing/",
+    "clutchUrl": "https://clutch.co/profile/everclear-marketing"
   },
   {
     "id": "envy-goenvy",
@@ -499,7 +517,8 @@
       "Not cybersecurity-exclusive — broader B2B tech focus",
       "No content marketing, SEO, or PR services listed",
       "Higher minimum budget ($7,500/month) for a startup-focused agency"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/goenvy/"
   },
   {
     "id": "magnetude-consulting",
@@ -535,6 +554,8 @@
       "Fractional model means shared attention across multiple clients",
       "Not cybersecurity-exclusive — serves broader B2B tech",
       "Consulting approach may feel less hands-on than a dedicated agency"
-    ]
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/magnetude-consulting/",
+    "clutchUrl": "https://clutch.co/profile/magnetude-consulting"
   }
 ]

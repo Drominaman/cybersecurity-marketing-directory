@@ -1,4 +1,6 @@
 import { Agency } from '@/types/agency';
+import { getAgencyLogoUrl } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface AgencyCardProps {
@@ -8,9 +10,22 @@ interface AgencyCardProps {
 export default function AgencyCard({ agency }: AgencyCardProps) {
   // Support both single badge and multiple badges
   const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+  const logoUrl = getAgencyLogoUrl(agency.website);
 
   return (
     <div className="bg-gray-900 border-4 border-white p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative">
+      {logoUrl && (
+        <div className="mb-3 flex items-center gap-3">
+          <Image
+            src={logoUrl}
+            alt={`${agency.name} logo`}
+            width={32}
+            height={32}
+            className="bg-white rounded-sm"
+            unoptimized
+          />
+        </div>
+      )}
       {badges.length > 0 && (
         <div className="mb-3">
           {badges.map((badge) => (

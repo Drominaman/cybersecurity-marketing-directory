@@ -25,6 +25,10 @@ export interface Agency {
   recommended?: boolean; // Top recommendation flag
   pros?: string[]; // Honest strengths
   cons?: string[]; // Honest limitations
+  // External profile URLs for trust signals
+  linkedinUrl?: string;
+  clutchUrl?: string;
+  g2Url?: string;
 }
 
 export interface Award {

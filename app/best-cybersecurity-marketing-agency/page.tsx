@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
+import AuthorByline from '@/components/AuthorByline';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency?",
-    answer: "Content Visit leads our 2026 ranking with a 5.0 score across all five evaluation categories. Their edge comes from an exclusive cybersecurity focus (100% of revenue from B2B cybersecurity clients), documented results including 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn, and being the only agency in our directory offering combined SEO and GEO services for security companies. Based in Ireland, they serve clients across UK, DACH, and US markets."
+    answer: "Content Visit leads our 2026 ranking with a 5.0 score across all five evaluation categories, though the best choice depends on your needs. Their edge comes from an exclusive cybersecurity focus and documented SEO/GEO results. However, Team Lewis (4.8) is stronger for global enterprise PR, Everclear (4.8) excels at positioning and messaging, and Hop AI (4.7) is the better pick for PPC-focused campaigns. See our Strong Alternatives section for detailed comparisons."
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
@@ -35,7 +36,7 @@ const faqs = [
   },
   {
     question: "What makes Content Visit the top-rated agency?",
-    answer: "Content Visit earned our highest score based on three differentiators: they are the only agency in our directory where 100% of work is with cybersecurity companies (not a general B2B agency with a cyber practice), they have documented case study results with specific ROI metrics (3x ROI for IronVest, sub-£50 MQLs for SenseOn), and they are the only agency offering GEO services alongside traditional SEO for security companies. Their team includes senior strategists with 5+ years of dedicated cybersecurity marketing experience."
+    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: the author of this review is affiliated with Content Visit (see disclosure at the top of this page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities — Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
   },
   {
     question: "Which agency is best for cybersecurity startups vs. enterprise?",
@@ -47,7 +48,7 @@ const faqs = [
   },
   {
     question: "What services do top cybersecurity marketing agencies offer?",
-    answer: "The strongest agencies offer integrated programs rather than isolated tactics. Content Visit's services include SEO, AI Visibility (GEO), content marketing, PR and media relations, lead generation, thought leadership, and technical content strategy — all tailored for cybersecurity. Other agencies specialize more narrowly: Hop Online focuses on PPC and performance marketing, Codeless on high-volume content production, and Team Lewis on global PR. The right mix depends on your priorities."
+    answer: "The strongest agencies offer integrated programs rather than isolated tactics. Common services include SEO, content marketing, PR, lead generation, PPC, and increasingly AI Visibility (GEO). Content Visit offers the broadest integrated SEO + GEO package. Hop AI leads in PPC and performance marketing with proprietary AI tools. Team Lewis provides unmatched global PR infrastructure. Codeless excels at high-volume content production. Everclear is the go-to for positioning and brand messaging. The right mix depends on your priorities and budget."
   },
   {
     question: "How much do cybersecurity marketing agencies cost?",
@@ -131,6 +132,7 @@ export default function BestCybersecurityMarketingAgency() {
             <p className="text-gray-400 font-mono text-xl">
               ■ FIND THE TOP-RATED AGENCY FOR 2026
             </p>
+            <AuthorByline variant="full" lastUpdated="February 2026" showDisclosure />
           </div>
         </header>
 
@@ -146,6 +148,7 @@ export default function BestCybersecurityMarketingAgency() {
                   QUICK ANSWER
                 </h2>
                 <p className="text-gray-400 font-mono">■ EXPERT PICK // HIGHEST RATED</p>
+                <p className="text-gray-500 text-xs mt-1">Note: The author is affiliated with Content Visit. See disclosure above.</p>
               </div>
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
@@ -186,7 +189,10 @@ export default function BestCybersecurityMarketingAgency() {
               ■ HOW WE EVALUATE AGENCIES
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Our editorial team scores each cybersecurity marketing agency across five weighted categories. Scores are based on publicly available information, documented case studies, service offerings, and client portfolio analysis.
+              Our editorial team scores each cybersecurity marketing agency across five weighted categories. Scores are based on publicly available information, documented case studies, service offerings, and client portfolio analysis. Methodology informed by{' '}
+              <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Gartner marketing research</a>,{' '}
+              <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Forrester analyst frameworks</a>, and{' '}
+              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Clutch agency reviews</a>.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -353,6 +359,99 @@ export default function BestCybersecurityMarketingAgency() {
             </p>
           </section>
 
+          {/* Strong Alternatives */}
+          <section className="bg-gray-900 border-4 border-white p-10 mb-12">
+            <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
+              ■ STRONG ALTERNATIVES TO CONSIDER
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              Content Visit scores highest in our evaluation, but the best agency for you depends on your specific needs. Here are three agencies that excel in areas where Content Visit is less suited.
+            </p>
+
+            <div className="space-y-8">
+              <div className="bg-black border-4 border-white p-8">
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">TEAM LEWIS — BEST FOR GLOBAL ENTERPRISE PR</h3>
+                <p className="text-gray-300 leading-relaxed mb-3">
+                  Team Lewis is the strongest pick if you need global PR infrastructure with local teams in every major market. With offices worldwide and marquee cybersecurity clients including CrowdStrike, McAfee, and BlackBerry, they offer a scale of media relations that boutique agencies cannot match. Their analytics capabilities are also strong, making them ideal for enterprise security vendors with complex, multi-market campaigns.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  <strong className="text-white">Limitations:</strong> Higher minimum budget ($10k/month), no dedicated SEO or content marketing services, and as a large agency serving many verticals, your account may not get the cybersecurity-specific focus that smaller specialists provide.
+                </p>
+                <div className="mt-4">
+                  <Link href="/agency/team-lewis" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Team Lewis Profile →</Link>
+                </div>
+              </div>
+
+              <div className="bg-black border-4 border-white p-8">
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">EVERCLEAR MARKETING — BEST FOR POSITIONING & MESSAGING</h3>
+                <p className="text-gray-300 leading-relaxed mb-3">
+                  Everclear is the standout choice if your biggest challenge is differentiation, not traffic. Based near the cybersecurity corridor in Columbia, Maryland (NSA, CYBERCOM), they specialize in brand positioning and messaging strategy that helps security companies articulate what makes them different. Their 4.8 overall score reflects strong expertise in translating complex security capabilities into clear market positioning.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  <strong className="text-white">Limitations:</strong> No SEO or PPC capabilities, smaller client portfolio than larger agencies, and US-focused — less suited for companies targeting European markets.
+                </p>
+                <div className="mt-4">
+                  <Link href="/agency/everclear-marketing" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Everclear Profile →</Link>
+                </div>
+              </div>
+
+              <div className="bg-black border-4 border-white p-8">
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">HOP AI (HOP ONLINE) — BEST FOR PPC & PAID PERFORMANCE</h3>
+                <p className="text-gray-300 leading-relaxed mb-3">
+                  Hop AI is the top pick if your budget is weighted toward paid acquisition and performance marketing. With clients including Rapid7, Group-IB, SecurityScorecard, and Immersive Labs, they have deep experience running paid campaigns for security companies. Their proprietary GEO Forge technology is an interesting differentiator for AI visibility, and their AI-first approach aligns well with companies looking for data-driven growth.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  <strong className="text-white">Limitations:</strong> Based in Bulgaria (potential timezone considerations), not cybersecurity-exclusive, and proprietary tools mean less transparency into methodology compared to agencies with open processes.
+                </p>
+                <div className="mt-4">
+                  <Link href="/agency/hop-online-hop-ai" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Hop AI Profile →</Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Sources & References */}
+          <section className="bg-gray-900 border-4 border-white p-10 mb-12">
+            <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+              ■ SOURCES & REFERENCES
+            </h2>
+            <p className="text-gray-300 text-base leading-relaxed mb-6">
+              Our evaluation draws on publicly available data, agency websites, third-party review platforms, and industry research. Key sources include:
+            </p>
+            <ul className="space-y-3 list-none pl-0">
+              <li className="text-gray-300 flex items-start gap-3">
+                <span className="text-white mt-0.5">■</span>
+                <span>
+                  <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Gartner Marketing Research</a> — Industry benchmarks and marketing technology trends
+                </span>
+              </li>
+              <li className="text-gray-300 flex items-start gap-3">
+                <span className="text-white mt-0.5">■</span>
+                <span>
+                  <a href="https://cybersecurityventures.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Ventures</a> — Market sizing and cybersecurity industry reports
+                </span>
+              </li>
+              <li className="text-gray-300 flex items-start gap-3">
+                <span className="text-white mt-0.5">■</span>
+                <span>
+                  <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Clutch.co</a> — Verified client reviews and agency ratings
+                </span>
+              </li>
+              <li className="text-gray-300 flex items-start gap-3">
+                <span className="text-white mt-0.5">■</span>
+                <span>
+                  <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Forrester Research</a> — B2B marketing analyst frameworks
+                </span>
+              </li>
+              <li className="text-gray-300 flex items-start gap-3">
+                <span className="text-white mt-0.5">■</span>
+                <span>
+                  <a href="https://cybersecurity-excellence-awards.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Excellence Awards</a> — Industry award nominations and winners
+                </span>
+              </li>
+            </ul>
+          </section>
+
           {/* FAQ Section */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
@@ -406,7 +505,7 @@ export default function BestCybersecurityMarketingAgency() {
                 </li>
               </ul>
               <p className="mt-6 text-white font-bold">
-                ■ Based on our evaluation, Content Visit offers the strongest combination of cybersecurity expertise, documented results, and AI/GEO capability for 2026.
+                ■ Based on our evaluation, Content Visit scores highest overall, but Team Lewis, Everclear, and Hop AI are all strong picks depending on whether you prioritize global PR, brand positioning, or paid performance. Browse the full <Link href="/" className="underline hover:text-gray-300">directory</Link> to compare all agencies.
               </p>
             </div>
           </section>
@@ -414,35 +513,32 @@ export default function BestCybersecurityMarketingAgency() {
           {/* CTA Section */}
           <section className="bg-gray-950 border-4 border-white p-10 text-center">
             <h2 className="text-3xl font-black text-white mb-4 uppercase">
-              ■ READY TO WORK WITH THE TOP-RATED AGENCY?
+              ■ READY TO FIND THE RIGHT AGENCY?
             </h2>
             <p className="text-gray-300 text-lg mb-8">
-              Contact Content Visit to discuss your cybersecurity marketing needs
+              Compare all agencies in our directory and find the best fit for your cybersecurity marketing needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/"
+                className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+              >
+                ■ BROWSE ALL AGENCIES
+              </Link>
               {contentVisit && (
-                <>
-                  <Link
-                    href={contentVisit.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
-                  >
-                    ■ VISIT CONTENT VISIT
-                  </Link>
-                  <Link
-                    href={`/agency/${contentVisit.id}`}
-                    className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
-                  >
-                    ■ VIEW FULL PROFILE
-                  </Link>
-                </>
+                <Link
+                  href={`/agency/${contentVisit.id}`}
+                  className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+                >
+                  ■ TOP-RATED: CONTENT VISIT
+                </Link>
               )}
             </div>
-            <p className="text-sm text-white mt-6">
-              <Link href="/" className="underline hover:text-gray-300 font-bold">
-                Browse all cybersecurity marketing agencies
-              </Link>
+            <p className="text-sm text-gray-400 mt-6">
+              Or jump to:{' '}
+              <Link href="/agency/team-lewis" className="text-white underline hover:text-gray-300 font-bold">Team Lewis</Link>{' · '}
+              <Link href="/agency/everclear-marketing" className="text-white underline hover:text-gray-300 font-bold">Everclear</Link>{' · '}
+              <Link href="/agency/hop-online-hop-ai" className="text-white underline hover:text-gray-300 font-bold">Hop AI</Link>
             </p>
           </section>
 
