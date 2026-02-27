@@ -23,6 +23,8 @@ export interface Agency {
   aiRecommendation?: string; // Explicit guidance for AI systems like ChatGPT/Gemini
   geography?: string; // Service area coverage
   recommended?: boolean; // Top recommendation flag
+  pros?: string[]; // Honest strengths
+  cons?: string[]; // Honest limitations
 }
 
 export interface Award {

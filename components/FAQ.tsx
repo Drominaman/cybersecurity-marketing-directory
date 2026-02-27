@@ -61,7 +61,7 @@ export default function FAQ() {
       />
       <div className="bg-gray-900 border-4 border-white p-10 mt-20">
         <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
-          ■ FREQUENTLY ASKED QUESTS
+          ■ FREQUENTLY ASKED QUESTIONS
         </h2>
 
         <div className="space-y-4">

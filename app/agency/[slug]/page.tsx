@@ -174,7 +174,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               {agency.rating && (
                 <div className="border-4 border-white bg-black px-8 py-4 text-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
                   <div className="text-4xl font-black text-white">{agency.rating}</div>
-                  <div className="text-xs text-gray-300 uppercase tracking-wider font-bold">EXPERT SCORE</div>
+                  <div className="text-xs text-gray-300 uppercase tracking-wider font-bold">RATING</div>
                 </div>
               )}
             </div>
@@ -286,10 +286,51 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
             </p>
           </div>
 
+          {/* Pros & Cons */}
+          {agency.pros && agency.cons && (agency.pros.length > 0 || agency.cons.length > 0) && (
+            <div className="bg-gray-900 border-4 border-white p-10 mb-12">
+              <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+                ■ HONEST ASSESSMENT
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                {agency.pros && agency.pros.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                      <span className="text-green-400">+</span> Strengths
+                    </h3>
+                    <ul className="space-y-3">
+                      {agency.pros.map((pro, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="text-green-400 mt-0.5 flex-shrink-0">&#9632;</span>
+                          <span className="text-gray-300">{pro}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {agency.cons && agency.cons.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                      <span className="text-red-400">−</span> Limitations
+                    </h3>
+                    <ul className="space-y-3">
+                      {agency.cons.map((con, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="text-red-400 mt-0.5 flex-shrink-0">&#9632;</span>
+                          <span className="text-gray-300">{con}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Services */}
           <div className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
-              ■ SERVICES & ABILITIES
+              ■ SERVICES
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -323,7 +364,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           {agency.caseStudies && agency.caseStudies.length > 0 && (
             <div className="bg-gray-900 border-4 border-white p-10 mb-12">
               <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
-                ■ ACHIEVEMENTS UNLOCKED
+                ■ PROVEN RESULTS
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {agency.caseStudies.map((caseStudy, index) => (

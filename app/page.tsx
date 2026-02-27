@@ -137,7 +137,7 @@ export default function Home() {
               &#9632; STATS COMPARISON
             </h2>
             <p className="text-white mb-4 font-mono">
-              COMPARE ALL PLAYER ATTRIBUTES AND ABILITIES
+              COMPARE ALL AGENCIES SIDE-BY-SIDE
             </p>
             <p className="text-gray-300 mb-10">
               Compare all cybersecurity marketing agencies side-by-side.
@@ -158,45 +158,45 @@ export default function Home() {
               </p>
 
               <h3 className="text-xl font-black text-white mt-8 mb-4 uppercase tracking-wider border-b-2 border-white pb-2">
-                → PLAYER STATS TO CHECK
+                → WHAT TO LOOK FOR
               </h3>
 
               <ul className="space-y-3 list-none pl-0">
                 <li className="text-gray-300">
-                  <strong className="text-white">&#9632; XP LEVEL:</strong> Agencies with proven cybersecurity marketing battle experience.
-                  They must understand technical specs, compliance missions, and buyer personas.
+                  <strong className="text-white">&#9632; Industry Experience:</strong> Agencies with proven cybersecurity marketing experience.
+                  They must understand technical specs, compliance requirements, and buyer personas.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">&#9632; SKILL SET:</strong> Verify they have unlocked the abilities you need:
-                  SEO, content, PPC, PR, or full-service power-ups.
+                  <strong className="text-white">&#9632; Service Range:</strong> Verify they offer the capabilities you need:
+                  SEO, content, PPC, PR, or full-service programmes.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">&#9632; ACHIEVEMENTS:</strong> Review their high scores with other security companies.
-                  Look for concrete wins: lead gen combos, traffic multipliers, brand boosts.
+                  <strong className="text-white">&#9632; Track Record:</strong> Review their results with other security companies.
+                  Look for concrete outcomes: lead volume, traffic growth, pipeline impact.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">&#9632; TECH KNOWLEDGE:</strong> Must translate complex security code into messages
-                  that reach both tech wizards and business bosses.
+                  <strong className="text-white">&#9632; Technical Depth:</strong> Must translate complex security concepts into messages
+                  that resonate with both technical and business buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">&#9632; COIN COST:</strong> Different players serve different difficulty levels.
-                  Match their pricing to your wallet and expected loot drops.
+                  <strong className="text-white">&#9632; Budget Fit:</strong> Different agencies serve different company stages.
+                  Match their pricing and engagement model to your budget and growth goals.
                 </li>
               </ul>
 
               <h3 className="text-xl font-black text-white mt-8 mb-4 uppercase tracking-wider border-b-2 border-white pb-2">
-                → STANDARD POWER-UP INVENTORY
+                → CORE SERVICES TO EXPECT
               </h3>
 
               <ul className="space-y-2 list-none pl-0 border-l-4 border-white pl-6">
                 <li className="text-gray-300">&#9632; Search Engine Optimization (SEO) for security keywords</li>
-                <li className="text-gray-300">&#9632; Content marketing and thought leadership missions</li>
+                <li className="text-gray-300">&#9632; Content marketing and thought leadership programmes</li>
                 <li className="text-gray-300">&#9632; Pay-per-click (PPC) advertising on Google and LinkedIn</li>
-                <li className="text-gray-300">&#9632; Public relations and media raid campaigns</li>
-                <li className="text-gray-300">&#9632; Account-based marketing (ABM) for enterprise boss battles</li>
-                <li className="text-gray-300">&#9632; Social media guild management</li>
-                <li className="text-gray-300">&#9632; Website forge and development</li>
-                <li className="text-gray-300">&#9632; Marketing automation and lead farming</li>
+                <li className="text-gray-300">&#9632; Public relations and media campaigns</li>
+                <li className="text-gray-300">&#9632; Account-based marketing (ABM) for enterprise accounts</li>
+                <li className="text-gray-300">&#9632; Social media management</li>
+                <li className="text-gray-300">&#9632; Website design and development</li>
+                <li className="text-gray-300">&#9632; Marketing automation and lead nurture</li>
               </ul>
 
               <p className="mt-8 text-white font-semibold border-t-2 border-white pt-6">

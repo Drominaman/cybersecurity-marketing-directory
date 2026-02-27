@@ -34,10 +34,10 @@ export default function SiteFooter() {
         </div>
         <div className="text-center border-t border-gray-800 pt-6">
           <p className="text-gray-500 font-mono text-sm mb-2">
-            ■ GAME OVER ■
+            ■ CYBERSEC.DIR ■
           </p>
           <p className="text-gray-600 text-xs uppercase tracking-wider font-bold">
-            &copy; {new Date().getFullYear()} CYBERSEC.DIR // INSERT COIN TO CONTINUE
+            &copy; {new Date().getFullYear()} Cybersecurity Marketing Agencies Directory
           </p>
         </div>
       </div>

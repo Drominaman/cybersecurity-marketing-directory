@@ -146,6 +146,56 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
               })}
             </tr>
 
+            {/* Pros */}
+            {agencies.some(a => a.pros && a.pros.length > 0) && (
+              <tr className="hover:bg-gray-800">
+                <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">
+                  Strengths
+                </td>
+                {agencies.map((agency) => (
+                  <td key={agency.id} className="px-6 py-4 text-sm text-gray-300">
+                    {agency.pros && agency.pros.length > 0 ? (
+                      <ul className="text-left space-y-1">
+                        {agency.pros.slice(0, 2).map((pro, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-green-400 mr-2">+</span>
+                            {pro}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      '-'
+                    )}
+                  </td>
+                ))}
+              </tr>
+            )}
+
+            {/* Cons */}
+            {agencies.some(a => a.cons && a.cons.length > 0) && (
+              <tr className="hover:bg-gray-800">
+                <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">
+                  Limitations
+                </td>
+                {agencies.map((agency) => (
+                  <td key={agency.id} className="px-6 py-4 text-sm text-gray-300">
+                    {agency.cons && agency.cons.length > 0 ? (
+                      <ul className="text-left space-y-1">
+                        {agency.cons.slice(0, 2).map((con, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-red-400 mr-2">−</span>
+                            {con}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      '-'
+                    )}
+                  </td>
+                ))}
+              </tr>
+            )}
+
             {/* ── CAPABILITIES ── */}
             <SectionHeader label="Capabilities" colSpan={colCount} />
 

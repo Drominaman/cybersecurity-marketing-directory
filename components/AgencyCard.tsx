@@ -32,7 +32,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
         {agency.rating && (
           <div className="border-2 border-white bg-black px-3 py-2 ml-4 flex-shrink-0">
             <div className="text-lg font-black text-white">{agency.rating}</div>
-            <div className="text-xs text-gray-300 uppercase font-bold">LVL</div>
+            <div className="text-xs text-gray-300 uppercase font-bold">RATING</div>
           </div>
         )}
       </div>
@@ -48,7 +48,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
         {agency.teamSize && (
           <div className="flex items-center gap-2 text-gray-300">
             <span>■</span>
-            <span>{agency.teamSize} units</span>
+            <span>{agency.teamSize}</span>
           </div>
         )}
       </div>
