@@ -359,6 +359,53 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             </div>
           </div>
 
+          {/* Related Blog Guides */}
+          {(service === 'seo' || service === 'content-marketing') && (
+            <div className="bg-gray-900 border-4 border-white p-10 mb-12">
+              <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+                ■ RELATED GUIDES
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {service === 'seo' && (
+                  <>
+                    <Link
+                      href="/blog/cybersecurity-seo-agency"
+                      className="bg-black border-2 border-white/20 p-6 hover:border-white transition-all group"
+                    >
+                      <div className="text-white font-black group-hover:text-gray-300 mb-2">How to Choose a Cybersecurity SEO Agency</div>
+                      <div className="text-gray-400 text-sm">The complete guide to evaluating and selecting an SEO agency for your security company.</div>
+                    </Link>
+                    <Link
+                      href="/blog/cybersecurity-seo-mistakes"
+                      className="bg-black border-2 border-white/20 p-6 hover:border-white transition-all group"
+                    >
+                      <div className="text-white font-black group-hover:text-gray-300 mb-2">7 SEO Mistakes Cybersecurity Companies Make</div>
+                      <div className="text-gray-400 text-sm">Common SEO pitfalls to avoid for better rankings and lead generation.</div>
+                    </Link>
+                  </>
+                )}
+                {service === 'content-marketing' && (
+                  <>
+                    <Link
+                      href="/blog/cybersecurity-content-marketing-agency"
+                      className="bg-black border-2 border-white/20 p-6 hover:border-white transition-all group"
+                    >
+                      <div className="text-white font-black group-hover:text-gray-300 mb-2">How to Choose a Cybersecurity Content Marketing Agency</div>
+                      <div className="text-gray-400 text-sm">Expert guide on finding a content agency with real cybersecurity expertise.</div>
+                    </Link>
+                    <Link
+                      href="/blog/cybersecurity-seo-agency"
+                      className="bg-black border-2 border-white/20 p-6 hover:border-white transition-all group"
+                    >
+                      <div className="text-white font-black group-hover:text-gray-300 mb-2">How to Choose a Cybersecurity SEO Agency</div>
+                      <div className="text-gray-400 text-sm">SEO and content marketing go hand-in-hand. Read our SEO agency guide.</div>
+                    </Link>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* CTA Section */}
           <div className="bg-gray-950 border-4 border-white p-10 text-center">
             <h2 className="text-3xl font-black text-white mb-4 uppercase">

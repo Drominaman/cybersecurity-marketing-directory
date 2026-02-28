@@ -54,6 +54,13 @@ export default function BlogCard({ post }: BlogCardProps) {
                 <span className="text-gray-300">{post.readingTime} min read</span>
               </>
             )}
+            <span>•</span>
+            <Link
+              href={`/blog/author/${slugify(post.author)}`}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {post.author}
+            </Link>
           </div>
 
         <h2 className="text-xl font-black text-white mb-3 uppercase leading-tight hover:text-gray-300 transition-colors">

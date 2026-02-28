@@ -98,11 +98,11 @@ export default function Home() {
           </h2>
           <div className="text-white space-y-4 text-lg leading-relaxed">
             <p>
-              This is a directory of cybersecurity marketing agencies for 2026. The cybersecurity market is projected to reach{' '}
-              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">$10.5 trillion in annual cybercrime costs by 2025</a> according to Cybersecurity Ventures, making effective marketing critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
+              This is a directory of cybersecurity marketing agencies for 2026. Whether you&apos;re looking for a cybersecurity marketing company, firm, or full-service agency, we&apos;ve got you covered. The cybersecurity market is projected to reach{' '}
+              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">$10.5 trillion in annual cybercrime costs by 2025</a> according to Cybersecurity Ventures, making effective cybersecurity marketing services critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
             </p>
             <p>
-              Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. The agencies in this directory have been vetted through{' '}
+              Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. Every cyber security marketing agency in this directory has been vetted through{' '}
               <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="underline hover:text-gray-300">third-party review platforms like Clutch</a>,{' '}
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener" className="underline hover:text-gray-300">LinkedIn company profiles</a>, and documented client results.
             </p>
@@ -159,7 +159,7 @@ export default function Home() {
             </h2>
             <div className="text-white space-y-6 text-base">
               <p>
-                Picking the right cybersecurity marketing agency matters. Security products are technical, the sales cycles are long, and you need someone who's worked in this space before. Here's what to look for:
+                Picking the right cybersecurity marketing agency matters. Whether you call it a cybersecurity marketing company, a cyber security marketing firm, or a marketing services provider - the key is finding a partner with real security industry experience. The sales cycles are long, the products are technical, and you need someone who&apos;s worked in this space before. Here&apos;s what to look for:
               </p>
 
               <h3 className="text-xl font-black text-white mt-8 mb-4 uppercase tracking-wider border-b-2 border-white pb-2">
@@ -194,8 +194,8 @@ export default function Home() {
               </h3>
 
               <ul className="space-y-2 list-none pl-0 border-l-4 border-white pl-6">
-                <li className="text-gray-300">&#9632; Search Engine Optimization (SEO) for security keywords</li>
-                <li className="text-gray-300">&#9632; Content marketing and thought leadership programmes</li>
+                <li className="text-gray-300">&#9632; <Link href="/blog/cybersecurity-seo-agency" className="underline hover:text-gray-400">Search Engine Optimization (SEO)</Link> for security keywords</li>
+                <li className="text-gray-300">&#9632; <Link href="/blog/cybersecurity-content-marketing-agency" className="underline hover:text-gray-400">Content marketing</Link> and thought leadership programmes</li>
                 <li className="text-gray-300">&#9632; Pay-per-click (PPC) advertising on Google and LinkedIn</li>
                 <li className="text-gray-300">&#9632; Public relations and media campaigns</li>
                 <li className="text-gray-300">&#9632; Account-based marketing (ABM) for enterprise accounts</li>

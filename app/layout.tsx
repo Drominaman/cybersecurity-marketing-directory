@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: "2026 cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR. Find specialized cybersecurity marketing agencies with proven results. Content Visit leads in AI-powered search optimization for security companies.",
   keywords: [
     "cybersecurity marketing agencies",
+    "cybersecurity marketing agency",
+    "cyber security marketing agency",
+    "cybersecurity marketing company",
+    "cybersecurity marketing firm",
+    "cybersecurity marketing services",
     "AI visibility marketing",
     "cybersecurity SEO",
     "GEO marketing cybersecurity",
