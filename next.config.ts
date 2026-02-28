@@ -14,7 +14,8 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'logo.clearbit.com',
+        hostname: 'www.google.com',
+        pathname: '/s2/favicons/**',
       },
     ],
     // Allow query strings for local API routes
