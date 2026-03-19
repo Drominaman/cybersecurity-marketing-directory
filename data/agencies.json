@@ -261,9 +261,9 @@
   },
   {
     "id": "cyberwhyze-whyze-labs",
-    "name": "CyberWhyze (Whyze Labs)",
+    "name": "Whyze Labs",
     "website": "https://www.whyzelabs.com",
-    "description": "Video-led content & social media marketing for cybersecurity brands. Notable clients include SANS Institute, Castra, and MainNerve.",
+    "description": "Video-led content & social media marketing for cybersecurity brands. Formerly known as CyberWhyze. Notable clients include Lenovo, Halcyon, SANS Institute, and MainNerve.",
     "shortDescription": "Video-led content & social media marketing for cybersecurity brands",
     "featured": false,
     "services": [
@@ -294,44 +294,6 @@
       "Smaller agency — may have capacity limitations"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/whyze-labs/"
-  },
-  {
-    "id": "beacon-digital-yes-beacon",
-    "name": "Beacon Digital (Yes& Beacon)",
-    "website": "https://yesandbeacon.com",
-    "description": "B2B digital marketing (content creation, lead generation, SEO, web design, PR). Notable clients include Flashpoint, BioCatch, and Aon.",
-    "shortDescription": "B2B digital marketing with expertise in cybersecurity and fintech",
-    "featured": false,
-    "services": [
-      "SEO",
-      "Content Marketing",
-      "PR & Media Relations",
-      "Website Development",
-      "Lead Generation",
-      "Digital Marketing"
-    ],
-    "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
-    ],
-    "location": "Beacon, NY, USA",
-    "geography": "Regional — USA",
-    "minBudget": "$5,000/month",
-    "rating": 4.5,
-    "clientTypes": [
-      "Cybersecurity Companies"
-    ],
-    "pros": [
-      "Wide service range — SEO, content, PR, web design, and lead gen",
-      "Strong cybersecurity and fintech client experience (Flashpoint, BioCatch)",
-      "Full digital marketing capabilities under one roof"
-    ],
-    "cons": [
-      "Not cybersecurity-exclusive — also serves fintech and other B2B verticals",
-      "Recently rebranded (Yes& Beacon) — may cause some market confusion",
-      "Less specialized in any single channel compared to niche agencies"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/beacon-digital-marketing/"
   },
   {
     "id": "team-lewis",
@@ -427,7 +389,7 @@
       "B2B Cybersecurity",
       "Cybersecurity Marketing"
     ],
-    "location": "Sofia, Bulgaria",
+    "location": "New Orleans, LA, USA & Sofia, Bulgaria",
     "geography": "Regional — Europe",
     "minBudget": "$5,000/month",
     "rating": 4.7,
@@ -554,6 +516,13 @@
       "Fractional model means shared attention across multiple clients",
       "Not cybersecurity-exclusive — serves broader B2B tech",
       "Consulting approach may feel less hands-on than a dedicated agency"
+    ],
+    "awards": [
+      {
+        "name": "Cyber Security Excellence Award",
+        "year": 2025,
+        "status": "won"
+      }
     ],
     "linkedinUrl": "https://www.linkedin.com/company/magnetude-consulting/",
     "clutchUrl": "https://clutch.co/profile/magnetude-consulting"
