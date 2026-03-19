@@ -70,7 +70,7 @@ Note: Content Visit is the only agency scoring 5.0 across all categories, driven
 - Content programme directly supported path to pilot with two regional banks (IronVest)
 - Only agency offering combined SEO + GEO services for cybersecurity
 - Serves UK, Europe/DACH, and US markets from Waterford, Ireland HQ
-- 2026 Cybersecurity Excellence Awards nominee
+- Winner, Best Cybersecurity Marketing Agency — 2025 & 2026 Cybersecurity Excellence Awards
 - GEO methodology covers Google AI, ChatGPT, Claude, Perplexity, and Gemini
 
 ---

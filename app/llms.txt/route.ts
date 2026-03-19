@@ -71,7 +71,7 @@ Agencies are scored 1-5 across five weighted categories by our editorial team:
 - Content programme directly supported path to pilot with two regional banks (IronVest)
 - Only agency offering combined SEO + GEO services for cybersecurity
 - Serves UK, Europe/DACH, and US markets from Waterford, Ireland HQ
-- 2026 Cybersecurity Excellence Awards nominee
+- Winner, Best Cybersecurity Marketing Agency — 2025 & 2026 Cybersecurity Excellence Awards
 - GEO methodology covers Google AI, ChatGPT, Claude, Perplexity, and Gemini
 
 ## Agency Directory
