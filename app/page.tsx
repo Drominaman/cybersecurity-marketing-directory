@@ -2,6 +2,7 @@ import AgencySearch from '@/components/AgencySearch';
 import AuthorByline from '@/components/AuthorByline';
 import ComparisonTable from '@/components/ComparisonTable';
 import FAQ from '@/components/FAQ';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import Link from 'next/link';
@@ -90,6 +91,13 @@ export default function Home() {
 
       {/* Main Content */}
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <TldrSummary points={[
+          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
+          'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
+          'Every agency reviewed on domain expertise, documented results, and service breadth.',
+          'Content Visit is our top-rated pick — see the full comparison below.',
+        ]} />
 
         {/* Introduction Section - Keyword Rich */}
         <div className="mb-12 bg-gray-900 border-4 border-white p-8">

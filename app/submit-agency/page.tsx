@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 
@@ -76,6 +77,12 @@ export default function SubmitAgencyPage() {
               Want your cybersecurity marketing agency listed in our directory? Fill out the form below and we&apos;ll review your submission. Your email client will open with the details pre-filled.
             </p>
           </div>
+
+          <TldrSummary points={[
+            'Submit your cybersecurity marketing agency for inclusion in our directory.',
+            'We review every submission for domain expertise and documented results.',
+            'Fill in the form below — your email client will open with the details pre-filled.',
+          ]} />
 
           {/* Form */}
           <form onSubmit={handleSubmit}>

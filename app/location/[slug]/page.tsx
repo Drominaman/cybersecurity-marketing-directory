@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import AgencyCard from '@/components/AgencyCard';
+import TldrSummary from '@/components/TldrSummary';
 import { getAllAgencies } from '@/lib/agencies';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -145,6 +146,13 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       </header>
 
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <TldrSummary points={[
+          `${totalAgencies} cybersecurity marketing agencies serving ${location.name}.`,
+          `Includes ${localAgencies.length} local ${localAgencies.length === 1 ? 'agency' : 'agencies'} and ${globalAgencies.length} global ${globalAgencies.length === 1 ? 'firm' : 'firms'} with international reach.`,
+          'All agencies vetted for cybersecurity domain expertise and documented client results.',
+        ]} />
+
         <div className="mb-12">
           <h2 className="text-2xl font-black text-white mb-4 uppercase">
             ■ {totalAgencies} AGENCIES AVAILABLE

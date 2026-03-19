@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
 import { getAgencyLogoUrl } from '@/lib/utils';
 import AuthorByline from '@/components/AuthorByline';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -210,6 +211,14 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
 
         {/* Main Content */}
         <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+          <TldrSummary points={[
+            `${agency.name} is a cybersecurity marketing agency${agency.location ? ` based in ${agency.location}` : ''}.`,
+            `Services: ${agency.services.slice(0, 4).join(', ')}${agency.services.length > 4 ? ` +${agency.services.length - 4} more` : ''}.`,
+            ...(agency.rating ? [`Rated ${agency.rating}/5 in our editorial evaluation.`] : []),
+            ...(badges.length > 0 ? [`Editor picks: ${badges.join(', ')}.`] : []),
+            agency.shortDescription,
+          ]} />
 
           {/* Quick Stats */}
           <div className="grid md:grid-cols-3 gap-4 mb-12">

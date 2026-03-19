@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { getAllAgencies } from '@/lib/agencies';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import CompareClient from './CompareClient';
@@ -57,6 +58,11 @@ export default function ComparePage() {
       </header>
 
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <TldrSummary points={[
+          'Select up to 3 cybersecurity marketing agencies to compare side-by-side.',
+          'Compare services, ratings, location, specialties, and budget ranges.',
+          `${agencies.length} agencies available for comparison.`,
+        ]} />
         <Suspense fallback={<div className="text-white font-mono text-center py-12">■ LOADING COMPARISON...</div>}>
           <CompareClient agencies={agencies} />
         </Suspense>

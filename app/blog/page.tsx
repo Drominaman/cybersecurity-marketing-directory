@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getAllPosts, getAllTags, slugify } from '@/lib/blog';
 import BlogCard from '@/components/BlogCard';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 
@@ -124,6 +125,13 @@ export default function BlogPage() {
 
       {/* Blog Posts Grid */}
       <main className="max-w-7xl mx-auto px-4 py-12">
+
+        <TldrSummary points={[
+          `${posts.length} expert articles on cybersecurity marketing strategy.`,
+          'Covers SEO, AI visibility, content marketing, PPC, and growth tactics for security companies.',
+          'Written by cybersecurity marketing practitioners with real-world experience.',
+        ]} />
+
         {posts.length === 0 ? (
           <div className="text-center py-20">
             <div className="text-6xl mb-6">📝</div>

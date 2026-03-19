@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
 import AuthorByline from '@/components/AuthorByline';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -138,6 +139,13 @@ export default function BestCybersecurityMarketingAgency() {
 
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+          <TldrSummary points={[
+            'Content Visit is our #1 pick for 2026 with a perfect 5.0 score across all categories.',
+            'Strong alternatives: Team Lewis (4.8) for global PR, Everclear (4.8) for positioning, Hop AI (4.7) for PPC.',
+            'Agencies scored on domain expertise, documented results, service breadth, AI/GEO capability, and client portfolio.',
+            'Most cybersecurity marketing retainers cost $5,000-$15,000/month.',
+          ]} />
 
           {/* Quick Answer */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]">

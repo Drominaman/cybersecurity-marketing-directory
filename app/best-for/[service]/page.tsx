@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getAllAgencies } from '@/lib/agencies';
 import AuthorByline from '@/components/AuthorByline';
+import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
@@ -166,6 +167,12 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
         {/* Main Content */}
         <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+          <TldrSummary points={[
+            `${sortedAgencies.length} cybersecurity marketing agencies offering ${serviceName} compared.`,
+            ...(topAgency ? [`Top pick: ${topAgency.name}${topAgency.rating ? ` (${topAgency.rating}/5)` : ''}.`] : []),
+            `All agencies vetted for proven ${serviceName} expertise in the cybersecurity space.`,
+          ]} />
 
           {/* Top Recommendation Box */}
           {topAgency && (
