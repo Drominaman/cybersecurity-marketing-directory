@@ -24,6 +24,9 @@ export default function SubmitAgencyPage() {
   const [location, setLocation] = useState('');
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [description, setDescription] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleServiceToggle = (service: string) => {
     setSelectedServices((prev) =>
@@ -33,24 +36,44 @@ export default function SubmitAgencyPage() {
     );
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
 
-    const body = [
-      `Agency Name: ${agencyName}`,
-      `Website URL: ${websiteUrl}`,
-      `Contact Email: ${contactEmail}`,
-      `Location/Region: ${location || 'Not specified'}`,
-      `Services: ${selectedServices.length > 0 ? selectedServices.join(', ') : 'Not specified'}`,
-      ``,
-      `Description:`,
-      description || 'Not provided',
-    ].join('\n');
+    try {
+      const res = await fetch('/api/submit-agency', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          agencyName,
+          websiteUrl,
+          contactEmail,
+          location,
+          services: selectedServices,
+          description,
+        }),
+      });
 
-    const subject = `Agency Submission: ${agencyName}`;
-    const mailtoUrl = `mailto:hello@cybersecuritymarketingagencies.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Failed to submit.');
+      }
 
-    window.location.href = mailtoUrl;
+      setSubmitStatus('success');
+      setAgencyName('');
+      setWebsiteUrl('');
+      setContactEmail('');
+      setLocation('');
+      setSelectedServices([]);
+      setDescription('');
+    } catch (err) {
+      setSubmitStatus('error');
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,14 +97,14 @@ export default function SubmitAgencyPage() {
               SUBMIT YOUR AGENCY
             </h1>
             <p className="text-gray-400 font-mono text-sm max-w-2xl">
-              Want your cybersecurity marketing agency listed in our directory? Fill out the form below and we&apos;ll review your submission. Your email client will open with the details pre-filled.
+              Want your cybersecurity marketing agency listed in our directory? Fill out the form below and we&apos;ll review your submission.
             </p>
           </div>
 
           <TldrSummary points={[
             'Submit your cybersecurity marketing agency for inclusion in our directory.',
             'We review every submission for domain expertise and documented results.',
-            'Fill in the form below — your email client will open with the details pre-filled.',
+            'Fill in the form below and hit submit — we\'ll take it from there.',
           ]} />
 
           {/* Form */}
@@ -217,17 +240,30 @@ export default function SubmitAgencyPage() {
               </div>
             </div>
 
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="bg-green-900 border-4 border-green-400 p-6 mb-12 text-center">
+                <p className="text-green-400 font-black uppercase tracking-wide text-lg mb-2">SUBMISSION RECEIVED</p>
+                <p className="text-green-300 font-mono text-sm">Thanks! We&apos;ll review your agency and get back to you.</p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="bg-red-900 border-4 border-red-400 p-6 mb-12 text-center">
+                <p className="text-red-400 font-black uppercase tracking-wide text-lg mb-2">SUBMISSION FAILED</p>
+                <p className="text-red-300 font-mono text-sm">{errorMessage}</p>
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]"
+                disabled={isSubmitting}
+                className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                SUBMIT AGENCY &#9654;
+                {isSubmitting ? 'SUBMITTING...' : 'SUBMIT AGENCY \u25B6'}
               </button>
-              <p className="text-gray-500 font-mono text-xs mt-4 uppercase tracking-wider">
-                This will open your email client with the submission details
-              </p>
             </div>
           </form>
 

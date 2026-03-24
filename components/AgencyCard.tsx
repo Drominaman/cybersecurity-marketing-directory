@@ -3,6 +3,26 @@ import { getAgencyLogoUrl } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const SERVICE_SLUGS: Record<string, string> = {
+  'SEO': 'seo',
+  'AI Visibility': 'ai-visibility',
+  'Content Marketing': 'content-marketing',
+  'PR & Media Relations': 'pr-media-relations',
+  'Lead Generation': 'lead-generation',
+  'Thought Leadership': 'thought-leadership',
+  'Technical Content Strategy': 'technical-content-strategy',
+  'PPC': 'ppc',
+  'Social Media': 'social-media',
+  'Brand Strategy': 'brand-strategy',
+  'Website Development': 'website-development',
+  'Digital Marketing': 'digital-marketing',
+  'Video Marketing': 'video-marketing',
+  'Podcast Marketing': 'podcast-marketing',
+  'Demand Generation': 'demand-generation',
+  'Sales Enablement': 'sales-enablement',
+  'Marketing Analytics': 'marketing-analytics',
+};
+
 interface AgencyCardProps {
   agency: Agency;
 }
@@ -71,13 +91,29 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
       <div className="mb-4">
         <div className="text-xs font-bold text-white mb-2 uppercase tracking-wider">■ SERVICES</div>
         <div className="flex flex-wrap gap-2">
-          {agency.services.slice(0, 4).map((service) => (
-            <span key={service} className="bg-gray-800 border-2 border-white text-gray-300 px-2 py-1 text-xs font-bold">
-              {service}
-            </span>
-          ))}
+          {agency.services.slice(0, 4).map((service) => {
+            const slug = SERVICE_SLUGS[service];
+            return slug ? (
+              <Link
+                key={service}
+                href={`/best-for/${slug}`}
+                className="bg-gray-800 border-2 border-white text-gray-300 px-2 py-1 text-xs font-bold hover:bg-white hover:text-black transition-colors"
+              >
+                {service}
+              </Link>
+            ) : (
+              <span key={service} className="bg-gray-800 border-2 border-white text-gray-300 px-2 py-1 text-xs font-bold">
+                {service}
+              </span>
+            );
+          })}
           {agency.services.length > 4 && (
-            <span className="text-gray-400 text-xs py-1 font-bold">+{agency.services.length - 4}</span>
+            <Link
+              href={`/agency/${agency.id}`}
+              className="text-gray-400 text-xs py-1 font-bold hover:text-white transition-colors"
+            >
+              +{agency.services.length - 4}
+            </Link>
           )}
         </div>
       </div>

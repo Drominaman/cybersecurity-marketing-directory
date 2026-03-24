@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
+import ConsultationCTA from "@/components/ConsultationCTA";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -133,6 +135,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <Suspense><ConsultationCTA /></Suspense>
       </body>
     </html>
   );
