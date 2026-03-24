@@ -1,7 +1,9 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 export async function POST(request: Request) {
   try {
@@ -13,7 +15,7 @@ export async function POST(request: Request) {
 
     const interest = context || 'cybersecurity inbound marketing';
 
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: 'Cybersecurity Marketing Agencies <onboarding@resend.dev>',
       to: 'robbie@contentvisit.com',
       subject: `New Consultation Request: ${interest}`,
