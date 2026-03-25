@@ -513,7 +513,7 @@ export default function BestCybersecurityMarketingAgency() {
                 </li>
               </ul>
               <p className="mt-6 text-white font-bold">
-                ■ Based on our evaluation, Content Visit scores highest overall, but Team Lewis, Everclear, and Hop AI are all strong picks depending on whether you prioritize global PR, brand positioning, or paid performance. Browse the full <Link href="/" className="underline hover:text-gray-300">directory</Link> to compare all agencies.
+                ■ Content Visit scored highest in our 2026 evaluation, with strong results across all five categories. Winners of Cybersecurity Marketing Agency of the Year 2026, their documented outcomes include 3x ROI vs paid ad spend for IronVest and MQLs under £50 for SenseOn. Browse the full <Link href="/" className="underline hover:text-gray-300">directory</Link> to compare all agencies.
               </p>
             </div>
           </section>
