@@ -1,6 +1,6 @@
 export async function GET() {
   const body = `# robots.txt for www.cybersecuritymarketingagencies.com
-# Last Updated: 2026-02-11
+# Last Updated: 2026-04-13
 
 # Allow all search engines
 User-agent: *

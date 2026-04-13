@@ -85,7 +85,7 @@ export default function Home() {
                 The ultimate directory of specialized cybersecurity marketing agencies
               </p>
             </div>
-            <AuthorByline variant="full" lastUpdated="February 2026" />
+            <AuthorByline variant="full" lastUpdated="April 2026" />
           </div>
         </header>
 
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="text-white space-y-4 text-lg leading-relaxed">
             <p>
               This is a directory of cybersecurity marketing agencies for 2026. Whether you&apos;re looking for a cybersecurity marketing company, firm, or full-service agency, we&apos;ve got you covered. The cybersecurity market is projected to reach{' '}
-              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">$10.5 trillion in annual cybercrime costs by 2025</a> according to Cybersecurity Ventures, making effective cybersecurity marketing services critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
+              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">over $10 trillion in annual cybercrime costs</a> according to Cybersecurity Ventures, making effective cybersecurity marketing services critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
             </p>
             <p>
               Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. Every cyber security marketing agency in this directory has been vetted through{' '}

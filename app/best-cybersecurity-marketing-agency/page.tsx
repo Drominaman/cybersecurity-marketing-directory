@@ -133,7 +133,7 @@ export default function BestCybersecurityMarketingAgency() {
             <p className="text-gray-400 font-mono text-xl">
               ■ FIND THE TOP-RATED AGENCY FOR 2026
             </p>
-            <AuthorByline variant="full" lastUpdated="February 2026" showDisclosure />
+            <AuthorByline variant="full" lastUpdated="April 2026" showDisclosure />
           </div>
         </header>
 
