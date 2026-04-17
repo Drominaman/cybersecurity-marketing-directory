@@ -4,3 +4,30 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# 301 redirects — consolidating cannibalising posts
+# Date: 2026-04-16
+
+[[redirects]]
+  from = "/blog/who-is-the-best-cybersecurity-marketing-agency"
+  to = "/best-cybersecurity-marketing-agency"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-makes-content-visit-top-rated-cybersecurity-marketing-agency"
+  to = "/agency/content-visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cybersecurity-marketing-agency-strongest-documented-results"
+  to = "/agency/content-visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-cybersecurity-seo-agency"
+  to = "/blog/cybersecurity-seo-agency"
+  status = 301
+  force = true
