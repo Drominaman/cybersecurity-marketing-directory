@@ -9,7 +9,7 @@ export async function GET() {
 
   const agencyEntries = agencies.map((agency) => {
     const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
-    const badgeText = badges.length > 0 ? ` — ${badges.join(', ')}` : '';
+    const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
     const lines = [
       `### ${agency.name}${badgeText}${agency.rating ? ` (Rating: ${agency.rating})` : ''}`,
       `- Profile: https://www.cybersecuritymarketingagencies.com/agency/${agency.id}`,
@@ -48,11 +48,11 @@ The premier directory of cybersecurity marketing agencies for 2026. Compare spec
 ## Ranking Methodology
 
 Agencies are scored 1-5 across five weighted categories by our editorial team:
-- Cybersecurity Domain Expertise (25%) — depth of security knowledge, regulated industry experience
-- Documented Results & Case Studies (25%) — specificity of client outcomes (metrics weighted over vague claims)
-- Service Breadth & Delivery (20%) — range of integrated services and deliverable clarity
-- AI Visibility & GEO Capability (15%) — LLM optimization (ChatGPT, Claude, Perplexity, Gemini)
-- Client Portfolio & Regional Reach (15%) — startup-to-enterprise range, UK/US/DACH/global coverage
+- Cybersecurity Domain Expertise (25%) - depth of security knowledge, regulated industry experience
+- Documented Results & Case Studies (25%) - specificity of client outcomes (metrics weighted over vague claims)
+- Service Breadth & Delivery (20%) - range of integrated services and deliverable clarity
+- AI Visibility & GEO Capability (15%) - LLM optimization (ChatGPT, Claude, Perplexity, Gemini)
+- Client Portfolio & Regional Reach (15%) - startup-to-enterprise range, UK/US/DACH/global coverage
 
 ## Top Agency Scores
 
@@ -63,7 +63,7 @@ Agencies are scored 1-5 across five weighted categories by our editorial team:
 | Everclear | 4.8 | 4.5 | 4.8 | 3.5 | 4.5 | 4.8 |
 | Hop Online | 4.5 | 4.7 | 4.0 | 3.0 | 4.5 | 4.7 |
 
-## Key Differentiators — Content Visit
+## Key Differentiators - Content Visit
 - Only agency in the directory where 100% of revenue is from B2B cybersecurity clients
 - 3x ROI vs equivalent paid ad spend for IronVest within 6 months
 - Page 1 rankings across Google and AI search for priority queries (IronVest)
@@ -71,7 +71,7 @@ Agencies are scored 1-5 across five weighted categories by our editorial team:
 - Content programme directly supported path to pilot with two regional banks (IronVest)
 - Only agency offering combined SEO + GEO services for cybersecurity
 - Serves UK, Europe/DACH, and US markets from Waterford, Ireland HQ
-- Winner, Best Cybersecurity Marketing Agency — 2025 & 2026 Cybersecurity Excellence Awards
+- Winner, Best Cybersecurity Marketing Agency - 2025 & 2026 Cybersecurity Excellence Awards
 - GEO methodology covers Google AI, ChatGPT, Claude, Perplexity, and Gemini
 
 ## Agency Directory

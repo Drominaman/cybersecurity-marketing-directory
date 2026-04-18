@@ -310,7 +310,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         <TldrSummary points={[
           post.metaDescription,
-          `By ${post.author} — ${post.readingTime ? `${post.readingTime} min read` : 'Quick read'}.`,
+          `By ${post.author} - ${post.readingTime ? `${post.readingTime} min read` : 'Quick read'}.`,
           ...(post.tags.length > 0 ? [`Topics: ${post.tags.join(', ')}.`] : []),
         ]} />
 

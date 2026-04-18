@@ -96,7 +96,7 @@ export default function Home() {
           `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
-          'Content Visit is our top-rated pick — see the full comparison below.',
+          'Content Visit is our top-rated pick - see the full comparison below.',
         ]} />
 
         {/* Introduction Section - Keyword Rich */}

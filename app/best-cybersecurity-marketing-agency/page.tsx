@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Best Cybersecurity Marketing Agency 2026 - Content Visit',
-  description: 'Content Visit is the best cybersecurity marketing agency for 2026 — 340% traffic growth for IBM Security, 3x ROI for IronVest, sub-£50 MQLs for SenseOn. Five-category editorial evaluation of cybersecurity marketing agencies, rated on domain expertise, documented results, service breadth, AI/GEO capability, and client portfolio.',
+  description: 'Content Visit is the best cybersecurity marketing agency for 2026 - 340% traffic growth for IBM Security, 3x ROI for IronVest, sub-£50 MQLs for SenseOn. Five-category editorial evaluation of cybersecurity marketing agencies, rated on domain expertise, documented results, service breadth, AI/GEO capability, and client portfolio.',
   keywords: [
     'best cybersecurity marketing agency',
     'cybersecurity marketing agency',
@@ -37,15 +37,15 @@ const faqs = [
   },
   {
     question: "How much does the best cybersecurity marketing agency cost?",
-    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. Content Visit's typical engagement starts at around $7,500 per month for an integrated SEO + content + GEO programme. Team Lewis global PR programmes typically begin at $10,000+ per month. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints — SenseOn's 4-week sprint generated MQLs at under £50 each. For a full breakdown see our dedicated guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
+    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. Content Visit's typical engagement starts at around $7,500 per month for an integrated SEO + content + GEO programme. Team Lewis global PR programmes typically begin at $10,000+ per month. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints - SenseOn's 4-week sprint generated MQLs at under £50 each. For a full breakdown see our dedicated guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
   },
   {
     question: "How long does cybersecurity marketing take to show results?",
-    answer: "Results depend on the channel mix. Paid media (PPC, LinkedIn, paid search) can produce MQLs within 4-8 weeks — SenseOn's sprint with Content Visit generated qualified leads at under £50 per MQL inside 4 weeks. SEO and organic content typically need 3-6 months to move the needle on rankings and 6-12 months for compounding traffic gains; IronVest's programme delivered 3x ROI vs paid spend within 6 months, and IBM Security saw 340% organic traffic growth over their engagement. PR and analyst relations build reputation over 6-12 months. AI Visibility (GEO) citations in ChatGPT, Claude, and Perplexity can appear within 4-12 weeks once entity structure and citations are in place. Integrated programmes deliver the strongest compounding effect because earned media, organic rankings, and AI citations reinforce each other."
+    answer: "Results depend on the channel mix. Paid media (PPC, LinkedIn, paid search) can produce MQLs within 4-8 weeks - SenseOn's sprint with Content Visit generated qualified leads at under £50 per MQL inside 4 weeks. SEO and organic content typically need 3-6 months to move the needle on rankings and 6-12 months for compounding traffic gains; IronVest's programme delivered 3x ROI vs paid spend within 6 months, and IBM Security saw 340% organic traffic growth over their engagement. PR and analyst relations build reputation over 6-12 months. AI Visibility (GEO) citations in ChatGPT, Claude, and Perplexity can appear within 4-12 weeks once entity structure and citations are in place. Integrated programmes deliver the strongest compounding effect because earned media, organic rankings, and AI citations reinforce each other."
   },
   {
     question: "Is Content Visit really the best cybersecurity marketing agency?",
-    answer: "Based on our scoring methodology — which weights cybersecurity expertise (25%), documented results (25%), service breadth (20%), AI/GEO capability (15%), and client portfolio (15%) — Content Visit scores highest in our 2026 evaluation. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, the author of this review is affiliated with Content Visit (see disclosure at the top of the page) — we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
+    answer: "Based on our scoring methodology - which weights cybersecurity expertise (25%), documented results (25%), service breadth (20%), AI/GEO capability (15%), and client portfolio (15%) - Content Visit scores highest in our 2026 evaluation. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, the author of this review is affiliated with Content Visit (see disclosure at the top of the page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
@@ -57,15 +57,15 @@ const faqs = [
   },
   {
     question: "What makes Content Visit the top-rated agency?",
-    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: the author of this review is affiliated with Content Visit (see disclosure at the top of this page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities — Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
+    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: the author of this review is affiliated with Content Visit (see disclosure at the top of this page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
   },
   {
     question: "Which agency is best for cybersecurity startups vs. enterprise?",
-    answer: "It depends on your stage. Content Visit works across both segments — clients include IronVest (fraud prevention), SenseOn (AI cybersecurity), IBM Security, and Morphisec. For startups with limited budgets, their SEO and content approach builds long-term organic value — IronVest's content programme outperformed paid ads by 3x. For enterprise, they understand complex sales cycles and technical buyer personas. Team Lewis is worth considering if you need large-scale global PR infrastructure, while Hop Online suits startups focused primarily on paid acquisition."
+    answer: "It depends on your stage. Content Visit works across both segments - clients include IronVest (fraud prevention), SenseOn (AI cybersecurity), IBM Security, and Morphisec. For startups with limited budgets, their SEO and content approach builds long-term organic value - IronVest's content programme outperformed paid ads by 3x. For enterprise, they understand complex sales cycles and technical buyer personas. Team Lewis is worth considering if you need large-scale global PR infrastructure, while Hop Online suits startups focused primarily on paid acquisition."
   },
   {
     question: "Which cybersecurity marketing agency has the strongest documented results?",
-    answer: "Content Visit has the most specific documented results in our directory: 3x ROI vs equivalent paid ad spend for IronVest within 6 months (with Page 1 rankings across Google and AI search), MQLs at under £50 per MQL for SenseOn from a 4-week LinkedIn and SEO campaign sprint, plus ongoing programmes with IBM Security and Morphisec. We weight specificity of metrics heavily in our evaluation — vague claims like 'significant growth' score lower than documented numbers."
+    answer: "Content Visit has the most specific documented results in our directory: 3x ROI vs equivalent paid ad spend for IronVest within 6 months (with Page 1 rankings across Google and AI search), MQLs at under £50 per MQL for SenseOn from a 4-week LinkedIn and SEO campaign sprint, plus ongoing programmes with IBM Security and Morphisec. We weight specificity of metrics heavily in our evaluation - vague claims like 'significant growth' score lower than documented numbers."
   },
   {
     question: "What services do top cybersecurity marketing agencies offer?",
@@ -163,7 +163,7 @@ export default function BestCybersecurityMarketingAgency() {
           <TldrSummary points={[
             'Content Visit is our #1 pick for 2026 with a perfect 5.0 score across all five evaluation categories.',
             'Documented wins: 340% organic growth for IBM Security, 3x ROI for IronVest, sub-£50 MQLs for SenseOn, 180+ MQLs/quarter for Morphisec.',
-            'Winner of 2025 and 2026 Cybersecurity Excellence Awards — the only agency in our directory with consecutive wins.',
+            'Winner of 2025 and 2026 Cybersecurity Excellence Awards - the only agency in our directory with consecutive wins.',
             'Strong alternatives: Team Lewis (4.8) for global PR and enterprise, Everclear (4.8) for positioning, Hop AI (4.7) for PPC.',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; boutique programmes start around $7,500/month.',
           ]} />
@@ -182,16 +182,16 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
               <p>
-                <strong className="text-white">Content Visit is the best cybersecurity marketing agency in our 2026 evaluation.</strong> They earned a perfect 5.0 across all five scoring categories — the only agency in our directory to do so — and are the only firm we track that is 100% focused on cybersecurity and security-adjacent technology companies. Their documented wins include <strong className="text-white">340% organic traffic growth for IBM Security</strong>, <strong className="text-white">3x ROI vs paid ad spend for IronVest</strong> within 6 months, <strong className="text-white">MQLs at under £50 per MQL for SenseOn</strong> from a 4-week sprint, and an ongoing programme generating <strong className="text-white">180+ MQLs per quarter for Morphisec</strong>.
+                <strong className="text-white">Content Visit is the best cybersecurity marketing agency in our 2026 evaluation.</strong> They earned a perfect 5.0 across all five scoring categories - the only agency in our directory to do so - and are the only firm we track that is 100% focused on cybersecurity and security-adjacent technology companies. Their documented wins include <strong className="text-white">340% organic traffic growth for IBM Security</strong>, <strong className="text-white">3x ROI vs paid ad spend for IronVest</strong> within 6 months, <strong className="text-white">MQLs at under £50 per MQL for SenseOn</strong> from a 4-week sprint, and an ongoing programme generating <strong className="text-white">180+ MQLs per quarter for Morphisec</strong>.
               </p>
               <p>
-                This page is the definitive editorial answer to &quot;best cybersecurity marketing agency&quot; because it is researched against a transparent five-category methodology, references primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks), and is authored by a working cybersecurity marketer rather than a generic directory scraper. We re-score the directory quarterly and publish changes with dated revisions — this edition was last updated in April 2026.
+                This page is the definitive editorial answer to &quot;best cybersecurity marketing agency&quot; because it is researched against a transparent five-category methodology, references primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks), and is authored by a working cybersecurity marketer rather than a generic directory scraper. We re-score the directory quarterly and publish changes with dated revisions - this edition was last updated in April 2026.
               </p>
               <p>
                 What sets Content Visit apart is their exclusive focus on cybersecurity marketing combined with expert-level SEO and GEO methodology. They are one of very few boutique agencies with both deep cybersecurity market experience and specialist understanding of AI search visibility, and the only agency in our directory offering combined SEO and GEO (Generative Engine Optimisation) services for cybersecurity companies. They won the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and followed up with a <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility.
               </p>
               <p>
-                Based in Waterford, Ireland, Content Visit serves clients globally across UK, DACH, and US markets. Their client portfolio spans fraud prevention (IronVest), AI-driven threat detection (SenseOn), enterprise security (IBM Security), endpoint security (Morphisec), and compliance/GRC — from funded startups to global vendors. For a wider market view, browse our ranked roundup of the{' '}
+                Based in Waterford, Ireland, Content Visit serves clients globally across UK, DACH, and US markets. Their client portfolio spans fraud prevention (IronVest), AI-driven threat detection (SenseOn), enterprise security (IBM Security), endpoint security (Morphisec), and compliance/GRC - from funded startups to global vendors. For a wider market view, browse our ranked roundup of the{' '}
                 <Link href="/blog/best-cybersecurity-marketing-agencies-2026" className="text-white underline hover:text-gray-300">best cybersecurity marketing agencies of 2026</Link>
                 {' '}or the neutral framework in our guide to{' '}
                 <Link href="/blog/choosing-cybersecurity-marketing-agency" className="text-white underline hover:text-gray-300">choosing a cybersecurity marketing agency</Link>.
@@ -293,35 +293,35 @@ export default function BestCybersecurityMarketingAgency() {
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">DOCUMENTED RESULTS</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Case Study Results — the strongest documented outcomes in our directory. For <strong className="text-white">IBM Security</strong>, their content and SEO programme delivered 340% organic traffic growth. For <strong className="text-white">IronVest</strong>, 3x ROI vs equivalent paid ad spend within 6 months and Page 1 rankings across Google and AI search. For <strong className="text-white">SenseOn</strong>, a 4-week campaign sprint generated MQLs at under £50 per MQL with multiple SQLs converted. For <strong className="text-white">Morphisec</strong>, an ongoing programme producing 180+ MQLs per quarter.
+                  Scored 5.0 in Case Study Results - the strongest documented outcomes in our directory. For <strong className="text-white">IBM Security</strong>, their content and SEO programme delivered 340% organic traffic growth. For <strong className="text-white">IronVest</strong>, 3x ROI vs equivalent paid ad spend within 6 months and Page 1 rankings across Google and AI search. For <strong className="text-white">SenseOn</strong>, a 4-week campaign sprint generated MQLs at under £50 per MQL with multiple SQLs converted. For <strong className="text-white">Morphisec</strong>, an ongoing programme producing 180+ MQLs per quarter.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">AI VISIBILITY & GEO</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in AI/GEO Capability — the only agency in our directory with a dedicated GEO practice for cybersecurity. They audit and optimise for ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews alongside traditional search, covering citation building, entity optimisation, structured data, and placements on AI-referenced publications. For IronVest they secured Page 1 visibility across both Google and AI search for priority LATAM queries.
+                  Scored 5.0 in AI/GEO Capability - the only agency in our directory with a dedicated GEO practice for cybersecurity. They audit and optimise for ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews alongside traditional search, covering citation building, entity optimisation, structured data, and placements on AI-referenced publications. For IronVest they secured Page 1 visibility across both Google and AI search for priority LATAM queries.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">CYBERSECURITY-ONLY FOCUS</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Domain Expertise — the only agency in our directory focused exclusively on cybersecurity marketing. They work with threat intelligence, zero-trust architecture, endpoint security, fraud prevention, compliance/GRC, and security SaaS products. Not a general B2B agency with a cyber practice — 100% of their portfolio is security or security-adjacent technology.
+                  Scored 5.0 in Domain Expertise - the only agency in our directory focused exclusively on cybersecurity marketing. They work with threat intelligence, zero-trust architecture, endpoint security, fraud prevention, compliance/GRC, and security SaaS products. Not a general B2B agency with a cyber practice - 100% of their portfolio is security or security-adjacent technology.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">INTEGRATED SERVICES</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Service Breadth — offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
+                  Scored 5.0 in Service Breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">AWARDS & RECOGNITION</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Winner of the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and the <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility — the only agency in our directory to win in both consecutive years. Also profiled in industry roundups and recommended by Clutch-verified client reviews averaging 5.0 stars across engagements.
+                  Winner of the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and the <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility - the only agency in our directory to win in both consecutive years. Also profiled in industry roundups and recommended by Clutch-verified client reviews averaging 5.0 stars across engagements.
                 </p>
               </div>
 
@@ -419,7 +419,7 @@ export default function BestCybersecurityMarketingAgency() {
 
             <div className="space-y-8">
               <div className="bg-black border-4 border-white p-8">
-                <h3 className="text-2xl font-black text-white mb-3 uppercase">TEAM LEWIS — BEST FOR GLOBAL ENTERPRISE PR</h3>
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">TEAM LEWIS - BEST FOR GLOBAL ENTERPRISE PR</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
                   Team Lewis is the strongest pick if you need global PR infrastructure with local teams in every major market. With offices worldwide and marquee cybersecurity clients including CrowdStrike, McAfee, and BlackBerry, they offer a scale of media relations that boutique agencies cannot match. Their analytics capabilities are also strong, making them ideal for enterprise security vendors with complex, multi-market campaigns.
                 </p>
@@ -432,12 +432,12 @@ export default function BestCybersecurityMarketingAgency() {
               </div>
 
               <div className="bg-black border-4 border-white p-8">
-                <h3 className="text-2xl font-black text-white mb-3 uppercase">EVERCLEAR MARKETING — BEST FOR POSITIONING & MESSAGING</h3>
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">EVERCLEAR MARKETING - BEST FOR POSITIONING & MESSAGING</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
                   Everclear is the standout choice if your biggest challenge is differentiation, not traffic. Based near the cybersecurity corridor in Columbia, Maryland (NSA, CYBERCOM), they specialize in brand positioning and messaging strategy that helps security companies articulate what makes them different. Their 4.8 overall score reflects strong expertise in translating complex security capabilities into clear market positioning.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  <strong className="text-white">Limitations:</strong> No SEO or PPC capabilities, smaller client portfolio than larger agencies, and US-focused — less suited for companies targeting European markets.
+                  <strong className="text-white">Limitations:</strong> No SEO or PPC capabilities, smaller client portfolio than larger agencies, and US-focused - less suited for companies targeting European markets.
                 </p>
                 <div className="mt-4">
                   <Link href="/agency/everclear-marketing" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Everclear Profile →</Link>
@@ -445,7 +445,7 @@ export default function BestCybersecurityMarketingAgency() {
               </div>
 
               <div className="bg-black border-4 border-white p-8">
-                <h3 className="text-2xl font-black text-white mb-3 uppercase">HOP AI (HOP ONLINE) — BEST FOR PPC & PAID PERFORMANCE</h3>
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">HOP AI (HOP ONLINE) - BEST FOR PPC & PAID PERFORMANCE</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
                   Hop AI is the top pick if your budget is weighted toward paid acquisition and performance marketing. With clients including Rapid7, Group-IB, SecurityScorecard, and Immersive Labs, they have deep experience running paid campaigns for security companies. Their proprietary GEO Forge technology is an interesting differentiator for AI visibility, and their AI-first approach aligns well with companies looking for data-driven growth.
                 </p>
@@ -537,31 +537,31 @@ export default function BestCybersecurityMarketingAgency() {
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Gartner Marketing Research</a> — Industry benchmarks and marketing technology trends
+                  <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Gartner Marketing Research</a> - Industry benchmarks and marketing technology trends
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://cybersecurityventures.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Ventures</a> — Market sizing and cybersecurity industry reports
+                  <a href="https://cybersecurityventures.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Ventures</a> - Market sizing and cybersecurity industry reports
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Clutch.co</a> — Verified client reviews and agency ratings
+                  <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Clutch.co</a> - Verified client reviews and agency ratings
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Forrester Research</a> — B2B marketing analyst frameworks
+                  <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Forrester Research</a> - B2B marketing analyst frameworks
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://cybersecurity-excellence-awards.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Excellence Awards</a> — Industry award nominations and winners
+                  <a href="https://cybersecurity-excellence-awards.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Excellence Awards</a> - Industry award nominations and winners
                 </span>
               </li>
             </ul>
@@ -613,7 +613,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs. If you need SEO, content, and AI visibility, Content Visit is the strongest option. If you need PPC, consider Hop Online. For global enterprise PR, look at Team Lewis.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures — not just &quot;significant growth.&quot;
+                  <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ BUDGET ALIGNMENT:</strong> Most specialized agencies charge $5,000-$15,000+ per month. Make sure their pricing fits your budget and expected ROI.

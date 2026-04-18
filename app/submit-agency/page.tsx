@@ -104,7 +104,7 @@ export default function SubmitAgencyPage() {
           <TldrSummary points={[
             'Submit your cybersecurity marketing agency for inclusion in our directory.',
             'We review every submission for domain expertise and documented results.',
-            'Fill in the form below and hit submit — we\'ll take it from there.',
+            'Fill in the form below and hit submit - we\'ll take it from there.',
           ]} />
 
           {/* Form */}
