@@ -430,63 +430,38 @@
     "linkedinUrl": "https://www.linkedin.com/company/goenvy/"
   },
   {
-    "id": "magnetude-consulting",
-    "name": "Magnetude Consulting",
-    "website": "https://www.magnetudeconsulting.com",
-    "description": "Fractional B2B marketing services (lead generation, content marketing, sales enablement, PPC, SEO). Notable clients include Reveald, Skybox Security, and Semaphore.",
-    "shortDescription": "Fractional B2B marketing services for cybersecurity companies",
+    "id": "nola-marketing",
+    "name": "NOLA Marketing",
+    "website": "https://www.nolamarketing.com",
+    "description": "NOLA Marketing combines product marketing know-how with content-driven creative to deliver results for technology companies. Since 1999, NOLA Marketing has worked across AI, IoT, cybersecurity ecosystems, and cloud environments, pairing deep domain knowledge with modern AI tools. Known for taking the best ingredients and creating something better than the sum of its parts - a little extra, or lagniappe, in every engagement.",
+    "shortDescription": "Product marketing and content-driven creative for cybersecurity and technology companies since 1999.",
     "featured": false,
     "services": [
       "SEO",
       "Content Marketing",
-      "PPC",
-      "Lead Generation",
-      "Sales Enablement"
+      "AI Visibility",
+      "Digital Marketing"
     ],
     "specialties": [
       "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Cybersecurity Marketing",
+      "Product Marketing",
+      "AI and IoT Technology"
     ],
-    "location": "Needham, MA, USA",
+    "location": "United States",
+    "yearFounded": 1999,
     "geography": "Regional - USA",
-    "minBudget": "$10,000+ min project",
-    "rating": 4.8,
+    "rating": 4.7,
     "clientTypes": [
-      "Cybersecurity Companies"
+      "Cybersecurity Companies",
+      "Technology Companies"
     ],
     "pros": [
-      "Fractional model is cost-effective for companies without a full marketing team",
-      "Broad service range including sales enablement - rare for smaller agencies",
-      "Solid cybersecurity client list (Skybox Security, Reveald, Semaphore)"
+      "Over 25 years of technology marketing experience across AI, IoT, cybersecurity, and cloud",
+      "Product marketing roots bring deeper positioning expertise than typical content agencies",
+      "Combines deep technology knowledge with modern AI tools to scale content production",
+      "Track record across hundreds of organisations since 1999"
     ],
-    "awards": [
-      {
-        "name": "Cybersecurity Excellence Award",
-        "year": 2022,
-        "status": "won"
-      },
-      {
-        "name": "Cybersecurity Excellence Award",
-        "year": 2023,
-        "status": "won"
-      },
-      {
-        "name": "Cybersecurity Excellence Award",
-        "year": 2024,
-        "status": "won"
-      },
-      {
-        "name": "Cybersecurity Excellence Award",
-        "year": 2025,
-        "status": "won"
-      },
-      {
-        "name": "Cybersecurity Excellence Award",
-        "year": 2026,
-        "status": "won"
-      }
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/magnetude-consulting/",
-    "clutchUrl": "https://clutch.co/profile/magnetude-consulting"
+    "linkedinUrl": "https://www.linkedin.com/company/nola-marketing/"
   }
 ]

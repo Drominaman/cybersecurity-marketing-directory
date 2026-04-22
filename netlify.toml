@@ -31,3 +31,9 @@
   to = "/blog/cybersecurity-seo-agency"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/agency/magnetude-consulting"
+  to = "/location/usa"
+  status = 301
+  force = true
