@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
 import ConsultationCTA from "@/components/ConsultationCTA";
@@ -7,6 +8,8 @@ import ConsultationCTA from "@/components/ConsultationCTA";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -38,11 +41,11 @@ export const metadata: Metadata = {
     description: "Cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, and content marketing. Find specialized cybersecurity marketing agencies with proven results.",
     type: "website",
     locale: "en_US",
-    url: "https://www.cybersecuritymarketingagencies.com",
+    url: "https://cybersecuritymarketingagencies.com",
     siteName: "Cybersecurity Marketing Agencies",
     images: [
       {
-        url: "https://www.cybersecuritymarketingagencies.com/api/placeholder/homepage/og-image?title=Cybersecurity%20Marketing%20Agencies%20Directory%202026",
+        url: "https://cybersecuritymarketingagencies.com/api/placeholder/homepage/og-image?title=Cybersecurity%20Marketing%20Agencies%20Directory%202026",
         width: 1200,
         height: 630,
         alt: "Cybersecurity Marketing Agencies Directory 2026",
@@ -66,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.cybersecuritymarketingagencies.com",
+    canonical: "https://cybersecuritymarketingagencies.com",
   },
 };
 
@@ -88,7 +91,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Cybersecurity Marketing Agencies",
-  "url": "https://www.cybersecuritymarketingagencies.com",
+  "url": "https://cybersecuritymarketingagencies.com",
   "description": "The premier directory of cybersecurity marketing agencies. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR.",
   "knowsAbout": [
     "Cybersecurity Marketing",
@@ -110,7 +113,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="llms-txt" href="https://www.cybersecuritymarketingagencies.com/llms.txt" />
+        <link rel="llms-txt" href="https://cybersecuritymarketingagencies.com/llms.txt" />
         <link rel="alternate" type="application/rss+xml" title="Cybersecurity Marketing Agencies Blog" href="/feed.xml" />
         <script
           type="application/ld+json"
@@ -119,10 +122,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w09i0pbsqn");` }}
         />
       </head>
       <body
@@ -136,6 +135,9 @@ export default function RootLayout({
         </a>
         {children}
         <Suspense><ConsultationCTA /></Suspense>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w09i0pbsqn");`}
+        </Script>
       </body>
     </html>
   );

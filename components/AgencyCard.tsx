@@ -28,8 +28,7 @@ interface AgencyCardProps {
 }
 
 export default function AgencyCard({ agency }: AgencyCardProps) {
-  // Support both single badge and multiple badges
-  const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+  const badges = agency.editorBadges || [];
   const logoUrl = getAgencyLogoUrl(agency.website);
 
   return (
@@ -121,7 +120,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <Link
           href={`/agency/${agency.id}`}
-          className="block w-full text-center bg-white border-4 border-white text-black px-3 py-3.5 font-black hover:bg-gray-200 transition-all uppercase text-xs sm:text-sm tracking-wide shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          className="block w-full text-center bg-white border-4 border-white text-black px-3 py-3.5 font-black hover:bg-gray-200 transition-colors uppercase text-xs sm:text-sm tracking-wide"
         >
           ■ INFO
         </Link>
@@ -129,7 +128,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
           href={agency.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center bg-black border-4 border-white text-white px-3 py-3.5 font-black hover:bg-gray-800 transition-all uppercase text-xs sm:text-sm tracking-wide shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          className="block w-full text-center bg-transparent border-4 border-white text-white px-3 py-3.5 font-black hover:bg-white hover:text-black transition-colors uppercase text-xs sm:text-sm tracking-wide"
         >
           ■ VISIT
         </Link>

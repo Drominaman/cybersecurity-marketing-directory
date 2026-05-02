@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'cybersecurity content marketing',
   ],
   alternates: {
-    canonical: 'https://www.cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency',
+    canonical: 'https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency',
   },
 };
 
@@ -114,13 +114,13 @@ export default function BestCybersecurityMarketingAgency() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.cybersecuritymarketingagencies.com"
+        "item": "https://cybersecuritymarketingagencies.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Best Cybersecurity Marketing Agency",
-        "item": "https://www.cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency"
+        "item": "https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency"
       }
     ]
   };

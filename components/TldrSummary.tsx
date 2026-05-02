@@ -4,7 +4,7 @@ interface TldrSummaryProps {
 
 export default function TldrSummary({ points }: TldrSummaryProps) {
   return (
-    <div className="bg-gray-900 border-4 border-white p-6 mb-8 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+    <div className="tldr-summary bg-gray-900 border-4 border-white p-6 mb-8 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
       <h2 className="text-lg font-black text-white uppercase tracking-wider mb-4 flex items-center gap-2">
         <span>&#9632;</span> TL;DR
       </h2>

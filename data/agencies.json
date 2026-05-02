@@ -78,7 +78,8 @@
         "results": "3x ROI vs equivalent paid ad spend within 6 months, Page 1 rankings for priority LATAM queries across Google and AI search",
         "description": "B2B content and SEO/GEO strategy for fraud prevention and authentication platform, including LATAM regional expansion with bilingual content marketing. Content programme directly supported path to pilot with two regional banks."
       }
-    ]
+    ],
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "codeless",
@@ -87,14 +88,17 @@
     "description": "High-volume content production agency with strong SEO focus. Notable clients include Monday.com (1000% traffic growth case study). Produces long-form, search-optimised content at scale for SaaS and B2B technology companies.",
     "shortDescription": "High-volume content production with strong SEO focus",
     "featured": false,
+    "editorBadges": ["Best for High-Volume Content"],
+    "editorNotes": "High-volume content engine with proven SEO methodology, but their headline case study is non-security (Monday.com, a project-management SaaS). Cybersecurity track record is thinner than the brand suggests - verify case studies in your specific sub-vertical before committing.",
     "services": [
       "SEO",
       "Content Marketing",
       "PR & Media Relations"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "SEO Content",
+      "High-Volume Publishing",
+      "Editorial Operations"
     ],
     "location": "Irvine, CA, USA",
     "geography": "Regional - USA",
@@ -109,24 +113,28 @@
       "Notable case study with Monday.com (1000% traffic growth)"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/codeless-io/",
-    "clutchUrl": "https://clutch.co/profile/codeless"
+    "clutchUrl": "https://clutch.co/profile/codeless",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "ronin",
     "name": "Ronin",
     "website": "https://www.deployronin.com",
-    "description": "Cybersecurity GTM experts offering marketing strategy, demand generation, and content marketing. Their team has extensive in-house experience at major cybersecurity companies. Positioned as a fully integrated GTM agency delivering qualified leads for cybersecurity vendors.",
+    "description": "Cybersecurity GTM experts offering brand strategy, marketing strategy, demand generation, and content marketing. Their team has extensive in-house experience at major cybersecurity companies. Positioned as a fully integrated GTM agency delivering qualified leads for cybersecurity vendors, with particular strength in bold creative and brand positioning.",
     "shortDescription": "Cybersecurity GTM experts with in-house security industry experience",
     "featured": false,
-    "editorBadge": "Best for Branding",
+    "editorBadges": ["Best for Branding"],
     "services": [
+      "Brand Strategy",
+      "Visual Identity",
       "Marketing Strategy",
       "Demand Generation",
       "Content Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Brand Strategy",
+      "Visual Identity",
+      "Demand Generation"
     ],
     "location": "USA (Remote)",
     "geography": "Regional - USA",
@@ -139,7 +147,8 @@
       "Deep experience across major cybersecurity vendors",
       "Strong understanding of brand positioning for security companies"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/deployronin/"
+    "linkedinUrl": "https://www.linkedin.com/company/deployronin/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "bora",
@@ -148,14 +157,18 @@
     "description": "Content creation, social media & lead generation for infosec (white papers, blogs, earned media). Notable clients include Cisco, Tripwire, Thales, Venafi, (ISC)², and Cybereason.",
     "shortDescription": "Content creation, social media & lead generation for information security companies",
     "featured": false,
+    "editorBadges": ["Best for Earned Media"],
+    "editorNotes": "Strongest editorial-PR shop in cybersecurity, with a roster (Cisco, Tripwire, Thales, ISC2) that signals enterprise-vendor pedigree. Best for vendors with 50+ employees and existing media targets. Lighter on demand generation if that's your only need.",
     "services": [
       "Content Marketing",
       "Social Media",
       "Lead Generation"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Earned Media",
+      "Analyst Relations",
+      "White Papers",
+      "Enterprise Vendor Marketing"
     ],
     "location": "Xaló, Valencia, Spain",
     "geography": "Regional - Europe",
@@ -169,7 +182,8 @@
       "Strong in white papers, blogs, and earned media for infosec",
       "Established track record in cybersecurity content creation"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/bora-design/"
+    "linkedinUrl": "https://www.linkedin.com/company/bora-design/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "bluetext",
@@ -178,6 +192,7 @@
     "description": "Full-service digital marketing agency (branding, web design, SEO, PPC, social, PR). Notable clients include Varonis, SecurityScorecard, Intel, and Cisco. 97+ companies have achieved successful transactions within 24 months of working with Bluetext.",
     "shortDescription": "Full-service digital marketing for technology and cybersecurity brands",
     "featured": false,
+    "editorNotes": "DC-corridor specialist that excels with federal-adjacent buyers. Best for vendors selling to government agencies, defence contractors, or large enterprise. Premium pricing - not a fit for early-stage.",
     "services": [
       "SEO",
       "PPC",
@@ -187,8 +202,9 @@
       "Digital Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "DC/Federal Marketing",
+      "Strategic Branding",
+      "Demand Generation"
     ],
     "location": "Washington, D.C., USA",
     "geography": "Regional - USA",
@@ -203,13 +219,14 @@
       "High-profile client portfolio including Intel and Cisco"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/bluetext/",
-    "clutchUrl": "https://clutch.co/profile/bluetext"
+    "clutchUrl": "https://clutch.co/profile/bluetext",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "the-rubicon-agency",
     "name": "The Rubicon Agency",
     "website": "https://therubiconagency.com",
-    "description": "Integrated B2B tech marketing (brand strategy, digital campaigns, content marketing, web & sales enablement). Notable clients include OpenText, Cisco, Symantec, and Radware.",
+    "description": "Integrated B2B tech marketing (brand strategy, digital campaigns, content marketing, web & sales enablement). Notable clients include OpenText, Cisco, Symantec (legacy / pre-Broadcom), and Radware.",
     "shortDescription": "Integrated B2B tech marketing for cybersecurity and technology companies",
     "featured": false,
     "services": [
@@ -218,8 +235,9 @@
       "Digital Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Channel Marketing",
+      "Enterprise Demand Gen",
+      "Integrated B2B Tech Marketing"
     ],
     "location": "London, UK",
     "geography": "Regional - UK",
@@ -229,19 +247,21 @@
       "Enterprise Security Vendors"
     ],
     "pros": [
-      "Strong enterprise client list (OpenText, Cisco, Symantec, Radware)",
+      "Strong enterprise client list (OpenText, Cisco, Radware, Symantec pre-Broadcom era)",
       "London base is ideal for UK and European security markets",
       "Integrated approach covering brand, digital campaigns, and sales enablement"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/the-rubicon-agency/"
+    "linkedinUrl": "https://www.linkedin.com/company/the-rubicon-agency/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "cyberwhyze-whyze-labs",
     "name": "Whyze Labs",
     "website": "https://www.whyzelabs.com",
-    "description": "LinkedIn video agency and Trust Studio for B2B tech and cybersecurity brands. Formerly known as CyberWhyze. Helps security vendors cut through vendor fatigue by amplifying experts through video. Notable clients include Lenovo, Halcyon, SANS, MainNerve, SecurityScorecard, Akeyless, and Bluefin. Reported 275% lift in branded search and 3.2x increase in trust signal velocity for clients.",
+    "description": "LinkedIn video agency and Trust Studio for B2B tech and cybersecurity brands. Formerly known as CyberWhyze. Helps security vendors cut through vendor fatigue by amplifying experts through video. Notable clients include Lenovo, Halcyon, SANS, MainNerve, SecurityScorecard, Akeyless, and Bluefin. Reports client-attributed lifts in branded search and trust signal performance from their video-led programmes.",
     "shortDescription": "LinkedIn video agency and Trust Studio for cybersecurity brands",
     "featured": false,
+    "editorBadges": ["Best for Video"],
     "services": [
       "Video Marketing",
       "Social Media",
@@ -249,8 +269,9 @@
       "LinkedIn Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Video Marketing",
+      "Brand Storytelling",
+      "Demand Capture"
     ],
     "location": "Sacramento, CA, USA",
     "geography": "Regional - USA",
@@ -263,7 +284,8 @@
       "Works exclusively with cybersecurity brands",
       "Strong social media expertise alongside video production"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/whyze-labs/"
+    "linkedinUrl": "https://www.linkedin.com/company/whyze-labs/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "team-lewis",
@@ -272,15 +294,17 @@
     "description": "Global marketing & PR (public relations, digital marketing, analytics, creative services). Notable clients include BlackBerry, CrowdStrike, and McAfee.",
     "shortDescription": "Global marketing & PR agency with strong cybersecurity practice",
     "featured": false,
-    "editorBadge": "Best for Enterprise",
+    "editorBadges": ["Best for Enterprise"],
+    "editorNotes": "Global PR firm with enterprise client base. Strong for multi-region campaigns, but pricing reflects the global reach - overkill for vendors that only need US or UK media.",
     "services": [
       "PR & Media Relations",
       "Digital Marketing",
       "Marketing Analytics"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Global PR",
+      "Enterprise Marketing",
+      "Earned Media"
     ],
     "location": "San Diego, CA, USA (global)",
     "geography": "Global - HQ in USA with offices worldwide",
@@ -294,7 +318,8 @@
       "Marquee cybersecurity clients (CrowdStrike, McAfee, BlackBerry)",
       "Strong PR and analytics capabilities for enterprise-scale campaigns"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/teamlewis/"
+    "linkedinUrl": "https://www.linkedin.com/company/teamlewis/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "top-agency",
@@ -303,6 +328,7 @@
     "description": "Data-driven digital marketing (SEO, PPC, content marketing, PR, influencer campaigns). Notable clients include RedMarlin, Check Point, and Lookout.",
     "shortDescription": "Data-driven digital marketing for cybersecurity and technology brands",
     "featured": false,
+    "editorBadges": ["Best for Influencer"],
     "services": [
       "SEO",
       "Content Marketing",
@@ -311,8 +337,9 @@
       "Digital Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Performance Marketing",
+      "Influencer Marketing",
+      "Data-Driven Digital"
     ],
     "location": "Austin, TX, USA",
     "geography": "Regional - USA",
@@ -326,7 +353,8 @@
       "Notable security clients (Check Point, Lookout, RedMarlin)"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/topagency/",
-    "clutchUrl": "https://clutch.co/profile/top-agency"
+    "clutchUrl": "https://clutch.co/profile/top-agency",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "hop-online-hop-ai",
@@ -335,7 +363,8 @@
     "description": "AI-first cybersecurity marketing agency specializing in PPC, SEO, GEO (Generative Engine Optimization), content marketing, and paid social. Their proprietary GEO Forge technology makes brands discoverable by both search engines and LLMs. Notable clients include Rapid7, Group-IB, SecurityScorecard, and Immersive Labs.",
     "shortDescription": "AI-first performance marketing & growth for cybersecurity companies",
     "featured": false,
-    "editorBadge": "Best for PPC",
+    "editorBadges": ["Best for PPC"],
+    "editorNotes": "One of the few agencies with genuine GEO/AEO capability for AI search visibility. Best fit for vendors who need to be cited by ChatGPT/Perplexity. Smaller team, so not a fit for very large multi-channel programmes.",
     "services": [
       "SEO",
       "Content Marketing",
@@ -345,8 +374,9 @@
       "AI Consultancy"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "GEO/AEO",
+      "AI Search Optimization",
+      "Performance Marketing"
     ],
     "location": "New Orleans, LA, USA & Sofia, Bulgaria",
     "geography": "Global - USA & Europe",
@@ -362,7 +392,8 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/hop-online/",
     "clutchUrl": "https://clutch.co/profile/hop-online",
-    "g2Url": "https://www.g2.com/products/hop-online/reviews"
+    "g2Url": "https://www.g2.com/products/hop-online/reviews",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "everclear-marketing",
@@ -371,6 +402,7 @@
     "description": "Full-service cybersecurity marketing (positioning & messaging, branding, content & lead-gen programs). Notable clients include Lumifi, SecureWave, and Assured.",
     "shortDescription": "Full-service cybersecurity marketing specializing in positioning and messaging",
     "featured": false,
+    "editorBadges": ["Best for Positioning"],
     "services": [
       "Content Marketing",
       "PR & Media Relations",
@@ -379,8 +411,9 @@
       "Website Development"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Positioning",
+      "GTM Strategy",
+      "Messaging"
     ],
     "location": "Columbia, MD, USA",
     "geography": "Regional - USA",
@@ -394,7 +427,8 @@
       "Full-service offering from brand strategy through lead generation"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/everclear-marketing/",
-    "clutchUrl": "https://clutch.co/profile/everclear-marketing"
+    "clutchUrl": "https://clutch.co/profile/everclear-marketing",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "envy-goenvy",
@@ -403,6 +437,7 @@
     "description": "Go-to-market strategy, demand generation campaigns, PPC, inbound marketing, and RevOps for B2B tech companies. HubSpot Elite Partner. Notable clients include Check Point, BrandShield, Nuvei, Wing Security, and CyberInt.",
     "shortDescription": "Go-to-market strategy and demand generation for B2B tech companies",
     "featured": false,
+    "editorNotes": "Israeli-ecosystem positioning is rare and valuable for security vendors with HQ or co-founder ties to Israel. HubSpot Elite Partner status (a verifiable credential) is buried in their prose. Best for Series A/B startups; less suited to enterprise.",
     "services": [
       "Lead Generation",
       "Demand Generation",
@@ -412,8 +447,10 @@
       "Content Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing"
+      "Israeli Cybersecurity",
+      "Startup GTM",
+      "RevOps",
+      "HubSpot Implementation"
     ],
     "location": "Ramat Gan, Israel",
     "geography": "Regional - Israel",
@@ -427,7 +464,8 @@
       "Strong GTM and demand gen focus - ideal for startups going to market",
       "RevOps capability bridges the gap between marketing and sales"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/goenvy/"
+    "linkedinUrl": "https://www.linkedin.com/company/goenvy/",
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "nola-marketing",
@@ -443,9 +481,8 @@
       "Digital Marketing"
     ],
     "specialties": [
-      "B2B Cybersecurity",
-      "Cybersecurity Marketing",
       "Product Marketing",
+      "B2B Lead Generation",
       "AI and IoT Technology"
     ],
     "location": "United States",
@@ -462,6 +499,7 @@
       "Combines deep technology knowledge with modern AI tools to scale content production",
       "Track record across hundreds of organisations since 1999"
     ],
-    "linkedinUrl": "https://www.linkedin.com/company/nola-marketing/"
+    "linkedinUrl": "https://www.linkedin.com/company/nola-marketing/",
+    "lastVerified": "2026-05-02"
   }
 ]

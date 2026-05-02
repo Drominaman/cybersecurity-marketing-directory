@@ -37,10 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/blog/tag/${tag}`,
+      url: `https://cybersecuritymarketingagencies.com/blog/tag/${tag}`,
       images: [
         {
-          url: `https://www.cybersecuritymarketingagencies.com/api/placeholder/tag-${tag}/og-image?title=${encodeURIComponent(tagName)}`,
+          url: `https://cybersecuritymarketingagencies.com/api/placeholder/tag-${tag}/og-image?title=${encodeURIComponent(tagName)}`,
           width: 1200,
           height: 630,
           alt: `${tagName} Articles`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/blog/tag/${tag}`,
+      canonical: `https://cybersecuritymarketingagencies.com/blog/tag/${tag}`,
     },
   };
 }
@@ -68,7 +68,7 @@ export default async function TagPage({ params }: Props) {
     '@type': 'CollectionPage',
     name: `${tagName} Articles`,
     description: `Articles about ${tagName} in cybersecurity marketing`,
-    url: `https://www.cybersecuritymarketingagencies.com/blog/tag/${tag}`,
+    url: `https://cybersecuritymarketingagencies.com/blog/tag/${tag}`,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -76,19 +76,19 @@ export default async function TagPage({ params }: Props) {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://www.cybersecuritymarketingagencies.com',
+          item: 'https://cybersecuritymarketingagencies.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://www.cybersecuritymarketingagencies.com/blog',
+          item: 'https://cybersecuritymarketingagencies.com/blog',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: tagName,
-          item: `https://www.cybersecuritymarketingagencies.com/blog/tag/${tag}`,
+          item: `https://cybersecuritymarketingagencies.com/blog/tag/${tag}`,
         },
       ],
     },
@@ -106,7 +106,7 @@ export default async function TagPage({ params }: Props) {
             '@type': 'Organization',
             name: post.author,
           },
-          url: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+          url: `https://cybersecuritymarketingagencies.com/blog/${post.slug}`,
         },
       })),
     },

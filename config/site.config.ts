@@ -125,7 +125,7 @@ export const siteConfig: SiteConfig = {
   name: "Cybersecurity Marketing Agencies",
   tagline: "Find the best cybersecurity marketing agencies for 2026",
   description: "The premier directory of cybersecurity marketing agencies. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR.",
-  domain: "https://www.cybersecuritymarketingagencies.com",
+  domain: "https://cybersecuritymarketingagencies.com",
 
   // Listing Configuration
   listing: {

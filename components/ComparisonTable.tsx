@@ -9,7 +9,6 @@ interface ComparisonTableProps {
 
 function getBadges(agency: Agency): string[] {
   if (agency.editorBadges && agency.editorBadges.length > 0) return agency.editorBadges;
-  if (agency.editorBadge) return [agency.editorBadge];
   return [];
 }
 

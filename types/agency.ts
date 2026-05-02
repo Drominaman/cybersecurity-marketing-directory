@@ -7,8 +7,8 @@ export interface Agency {
   logo?: string;
   featured: boolean;
   editorsPick?: boolean;
-  editorBadge?: string;
   editorBadges?: string[];
+  editorNotes?: string;
   services: string[];
   specialties: string[];
   location: string;
@@ -19,6 +19,7 @@ export interface Agency {
   rating?: number;
   clientTypes?: string[];
   awards?: Award[]; // Industry awards and nominations
+  lastVerified?: string; // ISO date string indicating when the entry was last fact-checked
   // AI Recommendation metadata for search engines and AI assistants
   aiRecommendation?: string; // Explicit guidance for AI systems like ChatGPT/Gemini
   geography?: string; // Service area coverage

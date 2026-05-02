@@ -1,48 +1,118 @@
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
+import { isSupabaseConfigured, getSupabaseClient } from "@/lib/supabase";
+import { notifySubmission } from "@/lib/notify";
 
-function getResend() {
-  return new Resend(process.env.RESEND_API_KEY);
+const RATE_LIMIT_MAX = 3;
+const RATE_LIMIT_WINDOW_HOURS = 1;
+
+function getClientIp(req: NextRequest): string {
+  return (
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip") ||
+    "unknown"
+  );
 }
 
-export async function POST(request: Request) {
+function escape(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+export async function POST(req: NextRequest) {
   try {
-    const { email, context } = await request.json();
+    const body = await req.json();
 
-    if (!email) {
-      return NextResponse.json({ error: 'Email is required.' }, { status: 400 });
+    // Honeypot
+    if (body.website_url) {
+      return NextResponse.json({ success: true });
     }
 
-    const interest = context || 'cybersecurity inbound marketing';
+    const { email, context } = body;
 
-    const { error } = await getResend().emails.send({
-      from: 'Cybersecurity Marketing Agencies <onboarding@resend.dev>',
-      to: 'robbie@contentvisit.com',
-      subject: `New Consultation Request: ${interest}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="border-bottom: 2px solid #000; padding-bottom: 8px;">New Consultation Request</h2>
-          <p>Someone requested a free <strong>${interest}</strong> consultation.</p>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold;">Email</td>
-              <td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold;">Interest</td>
-              <td style="padding: 8px 0;">${interest}</td>
-            </tr>
-          </table>
-        </div>
-      `,
+    if (!email || typeof email !== "string") {
+      return NextResponse.json(
+        { error: "Email is required" },
+        { status: 400 }
+      );
+    }
+
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: "Please enter a valid email address" },
+        { status: 400 }
+      );
+    }
+
+    const interest =
+      typeof context === "string" && context.trim()
+        ? context.trim()
+        : "cybersecurity inbound marketing";
+
+    const ip = getClientIp(req);
+
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseClient();
+
+      // Rate limiting: 3 submissions per hour per IP
+      const windowStart = new Date(
+        Date.now() - RATE_LIMIT_WINDOW_HOURS * 60 * 60 * 1000
+      ).toISOString();
+
+      const { count } = await supabase
+        .from("consultation_submissions")
+        .select("*", { count: "exact", head: true })
+        .eq("ip_address", ip)
+        .gte("created_at", windowStart);
+
+      if (count !== null && count >= RATE_LIMIT_MAX) {
+        return NextResponse.json(
+          { error: "Too many submissions. Please try again later." },
+          { status: 429 }
+        );
+      }
+
+      const { error } = await supabase.from("consultation_submissions").insert({
+        name: email.trim(),
+        email: email.trim(),
+        message: interest,
+        ip_address: ip,
+      });
+
+      if (error) {
+        console.error("Supabase insert error:", error);
+        // Don't block the email send on Supabase failure.
+      }
+    } else {
+      console.log("Consultation submission (no Supabase):", {
+        email,
+        interest,
+        ip,
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    await notifySubmission({
+      kind: "Consultation request",
+      fromEmail: email,
+      subjectDetail: interest,
+      intro: `Someone requested a free ${escape(interest)} consultation.`,
+      fields: {
+        Email: escape(email),
+        Interest: escape(interest),
+        IP: escape(ip),
+      },
     });
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
 
     return NextResponse.json({ success: true });
   } catch {
-    return NextResponse.json({ error: 'Failed to send. Please try again.' }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send. Please try again." },
+      { status: 500 }
+    );
   }
 }

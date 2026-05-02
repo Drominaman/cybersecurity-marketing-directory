@@ -6,6 +6,7 @@ import TldrSummary from '@/components/TldrSummary';
 import { getAllAgencies } from '@/lib/agencies';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { collectionPageSchema, breadcrumbSchema } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 const locations = {
@@ -40,10 +41,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `Cybersecurity Marketing Agencies in ${location.name}`,
       description: `Find the best cybersecurity marketing agencies in ${location.name}. Compare specialized security marketing firms.`,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/location/${slug}`,
+      url: `https://cybersecuritymarketingagencies.com/location/${slug}`,
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/location/${slug}`,
+      canonical: `https://cybersecuritymarketingagencies.com/location/${slug}`,
     },
   };
 }
@@ -70,56 +71,26 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const totalAgencies = localAgencies.length + globalAgencies.length;
 
-  // Breadcrumb schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cybersecuritymarketingagencies.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": `Agencies in ${location.name}`,
-        "item": `https://www.cybersecuritymarketingagencies.com/location/${slug}`
-      }
-    ]
-  };
-
   const allAgencies = [...localAgencies, ...globalAgencies];
 
-  // Collection schema
-  const collectionSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": `Cybersecurity Marketing Agencies in ${location.name}`,
-    "description": `Top-rated cybersecurity marketing agencies serving ${location.name}`,
-    "url": `https://www.cybersecuritymarketingagencies.com/location/${slug}`,
-    "mainEntity": {
-      "@type": "ItemList",
-      "numberOfItems": allAgencies.length,
-      "itemListElement": allAgencies.map((agency, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "Organization",
-          "name": agency.name,
-          "url": agency.website,
-        }
-      }))
-    }
-  };
+  const breadcrumbData = breadcrumbSchema([
+    { label: 'Home', url: '/' },
+    { label: `Agencies in ${location.name}`, url: `/location/${slug}` },
+  ]);
+
+  const collectionSchema = collectionPageSchema(
+    `Cybersecurity Marketing Agencies in ${location.name}`,
+    `Top-rated cybersecurity marketing agencies serving ${location.name}`,
+    `/location/${slug}`,
+    allAgencies
+  );
 
   return (
     <div className="min-h-screen bg-black">
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
       <Script
         id="collection-schema"

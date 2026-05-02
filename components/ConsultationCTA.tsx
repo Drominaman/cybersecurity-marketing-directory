@@ -74,6 +74,7 @@ export default function ConsultationCTA() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [email, setEmail] = useState('');
+  const [websiteUrl, setWebsiteUrl] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   useEffect(() => {
@@ -85,13 +86,18 @@ export default function ConsultationCTA() {
 
     const handleScroll = () => {
       const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-      if (scrollPercent > 0.5) {
+      if (scrollPercent > 0.25) {
         setVisible(true);
       }
     };
 
+    const timer = setTimeout(() => setVisible(true), 20000);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, []);
 
   const handleDismiss = () => {
@@ -108,7 +114,7 @@ export default function ConsultationCTA() {
       const res = await fetch('/api/consultation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, context: contextText }),
+        body: JSON.stringify({ email, context: contextText, website_url: websiteUrl }),
       });
 
       if (!res.ok) throw new Error('Failed');
@@ -149,6 +155,16 @@ export default function ConsultationCTA() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-3">
+            <input
+              type="text"
+              name="website_url"
+              tabIndex={-1}
+              autoComplete="off"
+              value={websiteUrl}
+              onChange={(e) => setWebsiteUrl(e.target.value)}
+              style={{ position: 'absolute', left: '-9999px' }}
+              aria-hidden="true"
+            />
             <input
               type="email"
               required

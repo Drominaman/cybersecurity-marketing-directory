@@ -1,11 +1,13 @@
 export async function GET() {
-  const body = `# robots.txt for www.cybersecuritymarketingagencies.com
+  const body = `# robots.txt for cybersecuritymarketingagencies.com
 # Last Updated: 2026-04-13
 
 # Allow all search engines
 User-agent: *
 Allow: /
-Disallow: /*?search=*
+Disallow: /*?q=*
+Disallow: /*?service=*
+Disallow: /*?market=*
 
 # AI Crawlers - Explicitly Allowed
 # OpenAI
@@ -42,12 +44,12 @@ User-agent: cohere-ai
 Allow: /
 
 # Sitemap
-Sitemap: https://www.cybersecuritymarketingagencies.com/sitemap.xml
+Sitemap: https://cybersecuritymarketingagencies.com/sitemap.xml
 
 # LLM Content Files
 # For AI assistants and LLM crawlers:
-# Summary: https://www.cybersecuritymarketingagencies.com/llms.txt
-# Full content: https://www.cybersecuritymarketingagencies.com/llms-full.txt
+# Summary: https://cybersecuritymarketingagencies.com/llms.txt
+# Full content: https://cybersecuritymarketingagencies.com/llms-full.txt
 `;
 
   return new Response(body, {

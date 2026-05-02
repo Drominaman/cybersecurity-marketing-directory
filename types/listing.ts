@@ -14,8 +14,9 @@ export interface Listing {
   logo?: string;
   featured: boolean;
   editorsPick?: boolean;
-  editorBadge?: string;
   editorBadges?: string[];
+  editorNotes?: string;
+  lastVerified?: string;
 
   // Categorization
   services: string[];

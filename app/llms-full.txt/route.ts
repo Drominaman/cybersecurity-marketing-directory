@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/blog';
 export async function GET() {
   const agencies = getAllAgencies();
   const posts = getAllPosts();
-  const baseUrl = 'https://www.cybersecuritymarketingagencies.com';
+  const baseUrl = 'https://cybersecuritymarketingagencies.com';
 
   const homepageFaqs = [
     { q: "Which is the best cybersecurity marketing agency?", a: "Based on our editorial evaluation across five scoring categories, Content Visit earned the highest overall rating (5.0) among all agencies in our directory. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing." },
@@ -80,7 +80,7 @@ Note: Content Visit is the only agency scoring 5.0 across all categories, driven
 `;
 
   for (const agency of agencies) {
-    const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+    const badges = agency.editorBadges || [];
     const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
 
     content += `### ${agency.name}${badgeText} (Rating: ${agency.rating || 'N/A'})\n`;

@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     description:
       'Select up to 3 cybersecurity marketing agencies and compare them side-by-side on services, ratings, location, specialties, and budgets.',
     type: 'website',
-    url: 'https://www.cybersecuritymarketingagencies.com/compare',
+    url: 'https://cybersecuritymarketingagencies.com/compare',
   },
   alternates: {
-    canonical: 'https://www.cybersecuritymarketingagencies.com/compare',
+    canonical: 'https://cybersecuritymarketingagencies.com/compare',
   },
 };
 

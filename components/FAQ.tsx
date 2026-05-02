@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const faqs = [
+export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
     answer: "Based on our editorial evaluation across five scoring categories, Content Visit earned the highest overall rating (5.0) among all agencies in our directory. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing."
@@ -39,26 +39,11 @@ const faqs = [
   }
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-};
+const faqs = homepageFaqs;
 
 export default function FAQ() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <div className="bg-gray-900 border-4 border-white p-10 mt-20">
         <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
           ■ FREQUENTLY ASKED QUESTIONS

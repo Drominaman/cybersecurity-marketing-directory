@@ -34,6 +34,12 @@ export default function SiteNav() {
             COMPARE
           </Link>
           <Link
+            href="/submit-agency"
+            className="text-gray-300 hover:text-white transition-colors"
+          >
+            SUBMIT AGENCY
+          </Link>
+          <Link
             href="/"
             className="text-white hover:text-gray-300 transition-colors border-2 border-white hover:border-gray-400 px-3 py-1"
           >
@@ -58,28 +64,35 @@ export default function SiteNav() {
           <Link
             href="/blog"
             onClick={() => setMenuOpen(false)}
-            className="block py-2 text-sm font-mono text-gray-300 hover:text-white transition-colors"
+            className="block py-3 text-sm font-mono text-gray-300 hover:text-white transition-colors border-b border-white/30"
           >
             BLOG
           </Link>
           <Link
             href="/best-cybersecurity-marketing-agency"
             onClick={() => setMenuOpen(false)}
-            className="block py-2 text-sm font-mono text-gray-300 hover:text-white transition-colors"
+            className="block py-3 text-sm font-mono text-gray-300 hover:text-white transition-colors border-b border-white/30"
           >
             BEST AGENCY
           </Link>
           <Link
             href="/compare"
             onClick={() => setMenuOpen(false)}
-            className="block py-2 text-sm font-mono text-gray-300 hover:text-white transition-colors"
+            className="block py-3 text-sm font-mono text-gray-300 hover:text-white transition-colors border-b border-white/30"
           >
             COMPARE
           </Link>
           <Link
+            href="/submit-agency"
+            onClick={() => setMenuOpen(false)}
+            className="block py-3 text-sm font-mono text-gray-300 hover:text-white transition-colors border-b border-white/30"
+          >
+            SUBMIT AGENCY
+          </Link>
+          <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className="block py-2 text-sm font-mono text-white hover:text-gray-300 transition-colors"
+            className="block py-3 text-sm font-mono text-white hover:text-gray-300 transition-colors"
           >
             DIRECTORY
           </Link>

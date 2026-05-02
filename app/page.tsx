@@ -1,12 +1,13 @@
 import AgencySearch from '@/components/AgencySearch';
 import AuthorByline from '@/components/AuthorByline';
 import ComparisonTable from '@/components/ComparisonTable';
-import FAQ from '@/components/FAQ';
+import FAQ, { homepageFaqs } from '@/components/FAQ';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
+import { faqSchema } from '@/lib/seo';
 
 export default function Home() {
   const allAgencies = getAllAgencies();
@@ -51,11 +52,11 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Cybersecurity Marketing Agencies",
-    "url": "https://www.cybersecuritymarketingagencies.com",
+    "url": "https://cybersecuritymarketingagencies.com",
     "description": "The ultimate directory of specialized cybersecurity marketing agencies. Find the best cybersecurity marketing agencies for AI Visibility, SEO, content marketing, and PR.",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", "h2", ".text-white"]
+      "cssSelector": ["h1", ".tldr-summary"]
     }
   };
 
@@ -68,6 +69,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(homepageFaqs)) }}
       />
       <div className="min-h-screen bg-black">
         <SiteNav />
@@ -85,6 +90,14 @@ export default function Home() {
                 The ultimate directory of specialized cybersecurity marketing agencies
               </p>
             </div>
+            <div className="mt-8">
+              <a
+                href="#agency-search"
+                className="inline-block border-4 border-white px-6 py-3 text-white font-mono uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
+              >
+                &#9632; Find an agency &rarr;
+              </a>
+            </div>
             <AuthorByline variant="full" lastUpdated="April 2026" />
           </div>
         </header>
@@ -99,29 +112,13 @@ export default function Home() {
           'Content Visit is our top-rated pick - see the full comparison below.',
         ]} />
 
-        {/* Introduction Section - Keyword Rich */}
-        <div className="mb-12 bg-gray-900 border-4 border-white p-8">
-          <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
-            &#9632; Find the Best Cybersecurity Marketing Agencies
-          </h2>
-          <div className="text-white space-y-4 text-lg leading-relaxed">
-            <p>
-              This is a directory of cybersecurity marketing agencies for 2026. Whether you&apos;re looking for a cybersecurity marketing company, firm, or full-service agency, we&apos;ve got you covered. The cybersecurity market is projected to reach{' '}
-              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">over $10 trillion in annual cybercrime costs</a> according to Cybersecurity Ventures, making effective cybersecurity marketing services critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
-            </p>
-            <p>
-              Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. Every cyber security marketing agency in this directory has been vetted through{' '}
-              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="underline hover:text-gray-300">third-party review platforms like Clutch</a>,{' '}
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" className="underline hover:text-gray-300">LinkedIn company profiles</a>, and documented client results.
-            </p>
-            <p className="text-white font-bold">
-              &#9632; Browse the directory below and find the right partner for your security company.
-            </p>
-          </div>
-        </div>
+        {/* Client Island: Search/Filter + Agency Grid */}
+        <section id="agency-search">
+          <AgencySearch agencies={allAgencies} allServices={allServices} />
+        </section>
 
         {/* Best Agency CTA */}
-        <div className="mb-12 bg-gray-900 border-4 border-white p-8 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]">
+        <div className="mt-20 mb-12 bg-gray-900 border-4 border-white p-8 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-black text-white mb-3 uppercase tracking-wider">
@@ -140,8 +137,26 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Client Island: Search/Filter + Agency Grid */}
-        <AgencySearch agencies={allAgencies} allServices={allServices} />
+        {/* Introduction Section - Keyword Rich */}
+        <div className="mb-12 bg-gray-900 border-4 border-white p-8">
+          <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+            &#9632; Find the Best Cybersecurity Marketing Agencies
+          </h2>
+          <div className="text-white space-y-4 text-lg leading-relaxed">
+            <p>
+              This is a directory of cybersecurity marketing agencies for 2026. Whether you&apos;re looking for a cybersecurity marketing company, firm, or full-service agency, we&apos;ve got you covered. The cybersecurity market is projected to reach{' '}
+              <a href="https://cybersecurityventures.com/cybersecurity-market-report/" target="_blank" rel="noopener" className="underline hover:text-gray-300">over $10 trillion in annual cybercrime costs</a> according to Cybersecurity Ventures, making effective cybersecurity marketing services critical for security vendors. If you run a cybersecurity startup, MSSP, or enterprise security vendor, you need a marketing partner who gets your space.
+            </p>
+            <p>
+              Marketing security products is hard. You&apos;re dealing with complex tech, long sales cycles, and technical buyers. Every cyber security marketing agency in this directory has been vetted through{' '}
+              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="underline hover:text-gray-300">third-party review platforms like Clutch</a>,{' '}
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" className="underline hover:text-gray-300">LinkedIn company profiles</a>, and documented client results.
+            </p>
+            <p className="text-white font-bold">
+              &#9632; Browse the directory above and find the right partner for your security company.
+            </p>
+          </div>
+        </div>
 
         {/* Comparison Table */}
         {allAgencies.length > 0 && (

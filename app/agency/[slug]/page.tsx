@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+  const badges = agency.editorBadges || [];
   const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
 
   return {
@@ -37,10 +37,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${agency.name} - Cybersecurity Marketing Agency`,
       description: `${agency.shortDescription} Part of the cybersecurity marketing agencies directory.`,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/agency/${slug}`,
+      url: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/agency/${slug}`,
+      canonical: `https://cybersecuritymarketingagencies.com/agency/${slug}`,
     },
   };
 }
@@ -64,7 +64,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     .slice(0, 3);
 
   // Get badges for SEO markup
-  const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+  const badges = agency.editorBadges || [];
 
   // Breadcrumb schema
   const breadcrumbSchema = {
@@ -75,13 +75,13 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.cybersecuritymarketingagencies.com"
+        "item": "https://cybersecuritymarketingagencies.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": agency.name,
-        "item": `https://www.cybersecuritymarketingagencies.com/agency/${slug}`
+        "item": `https://cybersecuritymarketingagencies.com/agency/${slug}`
       }
     ]
   };
@@ -249,7 +249,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 <div className="text-4xl">⭐</div>
                 <div>
                   <h2 className="text-2xl font-black text-white mb-4 uppercase tracking-wider">
-                    Editor's Choice
+                    Editor&apos;s Choice
                   </h2>
                   <p className="text-white text-lg mb-4">
                     We picked {agency.name} as best for:
@@ -262,6 +262,21 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Editor's Note - honest editorial context including weaknesses */}
+          {agency.editorNotes && (
+            <div className="bg-gray-900 border-2 border-white p-8 mb-12">
+              <div className="flex items-start gap-4">
+                <div className="text-4xl">📝</div>
+                <div>
+                  <h2 className="text-2xl font-black text-white mb-4 uppercase tracking-wider">
+                    Editor&apos;s Note
+                  </h2>
+                  <p className="text-white text-base leading-relaxed">{agency.editorNotes}</p>
                 </div>
               </div>
             </div>
@@ -309,9 +324,10 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
             </p>
             <p className="text-gray-300 text-base mb-4">
               {agency.name} is a specialized cybersecurity marketing agency that helps security companies
-              grow their business through strategic marketing initiatives. Based in {agency.location},
-              they have {agency.yearFounded ? `been in business since ${agency.yearFounded}` : 'extensive experience'}
-              working with cybersecurity vendors, MSSPs, and security service providers.
+              grow their business through strategic marketing initiatives.
+              {agency.location ? ` Based in ${agency.location}, they have` : ' They have'}{' '}
+              {agency.yearFounded ? `been in business since ${agency.yearFounded}` : 'extensive experience'}
+              {' '}working with cybersecurity vendors, MSSPs, and security service providers.
             </p>
             <p className="text-gray-300 text-base">
               Want to see other options? Check the full{' '}

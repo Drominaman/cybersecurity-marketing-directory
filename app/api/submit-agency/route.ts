@@ -1,79 +1,144 @@
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
+import { isSupabaseConfigured, getSupabaseClient } from "@/lib/supabase";
+import { notifySubmission } from "@/lib/notify";
 
-function getResend() {
-  return new Resend(process.env.RESEND_API_KEY);
-}
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_HOURS = 1;
 
 interface SubmissionData {
-  agencyName: string;
-  websiteUrl: string;
-  contactEmail: string;
+  agencyName?: string;
+  websiteUrl?: string;
+  contactEmail?: string;
+  contactName?: string;
   location?: string;
   services?: string[];
   description?: string;
+  website_url?: string; // honeypot
 }
 
-export async function POST(request: Request) {
-  try {
-    const body: SubmissionData = await request.json();
+function getClientIp(req: NextRequest): string {
+  return (
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip") ||
+    "unknown"
+  );
+}
 
-    if (!body.agencyName || !body.websiteUrl || !body.contactEmail) {
+function escape(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const body: SubmissionData = await req.json();
+
+    // Honeypot
+    if (body.website_url) {
+      return NextResponse.json({ success: true });
+    }
+
+    const { agencyName, websiteUrl, contactEmail, contactName, location, services, description } = body;
+
+    if (
+      !agencyName ||
+      typeof agencyName !== "string" ||
+      !agencyName.trim() ||
+      !websiteUrl ||
+      typeof websiteUrl !== "string" ||
+      !websiteUrl.trim() ||
+      !contactEmail ||
+      typeof contactEmail !== "string"
+    ) {
       return NextResponse.json(
-        { error: 'Agency name, website URL, and contact email are required.' },
+        { error: "Agency name, website URL, and contact email are required." },
         { status: 400 }
       );
     }
 
-    const servicesText = body.services?.length
-      ? body.services.join(', ')
-      : 'Not specified';
-
-    const { error } = await getResend().emails.send({
-      from: 'Cybersecurity Marketing Agencies <onboarding@resend.dev>',
-      to: 'robbie@contentvisit.com',
-      subject: `Agency Submission: ${body.agencyName}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="border-bottom: 2px solid #000; padding-bottom: 8px;">New Agency Submission</h2>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top; width: 140px;">Agency Name</td>
-              <td style="padding: 8px 0;">${body.agencyName}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Website</td>
-              <td style="padding: 8px 0;"><a href="${body.websiteUrl}">${body.websiteUrl}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Contact Email</td>
-              <td style="padding: 8px 0;"><a href="mailto:${body.contactEmail}">${body.contactEmail}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Location</td>
-              <td style="padding: 8px 0;">${body.location || 'Not specified'}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Services</td>
-              <td style="padding: 8px 0;">${servicesText}</td>
-            </tr>
-          </table>
-          ${body.description ? `
-            <h3 style="margin-top: 24px; border-bottom: 1px solid #ccc; padding-bottom: 4px;">Description</h3>
-            <p style="white-space: pre-wrap;">${body.description}</p>
-          ` : ''}
-        </div>
-      `,
-    });
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) {
+      return NextResponse.json(
+        { error: "Please enter a valid email address" },
+        { status: 400 }
+      );
     }
+
+    const servicesText = services?.length ? services.join(", ") : "";
+    const ip = getClientIp(req);
+
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseClient();
+
+      // Rate limiting: 5 submissions per hour per IP
+      const windowStart = new Date(
+        Date.now() - RATE_LIMIT_WINDOW_HOURS * 60 * 60 * 1000
+      ).toISOString();
+
+      const { count } = await supabase
+        .from("agency_submissions")
+        .select("*", { count: "exact", head: true })
+        .eq("ip_address", ip)
+        .gte("created_at", windowStart);
+
+      if (count !== null && count >= RATE_LIMIT_MAX) {
+        return NextResponse.json(
+          { error: "Too many submissions. Please try again later." },
+          { status: 429 }
+        );
+      }
+
+      const { error } = await supabase.from("agency_submissions").insert({
+        company_name: agencyName.trim(),
+        website: websiteUrl.trim(),
+        contact_email: contactEmail.trim(),
+        contact_name: contactName?.trim() || null,
+        description: description?.trim() || null,
+        services: servicesText || null,
+        location: location?.trim() || null,
+        ip_address: ip,
+      });
+
+      if (error) {
+        console.error("Supabase insert error:", error);
+        // Don't block the email send on Supabase failure.
+      }
+    } else {
+      console.log("Agency submission (no Supabase):", {
+        agencyName,
+        websiteUrl,
+        contactEmail,
+        location,
+        services: servicesText,
+        ip,
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    await notifySubmission({
+      kind: "Agency submission",
+      fromEmail: contactEmail,
+      subjectDetail: agencyName,
+      fields: {
+        "Agency Name": escape(agencyName),
+        Website: escape(websiteUrl),
+        "Contact Email": escape(contactEmail),
+        "Contact Name": contactName ? escape(contactName) : "",
+        Location: location ? escape(location) : "",
+        Services: servicesText ? escape(servicesText) : "",
+        Description: description ? escape(description) : "",
+        IP: escape(ip),
+      },
+    });
 
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(
-      { error: 'Failed to send submission. Please try again.' },
+      { error: "Failed to send submission. Please try again." },
       { status: 500 }
     );
   }

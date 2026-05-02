@@ -6,6 +6,7 @@ import { getAllSlugs, getPostBySlug, getAllPosts, slugify } from '@/lib/blog';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { articleSchema as buildArticleSchema, breadcrumbSchema as buildBreadcrumbSchema } from '@/lib/seo';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const ogImageUrl = post.coverImage ||
-    `https://www.cybersecuritymarketingagencies.com/api/placeholder/${slug}/og-image?title=${encodeURIComponent(post.title)}`;
+    `https://cybersecuritymarketingagencies.com/api/placeholder/${slug}/og-image?title=${encodeURIComponent(post.title)}`;
 
   return {
     title: `${post.title} | Cybersecurity Marketing Tips`,
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.publishedDate,
       modifiedTime: post.updatedDate || post.publishedDate,
       authors: [post.author],
-      url: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+      url: `https://cybersecuritymarketingagencies.com/blog/${post.slug}`,
       images: [
         {
           url: ogImageUrl,
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [ogImageUrl],
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+      canonical: `https://cybersecuritymarketingagencies.com/blog/${post.slug}`,
     },
   };
 }
@@ -163,31 +164,15 @@ export default async function BlogPostPage({ params }: Props) {
   });
 
   const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.metaDescription,
-    image: {
-      '@type': 'ImageObject',
-      url: post.coverImage || `https://www.cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
-      width: 1200,
-      height: 630,
-    },
-    datePublished: post.publishedDate,
-    dateModified: post.updatedDate || post.publishedDate,
-    author: {
-      '@type': 'Organization',
-      name: post.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Cybersecurity Marketing Agencies',
-      url: 'https://www.cybersecuritymarketingagencies.com',
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
-    },
+    ...buildArticleSchema({
+      title: post.title,
+      description: post.metaDescription,
+      slug: post.slug,
+      datePublished: post.publishedDate,
+      dateModified: post.updatedDate || post.publishedDate,
+      author: post.author,
+      image: post.coverImage || `https://cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
+    }),
     keywords: post.keywords.join(', '),
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -195,30 +180,11 @@ export default async function BlogPostPage({ params }: Props) {
     },
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.cybersecuritymarketingagencies.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: 'https://www.cybersecuritymarketingagencies.com/blog',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { label: 'Home', url: '/' },
+    { label: 'Blog', url: '/blog' },
+    { label: post.title, url: `/blog/${post.slug}` },
+  ]);
 
   return (
     <div className="min-h-screen bg-black text-white">

@@ -5,6 +5,7 @@ import { getAllAgencies } from '@/lib/agencies';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { collectionPageSchema, breadcrumbSchema } from '@/lib/seo';
 import type { Metadata } from 'next';
 import type { Agency } from '@/types/agency';
 
@@ -49,10 +50,10 @@ export async function generateMetadata({ params }: { params: Promise<{ niche: st
       title: `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
       description: nicheData.description,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
+      url: `https://cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
+      canonical: `https://cybersecuritymarketingagencies.com/best-for-audience/${niche}`,
     },
   };
 }
@@ -81,49 +82,24 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
 
   const topAgency = sortedAgencies.find((a) => a.recommended || a.rating === 5.0);
 
-  // Breadcrumb schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cybersecuritymarketingagencies.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": `Best for ${nicheData.name}`,
-        "item": `https://www.cybersecuritymarketingagencies.com/best-for-audience/${niche}`
-      }
-    ]
-  };
+  const breadcrumbData = breadcrumbSchema([
+    { label: 'Home', url: '/' },
+    { label: `Best for ${nicheData.name}`, url: `/best-for-audience/${niche}` },
+  ]);
 
-  // Collection schema for niche page
-  const collectionSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
-    "description": nicheData.description,
-    "about": {
-      "@type": "Service",
-      "serviceType": `Cybersecurity Marketing for ${nicheData.name}`,
-      "provider": sortedAgencies.slice(0, 5).map((agency) => ({
-        "@type": "Organization",
-        "name": agency.name,
-        "url": agency.website,
-      })),
-    },
-  };
+  const collectionSchema = collectionPageSchema(
+    `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
+    nicheData.description,
+    `/best-for-audience/${niche}`,
+    sortedAgencies
+  );
 
   return (
     <>
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
       <Script
         id="collection-schema"

@@ -1,11 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ['resend', '@supabase/supabase-js'],
+  },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.cybersecuritymarketingagencies.com',
+        hostname: 'cybersecuritymarketingagencies.com',
         pathname: '/api/placeholder/**',
       },
       {
@@ -18,6 +23,7 @@ const nextConfig: NextConfig = {
         pathname: '/s2/favicons/**',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
     // Allow query strings for local API routes
     localPatterns: [
       {

@@ -24,6 +24,7 @@ export default function SubmitAgencyPage() {
   const [location, setLocation] = useState('');
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [description, setDescription] = useState('');
+  const [websiteHoneypot, setWebsiteHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -53,6 +54,7 @@ export default function SubmitAgencyPage() {
           location,
           services: selectedServices,
           description,
+          website_url: websiteHoneypot,
         }),
       });
 
@@ -109,6 +111,16 @@ export default function SubmitAgencyPage() {
 
           {/* Form */}
           <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="website_url"
+              tabIndex={-1}
+              autoComplete="off"
+              value={websiteHoneypot}
+              onChange={(e) => setWebsiteHoneypot(e.target.value)}
+              style={{ position: 'absolute', left: '-9999px' }}
+              aria-hidden="true"
+            />
             <div className="bg-gray-900 border-4 border-white p-10 mb-12 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]">
               <h2 className="text-xl font-black uppercase tracking-tight mb-8">
                 ■ AGENCY DETAILS

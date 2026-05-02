@@ -36,10 +36,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'website',
-      url: `https://www.cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
+      url: `https://cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
       images: [
         {
-          url: `https://www.cybersecuritymarketingagencies.com/api/placeholder/author-${authorSlug}/og-image?title=${encodeURIComponent(`Articles by ${author.name}`)}`,
+          url: `https://cybersecuritymarketingagencies.com/api/placeholder/author-${authorSlug}/og-image?title=${encodeURIComponent(`Articles by ${author.name}`)}`,
           width: 1200,
           height: 630,
           alt: `Articles by ${author.name}`,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
     },
     alternates: {
-      canonical: `https://www.cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
+      canonical: `https://cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
     },
   };
 }
@@ -71,19 +71,19 @@ export default async function AuthorPage({ params }: Props) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.cybersecuritymarketingagencies.com',
+        item: 'https://cybersecuritymarketingagencies.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://www.cybersecuritymarketingagencies.com/blog',
+        item: 'https://cybersecuritymarketingagencies.com/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: author.name,
-        item: `https://www.cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
+        item: `https://cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
       },
     ],
   };
@@ -93,7 +93,7 @@ export default async function AuthorPage({ params }: Props) {
     '@type': 'CollectionPage',
     name: `Articles by ${author.name}`,
     description: `All articles written by ${author.name} on cybersecurity marketing.`,
-    url: `https://www.cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
+    url: `https://cybersecuritymarketingagencies.com/blog/author/${authorSlug}`,
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: posts.map((post, index) => ({
@@ -108,7 +108,7 @@ export default async function AuthorPage({ params }: Props) {
             '@type': 'Organization',
             name: author.name,
           },
-          url: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+          url: `https://cybersecuritymarketingagencies.com/blog/${post.slug}`,
         },
       })),
     },

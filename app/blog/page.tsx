@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     title: 'Cybersecurity Marketing Tips & Insights | Blog',
     description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights.',
     type: 'website',
-    url: 'https://www.cybersecuritymarketingagencies.com/blog',
+    url: 'https://cybersecuritymarketingagencies.com/blog',
     images: [
       {
-        url: 'https://www.cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
+        url: 'https://cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
         width: 1200,
         height: 630,
         alt: 'Cybersecurity Marketing Tips & Insights',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.cybersecuritymarketingagencies.com/blog',
+    canonical: 'https://cybersecuritymarketingagencies.com/blog',
     types: {
-      'application/rss+xml': 'https://www.cybersecuritymarketingagencies.com/feed.xml',
+      'application/rss+xml': 'https://cybersecuritymarketingagencies.com/feed.xml',
     },
   },
 };
@@ -49,17 +49,17 @@ export default function BlogPage() {
     '@type': 'Blog',
     name: 'Cybersecurity Marketing Tips & Insights',
     description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights.',
-    url: 'https://www.cybersecuritymarketingagencies.com/blog',
+    url: 'https://cybersecuritymarketingagencies.com/blog',
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
+      url: 'https://cybersecuritymarketingagencies.com/api/placeholder/blog-index/og-image?title=Cybersecurity%20Marketing%20Blog',
       width: 1200,
       height: 630,
     },
     publisher: {
       '@type': 'Organization',
       name: 'Cybersecurity Marketing Agencies',
-      url: 'https://www.cybersecuritymarketingagencies.com',
+      url: 'https://cybersecuritymarketingagencies.com',
     },
     blogPost: posts.map(post => ({
       '@type': 'BlogPosting',
@@ -67,12 +67,12 @@ export default function BlogPage() {
       description: post.excerpt,
       datePublished: post.publishedDate,
       dateModified: post.updatedDate || post.publishedDate,
-      image: post.coverImage || `https://www.cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
+      image: post.coverImage || `https://cybersecuritymarketingagencies.com/api/placeholder/${post.slug}/og-image?title=${encodeURIComponent(post.title)}`,
       author: {
         '@type': 'Organization',
         name: post.author,
       },
-      url: `https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`,
+      url: `https://cybersecuritymarketingagencies.com/blog/${post.slug}`,
     })),
   };
 

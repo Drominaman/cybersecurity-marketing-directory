@@ -3,7 +3,7 @@ import { getAllAgencies } from '@/lib/agencies';
 import { getAllPosts, getAllTags, slugify } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.cybersecuritymarketingagencies.com';
+  const baseUrl = 'https://cybersecuritymarketingagencies.com';
   const agencies = getAllAgencies();
   const posts = getAllPosts();
   const tags = getAllTags();

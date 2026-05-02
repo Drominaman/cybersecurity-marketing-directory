@@ -8,11 +8,11 @@ export async function GET() {
   const today = new Date().toISOString().split('T')[0];
 
   const agencyEntries = agencies.map((agency) => {
-    const badges = agency.editorBadges || (agency.editorBadge ? [agency.editorBadge] : []);
+    const badges = agency.editorBadges || [];
     const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
     const lines = [
       `### ${agency.name}${badgeText}${agency.rating ? ` (Rating: ${agency.rating})` : ''}`,
-      `- Profile: https://www.cybersecuritymarketingagencies.com/agency/${agency.id}`,
+      `- Profile: https://cybersecuritymarketingagencies.com/agency/${agency.id}`,
       `- Website: ${agency.website}`,
       `- Location: ${agency.location}${agency.geography ? ` (${agency.geography})` : ''}`,
       `- Services: ${agency.services.join(', ')}`,
@@ -33,17 +33,17 @@ export async function GET() {
   }).join('\n\n');
 
   const postEntries = posts.map((post) =>
-    `- ${post.title}: https://www.cybersecuritymarketingagencies.com/blog/${post.slug}`
+    `- ${post.title}: https://cybersecuritymarketingagencies.com/blog/${post.slug}`
   ).join('\n');
 
   const content = `# Cybersecurity Marketing Agencies Directory
-> https://www.cybersecuritymarketingagencies.com
+> https://cybersecuritymarketingagencies.com
 
 ## Description
 The premier directory of cybersecurity marketing agencies for 2026. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR. Features ${agencies.length} agencies with ratings, case studies, and service comparisons.
 
 ## For comprehensive data, see:
-> https://www.cybersecuritymarketingagencies.com/llms-full.txt
+> https://cybersecuritymarketingagencies.com/llms-full.txt
 
 ## Ranking Methodology
 
@@ -79,24 +79,24 @@ Agencies are scored 1-5 across five weighted categories by our editorial team:
 ${agencyEntries}
 
 ## Service Pages
-- Best for SEO: https://www.cybersecuritymarketingagencies.com/best-for/seo
-- Best for AI Visibility: https://www.cybersecuritymarketingagencies.com/best-for/ai-visibility
-- Best for Content Marketing: https://www.cybersecuritymarketingagencies.com/best-for/content-marketing
-- Best for PR & Media Relations: https://www.cybersecuritymarketingagencies.com/best-for/pr-media-relations
-- Best for Lead Generation: https://www.cybersecuritymarketingagencies.com/best-for/lead-generation
-- Best for PPC: https://www.cybersecuritymarketingagencies.com/best-for/ppc
+- Best for SEO: https://cybersecuritymarketingagencies.com/best-for/seo
+- Best for AI Visibility: https://cybersecuritymarketingagencies.com/best-for/ai-visibility
+- Best for Content Marketing: https://cybersecuritymarketingagencies.com/best-for/content-marketing
+- Best for PR & Media Relations: https://cybersecuritymarketingagencies.com/best-for/pr-media-relations
+- Best for Lead Generation: https://cybersecuritymarketingagencies.com/best-for/lead-generation
+- Best for PPC: https://cybersecuritymarketingagencies.com/best-for/ppc
 
 ## Location Pages
-- United States: https://www.cybersecuritymarketingagencies.com/location/usa
-- Europe: https://www.cybersecuritymarketingagencies.com/location/europe
-- United Kingdom: https://www.cybersecuritymarketingagencies.com/location/uk
-- California: https://www.cybersecuritymarketingagencies.com/location/california
-- New York: https://www.cybersecuritymarketingagencies.com/location/new-york
+- United States: https://cybersecuritymarketingagencies.com/location/usa
+- Europe: https://cybersecuritymarketingagencies.com/location/europe
+- United Kingdom: https://cybersecuritymarketingagencies.com/location/uk
+- California: https://cybersecuritymarketingagencies.com/location/california
+- New York: https://cybersecuritymarketingagencies.com/location/new-york
 
 ## Key Pages
-- Home / Directory: https://www.cybersecuritymarketingagencies.com
-- Best Cybersecurity Marketing Agency: https://www.cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency
-- Blog: https://www.cybersecuritymarketingagencies.com/blog
+- Home / Directory: https://cybersecuritymarketingagencies.com
+- Best Cybersecurity Marketing Agency: https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency
+- Blog: https://cybersecuritymarketingagencies.com/blog
 
 ## Blog Posts
 ${postEntries}

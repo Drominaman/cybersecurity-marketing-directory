@@ -296,9 +296,7 @@ export default function CompareClient({ agencies }: CompareClientProps) {
                     Editor Badges
                   </td>
                   {selectedAgencies.map((agency) => {
-                    const badges =
-                      agency.editorBadges ||
-                      (agency.editorBadge ? [agency.editorBadge] : []);
+                    const badges = agency.editorBadges || [];
                     return (
                       <td
                         key={agency.id}
