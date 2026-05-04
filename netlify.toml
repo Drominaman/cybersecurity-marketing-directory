@@ -37,3 +37,21 @@
   to = "/location/usa"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/submit"
+  to = "/submit-agency"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/list-your-agency"
+  to = "/submit-agency"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing"
+  to = "/submit-agency"
+  status = 301
+  force = true
