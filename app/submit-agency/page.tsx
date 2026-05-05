@@ -17,7 +17,7 @@ const SERVICES = [
   'Digital Marketing',
 ];
 
-const SUBMISSIONS_EMAIL = 'submissions@cybersecuritymarketingagencies.com';
+const SUBMISSIONS_EMAIL = 'robbie@contentvisit.com';
 
 export default function SubmitAgencyPage() {
   const [agencyName, setAgencyName] = useState('');
@@ -108,7 +108,7 @@ export default function SubmitAgencyPage() {
           <TldrSummary points={[
             'Two listing tiers: Verified ($499/year) and Featured ($1,499/year).',
             'Editorial picks (Best for SEO, Best Overall, etc.) cannot be purchased.',
-            'Submit below or email submissions@cybersecuritymarketingagencies.com to discuss.',
+            'Submit below or email robbie@contentvisit.com to discuss.',
             'Approval takes 5 to 7 business days. Annual renewal.',
           ]} />
 
