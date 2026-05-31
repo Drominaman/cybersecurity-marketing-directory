@@ -6,6 +6,25 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['resend', '@supabase/supabase-js'],
   },
+  // Enforce canonical hostname: www -> non-www.
+  // Belt-and-braces: Netlify also handles this at the edge, but having
+  // it in code means it survives any platform reconfiguration and is
+  // reviewable in PRs. See memory: seo_canonical_domain_setup.md
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.cybersecuritymarketingagencies.com',
+          },
+        ],
+        destination: 'https://cybersecuritymarketingagencies.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
