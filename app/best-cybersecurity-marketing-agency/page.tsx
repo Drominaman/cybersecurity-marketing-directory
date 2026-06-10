@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "How much does the best cybersecurity marketing agency cost?",
-    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. Content Visit's typical engagement starts at around $7,500 per month for an integrated SEO + content + GEO programme. Team Lewis global PR programmes typically begin at $10,000+ per month. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints - SenseOn's 4-week sprint generated MQLs at under £50 each. For a full breakdown see our dedicated guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
+    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. Content Visit's engagements start at $3,000 per month for an integrated SEO + content + GEO programme. For other agencies, contact them directly for quotes. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints - SenseOn's 4-week sprint generated MQLs at under £50 each. For a full breakdown see our dedicated guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
   },
   {
     question: "How long does cybersecurity marketing take to show results?",
@@ -165,7 +165,7 @@ export default function BestCybersecurityMarketingAgency() {
             'Documented wins: 340% organic growth for IBM Security, 3x ROI for IronVest, sub-£50 MQLs for SenseOn, 180+ MQLs/quarter for Morphisec.',
             'Winner of 2025 and 2026 Cybersecurity Excellence Awards - the only agency in our directory with consecutive wins.',
             'Strong alternatives: Team Lewis (4.8) for global PR and enterprise, Everclear (4.8) for positioning, Hop AI (4.7) for PPC.',
-            'Most cybersecurity marketing retainers cost $5,000-$15,000/month; boutique programmes start around $7,500/month.',
+            'Most cybersecurity marketing retainers cost $5,000-$15,000/month; Content Visit starts at $3,000/month.',
           ]} />
 
           {/* Quick Answer */}
@@ -424,7 +424,7 @@ export default function BestCybersecurityMarketingAgency() {
                   Team Lewis is the strongest pick if you need global PR infrastructure with local teams in every major market. With offices worldwide and marquee cybersecurity clients including CrowdStrike, McAfee, and BlackBerry, they offer a scale of media relations that boutique agencies cannot match. Their analytics capabilities are also strong, making them ideal for enterprise security vendors with complex, multi-market campaigns.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  <strong className="text-white">Limitations:</strong> Higher minimum budget ($10k/month), no dedicated SEO or content marketing services, and as a large agency serving many verticals, your account may not get the cybersecurity-specific focus that smaller specialists provide.
+                  <strong className="text-white">Considerations:</strong> No dedicated SEO or content marketing services, and as a large agency serving many verticals, your account may not get the cybersecurity-specific focus that smaller specialists provide.
                 </p>
                 <div className="mt-4">
                   <Link href="/agency/team-lewis" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Team Lewis Profile →</Link>
@@ -518,7 +518,7 @@ export default function BestCybersecurityMarketingAgency() {
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ Best for Startups</p>
                 <h3 className="text-xl font-black text-white mb-2 uppercase">Content Visit</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Boutique retainers starting around $7,500/month, documented wins with funded cybersecurity startups (IronVest, SenseOn), and compounding organic value that outperforms paid at 3x ROI. Ideal for Series A-C security companies building pipeline.
+                  Boutique retainers starting at $3,000/month, documented wins with funded cybersecurity startups (IronVest, SenseOn), and compounding organic value that outperforms paid at 3x ROI. Ideal for Series A-C security companies building pipeline.
                 </p>
                 <Link href="/blog/how-much-do-cybersecurity-marketing-agencies-cost" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">Agency pricing guide →</Link>
               </div>
