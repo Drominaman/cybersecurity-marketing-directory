@@ -12,6 +12,7 @@ export default function SiteFooter() {
               <Link href="/blog" className="block text-gray-400 hover:text-white transition-colors">Blog</Link>
               <Link href="/best-cybersecurity-marketing-agency" className="block text-gray-400 hover:text-white transition-colors">Best Agency Guide</Link>
               <Link href="/submit-agency" className="block text-gray-400 hover:text-white transition-colors">Submit Agency</Link>
+              <a href="/feed.xml" className="block text-gray-400 hover:text-white transition-colors">RSS Feed</a>
             </div>
           </div>
           <div>

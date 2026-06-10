@@ -228,6 +228,12 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 <div className="text-white font-black text-lg">{agency.location}</div>
               </div>
             )}
+            {agency.minBudget && (
+              <div className="bg-gray-900 border-4 border-white p-4">
+                <div className="text-gray-300 text-xs font-bold uppercase mb-1">MIN BUDGET</div>
+                <div className="text-white font-black text-lg">{agency.minBudget}</div>
+              </div>
+            )}
             {agency.yearFounded && (
               <div className="bg-gray-900 border-4 border-white p-4">
                 <div className="text-gray-300 text-xs font-bold uppercase mb-1">ESTABLISHED</div>
