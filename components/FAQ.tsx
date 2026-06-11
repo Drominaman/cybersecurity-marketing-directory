@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category winners: Content Visit for SEO, content, and AI visibility (4.9, the highest overall rating in our directory and the only cybersecurity-exclusive firm we track); Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology."
+    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category winners: Content Visit (4.8) for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
