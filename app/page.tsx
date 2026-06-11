@@ -29,21 +29,7 @@ export default function Home() {
         "@type": "Organization",
         "name": agency.name,
         "description": agency.description,
-        "url": agency.website,
-        ...(agency.rating && {
-          "review": {
-            "@type": "Review",
-            "author": {
-              "@type": "Organization",
-              "name": "Cybersecurity Marketing Agencies"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": agency.rating,
-              "bestRating": "5"
-            }
-          }
-        })
+        "url": agency.website
       }
     }))
   };

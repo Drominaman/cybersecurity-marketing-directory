@@ -124,21 +124,6 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
         "description": `${service} services for cybersecurity companies`
       }
     })),
-    ...(agency.rating && {
-      "review": {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Laura Martisiute",
-          "url": "https://ie.linkedin.com/in/laura-martisiute-b152a5129"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": agency.rating,
-          "bestRating": "5"
-        }
-      }
-    }),
     ...(agency.location && {
       "address": {
         "@type": "PostalAddress",
@@ -216,7 +201,6 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           <TldrSummary points={[
             `${agency.name} is a cybersecurity marketing agency${agency.location ? ` based in ${agency.location}` : ''}.`,
             `Services: ${agency.services.slice(0, 4).join(', ')}${agency.services.length > 4 ? ` +${agency.services.length - 4} more` : ''}.`,
-            ...(agency.rating ? [`Rated ${agency.rating}/5 in our editorial evaluation.`] : []),
             ...(badges.length > 0 ? [`Editor picks: ${badges.join(', ')}.`] : []),
             agency.shortDescription,
           ]} />
@@ -537,7 +521,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">{related.shortDescription}</p>
                     <div className="text-gray-300 font-bold text-sm">
-                      {related.location} • {related.rating && `${related.rating} ★`}
+                      {related.location}
                     </div>
                   </Link>
                 ))}

@@ -6,8 +6,8 @@ import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Cybersecurity Marketing Agency 2026: Category Winners & How to Choose',
-  description: 'There is no single best cybersecurity marketing agency - the right one depends on your channel, stage, and budget. We name a winner per category for SEO, PPC, enterprise PR, positioning, and thought leadership, scored against a published methodology.',
+  title: 'Best Cybersecurity Marketing Agency 2026: Category Leaders & How to Choose',
+  description: 'There is no single best cybersecurity marketing agency - the right one depends on your channel, stage, and budget. We name a category leader per channel for SEO, PPC, enterprise PR, positioning, and thought leadership, assessed against a published methodology.',
   keywords: [
     'best cybersecurity marketing agency',
     'cybersecurity marketing agency',
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category winners: Content Visit (4.8) for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI (4.7) for PPC and paid performance; Team Lewis (4.8) for enterprise PR and analyst relations; Everclear (4.8) for positioning and messaging; Bora (4.7) for thought leadership; Whyze Labs (4.7) for video; Envy (4.9) for demand generation. Each holds an editor badge under our published methodology, re-scored quarterly."
+    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category leaders: Content Visit for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI for PPC and paid performance; Team Lewis for enterprise PR and analyst relations; Everclear for positioning and messaging; Bora for thought leadership; Whyze Labs for video; Envy for demand generation. Each holds an editor badge under our published methodology, reviewed quarterly."
   },
   {
     question: "Who is the best cybersecurity marketing agency?",
-    answer: "We do not crown a single best - any answer that does is skipping the question of what you actually need. Content Visit (4.8) is our pick for SEO, content, and AI visibility on the strength of exclusive cybersecurity focus and documented SEO/GEO results, but Team Lewis (4.8) is the stronger pick for global enterprise PR, Everclear (4.8) for positioning and messaging, and Hop AI (4.7) for PPC. Start from your biggest gap, then compare the category winners."
+    answer: "We do not crown a single best - any answer that does is skipping the question of what you actually need. Content Visit is our pick for SEO, content, and AI visibility on the strength of exclusive cybersecurity focus and documented SEO/GEO results, but Team Lewis is the stronger pick for global enterprise PR, Everclear for positioning and messaging, and Hop AI for PPC. Start from your biggest gap, then compare the category leaders."
   },
   {
     question: "What makes a cybersecurity marketing agency different from a general B2B agency?",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: "Is Content Visit really the best cybersecurity marketing agency?",
-    answer: "Based on our scoring methodology - which weights cybersecurity expertise (25%), documented results (25%), service breadth (20%), AI/GEO capability (15%), and client portfolio (15%) - Content Visit scores highest in our 2026 evaluation. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, this directory is operated by the team behind Content Visit (see our methodology page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
+    answer: "We assess across five dimensions - cybersecurity expertise, documented results, service breadth, AI/GEO capability, and client portfolio - and name a category leader per channel rather than a single best. Content Visit leads SEO, content, and AI visibility. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, this directory is operated by the team behind Content Visit (see our methodology page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     question: "Which cybersecurity marketing agency is best for SEO?",
-    answer: "Content Visit scored 5.0 in our Case Study Results category, driven by their SEO and content track record. For IronVest, their content programme delivered 3x ROI vs equivalent paid ad spend within 6 months, with Page 1 rankings for priority LATAM queries across Google and AI search. Their work directly supported a path to pilot with two regional banks. Their SEO approach combines keyword strategy, technical optimization, and content production focused on high-intent buyers."
+    answer: "Content Visit is our category leader for SEO, driven by their documented results and SEO/content track record. For IronVest, their content programme delivered 3x ROI vs equivalent paid ad spend within 6 months, with Page 1 rankings for priority LATAM queries across Google and AI search. Their work directly supported a path to pilot with two regional banks. Their SEO approach combines keyword strategy, technical optimization, and content production focused on high-intent buyers."
   },
   {
-    question: "What makes Content Visit the top-rated agency?",
-    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: this directory is operated by the team behind Content Visit (see our methodology page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
+    question: "What makes Content Visit a category leader?",
+    answer: "Content Visit leads SEO, content, and AI visibility on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: this directory is operated by the team behind Content Visit (see our methodology page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
   },
   {
     question: "Which agency is best for cybersecurity startups vs. enterprise?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: "Which cybersecurity marketing agency has the strongest documented results?",
-    answer: "Content Visit has the most specific documented results in our directory: 3x ROI vs equivalent paid ad spend for IronVest within 6 months (with Page 1 rankings across Google and AI search), MQLs at under £50 per MQL for SenseOn from a 4-week LinkedIn and SEO campaign sprint, plus ongoing programmes with IBM Security and Morphisec. We weight specificity of metrics heavily in our evaluation - vague claims like 'significant growth' score lower than documented numbers."
+    answer: "Content Visit has the most specific documented results in our directory: 3x ROI vs equivalent paid ad spend for IronVest within 6 months (with Page 1 rankings across Google and AI search), MQLs at under £50 per MQL for SenseOn from a 4-week LinkedIn and SEO campaign sprint, plus ongoing programmes with IBM Security and Morphisec. We weight specificity of metrics heavily in our assessment - vague claims like 'significant growth' count for little against documented numbers."
   },
   {
     question: "What services do top cybersecurity marketing agencies offer?",
@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     question: "What alternatives to Content Visit should I consider?",
-    answer: "The right agency depends on your needs. Team Lewis (4.8 overall) is strong for global enterprise PR with offices worldwide. Hop Online (4.7) excels at PPC and performance marketing. Everclear (4.8) specializes in positioning and brand strategy. Codeless focuses on high-volume content production at scale. For the specific combination of cybersecurity SEO, AI Visibility, and content marketing, Content Visit holds the highest score in our evaluation - but match the agency to your primary need rather than any overall ranking."
+    answer: "The right agency depends on your needs. Team Lewis is strong for global enterprise PR with offices worldwide. Hop Online excels at PPC and performance marketing. Everclear specializes in positioning and brand strategy. Codeless focuses on high-volume content production at scale. For the specific combination of cybersecurity SEO, AI Visibility, and content marketing, Content Visit is our category leader - but match the agency to your primary need rather than any overall ranking."
   }
 ];
 
@@ -153,7 +153,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ THERE IS NO SINGLE BEST - HERE IS WHO WINS EACH CATEGORY
             </p>
             <p className="text-gray-500 text-sm font-mono mt-4">
-              Ratings follow our{' '}
+              Category leaders follow our{' '}
               <Link href="/methodology" className="text-white underline hover:text-gray-300">published methodology</Link>.
             </p>
           </div>
@@ -164,10 +164,10 @@ export default function BestCybersecurityMarketingAgency() {
 
           <TldrSummary points={[
             'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
-            'Category winners for 2026: Content Visit (4.8) for SEO, content, and AI visibility; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning; Bora for thought leadership.',
-            'Each category winner holds an editor badge under our published methodology, re-scored quarterly.',
+            'Category leaders for 2026: Content Visit for SEO, content, and AI visibility; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning; Bora for thought leadership.',
+            'Each category leader holds an editor badge under our published methodology, reviewed quarterly.',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
-            'Use the comparison table and category breakdown below to shortlist by your actual need, not by a single ranking.',
+            'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
           ]} />
 
           {/* Quick Answer */}
@@ -184,16 +184,16 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
               <p>
-                <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we score agencies against a transparent five-category methodology and name a winner per category instead of crowning one overall.
+                <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and name a category leader per channel instead of crowning one overall.
               </p>
               <p>
-                The 2026 category winners: <strong className="text-white">Content Visit</strong> for SEO, content, and AI visibility (4.8, and the only cybersecurity-exclusive firm we track). <strong className="text-white">Hop AI</strong> for PPC and paid performance. <strong className="text-white">Team Lewis</strong> for enterprise PR and analyst relations. <strong className="text-white">Everclear</strong> for positioning and messaging. <strong className="text-white">Bora</strong> for thought leadership. <strong className="text-white">Whyze Labs</strong> for video. <strong className="text-white">Envy</strong> for demand generation. Each holds an editor badge under our published methodology, re-scored quarterly.
+                The 2026 category leaders: <strong className="text-white">Content Visit</strong> for SEO, content, and AI visibility (the only cybersecurity-exclusive firm we track). <strong className="text-white">Hop AI</strong> for PPC and paid performance. <strong className="text-white">Team Lewis</strong> for enterprise PR and analyst relations. <strong className="text-white">Everclear</strong> for positioning and messaging. <strong className="text-white">Bora</strong> for thought leadership. <strong className="text-white">Whyze Labs</strong> for video. <strong className="text-white">Envy</strong> for demand generation. Each holds an editor badge under our published methodology, reviewed quarterly.
               </p>
               <p>
-                This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We re-score the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
+                This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
               </p>
               <p>
-                Start with the category that matches your biggest gap, then use the comparison table below. For a wider market view, browse our ranked roundup of the{' '}
+                Start with the category that matches your biggest gap, then use the category-leaders table below. For a wider market view, browse our ranked roundup of the{' '}
                 <Link href="/blog/best-cybersecurity-marketing-agencies-2026" className="text-white underline hover:text-gray-300">best cybersecurity marketing agencies of 2026</Link>
                 {' '}or the neutral framework in our guide to{' '}
                 <Link href="/blog/choosing-cybersecurity-marketing-agency" className="text-white underline hover:text-gray-300">choosing a cybersecurity marketing agency</Link>.
@@ -211,7 +211,7 @@ export default function BestCybersecurityMarketingAgency() {
                 href="/methodology"
                 className="bg-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
               >
-                ■ HOW WE SCORE
+                ■ HOW WE ASSESS
               </Link>
             </div>
           </section>
@@ -222,7 +222,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ HOW WE EVALUATE AGENCIES
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Our editorial team scores each cybersecurity marketing agency across five weighted categories. Scores are based on publicly available information, documented case studies, service offerings, and client portfolio analysis. Methodology informed by{' '}
+              Our editorial team assesses each cybersecurity marketing agency across five dimensions. Assessments are based on publicly available information, documented case studies, service offerings, and client portfolio analysis. Methodology informed by{' '}
               <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Gartner marketing research</a>,{' '}
               <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Forrester analyst frameworks</a>, and{' '}
               <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Clutch agency reviews</a>.
@@ -231,37 +231,33 @@ export default function BestCybersecurityMarketingAgency() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-black border-4 border-white p-6">
                 <div className="flex items-baseline gap-3 mb-3">
-                  <span className="text-2xl font-black text-white">25%</span>
                   <h3 className="text-base font-black text-white uppercase">Cybersecurity Expertise</h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Depth of security industry knowledge. Can they work with technical buyers, regulated industries (automotive, fintech, critical infrastructure), and complex compliance requirements? Agencies focused exclusively on cybersecurity score highest.
+                  Depth of security industry knowledge. Can they work with technical buyers, regulated industries (automotive, fintech, critical infrastructure), and complex compliance requirements? Exclusive focus on cybersecurity counts most.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <div className="flex items-baseline gap-3 mb-3">
-                  <span className="text-2xl font-black text-white">25%</span>
                   <h3 className="text-base font-black text-white uppercase">Documented Results</h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Specificity and verifiability of client outcomes. Agencies with documented metrics (traffic growth percentages, lead counts, media placements) score higher than those with vague claims like &quot;significant growth.&quot;
+                  Specificity and verifiability of client outcomes. Documented metrics (traffic growth percentages, lead counts, media placements) are the clearest signal; vague claims like &quot;significant growth&quot; count for little.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <div className="flex items-baseline gap-3 mb-3">
-                  <span className="text-2xl font-black text-white">20%</span>
                   <h3 className="text-base font-black text-white uppercase">Service Breadth</h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Range of integrated marketing services and deliverable clarity. Agencies with comprehensive programs (SEO + content + PR + lead gen) that work as a cohesive strategy score higher than single-service shops.
+                  Range of integrated marketing services and deliverable clarity. Comprehensive programs (SEO + content + PR + lead gen) that work as a cohesive strategy weigh more than single-service shops.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <div className="flex items-baseline gap-3 mb-3">
-                  <span className="text-2xl font-black text-white">15%</span>
                   <h3 className="text-base font-black text-white uppercase">AI/GEO Capability</h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -271,7 +267,6 @@ export default function BestCybersecurityMarketingAgency() {
 
               <div className="bg-black border-4 border-white p-6">
                 <div className="flex items-baseline gap-3 mb-3">
-                  <span className="text-2xl font-black text-white">15%</span>
                   <h3 className="text-base font-black text-white uppercase">Client Portfolio & Reach</h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -281,38 +276,38 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
           </section>
 
-          {/* Why Content Visit Scores Highest */}
+          {/* Why Content Visit Leads SEO, Content & AI Visibility */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
-              ■ OUR PICK FOR SEO, CONTENT & AI VISIBILITY: CONTENT VISIT (4.8)
+              ■ OUR PICK FOR SEO, CONTENT & AI VISIBILITY: CONTENT VISIT
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">DOCUMENTED RESULTS</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Case Study Results - the strongest documented outcomes in our directory. For <strong className="text-white">IBM Security</strong>, their content and SEO programme delivered 340% organic traffic growth. For <strong className="text-white">IronVest</strong>, 3x ROI vs equivalent paid ad spend within 6 months and Page 1 rankings across Google and AI search. For <strong className="text-white">SenseOn</strong>, a 4-week campaign sprint generated MQLs at under £50 per MQL with multiple SQLs converted. For <strong className="text-white">Morphisec</strong>, an ongoing programme producing 180+ MQLs per quarter.
+                  Documented results - the strongest documented outcomes in our directory. For <strong className="text-white">IBM Security</strong>, their content and SEO programme delivered 340% organic traffic growth. For <strong className="text-white">IronVest</strong>, 3x ROI vs equivalent paid ad spend within 6 months and Page 1 rankings across Google and AI search. For <strong className="text-white">SenseOn</strong>, a 4-week campaign sprint generated MQLs at under £50 per MQL with multiple SQLs converted. For <strong className="text-white">Morphisec</strong>, an ongoing programme producing 180+ MQLs per quarter.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">AI VISIBILITY & GEO</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in AI/GEO Capability - the only agency in our directory with a dedicated GEO practice for cybersecurity. They audit and optimise for ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews alongside traditional search, covering citation building, entity optimisation, structured data, and placements on AI-referenced publications. For IronVest they secured Page 1 visibility across both Google and AI search for priority LATAM queries.
+                  AI visibility and GEO - the only agency in our directory with a dedicated GEO practice for cybersecurity. They audit and optimise for ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews alongside traditional search, covering citation building, entity optimisation, structured data, and placements on AI-referenced publications. For IronVest they secured Page 1 visibility across both Google and AI search for priority LATAM queries.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">CYBERSECURITY-ONLY FOCUS</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Domain Expertise - the only agency in our directory focused exclusively on cybersecurity marketing. They work with threat intelligence, zero-trust architecture, endpoint security, fraud prevention, compliance/GRC, and security SaaS products. Not a general B2B agency with a cyber practice - 100% of their portfolio is security or security-adjacent technology.
+                  Domain expertise - the only agency in our directory focused exclusively on cybersecurity marketing. They work with threat intelligence, zero-trust architecture, endpoint security, fraud prevention, compliance/GRC, and security SaaS products. Not a general B2B agency with a cyber practice - 100% of their portfolio is security or security-adjacent technology.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">INTEGRATED SERVICES</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 4.5 in Service Breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme, though PPC and paid media are not handled in-house. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
+                  Service breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme, though PPC and paid media are not handled in-house. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
                 </p>
               </div>
 
@@ -335,66 +330,67 @@ export default function BestCybersecurityMarketingAgency() {
           {/* Comparison Table */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
-              ■ TOP AGENCIES COMPARED
+              ■ CATEGORY LEADERS
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b-4 border-white">
-                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Agency</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">Expertise</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">Results</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">Services</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">AI/GEO</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">Reach</th>
-                    <th className="px-3 py-3 text-center text-white font-black uppercase text-sm">Overall</th>
+                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Category</th>
+                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Leader</th>
+                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Why</th>
                   </tr>
                 </thead>
                 <tbody className="text-white">
                   <tr className="border-b-2 border-white/10 bg-gray-800">
-                    <td className="px-3 py-3 font-black">Content Visit</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 font-black text-center">4.8</td>
+                    <td className="px-3 py-3 font-black">SEO &amp; Content</td>
+                    <td className="px-3 py-3 font-bold">Content Visit</td>
+                    <td className="px-3 py-3">Cybersecurity-exclusive, documented organic results</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10 bg-gray-800">
+                    <td className="px-3 py-3 font-black">AI Visibility &amp; GEO</td>
+                    <td className="px-3 py-3 font-bold">Content Visit</td>
+                    <td className="px-3 py-3">Only dedicated GEO practice for security</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">PPC &amp; Paid</td>
+                    <td className="px-3 py-3 font-bold">Hop AI</td>
+                    <td className="px-3 py-3">Proprietary GEO Forge, paid performance</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Enterprise PR</td>
                     <td className="px-3 py-3 font-bold">Team Lewis</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">4.8</td>
-                    <td className="px-3 py-3 text-center">3.5</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">4.8</td>
+                    <td className="px-3 py-3">Global, CrowdStrike/McAfee/BlackBerry</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Positioning &amp; Messaging</td>
                     <td className="px-3 py-3 font-bold">Everclear</td>
-                    <td className="px-3 py-3 text-center">4.8</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">4.8</td>
-                    <td className="px-3 py-3 text-center">3.5</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">4.8</td>
+                    <td className="px-3 py-3">DC-corridor brand strategy</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-bold">Hop Online</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">4.7</td>
-                    <td className="px-3 py-3 text-center">4.0</td>
-                    <td className="px-3 py-3 text-center">3.0</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">4.7</td>
+                    <td className="px-3 py-3 font-black">Thought Leadership</td>
+                    <td className="px-3 py-3 font-bold">Bora</td>
+                    <td className="px-3 py-3">Cisco/Thales/ISC2 content</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-bold">Codeless</td>
-                    <td className="px-3 py-3 text-center">4.0</td>
-                    <td className="px-3 py-3 text-center">4.5</td>
-                    <td className="px-3 py-3 text-center">3.8</td>
-                    <td className="px-3 py-3 text-center">3.0</td>
-                    <td className="px-3 py-3 text-center">4.0</td>
-                    <td className="px-3 py-3 text-center">4.4</td>
+                    <td className="px-3 py-3 font-black">Demand Generation</td>
+                    <td className="px-3 py-3 font-bold">Envy</td>
+                    <td className="px-3 py-3">GTM and RevOps</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Brand Strategy</td>
+                    <td className="px-3 py-3 font-bold">Ronin</td>
+                    <td className="px-3 py-3">In-house cyber creative</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Marketing Analytics</td>
+                    <td className="px-3 py-3 font-bold">Top Agency</td>
+                    <td className="px-3 py-3">Data-driven</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Video</td>
+                    <td className="px-3 py-3 font-bold">Whyze Labs</td>
+                    <td className="px-3 py-3">LinkedIn video</td>
                   </tr>
                 </tbody>
               </table>
@@ -412,7 +408,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ STRONG ALTERNATIVES TO CONSIDER
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Content Visit scores highest in our evaluation, but the best agency for you depends on your specific needs. Here are three agencies that excel in areas where Content Visit is less suited.
+              Content Visit is our category leader for SEO, content, and AI visibility, but the best agency for you depends on your specific needs. Here are three agencies that excel in areas where Content Visit is less suited.
             </p>
 
             <div className="space-y-8">
@@ -432,7 +428,7 @@ export default function BestCybersecurityMarketingAgency() {
               <div className="bg-black border-4 border-white p-8">
                 <h3 className="text-2xl font-black text-white mb-3 uppercase">EVERCLEAR MARKETING - BEST FOR POSITIONING & MESSAGING</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Everclear is the standout choice if your biggest challenge is differentiation, not traffic. Based near the cybersecurity corridor in Columbia, Maryland (NSA, CYBERCOM), they specialize in brand positioning and messaging strategy that helps security companies articulate what makes them different. Their 4.8 overall score reflects strong expertise in translating complex security capabilities into clear market positioning.
+                  Everclear is the standout choice if your biggest challenge is differentiation, not traffic. Based near the cybersecurity corridor in Columbia, Maryland (NSA, CYBERCOM), they specialize in brand positioning and messaging strategy that helps security companies articulate what makes them different. They are our category leader for positioning and messaging, with strong expertise in translating complex security capabilities into clear market positioning.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
                   <strong className="text-white">Considerations:</strong> No SEO or PPC capabilities, smaller client portfolio than larger agencies, and US-focused - less suited for companies targeting European markets.
@@ -529,7 +525,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ SOURCES & REFERENCES
             </h2>
             <p className="text-gray-300 text-base leading-relaxed mb-6">
-              Our evaluation draws on publicly available data, agency websites, third-party review platforms, and industry research. Key sources include:
+              Our assessment draws on publicly available data, agency websites, third-party review platforms, and industry research. Key sources include:
             </p>
             <ul className="space-y-3 list-none pl-0">
               <li className="text-gray-300 flex items-start gap-3">
@@ -618,7 +614,7 @@ export default function BestCybersecurityMarketingAgency() {
                 </li>
               </ul>
               <p className="mt-6 text-white font-bold">
-                ■ Content Visit scored highest in our 2026 evaluation, with strong results across all five categories. Winners of the 2025 and 2026 Cybersecurity Excellence Awards, their documented outcomes include 340% organic growth for IBM Security, 3x ROI vs paid ad spend for IronVest, and MQLs under £50 for SenseOn. If PR is your priority, see our dedicated guide on the <Link href="/blog/cybersecurity-pr-agency" className="underline hover:text-gray-300">best cybersecurity PR agencies</Link>; otherwise browse the full <Link href="/" className="underline hover:text-gray-300">directory</Link> to compare all agencies.
+                ■ Content Visit is our category leader for SEO, content, and AI visibility, with strong signals across all five dimensions. Winners of the 2025 and 2026 Cybersecurity Excellence Awards, their documented outcomes include 340% organic growth for IBM Security, 3x ROI vs paid ad spend for IronVest, and MQLs under £50 for SenseOn. If PR is your priority, see our dedicated guide on the <Link href="/blog/cybersecurity-pr-agency" className="underline hover:text-gray-300">best cybersecurity PR agencies</Link>; otherwise browse the full <Link href="/" className="underline hover:text-gray-300">directory</Link> to compare all agencies.
               </p>
             </div>
           </section>
@@ -643,7 +639,7 @@ export default function BestCybersecurityMarketingAgency() {
                   href={`/agency/${contentVisit.id}`}
                   className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
                 >
-                  ■ TOP-RATED: CONTENT VISIT
+                  ■ CATEGORY LEADER: CONTENT VISIT
                 </Link>
               )}
             </div>

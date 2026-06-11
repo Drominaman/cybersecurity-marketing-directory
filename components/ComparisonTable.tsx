@@ -70,30 +70,6 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
             {/* ── OVERVIEW ── */}
             <SectionHeader label="Overview" colSpan={colCount} />
 
-            {/* Rating */}
-            <tr className="hover:bg-gray-800">
-              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">
-                Rating
-              </td>
-              {agencies.map((agency) => (
-                <td key={agency.id} className="px-6 py-4 text-sm text-gray-300 text-center">
-                  {agency.rating ? (
-                    <div className="flex items-center justify-center gap-2">
-                      <div className="w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-white rounded-full"
-                          style={{ width: `${(agency.rating / 5) * 100}%` }}
-                        />
-                      </div>
-                      <span className="font-mono text-white text-sm">{agency.rating}</span>
-                    </div>
-                  ) : (
-                    '-'
-                  )}
-                </td>
-              ))}
-            </tr>
-
             {/* Location */}
             <tr className="hover:bg-gray-800">
               <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">

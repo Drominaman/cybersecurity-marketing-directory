@@ -209,27 +209,6 @@ export default function CompareClient({ agencies }: CompareClientProps) {
               </thead>
 
               <tbody className="divide-y divide-white/20">
-                {/* Rating */}
-                <tr className="hover:bg-gray-800 transition-colors">
-                  <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 font-mono">
-                    Rating
-                  </td>
-                  {selectedAgencies.map((agency) => (
-                    <td
-                      key={agency.id}
-                      className="px-6 py-4 text-center"
-                    >
-                      {agency.rating ? (
-                        <span className="text-white font-black text-lg">
-                          {agency.rating}/5
-                        </span>
-                      ) : (
-                        <span className="text-gray-500">-</span>
-                      )}
-                    </td>
-                  ))}
-                </tr>
-
                 {/* Location */}
                 <tr className="hover:bg-gray-800 transition-colors">
                   <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 font-mono">

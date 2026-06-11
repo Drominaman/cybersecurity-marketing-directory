@@ -6,9 +6,9 @@ import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Methodology - How We Rate and List Cybersecurity Marketing Agencies',
+  title: 'Methodology - How We Assess and List Cybersecurity Marketing Agencies',
   description:
-    'How agencies earn a place in our directory: rating criteria and weightings, the difference between rated and listed agencies, verification cadence, paid evaluation, and our affiliation disclosure.',
+    'How agencies earn a place in our directory: how we assess agencies across five dimensions, the difference between reviewed and listed agencies, verification cadence, paid evaluation, and our affiliation disclosure.',
   alternates: {
     canonical: 'https://cybersecuritymarketingagencies.com/methodology',
   },
@@ -17,31 +17,26 @@ export const metadata: Metadata = {
 const criteria = [
   {
     name: 'Cybersecurity expertise',
-    weight: '25%',
     detail:
-      'How much of the agency’s work is cybersecurity. Exclusive focus scores highest; a general B2B agency with one security client scores lowest. We check client rosters, case studies, team backgrounds, and published content for technical depth.',
+      'How much of the agency’s work is cybersecurity. Exclusive focus weighs most; a general B2B agency with one security client weighs least. We check client rosters, case studies, team backgrounds, and published content for technical depth.',
   },
   {
     name: 'Documented results',
-    weight: '25%',
     detail:
-      'Named clients with concrete metrics beat anonymised claims. We weight results that can be cross-checked: public case studies, client references, third-party reviews. “We drove growth for a leading security vendor” earns nothing.',
+      'Named clients with concrete metrics beat anonymised claims. We weight results that can be cross-checked: public case studies, client references, third-party reviews. “We drove growth for a leading security vendor” counts for little.',
   },
   {
     name: 'Service breadth and integration',
-    weight: '20%',
     detail:
-      'Whether the agency delivers its listed services in-house and how well they integrate. A focused specialist can score well here; a long service list with shallow delivery cannot.',
+      'Whether the agency delivers its listed services in-house and how well they integrate. A focused specialist can weigh well here; a long service list with shallow delivery cannot.',
   },
   {
     name: 'AI visibility and GEO capability',
-    weight: '15%',
     detail:
       'Whether the agency understands optimisation for AI-driven discovery (ChatGPT, Perplexity, Claude, Google AI Overviews) and can demonstrate it, starting with their own visibility.',
   },
   {
     name: 'Client portfolio quality',
-    weight: '15%',
     detail:
       'The calibre and relevance of the agency’s cybersecurity client base, and signals like client tenure, repeat engagements, and industry awards.',
   },
@@ -87,11 +82,11 @@ export default function MethodologyPage() {
 
           <div className="mb-10">
             <h1 className="text-4xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-              HOW WE RATE AND LIST AGENCIES
+              HOW WE ASSESS AND LIST AGENCIES
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl">
               A directory is only useful if you know how it works. This page explains how agencies get
-              in, how ratings are produced, how often data is re-verified, who runs this site, and what
+              in, how we assess them, how often data is re-verified, who runs this site, and what
               money does and does not buy here.
             </p>
             <AuthorByline variant="full" lastUpdated="June 2026" />
@@ -99,62 +94,62 @@ export default function MethodologyPage() {
 
           <TldrSummary
             points={[
-              'Two listing types: Rated (fully evaluated, scored out of 5) and Listed (verified basics, no score).',
-              'Ratings are produced from five weighted criteria; they cannot be bought.',
+              'Two listing types: Reviewed (fully assessed across five dimensions, with category-leader badges where earned) and Listed (verified basics).',
+              'Category-leader badges are editorial and cannot be bought.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
               'This site is operated by the team behind Content Visit; that affiliation is disclosed and Content Visit is held to the same criteria.',
               'New submissions pay an evaluation fee that covers our research time, not the outcome. Rejected agencies are refunded.',
             ]}
           />
 
-          {/* Rated vs Listed */}
+          {/* Reviewed vs Listed */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-10">
             <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; RATED VS LISTED
+              &#9632; REVIEWED VS LISTED
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Rated agencies</strong> have been through a full
-                editorial evaluation: we research their client work, verify their claims, test their own
-                visibility, and score them against the five criteria below. A rating out of 5 appears on
-                their profile and they are eligible for category designations like Best for SEO.
+                <strong className="text-white">Reviewed agencies</strong> have been through a full
+                editorial assessment across the five dimensions below, and earn category-leader badges
+                (Best for SEO, Best for PPC, and so on) where they lead. No numeric score is assigned.
               </p>
               <p>
                 <strong className="text-white">Listed agencies</strong> have passed verification, which
                 means we have confirmed they are a real, active agency with demonstrable cybersecurity work,
-                a working website, and accurate company information. They carry no score. A listing is not
+                a working website, and accurate company information. A listing is not
                 an endorsement; it is a verified record.
               </p>
               <p>
-                An agency profile with no rating displayed is a Listed agency. We would rather show you a
-                verified profile without a score than invent a number we have not earned the right to publish.
+                We name category leaders rather than assigning numeric scores, because a precise number
+                implies a precision our assessment does not have. We would rather tell you who leads each
+                channel and why.
               </p>
             </div>
           </section>
 
-          {/* Rating criteria */}
+          {/* Assessment dimensions */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-10">
             <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; HOW RATINGS ARE PRODUCED
+              &#9632; HOW WE ASSESS AGENCIES
             </h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Ratings are scored out of 5 against five weighted criteria. Scores are reviewed quarterly
-              and re-scored when an agency&apos;s circumstances materially change (acquisitions, rebrands,
-              major client wins or losses).
+              We assess agencies across the five dimensions below and award category-leader badges where
+              an agency clearly leads a channel. Assessments are reviewed quarterly and revised when an
+              agency&apos;s circumstances materially change (acquisitions, rebrands, major client wins or
+              losses).
             </p>
             <div className="space-y-5">
               {criteria.map((c) => (
                 <div key={c.name} className="border-l-4 border-white pl-5">
                   <div className="flex items-baseline gap-3 mb-1">
                     <h3 className="text-lg font-black text-white uppercase">{c.name}</h3>
-                    <span className="font-mono text-sm text-gray-400">{c.weight}</span>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-sm">{c.detail}</p>
                 </div>
               ))}
             </div>
             <p className="text-gray-300 leading-relaxed mt-6">
-              Editor&apos;s Pick badges and Best for designations are drawn from these scores plus
+              Editor&apos;s Pick badges and Best for designations are drawn from this assessment plus
               category-specific judgement. They are editorial decisions and are not for sale, at any price,
               to anyone.
             </p>
@@ -218,18 +213,19 @@ export default function MethodologyPage() {
                 <Link href="/agency/content-visit" className="text-white underline hover:text-gray-300">
                   Content Visit
                 </Link>
-                , a cybersecurity marketing agency that appears in these listings and holds our top rating.
-                You should know that before you weigh anything else on this site.
+                , a cybersecurity marketing agency that appears in these listings and is our category
+                leader for SEO, content, and AI visibility. You should know that before you weigh anything
+                else on this site.
               </p>
               <p>
-                How we keep that honest: Content Visit is scored against the same five criteria as every
+                How we keep that honest: Content Visit is assessed against the same five dimensions as every
                 other agency, its profile carries the same disclosure, and where another agency is the
                 stronger choice for a category, that agency gets the designation. Hop AI is our pick for
                 PPC. Team Lewis is our pick for enterprise PR. Those calls are on the record across this
                 site.
               </p>
               <p>
-                If the affiliation matters to you, verify our claims independently: every rated agency
+                If the affiliation matters to you, verify our claims independently: every reviewed agency
                 profile links to third-party platforms like Clutch, G2, and LinkedIn precisely so you can
                 check our work.
               </p>
@@ -248,13 +244,13 @@ export default function MethodologyPage() {
                   submit for evaluation
                 </Link>
                 . Submissions carry a fee because evaluation is real work: researching your client base,
-                verifying your claims and profiles, scoring you against the criteria above, and maintaining
-                your data quarterly after you are live.
+                verifying your claims and profiles, assessing you across the dimensions above and awarding
+                category badges where earned, and maintaining your data quarterly after you are live.
               </p>
               <p>
                 <strong className="text-white">The fee buys the evaluation, not the outcome.</strong>{' '}
-                Paying does not guarantee a listing, does not influence your rating, and does not make you
-                eligible to purchase an Editor&apos;s Pick, because those are not for sale. Agencies we
+                Paying does not guarantee a listing, does not influence your assessment, and does not make
+                you eligible to purchase an Editor&apos;s Pick, because those are not for sale. Agencies we
                 decline receive a full refund and a short explanation of why.
               </p>
               <p>

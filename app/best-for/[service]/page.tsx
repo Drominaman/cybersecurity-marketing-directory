@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
           <TldrSummary points={[
             `${sortedAgencies.length} cybersecurity marketing agencies offering ${serviceName} compared.`,
-            ...(topAgency ? [`Top pick: ${topAgency.name}${topAgency.rating ? ` (${topAgency.rating}/5)` : ''}.`] : []),
+            ...(topAgency ? [`Category leader: ${topAgency.name}.`] : []),
             `All agencies vetted for proven ${serviceName} expertise in the cybersecurity space.`,
           ]} />
 

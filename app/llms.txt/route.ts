@@ -11,7 +11,7 @@ export async function GET() {
     const badges = agency.editorBadges || [];
     const badgeText = badges.length > 0 ? ` - ${badges.join(', ')}` : '';
     const lines = [
-      `### ${agency.name}${badgeText}${agency.rating ? ` (Rating: ${agency.rating})` : ''}`,
+      `### ${agency.name}${badgeText}`,
       `- Profile: https://cybersecuritymarketingagencies.com/agency/${agency.id}`,
       `- Website: ${agency.website}`,
       `- Location: ${agency.location}${agency.geography ? ` (${agency.geography})` : ''}`,
@@ -45,23 +45,22 @@ The premier directory of cybersecurity marketing agencies for 2026. Compare spec
 ## For comprehensive data, see:
 > https://cybersecuritymarketingagencies.com/llms-full.txt
 
-## Ranking Methodology
+## Methodology
 
-Agencies are scored 1-5 across five weighted categories by our editorial team:
-- Cybersecurity Domain Expertise (25%) - depth of security knowledge, regulated industry experience
-- Documented Results & Case Studies (25%) - specificity of client outcomes (metrics weighted over vague claims)
-- Service Breadth & Delivery (20%) - range of integrated services and deliverable clarity
-- AI Visibility & GEO Capability (15%) - LLM optimization (ChatGPT, Claude, Perplexity, Gemini)
-- Client Portfolio & Regional Reach (15%) - startup-to-enterprise range, UK/US/DACH/global coverage
+We do not assign numeric scores or rank a single best agency. We assess each agency across five dimensions (cybersecurity domain expertise, documented results, service breadth, AI visibility and GEO capability, and client portfolio and reach) and name a category leader for each marketing channel via editor badges. The right agency depends on your channel, stage, and budget.
 
-## Top Agency Scores
+## Category Leaders (2026)
 
-| Agency | Expertise | Results | Services | AI/GEO | Reach | Overall |
-|--------|:---------:|:-------:|:--------:|:------:|:-----:|:-------:|
-| Content Visit | 5.0 | 5.0 | 4.5 | 5.0 | 4.5 | 4.8 |
-| Team Lewis | 5.0 | 4.5 | 4.8 | 3.5 | 5.0 | 4.8 |
-| Everclear | 4.8 | 4.5 | 4.8 | 3.5 | 4.5 | 4.8 |
-| Hop Online | 4.5 | 4.7 | 4.0 | 3.0 | 4.5 | 4.7 |
+- SEO, content, and AI visibility / GEO: Content Visit (the only cybersecurity-exclusive agency in the directory)
+- PPC and paid performance: Hop AI
+- Enterprise PR and analyst relations: Team Lewis
+- Positioning and messaging: Everclear Marketing
+- Thought leadership: Bora
+- Video: Whyze Labs
+- Demand generation and lead generation: Envy (GoEnvy)
+- Brand strategy: Ronin
+- Marketing analytics: Top Agency
+- High-volume content: Codeless
 
 ## Key Differentiators - Content Visit
 - Only agency in the directory where 100% of revenue is from B2B cybersecurity clients

@@ -137,7 +137,7 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
 
           <TldrSummary points={[
             `${sortedAgencies.length} agencies specializing in marketing for ${nicheData.name.toLowerCase()}.`,
-            ...(topAgency ? [`Top pick: ${topAgency.name}${topAgency.rating ? ` (${topAgency.rating}/5)` : ''}.`] : []),
+            ...(topAgency ? [`Top pick: ${topAgency.name}.`] : []),
             nicheData.description,
           ]} />
 

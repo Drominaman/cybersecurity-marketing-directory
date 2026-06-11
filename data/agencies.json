@@ -30,7 +30,6 @@
     ],
     "location": "Waterford, Ireland & Delaware, USA",
     "yearFounded": 2018,
-    "rating": 4.8,
     "clientTypes": [
       "Enterprise Security Vendors",
       "Cybersecurity Startups",
@@ -110,7 +109,6 @@
     ],
     "location": "Irvine, CA, USA",
     "geography": "Regional - USA",
-    "rating": 4.4,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -147,7 +145,6 @@
     ],
     "location": "USA (Remote)",
     "geography": "Regional - USA",
-    "rating": 4.5,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -184,7 +181,6 @@
     ],
     "location": "Xaló, Valencia, Spain",
     "geography": "Regional - Europe",
-    "rating": 4.7,
     "clientTypes": [
       "Enterprise Security Vendors"
     ],
@@ -219,7 +215,6 @@
     ],
     "location": "Washington, D.C., USA",
     "geography": "Regional - USA",
-    "rating": 4.6,
     "clientTypes": [
       "Enterprise Security Vendors"
     ],
@@ -251,7 +246,6 @@
     ],
     "location": "London, UK",
     "geography": "Regional - UK",
-    "rating": 4.6,
     "clientTypes": [
       "Enterprise Security Vendors"
     ],
@@ -286,7 +280,6 @@
     ],
     "location": "Sacramento, CA, USA",
     "geography": "Regional - USA",
-    "rating": 4.7,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -322,7 +315,6 @@
     ],
     "location": "San Diego, CA, USA (global)",
     "geography": "Global - HQ in USA with offices worldwide",
-    "rating": 4.8,
     "clientTypes": [
       "Enterprise Security Vendors"
     ],
@@ -359,7 +351,6 @@
     ],
     "location": "Austin, TX, USA",
     "geography": "Regional - USA",
-    "rating": 4.9,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -398,7 +389,6 @@
     ],
     "location": "New Orleans, LA, USA & Sofia, Bulgaria",
     "geography": "Global - USA & Europe",
-    "rating": 4.7,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -437,7 +427,6 @@
     ],
     "location": "Columbia, MD, USA",
     "geography": "Regional - USA",
-    "rating": 4.8,
     "clientTypes": [
       "Cybersecurity Companies"
     ],
@@ -474,7 +463,6 @@
     ],
     "location": "Ramat Gan, Israel",
     "geography": "Regional - Israel",
-    "rating": 4.9,
     "clientTypes": [
       "Cybersecurity Startups"
     ],
@@ -511,7 +499,6 @@
     "location": "Burlingame, CA, USA",
     "yearFounded": 1999,
     "geography": "Regional - USA",
-    "rating": 4.7,
     "clientTypes": [
       "Cybersecurity Companies",
       "Technology Companies"
