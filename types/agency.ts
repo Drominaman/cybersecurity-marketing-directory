@@ -30,6 +30,7 @@ export interface Agency {
   linkedinUrl?: string;
   clutchUrl?: string;
   g2Url?: string;
+  designRushUrl?: string;
 }
 
 export interface Award {

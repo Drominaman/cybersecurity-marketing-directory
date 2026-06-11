@@ -91,6 +91,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     ...(agency.linkedinUrl ? [agency.linkedinUrl] : []),
     ...(agency.clutchUrl ? [agency.clutchUrl] : []),
     ...(agency.g2Url ? [agency.g2Url] : []),
+    ...(agency.designRushUrl ? [agency.designRushUrl] : []),
   ];
 
   const logoUrl = getAgencyLogoUrl(agency.website);
@@ -435,7 +436,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           )}
 
           {/* External Profiles */}
-          {(agency.linkedinUrl || agency.clutchUrl || agency.g2Url) && (
+          {(agency.linkedinUrl || agency.clutchUrl || agency.g2Url || agency.designRushUrl) && (
             <div className="bg-gray-900 border-4 border-white p-10 mb-12">
               <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
                 ■ EXTERNAL PROFILES
@@ -469,6 +470,16 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
                   >
                     G2 Reviews →
+                  </a>
+                )}
+                {agency.designRushUrl && (
+                  <a
+                    href={agency.designRushUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
+                  >
+                    DesignRush →
                   </a>
                 )}
               </div>
