@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "Based on our editorial evaluation across five scoring categories, Content Visit earned a 4.9 rating, the highest overall rating in our directory, with category wins for SEO, AI visibility, and GEO. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing."
+    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category winners: Content Visit for SEO, content, and AI visibility (4.9, the highest overall rating in our directory and the only cybersecurity-exclusive firm we track); Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
