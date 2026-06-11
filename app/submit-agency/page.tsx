@@ -101,15 +101,15 @@ export default function SubmitAgencyPage() {
               LIST YOUR CYBERSECURITY MARKETING AGENCY
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl mb-2">
-              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Two ways to be listed.
+              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Submissions are paid because evaluation is real work: we research your client base, verify your claims and profiles, and maintain your data after you are live. The fee buys the evaluation, never the outcome - see <Link href="/methodology" className="text-white underline hover:text-gray-300">our methodology</Link> for exactly how listing and rating decisions are made.
             </p>
           </div>
 
           <TldrSummary points={[
-            'Two listing tiers: Verified ($499/year) and Featured ($1,499/year).',
+            'Two tiers: Verified ($499/year) and Featured ($1,499/year). The fee covers our evaluation work, not the outcome.',
             'Editorial picks (Best for SEO, Best Overall, etc.) cannot be purchased.',
-            'Submit below or email robbie@contentvisit.com to discuss.',
-            'Approval takes 5 to 7 business days. Annual renewal.',
+            'Rejected submissions receive a full refund. See our methodology for how evaluation works.',
+            'Submit below or email robbie@contentvisit.com to discuss. Approval takes 5 to 7 business days.',
           ]} />
 
           {/* Pricing Tiers */}

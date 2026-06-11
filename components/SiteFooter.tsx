@@ -12,6 +12,7 @@ export default function SiteFooter() {
               <Link href="/blog" className="block text-gray-400 hover:text-white transition-colors">Blog</Link>
               <Link href="/best-cybersecurity-marketing-agency" className="block text-gray-400 hover:text-white transition-colors">Best Agency Guide</Link>
               <Link href="/submit-agency" className="block text-gray-400 hover:text-white transition-colors">Submit Agency</Link>
+              <Link href="/methodology" className="block text-gray-400 hover:text-white transition-colors">Methodology</Link>
               <a href="/feed.xml" className="block text-gray-400 hover:text-white transition-colors">RSS Feed</a>
             </div>
           </div>
@@ -39,6 +40,10 @@ export default function SiteFooter() {
           </p>
           <p className="text-gray-600 text-xs uppercase tracking-wider font-bold">
             &copy; {new Date().getFullYear()} Cybersecurity Marketing Agencies Directory
+          </p>
+          <p className="text-gray-600 text-xs mt-2">
+            Operated by the team behind Content Visit. Ratings are editorial and not for sale.{' '}
+            <Link href="/methodology" className="underline hover:text-gray-400">See our methodology</Link>.
           </p>
         </div>
       </div>

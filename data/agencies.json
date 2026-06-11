@@ -517,5 +517,289 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/nola-marketing-llc",
     "lastVerified": "2026-05-02"
+  },
+  {
+    "id": "merritt-group",
+    "name": "Merritt Group",
+    "website": "https://www.merrittgrp.com",
+    "description": "Strategic communications agency founded in 1996, running PR, content, and digital marketing programmes for cybersecurity, govtech, and B2B technology companies. A dedicated security practice serves vendors selling into enterprise and federal markets, with strong analyst and influencer relations. Notable security clients include Telos, Checkmarx, BlueVoyant, and ISC2.",
+    "shortDescription": "Strategic communications for cybersecurity and govtech vendors selling into enterprise and federal markets.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Digital Marketing",
+      "Brand Strategy",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Government Technology",
+      "Analyst Relations"
+    ],
+    "location": "McLean, VA, USA",
+    "yearFounded": 1996,
+    "geography": "Regional - USA",
+    "clientTypes": [
+      "Enterprise Security Vendors",
+      "Government Technology Companies"
+    ],
+    "pros": [
+      "Dedicated security practice with deep federal and enterprise buyer understanding",
+      "Strong analyst and influencer relations for security vendors",
+      "Named cybersecurity clients including Telos, Checkmarx, BlueVoyant, and ISC2",
+      "Nearly three decades of B2B technology communications experience"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/merritt-group",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "w2-communications",
+    "name": "W2 Communications",
+    "website": "https://w2comm.com",
+    "description": "Integrated communications firm founded in 2003 (originally Welz & Weisel Communications), specialising in PR and marketing for cybersecurity, public sector, and space companies. Hosts the CYBERTACOS networking event series for the security community. Notable clients include Armis, Censys, Cisco, Intel 471, Netskope, 1Password, and Secure Code Warrior.",
+    "shortDescription": "Cybersecurity and public sector communications firm, host of the CYBERTACOS event series.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Digital Marketing",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Public Sector",
+      "Community Events"
+    ],
+    "location": "McLean, VA, USA",
+    "yearFounded": 2003,
+    "geography": "Regional - USA",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Public Sector Technology"
+    ],
+    "pros": [
+      "Deep cybersecurity client roster including Armis, Censys, Netskope, and 1Password",
+      "CYBERTACOS event series gives clients direct access to the security community",
+      "Two decades of dedicated security and public sector communications",
+      "Washington DC corridor location close to federal security buyers"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/w2comm",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "eskenzi-pr",
+    "name": "Eskenzi PR",
+    "website": "https://www.eskenzipr.com",
+    "description": "One of the longest-established dedicated cybersecurity PR agencies in the world, founded in London in 1995 with Infosecurity Europe as its first retained client. Runs the European Cybersecurity Blogger Awards, the Most Inspiring Women in Cyber Awards, and the IT Security Analyst & CISO Forum. Credits its work with supporting 15 client IPOs and 20 acquisitions. Clients include Nozomi Networks, Cato Networks, Huntress, KnowBe4, and Varonis.",
+    "shortDescription": "The UK's longest-established specialist cybersecurity PR agency, founded in 1995.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Brand Strategy",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "UK and European Markets",
+      "Industry Awards and Events"
+    ],
+    "location": "London, UK",
+    "yearFounded": 1995,
+    "geography": "Global - HQ in UK with US and European presence",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Enterprise Security Vendors"
+    ],
+    "pros": [
+      "Cybersecurity-exclusive PR practice running for three decades",
+      "Runs the European Cybersecurity Blogger Awards and IT Security Analyst & CISO Forum",
+      "Track record spanning 15 client IPOs and 20 acquisitions",
+      "Marquee security clients including KnowBe4, Varonis, Huntress, and Cato Networks"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/eskenzi-pr-and-marketing",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "10fold-communications",
+    "name": "10Fold Communications",
+    "website": "https://10fold.com",
+    "description": "B2B deep-tech PR agency founded in 1995 (as Trainer Communications, renamed 10Fold in 2015) with an established cybersecurity practice. Known for a measurement-led approach through its MetricsMatter methodology and for building client visibility with original threat research reports. Offices across California, Texas, and Massachusetts.",
+    "shortDescription": "Measurement-led B2B tech PR with an established cybersecurity practice and threat research expertise.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Marketing Analytics",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Deep Tech",
+      "PR Measurement"
+    ],
+    "location": "Walnut Creek, CA, USA",
+    "yearFounded": 1995,
+    "geography": "Regional - USA",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Enterprise Technology Vendors"
+    ],
+    "pros": [
+      "Three decades of B2B technology PR with a dedicated security practice",
+      "Measurement-led reporting through the MetricsMatter methodology",
+      "Experience producing original threat research that earns media coverage",
+      "Multi-office US presence across California, Texas, and Massachusetts"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/10foldcomms",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "highwire",
+    "name": "Highwire",
+    "website": "https://www.teamhighwire.com",
+    "description": "One of the largest independent US technology communications agencies, founded in 2008, with a dedicated cybersecurity practice known as the HWCyberSquad covering incident response communications, RSAC presence, and deep security media relationships. Security clients have included CrowdStrike, Barracuda, SolarWinds, Splunk, Rapid7, and Illumio.",
+    "shortDescription": "Major independent US tech communications agency with one of the largest dedicated cybersecurity PR practices.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Marketing Analytics",
+      "Brand Strategy",
+      "Digital Marketing",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Enterprise Technology",
+      "Incident Response Communications"
+    ],
+    "location": "San Francisco, CA, USA",
+    "yearFounded": 2008,
+    "geography": "Regional - USA",
+    "clientTypes": [
+      "Enterprise Security Vendors",
+      "Cybersecurity Companies"
+    ],
+    "pros": [
+      "Dedicated HWCyberSquad security practice within a 160-plus person agency",
+      "Marquee security clients including CrowdStrike, Splunk, Rapid7, and Illumio",
+      "Incident response communications capability for breach scenarios",
+      "Scale and media relationships of one of the largest independent US tech PR firms"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/highwirepr",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "touchdown-pr",
+    "name": "Touchdown PR",
+    "website": "https://www.touchdownpr.com",
+    "description": "Transatlantic B2B enterprise technology PR agency founded in 2006, now part of Ruder Finn, with cybersecurity and data protection as core sectors. Strong analyst relations offering across Gartner, Forrester, and 451 Research, with offices spanning the UK, US, Germany, Netherlands, France, and Israel. Security clients have included HackerOne, Beyond Identity, and Exabeam.",
+    "shortDescription": "Transatlantic B2B tech PR agency, part of Ruder Finn, with cybersecurity as a core sector.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Analyst Relations",
+      "Transatlantic Campaigns"
+    ],
+    "location": "Basingstoke, UK",
+    "yearFounded": 2006,
+    "geography": "Global - UK, US, and European offices",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Enterprise Technology Vendors"
+    ],
+    "pros": [
+      "Transatlantic coverage with offices in the UK, US, Germany, Netherlands, France, and Israel",
+      "Strong analyst relations across Gartner, Forrester, and 451 Research",
+      "Security clients including HackerOne, Beyond Identity, and Exabeam",
+      "Ruder Finn backing adds global network resources to a specialist team"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/touchdown-pr-ltd",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "ccgroup",
+    "name": "CCGroup",
+    "website": "https://ccgrouppr.com",
+    "description": "Research-led B2B technology PR and analyst relations consultancy founded in London in 1984, now part of The Hoffman Agency. Over 15 years of cybersecurity vendor communications backed by published research into how IT security buyers make decisions. Winner of multiple PRmoment Technology Agency of the Year awards and PRovoke EMEA Technology Consultancy of the Year 2023.",
+    "shortDescription": "Research-led London B2B tech PR consultancy with a data-driven cybersecurity practice.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Marketing Analytics",
+      "Brand Strategy",
+      "Digital Marketing",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Analyst Relations",
+      "Buyer Research"
+    ],
+    "location": "London, UK",
+    "yearFounded": 1984,
+    "geography": "Global - UK HQ with North American reach via The Hoffman Agency",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Enterprise Technology Vendors"
+    ],
+    "pros": [
+      "Published research into how IT security buyers actually make decisions",
+      "Four decades of B2B technology communications experience",
+      "Award-winning team: PRmoment Technology Agency of the Year multiple times",
+      "Hoffman Agency network extends reach into North America and APAC"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/cc-group",
+    "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "babel-pr",
+    "name": "Babel PR",
+    "website": "https://babelpr.com",
+    "description": "Employee-owned, B Corp certified B2B technology PR and marketing agency founded in London in 2006. Known in cybersecurity for newsjacking and data-led storytelling around ransomware, GDPR, and supply chain threats, serving international clients through The Babel Network partner model. Clients include Orange Cyberdefense, Enveil, and Veeam.",
+    "shortDescription": "Employee-owned London B2B tech PR agency with data-led cybersecurity storytelling.",
+    "featured": false,
+    "services": [
+      "PR & Media Relations",
+      "Content Marketing",
+      "Social Media",
+      "Brand Strategy",
+      "Digital Marketing",
+      "Thought Leadership"
+    ],
+    "specialties": [
+      "B2B Cybersecurity",
+      "Newsjacking",
+      "UK and International Markets"
+    ],
+    "location": "London, UK",
+    "yearFounded": 2006,
+    "geography": "Global - London HQ with international partner network",
+    "clientTypes": [
+      "Cybersecurity Companies",
+      "Enterprise Technology Vendors"
+    ],
+    "pros": [
+      "Employee-owned and B Corp certified, with strong team retention",
+      "Data-led cybersecurity storytelling around ransomware, GDPR, and supply chain threats",
+      "Security clients including Orange Cyberdefense and Enveil",
+      "International reach through The Babel Network partner model"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/babel-pr",
+    "lastVerified": "2026-06-11"
   }
 ]
