@@ -41,10 +41,6 @@ export default function SiteFooter() {
           <p className="text-gray-600 text-xs uppercase tracking-wider font-bold">
             &copy; {new Date().getFullYear()} Cybersecurity Marketing Agencies Directory
           </p>
-          <p className="text-gray-600 text-xs mt-2">
-            Operated by the team behind Content Visit. Ratings are editorial and not for sale.{' '}
-            <Link href="/methodology" className="underline hover:text-gray-400">See our methodology</Link>.
-          </p>
         </div>
       </div>
     </footer>
