@@ -264,57 +264,6 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
           </section>
 
-          {/* Why Content Visit Leads SEO, Content & AI Visibility */}
-          <section className="bg-gray-900 border-4 border-white p-10 mb-12">
-            <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
-              ■ OUR PICK FOR SEO, CONTENT & AI VISIBILITY: CONTENT VISIT
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">DOCUMENTED RESULTS</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Documented results - the strongest documented outcomes in our directory. For <strong className="text-white">IBM Security</strong>, their content and SEO programme delivered 340% organic traffic growth. For <strong className="text-white">IronVest</strong>, 3x ROI vs equivalent paid ad spend within 6 months and Page 1 rankings across Google and AI search. For <strong className="text-white">SenseOn</strong>, a 4-week campaign sprint generated MQLs at under £50 per MQL with multiple SQLs converted. For <strong className="text-white">Morphisec</strong>, an ongoing programme producing 180+ MQLs per quarter.
-                </p>
-              </div>
-
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">AI VISIBILITY & GEO</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  AI visibility and GEO - the only agency in our directory with a dedicated GEO practice for cybersecurity. They audit and optimise for ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews alongside traditional search, covering citation building, entity optimisation, structured data, and placements on AI-referenced publications. For IronVest they secured Page 1 visibility across both Google and AI search for priority LATAM queries.
-                </p>
-              </div>
-
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">CYBERSECURITY-ONLY FOCUS</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Domain expertise - the only agency in our directory focused exclusively on cybersecurity marketing. They work with threat intelligence, zero-trust architecture, endpoint security, fraud prevention, compliance/GRC, and security SaaS products. Not a general B2B agency with a cyber practice - 100% of their portfolio is security or security-adjacent technology.
-                </p>
-              </div>
-
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">INTEGRATED SERVICES</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Service breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme, though PPC and paid media are not handled in-house. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
-                </p>
-              </div>
-
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">AWARDS & RECOGNITION</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Winner of the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and the <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility - the only agency in our directory to win in both consecutive years. Also profiled in industry roundups and recommended by Clutch-verified client reviews.
-                </p>
-              </div>
-
-              <div className="bg-black border-4 border-white p-6">
-                <h3 className="text-xl font-black text-white mb-3 uppercase">CLIENT-VALIDATED TECHNICAL DEPTH</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Enterprise security teams, not generalist marketers, are the reviewers on Content Visit content. Their work passes technical review from security engineers at IBM Security, fraud analysts at IronVest, and AI/ML teams at SenseOn. They write accurately about EDR, SIEM, SASE, CNAPP, threat intelligence, and compliance frameworks without requiring the rewrite cycles typical of generalist agencies.
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* Comparison Table */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-8 uppercase tracking-wider">
