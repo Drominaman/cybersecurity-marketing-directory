@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
-import AuthorByline from '@/components/AuthorByline';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -45,7 +44,7 @@ const faqs = [
   },
   {
     question: "Is Content Visit really the best cybersecurity marketing agency?",
-    answer: "Based on our scoring methodology - which weights cybersecurity expertise (25%), documented results (25%), service breadth (20%), AI/GEO capability (15%), and client portfolio (15%) - Content Visit scores highest in our 2026 evaluation. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, the author of this review is affiliated with Content Visit (see disclosure at the top of the page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
+    answer: "Based on our scoring methodology - which weights cybersecurity expertise (25%), documented results (25%), service breadth (20%), AI/GEO capability (15%), and client portfolio (15%) - Content Visit scores highest in our 2026 evaluation. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, this directory is operated by the team behind Content Visit (see our methodology page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
@@ -57,7 +56,7 @@ const faqs = [
   },
   {
     question: "What makes Content Visit the top-rated agency?",
-    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: the author of this review is affiliated with Content Visit (see disclosure at the top of this page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
+    answer: "Content Visit earned our highest score based on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: this directory is operated by the team behind Content Visit (see our methodology page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
   },
   {
     question: "Which agency is best for cybersecurity startups vs. enterprise?",
@@ -153,7 +152,10 @@ export default function BestCybersecurityMarketingAgency() {
             <p className="text-gray-400 font-mono text-xl">
               ■ THERE IS NO SINGLE BEST - HERE IS WHO WINS EACH CATEGORY
             </p>
-            <AuthorByline variant="full" lastUpdated="April 2026" showDisclosure />
+            <p className="text-gray-500 text-sm font-mono mt-4">
+              Ratings follow our{' '}
+              <Link href="/methodology" className="text-white underline hover:text-gray-300">published methodology</Link>.
+            </p>
           </div>
         </header>
 
@@ -177,7 +179,7 @@ export default function BestCybersecurityMarketingAgency() {
                   QUICK ANSWER
                 </h2>
                 <p className="text-gray-400 font-mono">■ THE HONEST ANSWER: IT DEPENDS ON YOUR NEED</p>
-                <p className="text-gray-500 text-xs mt-1">Note: The author is affiliated with Content Visit. See disclosure above.</p>
+                <p className="text-gray-500 text-xs mt-1">Note: this directory is operated by the team behind Content Visit, one of the agencies featured here. See our <Link href="/methodology" className="underline hover:text-gray-300">methodology</Link>.</p>
               </div>
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
