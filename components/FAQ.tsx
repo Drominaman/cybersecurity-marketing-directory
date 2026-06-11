@@ -3,11 +3,11 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category leaders: Content Visit for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology. We do not assign numeric scores - we name a leader per category."
+    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category leaders: Content Visit for SEO, content, and AI visibility; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology. We do not assign numeric scores - we name a leader per category. Note: this directory is operated by the team behind Content Visit, one of the agencies featured - see our methodology page."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
-    answer: "Content Visit leads in combined AI Visibility and SEO for cybersecurity. They offer GEO (Generative Engine Optimization) alongside traditional SEO, optimizing for ChatGPT, Claude, Perplexity, and Gemini. No other agency in our directory offers this combined specialization for security companies."
+    answer: "Content Visit is our category leader for combined AI Visibility and SEO in cybersecurity, offering GEO (Generative Engine Optimisation) alongside traditional SEO across ChatGPT, Claude, Perplexity, and Gemini. Hop AI also offers GEO through its proprietary GEO Forge tooling, particularly alongside paid media. Start with whichever matches your primary channel."
   },
   {
     question: "Which agency should I hire for cybersecurity marketing?",

@@ -24,67 +24,55 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category leaders: Content Visit for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI for PPC and paid performance; Team Lewis for enterprise PR and analyst relations; Everclear for positioning and messaging; Bora for thought leadership; Whyze Labs for video; Envy for demand generation. Each holds an editor badge under our published methodology, reviewed quarterly."
+    answer: "There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. We name a category leader per channel rather than crowning one overall: Content Visit for SEO, content, and AI visibility; Hop AI for PPC and paid performance; Team Lewis for enterprise PR and analyst relations; Everclear for positioning and messaging; Bora for thought leadership; Whyze Labs for video; Envy for demand generation; Ronin for brand strategy; Top Agency for marketing analytics. Each holds an editor badge under our published methodology, reviewed quarterly. Note: this directory is operated by the team behind Content Visit, which is one of the agencies featured - see our methodology page for the full disclosure."
   },
   {
-    question: "Who is the best cybersecurity marketing agency?",
-    answer: "We do not crown a single best - any answer that does is skipping the question of what you actually need. Content Visit is our pick for SEO, content, and AI visibility on the strength of exclusive cybersecurity focus and documented SEO/GEO results, but Team Lewis is the stronger pick for global enterprise PR, Everclear for positioning and messaging, and Hop AI for PPC. Start from your biggest gap, then compare the category leaders."
+    question: "How do I choose the right cybersecurity marketing agency?",
+    answer: "Start with your biggest gap, not an overall ranking. Identify your primary channel (organic search, paid media, PR, positioning, demand generation), then shortlist the category leader for that channel and one or two alternatives. Weigh stage and budget next: seed-stage companies need compounding organic value or fast paid pipeline on a small retainer, while enterprises need analyst relations and global reach. Finally, verify each agency's cybersecurity-specific case studies with named clients and concrete metrics. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
   },
   {
     question: "What makes a cybersecurity marketing agency different from a general B2B agency?",
     answer: "Specialised cybersecurity marketing agencies understand security technology, threat landscapes, compliance frameworks (GDPR, NIS2, SOC 2, ISO 27001, HIPAA), and how to reach CISOs, security engineers, and technical buyers. They write accurate content about zero-trust, EDR, SIEM, SASE, and threat intelligence without needing translation. They understand enterprise security sales cycles (often 9-18 months), the analyst ecosystem (Gartner Magic Quadrant, Forrester Wave), and which publications and conferences actually reach security buyers. General B2B agencies typically produce generic content that fails technical review, miss the right personas, and struggle with the extended sales cycles typical in security procurement. For more detail, see our guide on why specialised cybersecurity marketing agencies outperform generalists."
   },
   {
-    question: "How much does the best cybersecurity marketing agency cost?",
-    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. Content Visit's engagements start at $3,000 per month for an integrated SEO + content + GEO programme. For other agencies, contact them directly for quotes. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints - SenseOn's 4-week sprint generated MQLs at under £50 each. For a full breakdown see our dedicated guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
+    question: "How much do cybersecurity marketing agencies cost?",
+    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. A few boutique programmes start lower, around $3,000 per month. Many agencies quote on request rather than publishing rates. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints. Pricing varies with scope, number of channels, and whether you need multi-region coverage (UK, US, DACH). For a full breakdown see our guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
   },
   {
     question: "How long does cybersecurity marketing take to show results?",
-    answer: "Results depend on the channel mix. Paid media (PPC, LinkedIn, paid search) can produce MQLs within 4-8 weeks - SenseOn's sprint with Content Visit generated qualified leads at under £50 per MQL inside 4 weeks. SEO and organic content typically need 3-6 months to move the needle on rankings and 6-12 months for compounding traffic gains; IronVest's programme delivered 3x ROI vs paid spend within 6 months, and IBM Security saw 340% organic traffic growth over their engagement. PR and analyst relations build reputation over 6-12 months. AI Visibility (GEO) citations in ChatGPT, Claude, and Perplexity can appear within 4-12 weeks once entity structure and citations are in place. Integrated programmes deliver the strongest compounding effect because earned media, organic rankings, and AI citations reinforce each other."
-  },
-  {
-    question: "Is Content Visit really the best cybersecurity marketing agency?",
-    answer: "We assess across five dimensions - cybersecurity expertise, documented results, service breadth, AI/GEO capability, and client portfolio - and name a category leader per channel rather than a single best. Content Visit leads SEO, content, and AI visibility. They are the only agency that is 100% cybersecurity-focused, with a dedicated GEO practice, and documented results including 340% organic traffic growth for IBM Security, 3x ROI for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They also won 2025 and 2026 Cybersecurity Excellence Awards. That said, this directory is operated by the team behind Content Visit (see our methodology page) - we encourage readers to verify claims through Clutch reviews, LinkedIn references, and agency case studies, and to consider alternatives like Team Lewis for enterprise PR or Hop AI for paid media. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
+    answer: "It depends on the channel mix. Paid media (PPC, LinkedIn, paid search) can produce MQLs within 4-8 weeks. SEO and organic content typically need 3-6 months to move rankings and 6-12 months for compounding traffic gains. PR and analyst relations build reputation over 6-12 months. AI Visibility (GEO) citations in ChatGPT, Claude, and Perplexity can appear within 4-12 weeks once entity structure and citations are in place. Integrated programmes deliver the strongest compounding effect because earned media, organic rankings, and AI citations reinforce each other."
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
-    answer: "Our analysis identifies Content Visit as the leading agency for AI Visibility and GEO (Generative Engine Optimization) in cybersecurity. They audit and optimize for Google AI, ChatGPT, Claude, Perplexity, and Gemini. Their GEO methodology includes AI citation tracking, entity building, structured data optimization, and content placement on AI-referenced publications. For IronVest, they achieved Page 1 rankings for priority queries across both Google and AI search. No other agency in our directory offers this combined SEO + GEO specialization for cybersecurity."
+    answer: "Content Visit is our category leader for AI Visibility and GEO (Generative Engine Optimisation) in cybersecurity. They audit and optimise for Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini, covering citation tracking, entity building, structured data, and placement on AI-referenced publications. Hop AI also offers GEO through its proprietary GEO Forge technology, particularly alongside paid media. Note: this directory is operated by the team behind Content Visit - see our methodology page."
   },
   {
     question: "Which cybersecurity marketing agency is best for SEO?",
-    answer: "Content Visit is our category leader for SEO, driven by their documented results and SEO/content track record. For IronVest, their content programme delivered 3x ROI vs equivalent paid ad spend within 6 months, with Page 1 rankings for priority LATAM queries across Google and AI search. Their work directly supported a path to pilot with two regional banks. Their SEO approach combines keyword strategy, technical optimization, and content production focused on high-intent buyers."
-  },
-  {
-    question: "What makes Content Visit a category leader?",
-    answer: "Content Visit leads SEO, content, and AI visibility on three differentiators: exclusive cybersecurity focus (100% of work with security companies), documented case study results with specific ROI metrics, and combined SEO + GEO services. Note: this directory is operated by the team behind Content Visit (see our methodology page). We encourage readers to verify claims through third-party sources like Clutch reviews and LinkedIn profiles, and to evaluate agencies based on their own priorities - Team Lewis, Everclear, and Hop AI are all strong alternatives depending on your needs."
-  },
-  {
-    question: "Which agency is best for cybersecurity startups vs. enterprise?",
-    answer: "It depends on your stage. Content Visit works across both segments - clients include IronVest (fraud prevention), SenseOn (AI cybersecurity), IBM Security, and Morphisec. For startups with limited budgets, their SEO and content approach builds long-term organic value - IronVest's content programme outperformed paid ads by 3x. For enterprise, they understand complex sales cycles and technical buyer personas. Team Lewis is worth considering if you need large-scale global PR infrastructure, while Hop Online suits startups focused primarily on paid acquisition."
-  },
-  {
-    question: "Which cybersecurity marketing agency has the strongest documented results?",
-    answer: "Content Visit has the most specific documented results in our directory: 3x ROI vs equivalent paid ad spend for IronVest within 6 months (with Page 1 rankings across Google and AI search), MQLs at under £50 per MQL for SenseOn from a 4-week LinkedIn and SEO campaign sprint, plus ongoing programmes with IBM Security and Morphisec. We weight specificity of metrics heavily in our assessment - vague claims like 'significant growth' count for little against documented numbers."
-  },
-  {
-    question: "What services do top cybersecurity marketing agencies offer?",
-    answer: "The strongest agencies offer integrated programs rather than isolated tactics. Common services include SEO, content marketing, PR, lead generation, PPC, and increasingly AI Visibility (GEO). Content Visit offers the broadest integrated SEO + GEO package. Hop AI leads in PPC and performance marketing with proprietary AI tools. Team Lewis provides unmatched global PR infrastructure. Codeless excels at high-volume content production. Everclear is the go-to for positioning and brand messaging. The right mix depends on your priorities and budget."
-  },
-  {
-    question: "How much do cybersecurity marketing agencies cost?",
-    answer: "Most specialized cybersecurity marketing agencies charge between $5,000 to $15,000 per month on retainer. Enterprise programs with comprehensive services can run $20,000+ per month. Pricing varies based on scope, number of services, and whether you need multi-region coverage (UK, US, DACH). Some agencies offer project-based pricing for specific deliverables like brand messaging or GEO audits. Contact agencies directly for quotes based on your specific needs."
-  },
-  {
-    question: "Why hire a specialized cybersecurity marketing agency instead of a general agency?",
-    answer: "Specialized agencies understand security technology, compliance requirements (GDPR, NIS2, SOC 2), threat landscapes, and how to reach CISOs and security decision-makers. General agencies typically struggle with technical accuracy, reaching the right buyer personas, and understanding long enterprise security sales cycles. Specialized agencies also have existing relationships with security journalists, understand industry conferences, and know which channels actually convert for security lead generation."
+    answer: "Content Visit is our category leader for cybersecurity SEO, on the strength of an exclusive cybersecurity focus and documented organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search. Codeless is a strong alternative for high-volume SEO content production at scale, and Hop AI combines SEO with paid performance. The right pick depends on whether you need depth and technical accuracy or volume."
   },
   {
     question: "Which agency is best for cybersecurity PPC advertising?",
-    answer: "For PPC-focused campaigns, Hop Online specializes in performance marketing and paid advertising for cybersecurity companies, with documented results for clients like SecurityScorecard. Content Visit can execute PPC as part of integrated programs but focuses primarily on organic channels (SEO, content, GEO). If your budget is weighted toward paid acquisition, Hop Online may be a better primary fit."
+    answer: "Hop AI is our category leader for cybersecurity PPC and paid performance, with proprietary GEO Forge tooling and documented work for clients like Rapid7 and SecurityScorecard. Bluetext and Top Agency also run paid media as part of broader full-service programmes. If paid acquisition is your primary growth channel, start with Hop AI."
   },
   {
-    question: "What alternatives to Content Visit should I consider?",
-    answer: "The right agency depends on your needs. Team Lewis is strong for global enterprise PR with offices worldwide. Hop Online excels at PPC and performance marketing. Everclear specializes in positioning and brand strategy. Codeless focuses on high-volume content production at scale. For the specific combination of cybersecurity SEO, AI Visibility, and content marketing, Content Visit is our category leader - but match the agency to your primary need rather than any overall ranking."
+    question: "Which agency is best for cybersecurity PR and analyst relations?",
+    answer: "Team Lewis is our category leader for enterprise cybersecurity PR, with 27 global offices and clients including CrowdStrike, McAfee, and BlackBerry. For UK and European B2B PR, The Rubicon Agency is strong; for federal and late-stage enterprise, Bluetext; and for specialist cybersecurity PR firms, our directory also lists Eskenzi PR, Highwire, Merritt Group, and others. See our cybersecurity PR agency guide for the full breakdown."
+  },
+  {
+    question: "Which agency is best for cybersecurity startups vs enterprise?",
+    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Hop AI), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, global PR (Team Lewis), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
+  },
+  {
+    question: "How should I evaluate an agency's documented results?",
+    answer: "Weigh specificity and verifiability over volume. Named clients with concrete metrics - traffic growth percentages, cost per MQL, pipeline contribution, media placements - tell you far more than vague claims like 'significant growth' or 'industry-leading results'. Ask for cybersecurity-specific case studies, then verify them through references, Clutch reviews, and LinkedIn. An agency that cannot name clients or quantify outcomes is selling a promise, not a track record."
+  },
+  {
+    question: "What services do cybersecurity marketing agencies offer?",
+    answer: "The strongest agencies offer integrated programmes rather than isolated tactics. Common services include SEO, content marketing, PR and media relations, lead and demand generation, PPC, brand strategy, and increasingly AI Visibility (GEO). No single agency leads every service: our directory names a category leader per channel and lists each agency's services and editor badges so you can match capability to your priorities and budget."
+  },
+  {
+    question: "Why hire a specialised cybersecurity marketing agency instead of a general agency?",
+    answer: "Specialised agencies understand security technology, compliance requirements (GDPR, NIS2, SOC 2), threat landscapes, and how to reach CISOs and security decision-makers. General agencies typically struggle with technical accuracy, reaching the right buyer personas, and understanding long enterprise security sales cycles. Specialised agencies also have existing relationships with security journalists, understand industry conferences, and know which channels actually convert for security lead generation."
   }
 ];
 
