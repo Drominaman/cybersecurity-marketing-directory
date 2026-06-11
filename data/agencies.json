@@ -30,7 +30,7 @@
     ],
     "location": "Waterford, Ireland & Delaware, USA",
     "yearFounded": 2018,
-    "rating": 5,
+    "rating": 4.9,
     "clientTypes": [
       "Enterprise Security Vendors",
       "Cybersecurity Startups",
@@ -131,7 +131,7 @@
     "shortDescription": "Cybersecurity GTM experts with in-house security industry experience",
     "featured": false,
     "editorBadges": [
-      "Best for Branding"
+      "Best for Brand Strategy"
     ],
     "services": [
       "Brand Strategy",
@@ -167,13 +167,14 @@
     "shortDescription": "Content creation, social media & lead generation for information security companies",
     "featured": false,
     "editorBadges": [
-      "Best for Earned Media"
+      "Best for Thought Leadership"
     ],
     "editorNotes": "Strongest editorial-PR shop in cybersecurity, with a roster (Cisco, Tripwire, Thales, ISC2) that signals enterprise-vendor pedigree. Best for vendors with 50+ employees and existing media targets. Lighter on demand generation if that's your only need.",
     "services": [
       "Content Marketing",
       "Social Media",
-      "Lead Generation"
+      "Lead Generation",
+      "Thought Leadership"
     ],
     "specialties": [
       "Earned Media",
@@ -270,7 +271,7 @@
     "shortDescription": "LinkedIn video agency and Trust Studio for cybersecurity brands",
     "featured": false,
     "editorBadges": [
-      "Best for Video"
+      "Best for Video Marketing"
     ],
     "services": [
       "Video Marketing",
@@ -305,7 +306,8 @@
     "shortDescription": "Global marketing & PR agency with strong cybersecurity practice",
     "featured": false,
     "editorBadges": [
-      "Best for Enterprise"
+      "Best for Enterprise",
+      "Best for PR & Media Relations"
     ],
     "editorNotes": "Global PR firm with enterprise client base. Strong for multi-region campaigns, but pricing reflects the global reach - overkill for vendors that only need US or UK media.",
     "services": [
@@ -340,14 +342,15 @@
     "shortDescription": "Data-driven digital marketing for cybersecurity and technology brands",
     "featured": false,
     "editorBadges": [
-      "Best for Influencer"
+      "Best for Marketing Analytics"
     ],
     "services": [
       "SEO",
       "Content Marketing",
       "PPC",
       "PR & Media Relations",
-      "Digital Marketing"
+      "Digital Marketing",
+      "Marketing Analytics"
     ],
     "specialties": [
       "Performance Marketing",
@@ -417,7 +420,8 @@
     "shortDescription": "Full-service cybersecurity marketing specializing in positioning and messaging",
     "featured": false,
     "editorBadges": [
-      "Best for Positioning"
+      "Best for Positioning & Messaging",
+      "Best for Website Development"
     ],
     "services": [
       "Content Marketing",
@@ -480,7 +484,11 @@
       "RevOps capability bridges the gap between marketing and sales"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/goenvy/",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "editorBadges": [
+      "Best for Demand Generation",
+      "Best for Lead Generation"
+    ]
   },
   {
     "id": "nola-marketing",

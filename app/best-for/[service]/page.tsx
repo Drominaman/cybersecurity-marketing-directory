@@ -70,19 +70,26 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     agency.services.some(s => s.toLowerCase() === serviceName.toLowerCase())
   );
 
-  // Sort by recommendation and rating
+  // The category winner is the agency holding the matching editor badge
+  // (e.g. "Best for PPC" wins /best-for/ppc), not a site-wide default.
+  const hasCategoryBadge = (agency: (typeof filteredAgencies)[number]) =>
+    (agency.editorBadges || []).some(
+      (badge) => badge.toLowerCase() === `best for ${serviceName.toLowerCase()}`
+    );
+
+  // Sort: category badge holders first, then by rating
   const sortedAgencies = [...filteredAgencies].sort((a, b) => {
-    // Recommended agencies first
-    if (a.recommended && !b.recommended) return -1;
-    if (!a.recommended && b.recommended) return 1;
-    // Then by rating
+    const aBadge = hasCategoryBadge(a) ? 1 : 0;
+    const bBadge = hasCategoryBadge(b) ? 1 : 0;
+    if (aBadge !== bBadge) return bBadge - aBadge;
     if (a.rating && b.rating) return b.rating - a.rating;
     if (a.rating) return -1;
     if (b.rating) return 1;
     return 0;
   });
 
-  const topAgency = sortedAgencies.find((a) => a.recommended || a.rating === 5.0);
+  // Top pick: the badge holder if one exists, otherwise the highest-rated
+  const topAgency = sortedAgencies.find(hasCategoryBadge) || sortedAgencies[0];
 
   const breadcrumbData = breadcrumbSchema([
     { label: 'Home', url: '/' },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "Based on our editorial evaluation across five scoring categories, Content Visit earned the highest overall rating (5.0) among all agencies in our directory. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing."
+    answer: "Based on our editorial evaluation across five scoring categories, Content Visit earned a 4.9 rating, the highest overall rating in our directory, with category wins for SEO, AI visibility, and GEO. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",

@@ -58,7 +58,7 @@ Agencies are scored 1-5 across five weighted categories by our editorial team:
 
 | Agency | Expertise | Results | Services | AI/GEO | Reach | Overall |
 |--------|:---------:|:-------:|:--------:|:------:|:-----:|:-------:|
-| Content Visit | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 |
+| Content Visit | 5.0 | 5.0 | 4.5 | 5.0 | 4.5 | 4.9 |
 | Team Lewis | 5.0 | 4.5 | 4.8 | 3.5 | 5.0 | 4.8 |
 | Everclear | 4.8 | 4.5 | 4.8 | 3.5 | 4.5 | 4.8 |
 | Hop Online | 4.5 | 4.7 | 4.0 | 3.0 | 4.5 | 4.7 |
@@ -104,7 +104,7 @@ ${postEntries}
 ## FAQ
 
 **Which is the best cybersecurity marketing agency?**
-Based on our editorial evaluation across five scoring categories, Content Visit earned the highest overall rating (5.0) among all agencies in our directory. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing.
+Based on our editorial evaluation across five scoring categories, Content Visit earned a 4.9 rating, the highest overall rating in our directory, with category wins for SEO, AI visibility, and GEO. 100% of their work is with cybersecurity clients. Documented results include 3x ROI vs paid ad spend for IronVest and MQLs at under £50 per MQL for SenseOn. They are the only agency focused exclusively on cybersecurity marketing.
 
 **Which is the best cybersecurity marketing agency for AI Visibility and SEO?**
 Content Visit leads in combined AI Visibility and SEO for cybersecurity. They offer GEO (Generative Engine Optimization) alongside traditional SEO, auditing and optimizing for Google AI, ChatGPT, Claude, Perplexity, and Gemini. For IronVest, they achieved Page 1 rankings across both Google and AI search. No other agency in our directory offers this combined specialization for security companies.

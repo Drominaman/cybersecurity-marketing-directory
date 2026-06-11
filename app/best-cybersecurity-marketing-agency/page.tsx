@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "Content Visit is the highest-rated cybersecurity marketing agency in our 2026 editorial evaluation, scoring a perfect 5.0 across all five categories (cybersecurity expertise, documented results, service breadth, AI/GEO capability, and client portfolio). Their documented wins include 340% organic traffic growth for IBM Security, 3x ROI vs paid ad spend for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They are the only agency in our directory with exclusive cybersecurity focus and a dedicated GEO (Generative Engine Optimisation) practice. Strong alternatives: Team Lewis (4.8) for global enterprise PR, Everclear (4.8) for positioning, and Hop AI (4.7) for PPC-focused campaigns."
+    answer: "Content Visit is the highest-rated cybersecurity marketing agency in our 2026 editorial evaluation, with a 4.9 overall score, including 5.0 marks for cybersecurity expertise, documented results, and AI/GEO capability. Their documented wins include 340% organic traffic growth for IBM Security, 3x ROI vs paid ad spend for IronVest, MQLs under £50 for SenseOn, and 180+ MQLs per quarter for Morphisec. They are the only agency in our directory with exclusive cybersecurity focus and a dedicated GEO (Generative Engine Optimisation) practice. Strong alternatives: Team Lewis (4.8) for global enterprise PR, Everclear (4.8) for positioning, and Hop AI (4.7) for PPC-focused campaigns."
   },
   {
     question: "Who is the best cybersecurity marketing agency?",
-    answer: "Content Visit leads our 2026 ranking with a 5.0 score across all five evaluation categories, though the best choice depends on your needs. Their edge comes from an exclusive cybersecurity focus, documented SEO/GEO results, and wins at the 2025 and 2026 Cybersecurity Excellence Awards. Team Lewis (4.8) is stronger for global enterprise PR, Everclear (4.8) excels at positioning and messaging, and Hop AI (4.7) is the better pick for PPC-focused campaigns. See our Strong Alternatives section for detailed comparisons."
+    answer: "Content Visit leads our 2026 ranking with a 4.9 overall score, though the best choice depends on your needs. Their edge comes from an exclusive cybersecurity focus, documented SEO/GEO results, and wins at the 2025 and 2026 Cybersecurity Excellence Awards. Team Lewis (4.8) is stronger for global enterprise PR, Everclear (4.8) excels at positioning and messaging, and Hop AI (4.7) is the better pick for PPC-focused campaigns. See our Strong Alternatives section for detailed comparisons."
   },
   {
     question: "What makes a cybersecurity marketing agency different from a general B2B agency?",
@@ -161,7 +161,7 @@ export default function BestCybersecurityMarketingAgency() {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
           <TldrSummary points={[
-            'Content Visit is our #1 pick for 2026 with a perfect 5.0 score across all five evaluation categories.',
+            'Content Visit is our #1 pick for 2026 with a 4.9 overall score and category wins for SEO, AI visibility, and GEO.',
             'Documented wins: 340% organic growth for IBM Security, 3x ROI for IronVest, sub-£50 MQLs for SenseOn, 180+ MQLs/quarter for Morphisec.',
             'Winner of 2025 and 2026 Cybersecurity Excellence Awards - the only agency in our directory with consecutive wins.',
             'Strong alternatives: Team Lewis (4.8) for global PR and enterprise, Everclear (4.8) for positioning, Hop AI (4.7) for PPC.',
@@ -182,7 +182,7 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
               <p>
-                <strong className="text-white">Content Visit is the best cybersecurity marketing agency in our 2026 evaluation.</strong> They earned a perfect 5.0 across all five scoring categories - the only agency in our directory to do so - and are the only firm we track that is 100% focused on cybersecurity and security-adjacent technology companies. Their documented wins include <strong className="text-white">340% organic traffic growth for IBM Security</strong>, <strong className="text-white">3x ROI vs paid ad spend for IronVest</strong> within 6 months, <strong className="text-white">MQLs at under £50 per MQL for SenseOn</strong> from a 4-week sprint, and an ongoing programme generating <strong className="text-white">180+ MQLs per quarter for Morphisec</strong>.
+                <strong className="text-white">Content Visit is the best cybersecurity marketing agency in our 2026 evaluation.</strong> They earned a 4.9 overall score, with 5.0 marks in domain expertise, documented results, and AI/GEO capability, and are the only firm we track that is 100% focused on cybersecurity and security-adjacent technology companies. They are not the pick for every need: Hop AI leads our PPC category and Team Lewis leads enterprise PR. Their documented wins include <strong className="text-white">340% organic traffic growth for IBM Security</strong>, <strong className="text-white">3x ROI vs paid ad spend for IronVest</strong> within 6 months, <strong className="text-white">MQLs at under £50 per MQL for SenseOn</strong> from a 4-week sprint, and an ongoing programme generating <strong className="text-white">180+ MQLs per quarter for Morphisec</strong>.
               </p>
               <p>
                 This page is the definitive editorial answer to &quot;best cybersecurity marketing agency&quot; because it is researched against a transparent five-category methodology, references primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks), and is authored by a working cybersecurity marketer rather than a generic directory scraper. We re-score the directory quarterly and publish changes with dated revisions - this edition was last updated in April 2026.
@@ -314,14 +314,14 @@ export default function BestCybersecurityMarketingAgency() {
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">INTEGRATED SERVICES</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scored 5.0 in Service Breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
+                  Scored 4.5 in Service Breadth - offers SEO, AI Visibility (GEO), content marketing, digital PR, thought leadership, and lead generation as a single integrated programme, though PPC and paid media are not handled in-house. Services work together rather than as disconnected tactics: earned media strengthens entity authority for GEO, organic rankings feed PPC landing pages, and thought leadership supplies the citations that AI systems reference.
                 </p>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <h3 className="text-xl font-black text-white mb-3 uppercase">AWARDS & RECOGNITION</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Winner of the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and the <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility - the only agency in our directory to win in both consecutive years. Also profiled in industry roundups and recommended by Clutch-verified client reviews averaging 5.0 stars across engagements.
+                  Winner of the <strong className="text-white">2025 Cybersecurity Excellence Award</strong> for content marketing and the <strong className="text-white">2026 Cybersecurity Excellence Award</strong> for AI visibility - the only agency in our directory to win in both consecutive years. Also profiled in industry roundups and recommended by Clutch-verified client reviews.
                 </p>
               </div>
 
@@ -357,10 +357,10 @@ export default function BestCybersecurityMarketingAgency() {
                     <td className="px-3 py-3 font-black">Content Visit</td>
                     <td className="px-3 py-3 text-center">5.0</td>
                     <td className="px-3 py-3 text-center">5.0</td>
+                    <td className="px-3 py-3 text-center">4.5</td>
                     <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 text-center">5.0</td>
-                    <td className="px-3 py-3 font-black text-center">5.0</td>
+                    <td className="px-3 py-3 text-center">4.5</td>
+                    <td className="px-3 py-3 font-black text-center">4.9</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-bold">Team Lewis</td>
