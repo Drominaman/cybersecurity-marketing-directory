@@ -77,19 +77,18 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       (badge) => badge.toLowerCase() === `best for ${serviceName.toLowerCase()}`
     );
 
-  // Sort: category badge holders first, then by rating
+  // Sort: category badge holders first, then alphabetical
   const sortedAgencies = [...filteredAgencies].sort((a, b) => {
     const aBadge = hasCategoryBadge(a) ? 1 : 0;
     const bBadge = hasCategoryBadge(b) ? 1 : 0;
     if (aBadge !== bBadge) return bBadge - aBadge;
-    if (a.rating && b.rating) return b.rating - a.rating;
-    if (a.rating) return -1;
-    if (b.rating) return 1;
-    return 0;
+    return a.name.localeCompare(b.name);
   });
 
-  // Top pick: the badge holder if one exists, otherwise the highest-rated
-  const topAgency = sortedAgencies.find(hasCategoryBadge) || sortedAgencies[0];
+  // Top pick: only the badge holder. Categories with no badge holder
+  // (e.g. SEO and AI visibility, where the directory operator competes)
+  // show no crowned leader - just the listings.
+  const topAgency = sortedAgencies.find(hasCategoryBadge);
 
   const breadcrumbData = breadcrumbSchema([
     { label: 'Home', url: '/' },

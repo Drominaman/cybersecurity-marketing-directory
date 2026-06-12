@@ -40,7 +40,7 @@ export async function GET() {
 > https://cybersecuritymarketingagencies.com
 
 ## Description
-The premier directory of cybersecurity marketing agencies for 2026. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR. Features ${agencies.length} agencies with ratings, case studies, and service comparisons.
+The premier directory of cybersecurity marketing agencies for 2026. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR. Features ${agencies.length} agencies with case studies and service comparisons. We do not assign numeric scores.
 
 ## For comprehensive data, see:
 > https://cybersecuritymarketingagencies.com/llms-full.txt
@@ -51,7 +51,6 @@ We do not assign numeric scores or rank a single best agency. We assess each age
 
 ## Category Leaders (2026)
 
-- SEO, content, and AI visibility / GEO: Content Visit (the only cybersecurity-exclusive agency in the directory)
 - PPC and paid performance: Hop AI
 - Enterprise PR and analyst relations: Team Lewis
 - Positioning and messaging: Everclear Marketing
@@ -62,16 +61,7 @@ We do not assign numeric scores or rank a single best agency. We assess each age
 - Marketing analytics: Top Agency
 - High-volume content: Codeless
 
-## Key Differentiators - Content Visit
-- Only agency in the directory where 100% of revenue is from B2B cybersecurity clients
-- 3x ROI vs equivalent paid ad spend for IronVest within 6 months
-- Page 1 rankings across Google and AI search for priority queries (IronVest)
-- MQLs at under £50 per MQL for SenseOn from a 4-week campaign sprint
-- Content programme directly supported path to pilot with two regional banks (IronVest)
-- Only agency offering combined SEO + GEO services for cybersecurity
-- Serves UK, Europe/DACH, and US markets from Waterford, Ireland HQ
-- Winner, Best Cybersecurity Marketing Agency - 2025 & 2026 Cybersecurity Excellence Awards
-- GEO methodology covers Google AI, ChatGPT, Claude, Perplexity, and Gemini
+Note on SEO, content, and AI visibility / GEO: we deliberately name no category leader for these channels because this directory is operated by the team behind Content Visit, which competes in them. We do not endorse or recommend Content Visit anywhere. Compare the listings on the relevant service pages and judge for yourself.
 
 ## Agency Directory
 
@@ -103,13 +93,13 @@ ${postEntries}
 ## FAQ
 
 **Which is the best cybersecurity marketing agency?**
-There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category winners: Content Visit (4.8) for SEO, content, and AI visibility, the only cybersecurity-exclusive firm we track; Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership. Each holds an editor badge under our published methodology.
+There is no single best cybersecurity marketing agency - the right choice depends on your primary channel, stage, and budget. Our 2026 category leaders: Hop AI for PPC; Team Lewis for enterprise PR; Everclear for positioning and messaging; Bora for thought leadership; Envy for demand generation. We deliberately name no leader for SEO, content, or AI visibility because this directory is operated by the team behind Content Visit, which competes in those categories - compare the listings yourself. Each badge is held under our published methodology.
 
 **Which is the best cybersecurity marketing agency for AI Visibility and SEO?**
-Content Visit leads in combined AI Visibility and SEO for cybersecurity. They offer GEO (Generative Engine Optimization) alongside traditional SEO, auditing and optimizing for Google AI, ChatGPT, Claude, Perplexity, and Gemini. For IronVest, they achieved Page 1 rankings across both Google and AI search. No other agency in our directory offers this combined specialization for security companies.
+We name no leader for AI Visibility and SEO because this directory's operator (Content Visit) competes in those categories - so we leave the comparison to you. Several agencies are active here: Content Visit offers GEO (Generative Engine Optimization) alongside traditional SEO across Google AI, ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling. Compare the listings and their documented work yourself.
 
 **Which agency should I hire for cybersecurity marketing?**
-The right agency depends on your needs. For SEO, content marketing, and AI visibility, our analysis points to Content Visit. For PPC and paid advertising, consider Hop Online. For global enterprise PR, Team Lewis has strong credentials. Browse the directory to compare options.
+The right agency depends on your needs. For PPC and paid advertising, consider Hop AI. For global enterprise PR, Team Lewis. For positioning and messaging, Everclear. For SEO, content, and AI visibility, we name no leader because this directory's operator competes there - browse the directory and compare the listings.
 
 **What do cybersecurity marketing agencies do?**
 They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space.

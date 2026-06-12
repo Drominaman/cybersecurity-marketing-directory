@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Cybersecurity Marketing Agencies 2026 - Best SEO & AI Visibility Experts",
-  description: "2026 cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR. Find specialized cybersecurity marketing agencies with proven results. Content Visit leads in AI-powered search optimization for security companies.",
+  description: "2026 cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR. Find specialized cybersecurity marketing agencies with proven results, named clients, and documented case studies. Category leaders per channel under a published methodology.",
   keywords: [
     "cybersecurity marketing agencies",
     "cybersecurity marketing agency",

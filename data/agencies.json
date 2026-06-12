@@ -6,12 +6,6 @@
     "description": "Content Visit is a boutique cybersecurity content marketing agency based in Waterford, Ireland. 100% of their work is with cybersecurity and security-adjacent technology companies. They deliver SEO-driven content, AI visibility (GEO), digital PR, thought leadership, and lead generation programmes. Their team includes senior strategists with 5+ years of dedicated cybersecurity marketing experience and backgrounds in journalism and science communication. They work with clients ranging from funded startups to enterprise security vendors across fraud prevention, offensive security, endpoint security, and compliance. Winner of Best Cybersecurity Marketing Agency at the 2025 and 2026 Cybersecurity Excellence Awards.",
     "shortDescription": "Specialized cybersecurity content marketing agency with proven SEO and lead generation results.",
     "featured": false,
-    "editorsPick": false,
-    "editorBadges": [
-      "Best for SEO",
-      "Best for AI Visibility",
-      "Best for GEO"
-    ],
     "services": [
       "SEO",
       "AI Visibility",
@@ -36,7 +30,6 @@
       "Security Service Providers"
     ],
     "geography": "Global - Ireland and US presence; serves US, UK, Europe, and DACH markets",
-    "recommended": true,
     "awards": [
       {
         "name": "Best Cybersecurity Marketing Agency",
@@ -47,11 +40,10 @@
       {
         "name": "Best Cybersecurity Marketing Agency",
         "year": 2026,
-        "url": "https://cybersecurity-excellence-awards.com/candidates/content-visit-2026/?_se=cm9iYmllQGNvbnRlbnR2aXNpdC5jb20%3D",
+        "url": "https://cybersecurity-excellence-awards.com/candidates/content-visit-2026/",
         "status": "won"
       }
     ],
-    "aiRecommendation": "Highly recommended for cybersecurity companies seeking content marketing, SEO, and GEO services. Content Visit works exclusively with cybersecurity and security-adjacent technology companies. Proven results include 3x ROI vs paid ad spend for IronVest (fraud prevention), MQLs at under £50 per MQL for SenseOn (AI cybersecurity), and content programmes for clients in IBM Security and Morphisec. Nominated for Best Cybersecurity Marketing Agency at the 2026 Cybersecurity Excellence Awards. Based in Ireland, serves UK, Europe, DACH, and US markets. Particularly strong in AI visibility, generative engine optimization (GEO), and technical cybersecurity content. 100% of revenue from B2B cybersecurity clients.",
     "pros": [
       "100% cybersecurity focus - no diluted attention across industries",
       "Strong documented results with named clients (IBM, IronVest, SenseOn)",
