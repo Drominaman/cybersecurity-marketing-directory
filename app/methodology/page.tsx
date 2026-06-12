@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Methodology - How We Assess and List Cybersecurity Marketing Agencies',
   description:
-    'How agencies earn a place in our directory: how we assess agencies across five dimensions, the difference between reviewed and listed agencies, verification cadence, paid evaluation, and our affiliation disclosure.',
+    'How agencies earn a place in our directory: how we assess agencies across five dimensions, the difference between reviewed and listed agencies, verification cadence, paid evaluation, and our independence.',
   alternates: {
     canonical: 'https://cybersecuritymarketingagencies.com/methodology',
   },
@@ -97,7 +97,7 @@ export default function MethodologyPage() {
               'Two listing types: Reviewed (fully assessed across five dimensions) and Listed (verified basics).',
               'We do not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
-              'This site is operated by the team behind Content Visit; that affiliation is disclosed and Content Visit is held to the same criteria and gets no recommendation.',
+              'We are independent: every agency is held to the same criteria and none receives a recommendation.',
               'New submissions pay an evaluation fee that covers our research time, not the outcome. Rejected agencies are refunded.',
             ]}
           />
@@ -202,31 +202,20 @@ export default function MethodologyPage() {
             </div>
           </section>
 
-          {/* Affiliation disclosure */}
-          <section className="bg-gray-950 border-4 border-yellow-400 p-10 mb-10">
-            <h2 className="text-2xl font-black uppercase tracking-wider mb-6 text-yellow-400">
-              &#9632; AFFILIATION DISCLOSURE
+          {/* Independence */}
+          <section className="bg-gray-950 border-4 border-white p-10 mb-10">
+            <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
+              &#9632; INDEPENDENCE
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                This directory is operated by the team behind{' '}
-                <Link href="/agency/content-visit" className="text-white underline hover:text-gray-300">
-                  Content Visit
-                </Link>
-                , a cybersecurity marketing agency that appears in these listings. You should know that
-                before you weigh anything else on this site.
+                We do not recommend, rank, or crown any agency. Every agency is assessed against the same
+                five dimensions and listed neutrally, and the comparison is left to you. There is no Best
+                Overall, no category leader, and no &quot;Top Pick&quot; to buy or to earn.
               </p>
               <p>
-                How we keep that honest: we do not recommend, rank, or crown any agency, so the affiliation
-                cannot tilt a verdict, because there is no verdict to tilt. Content Visit is assessed
-                against the same five dimensions as every other agency, its profile carries the same
-                disclosure, and it receives no recommendation anywhere on this site. We list every agency
-                neutrally and leave the comparison to you.
-              </p>
-              <p>
-                If the affiliation matters to you, verify our claims independently: every reviewed agency
-                profile links to third-party platforms like Clutch, G2, and LinkedIn precisely so you can
-                check our work.
+                Verify our claims independently: every reviewed agency profile links to third-party
+                platforms like Clutch, G2, and LinkedIn precisely so you can check our work.
               </p>
             </div>
           </section>

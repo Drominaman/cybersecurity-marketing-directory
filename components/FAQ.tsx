@@ -3,15 +3,15 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI and others on PPC, Team Lewis and specialist firms on enterprise PR, Everclear on positioning, Bora on thought leadership, Envy on demand generation. For SEO, content, and AI visibility, note that this directory is operated by the team behind Content Visit, which competes in those categories - compare the listings yourself. We do not assign numeric scores. See our methodology page for the full disclosure."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI and others on PPC, Team Lewis and specialist firms on enterprise PR, Everclear on positioning, Bora on thought leadership, Envy on demand generation, Content Visit and Codeless on SEO and AI visibility. Compare the listings yourself. We do not assign numeric scores. See our methodology page for how we assess agencies."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
-    answer: "We do not crown a leader for AI Visibility and SEO because this directory is operated by the team behind Content Visit, which competes in those categories - so we leave the comparison to you. Several agencies are active here: Content Visit offers GEO (Generative Engine Optimisation) alongside traditional SEO across ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling, particularly alongside paid media. Compare the listings and their documented work yourself."
+    answer: "We do not crown a leader for AI Visibility and SEO - we leave the comparison to you. Several agencies are active here: Content Visit offers GEO (Generative Engine Optimisation) alongside traditional SEO across ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling, particularly alongside paid media; Codeless focuses on high-volume SEO content. Compare the listings and their documented work yourself."
   },
   {
     question: "Which agency should I hire for cybersecurity marketing?",
-    answer: "The right agency depends on your needs. For PPC and paid advertising, consider Hop AI. For global enterprise PR, Team Lewis has strong credentials. For positioning and messaging, Everclear. For SEO, content, and AI visibility, we name no single leader because this directory's operator competes there - browse the directory and compare the listings for your specific requirements."
+    answer: "The right agency depends on your needs, and we name no single leader. For PPC and paid advertising, agencies like Hop AI; for global enterprise PR, Team Lewis; for positioning and messaging, Everclear; for SEO, content, and AI visibility, Content Visit, Codeless, and others. Browse the directory and compare the listings for your specific requirements."
   },
   {
     question: "What do cybersecurity marketing agencies do?",

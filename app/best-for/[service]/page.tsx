@@ -85,9 +85,8 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     return a.name.localeCompare(b.name);
   });
 
-  // Top pick: only the badge holder. Categories with no badge holder
-  // (e.g. SEO and AI visibility, where the directory operator competes)
-  // show no crowned leader - just the listings.
+  // We no longer crown a leader in any category, so no agency is featured
+  // as a top pick - the page shows the listings only.
   const topAgency = sortedAgencies.find(hasCategoryBadge);
 
   const breadcrumbData = breadcrumbSchema([

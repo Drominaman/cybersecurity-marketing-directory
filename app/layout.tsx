@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "AI visibility marketing",
     "cybersecurity SEO",
     "GEO marketing cybersecurity",
-    "Content Visit",
     "AI search optimization",
     "cybersecurity marketing",
     "security marketing agency",
@@ -79,12 +78,7 @@ const personSchema = {
   "name": "Laura Martisiute",
   "jobTitle": "Content Strategist",
   "url": "https://ie.linkedin.com/in/laura-martisiute-b152a5129",
-  "sameAs": ["https://ie.linkedin.com/in/laura-martisiute-b152a5129"],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Content Visit",
-    "url": "https://www.contentvisit.com"
-  }
+  "sameAs": ["https://ie.linkedin.com/in/laura-martisiute-b152a5129"]
 };
 
 const organizationSchema = {

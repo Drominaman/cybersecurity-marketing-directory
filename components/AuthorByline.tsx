@@ -1,17 +1,16 @@
 interface AuthorBylineProps {
   variant: 'full' | 'reviewed-by';
   lastUpdated?: string;
-  showDisclosure?: boolean;
 }
 
 const AUTHOR = {
   name: 'Laura Martisiute',
   role: 'Content Strategist',
-  bio: '10+ years in cybersecurity marketing. Founder of Content Visit.',
+  bio: '10+ years in cybersecurity marketing.',
   linkedIn: 'https://ie.linkedin.com/in/laura-martisiute-b152a5129',
 };
 
-export default function AuthorByline({ variant, lastUpdated, showDisclosure }: AuthorBylineProps) {
+export default function AuthorByline({ variant, lastUpdated }: AuthorBylineProps) {
   if (variant === 'reviewed-by') {
     return (
       <p className="text-gray-400 text-sm font-mono">
@@ -52,12 +51,6 @@ export default function AuthorByline({ variant, lastUpdated, showDisclosure }: A
           )}
         </div>
       </div>
-
-      {showDisclosure && (
-        <div className="mt-3 p-3 bg-gray-800/50 border border-white/10 text-xs text-gray-400 leading-relaxed">
-          <strong className="text-gray-300">Disclosure:</strong> Laura Martisiute is the founder of Content Visit, which is featured in this directory. Ratings are based on our published methodology.
-        </div>
-      )}
     </div>
   );
 }
