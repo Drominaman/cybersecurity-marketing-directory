@@ -85,9 +85,6 @@
     "description": "High-volume content production agency with strong SEO focus. Notable clients include Monday.com (1000% traffic growth case study). Produces long-form, search-optimised content at scale for SaaS and B2B technology companies.",
     "shortDescription": "High-volume content production with strong SEO focus",
     "featured": false,
-    "editorBadges": [
-      "Best for High-Volume Content"
-    ],
     "editorNotes": "High-volume content engine with proven SEO methodology, but their headline case study is non-security (Monday.com, a project-management SaaS). Cybersecurity track record is thinner than the brand suggests - verify case studies in your specific sub-vertical before committing.",
     "services": [
       "SEO",
@@ -120,9 +117,6 @@
     "description": "Cybersecurity GTM experts offering brand strategy, marketing strategy, demand generation, and content marketing. Their team has extensive in-house experience at major cybersecurity companies. Positioned as a fully integrated GTM agency delivering qualified leads for cybersecurity vendors, with particular strength in bold creative and brand positioning.",
     "shortDescription": "Cybersecurity GTM experts with in-house security industry experience",
     "featured": false,
-    "editorBadges": [
-      "Best for Brand Strategy"
-    ],
     "services": [
       "Brand Strategy",
       "Visual Identity",
@@ -155,9 +149,6 @@
     "description": "Content creation, social media & lead generation for infosec (white papers, blogs, earned media). Notable clients include Cisco, Tripwire, Thales, Venafi, (ISC)², and Cybereason.",
     "shortDescription": "Content creation, social media & lead generation for information security companies",
     "featured": false,
-    "editorBadges": [
-      "Best for Thought Leadership"
-    ],
     "editorNotes": "Strongest editorial-PR shop in cybersecurity, with a roster (Cisco, Tripwire, Thales, ISC2) that signals enterprise-vendor pedigree. Best for vendors with 50+ employees and existing media targets. Lighter on demand generation if that's your only need.",
     "services": [
       "Content Marketing",
@@ -256,9 +247,6 @@
     "description": "LinkedIn video agency and Trust Studio for B2B tech and cybersecurity brands. Formerly known as CyberWhyze. Helps security vendors cut through vendor fatigue by amplifying experts through video. Notable clients include Lenovo, Halcyon, SANS, MainNerve, SecurityScorecard, Akeyless, and Bluefin. Reports client-attributed lifts in branded search and trust signal performance from their video-led programmes.",
     "shortDescription": "LinkedIn video agency and Trust Studio for cybersecurity brands",
     "featured": false,
-    "editorBadges": [
-      "Best for Video Marketing"
-    ],
     "services": [
       "Video Marketing",
       "Social Media",
@@ -290,10 +278,6 @@
     "description": "Global marketing & PR (public relations, digital marketing, analytics, creative services). Notable clients include BlackBerry, CrowdStrike, and McAfee.",
     "shortDescription": "Global marketing & PR agency with strong cybersecurity practice",
     "featured": false,
-    "editorBadges": [
-      "Best for Enterprise",
-      "Best for PR & Media Relations"
-    ],
     "editorNotes": "Global PR firm with enterprise client base. Strong for multi-region campaigns, but pricing reflects the global reach - overkill for vendors that only need US or UK media.",
     "services": [
       "PR & Media Relations",
@@ -325,9 +309,6 @@
     "description": "Data-driven digital marketing (SEO, PPC, content marketing, PR, influencer campaigns). Notable clients include RedMarlin, Check Point, and Lookout.",
     "shortDescription": "Data-driven digital marketing for cybersecurity and technology brands",
     "featured": false,
-    "editorBadges": [
-      "Best for Marketing Analytics"
-    ],
     "services": [
       "SEO",
       "Content Marketing",
@@ -362,9 +343,6 @@
     "description": "AI-first cybersecurity marketing agency specializing in PPC, SEO, GEO (Generative Engine Optimization), content marketing, and paid social. Their proprietary GEO Forge technology makes brands discoverable by both search engines and LLMs. Notable clients include Rapid7, Group-IB, SecurityScorecard, and Immersive Labs.",
     "shortDescription": "AI-first performance marketing & growth for cybersecurity companies",
     "featured": false,
-    "editorBadges": [
-      "Best for PPC"
-    ],
     "editorNotes": "One of the few agencies with genuine GEO/AEO capability for AI search visibility. Best fit for vendors who need to be cited by ChatGPT/Perplexity. Smaller team, so not a fit for very large multi-channel programmes.",
     "services": [
       "SEO",
@@ -401,10 +379,6 @@
     "description": "Full-service cybersecurity marketing (positioning & messaging, branding, content & lead-gen programs). Notable clients include Lumifi, SecureWave, and Assured.",
     "shortDescription": "Full-service cybersecurity marketing specializing in positioning and messaging",
     "featured": false,
-    "editorBadges": [
-      "Best for Positioning & Messaging",
-      "Best for Website Development"
-    ],
     "services": [
       "Content Marketing",
       "PR & Media Relations",
@@ -464,11 +438,7 @@
       "RevOps capability bridges the gap between marketing and sales"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/goenvy/",
-    "lastVerified": "2026-05-02",
-    "editorBadges": [
-      "Best for Demand Generation",
-      "Best for Lead Generation"
-    ]
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "nola-marketing",
