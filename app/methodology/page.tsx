@@ -94,10 +94,10 @@ export default function MethodologyPage() {
 
           <TldrSummary
             points={[
-              'Two listing types: Reviewed (fully assessed across five dimensions, with category-leader badges where earned) and Listed (verified basics).',
-              'Category-leader badges are editorial and cannot be bought.',
+              'Two listing types: Reviewed (fully assessed across five dimensions) and Listed (verified basics).',
+              'We do not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
-              'This site is operated by the team behind Content Visit; that affiliation is disclosed and Content Visit is held to the same criteria.',
+              'This site is operated by the team behind Content Visit; that affiliation is disclosed and Content Visit is held to the same criteria and gets no recommendation.',
               'New submissions pay an evaluation fee that covers our research time, not the outcome. Rejected agencies are refunded.',
             ]}
           />
@@ -110,8 +110,8 @@ export default function MethodologyPage() {
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
                 <strong className="text-white">Reviewed agencies</strong> have been through a full
-                editorial assessment across the five dimensions below, and earn category-leader badges
-                (Best for SEO, Best for PPC, and so on) where they lead. No numeric score is assigned.
+                editorial assessment across the five dimensions below. No numeric score is assigned, and
+                no agency is crowned: the assessment informs our neutral profile notes, not a ranking.
               </p>
               <p>
                 <strong className="text-white">Listed agencies</strong> have passed verification, which
@@ -120,9 +120,9 @@ export default function MethodologyPage() {
                 an endorsement; it is a verified record.
               </p>
               <p>
-                We name category leaders rather than assigning numeric scores, because a precise number
-                implies a precision our assessment does not have. We would rather tell you who leads each
-                channel and why.
+                We do not assign numeric scores, name a single best, or crown category leaders, because a
+                precise number or a crown implies a certainty our assessment does not have. We would rather
+                show you each agency&apos;s documented strengths and let you compare for your own needs.
               </p>
             </div>
           </section>
@@ -133,10 +133,10 @@ export default function MethodologyPage() {
               &#9632; HOW WE ASSESS AGENCIES
             </h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              We assess agencies across the five dimensions below and award category-leader badges where
-              an agency clearly leads a channel. Assessments are reviewed quarterly and revised when an
-              agency&apos;s circumstances materially change (acquisitions, rebrands, major client wins or
-              losses).
+              We assess agencies across the five dimensions below to write accurate, neutral profiles. We
+              do not turn this into a ranking or crown a leader. Assessments are reviewed quarterly and
+              revised when an agency&apos;s circumstances materially change (acquisitions, rebrands, major
+              client wins or losses).
             </p>
             <div className="space-y-5">
               {criteria.map((c) => (
@@ -149,9 +149,9 @@ export default function MethodologyPage() {
               ))}
             </div>
             <p className="text-gray-300 leading-relaxed mt-6">
-              Editor&apos;s Pick badges and Best for designations are drawn from this assessment plus
-              category-specific judgement. They are editorial decisions and are not for sale, at any price,
-              to anyone.
+              This assessment informs our neutral profile notes only. We do not name a single best agency,
+              crown category leaders, or publish &quot;Top Pick&quot; labels for anyone, and nothing here is
+              for sale, at any price, to anyone.
             </p>
           </section>
 
@@ -213,16 +213,15 @@ export default function MethodologyPage() {
                 <Link href="/agency/content-visit" className="text-white underline hover:text-gray-300">
                   Content Visit
                 </Link>
-                , a cybersecurity marketing agency that appears in these listings and is our category
-                leader for SEO, content, and AI visibility. You should know that before you weigh anything
-                else on this site.
+                , a cybersecurity marketing agency that appears in these listings. You should know that
+                before you weigh anything else on this site.
               </p>
               <p>
-                How we keep that honest: Content Visit is assessed against the same five dimensions as every
-                other agency, its profile carries the same disclosure, and where another agency is the
-                stronger choice for a category, that agency gets the designation. Hop AI is our pick for
-                PPC. Team Lewis is our pick for enterprise PR. Those calls are on the record across this
-                site.
+                How we keep that honest: we do not recommend, rank, or crown any agency, so the affiliation
+                cannot tilt a verdict, because there is no verdict to tilt. Content Visit is assessed
+                against the same five dimensions as every other agency, its profile carries the same
+                disclosure, and it receives no recommendation anywhere on this site. We list every agency
+                neutrally and leave the comparison to you.
               </p>
               <p>
                 If the affiliation matters to you, verify our claims independently: every reviewed agency
@@ -244,14 +243,15 @@ export default function MethodologyPage() {
                   submit for evaluation
                 </Link>
                 . Submissions carry a fee because evaluation is real work: researching your client base,
-                verifying your claims and profiles, assessing you across the dimensions above and awarding
-                category badges where earned, and maintaining your data quarterly after you are live.
+                verifying your claims and profiles, assessing you across the dimensions above, and
+                maintaining your data quarterly after you are live.
               </p>
               <p>
                 <strong className="text-white">The fee buys the evaluation, not the outcome.</strong>{' '}
-                Paying does not guarantee a listing, does not influence your assessment, and does not make
-                you eligible to purchase an Editor&apos;s Pick, because those are not for sale. Agencies we
-                decline receive a full refund and a short explanation of why.
+                Paying does not guarantee a listing, does not influence your assessment, and does not buy a
+                recommendation, ranking, or favourable editorial language, because we do not rank or
+                recommend agencies. Agencies we decline receive a full refund and a short explanation of
+                why.
               </p>
               <p>
                 See current tiers and what each includes on the{' '}

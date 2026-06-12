@@ -101,13 +101,13 @@ export default function SubmitAgencyPage() {
               LIST YOUR CYBERSECURITY MARKETING AGENCY
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl mb-2">
-              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Submissions are paid because evaluation is real work: we research your client base, verify your claims and profiles, and maintain your data after you are live. The fee buys the evaluation, never the outcome - see <Link href="/methodology" className="text-white underline hover:text-gray-300">our methodology</Link> for exactly how listing and rating decisions are made.
+              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Submissions are paid because evaluation is real work: we research your client base, verify your claims and profiles, and maintain your data after you are live. The fee buys the evaluation, never the outcome - see <Link href="/methodology" className="text-white underline hover:text-gray-300">our methodology</Link> for exactly how listing decisions are made. We do not rank or recommend agencies.
             </p>
           </div>
 
           <TldrSummary points={[
             'Two tiers: Verified ($499/year) and Featured ($1,499/year). The fee covers our evaluation work, not the outcome.',
-            'Editorial picks (Best for SEO, Best Overall, etc.) cannot be purchased.',
+            'We do not rank or recommend agencies. Paid tiers buy a listing and placement, never a recommendation.',
             'Rejected submissions receive a full refund. See our methodology for how evaluation works.',
             'Submit below or email robbie@contentvisit.com to discuss. Approval takes 5 to 7 business days.',
           ]} />
@@ -130,20 +130,20 @@ export default function SubmitAgencyPage() {
                   By invitation only
                 </div>
                 <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                  Editorial picks are agencies we have evaluated against documented results, client portfolio, and industry standing. They cannot be purchased.
+                  Editorial listings are agencies we researched and added ourselves, at no charge. The existing pre-pricing listings sit here. They cannot be purchased.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300 mb-6">
                   <li className="flex gap-2">
                     <span className="text-white">&#9632;</span>
-                    <span>Selected by us based on merit</span>
+                    <span>Researched and added by us</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-white">&#9632;</span>
-                    <span>Eligible for Editor&apos;s Pick badges</span>
+                    <span>No listing fee</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-white">&#9632;</span>
-                    <span>Included in &quot;Best of&quot; rankings</span>
+                    <span>Listed neutrally, the same as any other agency</span>
                   </li>
                 </ul>
                 <div className="mt-auto text-xs font-mono text-gray-500 uppercase tracking-wider">
@@ -183,7 +183,7 @@ export default function SubmitAgencyPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-gray-500">&#9633;</span>
-                    <span className="text-gray-500">Not included in &quot;Best of&quot; rankings</span>
+                    <span className="text-gray-500">Not included in roundup posts</span>
                   </li>
                 </ul>
                 <a
@@ -197,7 +197,7 @@ export default function SubmitAgencyPage() {
               {/* Featured */}
               <div className="bg-gray-900 border-4 border-yellow-400 p-8 flex flex-col shadow-[6px_6px_0px_0px_rgba(250,204,21,0.3)]">
                 <div className="text-xs font-mono text-yellow-400 uppercase tracking-wider mb-2">
-                  TIER 3 &mdash; MOST VISIBILITY
+                  TIER 3: MOST VISIBILITY
                 </div>
                 <h3 className="text-2xl font-black uppercase mb-2">Featured</h3>
                 <div className="text-3xl font-black text-white mb-1">$1,499<span className="text-base text-gray-400 font-normal">/year</span></div>
@@ -205,7 +205,7 @@ export default function SubmitAgencyPage() {
                   Annual renewal
                 </div>
                 <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                  Everything in Verified, plus inclusion in our editorial roundup posts and a dedicated agency Q&amp;A.
+                  Everything in Verified, plus inclusion in our roundup posts and a dedicated agency Q&amp;A. Placement, not a recommendation.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300 mb-6">
                   <li className="flex gap-2">
@@ -214,7 +214,7 @@ export default function SubmitAgencyPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-yellow-400">&#9632;</span>
-                    <span>Listed in relevant &quot;Best of&quot; roundups</span>
+                    <span>Listed in relevant roundup posts</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-yellow-400">&#9632;</span>
@@ -226,7 +226,7 @@ export default function SubmitAgencyPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-gray-500">&#9633;</span>
-                    <span className="text-gray-500">Editor&apos;s Pick badges still selected by us</span>
+                    <span className="text-gray-500">No recommendation or ranking (we do not rank agencies)</span>
                   </li>
                 </ul>
                 <a
@@ -246,13 +246,13 @@ export default function SubmitAgencyPage() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Listings are paid. Editorial recognition is not.</strong> Verified and Featured tiers buy you a place in the directory. They do not buy you a Best Overall or Best for SEO designation, a top ranking in any &quot;Best of&quot; post, or favourable editorial language. Those are determined by us based on documented results, client portfolio, awards, and industry standing.
+                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> Verified and Featured tiers buy you a place in the directory and neutral placement. We do not rank or recommend agencies at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy or to earn. Every agency is listed neutrally and compared by the reader.
               </p>
               <p>
-                <strong className="text-white">What this means for buyers:</strong> when you read a phrase like &quot;Top Pick&quot; or see an Editor&apos;s Pick badge, that is our independent judgement, not a transaction. When you see an agency in the directory or a Featured tier roundup mention, that is a paid listing and disclosed accordingly.
+                <strong className="text-white">What this means for buyers:</strong> you will not see us crown a winner or tag an agency as a pick. When you see an agency in the directory or a roundup post, that is a listing, disclosed accordingly, not a recommendation from us.
               </p>
               <p>
-                <strong className="text-white">What this means for agencies:</strong> if you are great, the editorial recognition follows the work, not the cheque. The paid tiers exist to fund the directory and surface you to buyers. They do not buy you a ranking we have not earned for you.
+                <strong className="text-white">What this means for agencies:</strong> the paid tiers exist to fund the directory and surface you to buyers in a neutral listing. They do not buy a recommendation, because we do not give one to anyone.
               </p>
             </div>
           </div>
@@ -461,9 +461,9 @@ export default function SubmitAgencyPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-black text-white mb-2">Can I buy a Best for SEO or Editor&apos;s Pick badge?</h3>
+                <h3 className="text-lg font-black text-white mb-2">Can I buy a recommendation or a top ranking?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  No. Editor&apos;s Pick badges and Best for designations are editorial. They are based on documented results, client portfolio, and industry standing. The directory is only useful to buyers if those signals stay independent.
+                  No, and you cannot earn one either, because we do not rank or recommend agencies. There is no Best for SEO designation, no &quot;Top Pick&quot; label, and no editor&apos;s badge for sale or for award. The directory lists every agency neutrally; paid tiers buy a listing and placement, never a recommendation. That is the only way the directory stays useful to buyers.
                 </p>
               </div>
               <div>
@@ -475,7 +475,7 @@ export default function SubmitAgencyPage() {
               <div>
                 <h3 className="text-lg font-black text-white mb-2">Do you offer custom packages or sponsorship?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Yes, for category sponsorship (for example, sole sponsor of the &quot;Best Cybersecurity PR Agency&quot; landing page) or content partnerships. Email <a href={`mailto:${SUBMISSIONS_EMAIL}`} className="text-white underline hover:text-gray-300">{SUBMISSIONS_EMAIL}</a> to discuss.
+                  Yes, for a clearly disclosed sponsor slot on a category page or content partnerships. Sponsorship is labelled advertising and does not change how any agency is listed or compared, because we do not rank or recommend agencies. Email <a href={`mailto:${SUBMISSIONS_EMAIL}`} className="text-white underline hover:text-gray-300">{SUBMISSIONS_EMAIL}</a> to discuss.
                 </p>
               </div>
             </div>
