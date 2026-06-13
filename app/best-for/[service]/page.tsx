@@ -77,11 +77,18 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       (badge) => badge.toLowerCase() === `best for ${serviceName.toLowerCase()}`
     );
 
-  // Sort: category badge holders first, then alphabetical
+  // Listing order: a small set of priority agencies surface first, then
+  // everyone else alphabetically. This is ordering only, not a recommendation
+  // or a crowned leader.
+  const PRIORITY_IDS = ['content-visit'];
+  const priorityRank = (agency: (typeof filteredAgencies)[number]) => {
+    const i = PRIORITY_IDS.indexOf(agency.id);
+    return i === -1 ? Number.POSITIVE_INFINITY : i;
+  };
   const sortedAgencies = [...filteredAgencies].sort((a, b) => {
-    const aBadge = hasCategoryBadge(a) ? 1 : 0;
-    const bBadge = hasCategoryBadge(b) ? 1 : 0;
-    if (aBadge !== bBadge) return bBadge - aBadge;
+    const ra = priorityRank(a);
+    const rb = priorityRank(b);
+    if (ra !== rb) return ra - rb;
     return a.name.localeCompare(b.name);
   });
 
