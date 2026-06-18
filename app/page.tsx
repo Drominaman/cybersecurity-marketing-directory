@@ -1,4 +1,5 @@
 import AgencySearch from '@/components/AgencySearch';
+import AgencyFeaturedReveal from '@/components/AgencyFeaturedReveal';
 import AuthorByline from '@/components/AuthorByline';
 import ComparisonTable from '@/components/ComparisonTable';
 import FAQ, { homepageFaqs } from '@/components/FAQ';
@@ -11,6 +12,7 @@ import { faqSchema } from '@/lib/seo';
 
 export default function Home() {
   const allAgencies = getAllAgenciesSponsoredFirst();
+  const featuredAgency = allAgencies.find(a => a.sponsored);
 
   const allServices = Array.from(
     new Set(allAgencies.flatMap(a => a.services))
@@ -97,6 +99,9 @@ export default function Home() {
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
           'We do not crown a winner or single out any agency. We list agencies neutrally so you can compare them on documented results.',
         ]} />
+
+        {/* Featured agency: Read more drops the full profile down inline */}
+        {featuredAgency && <AgencyFeaturedReveal agency={featuredAgency} />}
 
         {/* Client Island: Search/Filter + Agency Grid */}
         <section id="agency-search">

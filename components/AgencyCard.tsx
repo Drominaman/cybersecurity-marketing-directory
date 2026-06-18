@@ -32,16 +32,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
   const logoUrl = getAgencyLogoUrl(agency.website);
 
   return (
-    <div className={`bg-gray-900 border-4 ${agency.sponsored ? 'border-yellow-300' : 'border-white'} p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative`}>
-      {agency.sponsored && (
-        <Link
-          href="/methodology#sponsored"
-          title="Paid placement (disclosed). What this means."
-          className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider mb-3 hover:bg-yellow-200 transition-colors no-underline"
-        >
-          ■ Sponsored
-        </Link>
-      )}
+    <div className="bg-gray-900 border-4 border-white p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative">
       {logoUrl && (
         <div className="mb-3 flex items-center gap-3">
           <Image

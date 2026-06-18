@@ -98,7 +98,7 @@ export default function MethodologyPage() {
               'We do not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
               'We are independent: every agency is held to the same criteria and none receives a recommendation.',
-              'Sponsored listings are a paid, clearly-labelled placement: boosted to the top, but never a recommendation and never changing how other agencies are listed.',
+              'Featured listings are a paid, clearly-labelled placement: shown at the top, but never a recommendation and never changing how other agencies are listed.',
               'New submissions pay an evaluation fee that covers our research time, not the outcome. Rejected agencies are refunded.',
             ]}
           />
@@ -153,7 +153,7 @@ export default function MethodologyPage() {
               This assessment informs our neutral profile notes only. We do not name a single best agency,
               crown category leaders, or publish &quot;Top Pick&quot; labels for anyone. Our assessment and
               editorial profiles are not for sale. The one paid option is a clearly-labelled{' '}
-              <Link href="#sponsored" className="text-white underline hover:text-gray-300">Sponsored</Link>{' '}
+              <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
               placement, which buys position and a richer profile, never a recommendation or any change to
               how we assess an agency.
             </p>
@@ -217,7 +217,7 @@ export default function MethodologyPage() {
                 five dimensions and listed neutrally, and the comparison is left to you. There is no Best
                 Overall, no category leader, and no &quot;Top Pick&quot; to buy or to earn. The one paid
                 option, a{' '}
-                <Link href="#sponsored" className="text-white underline hover:text-gray-300">Sponsored</Link>{' '}
+                <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
                 placement, is always labelled and boosts position only: it is not a recommendation and does
                 not change how any other agency is listed.
               </p>
@@ -228,29 +228,29 @@ export default function MethodologyPage() {
             </div>
           </section>
 
-          {/* Sponsored listings */}
-          <section id="sponsored" className="bg-gray-900 border-4 border-yellow-300 p-10 mb-10 scroll-mt-24">
+          {/* Featured listings */}
+          <section id="featured" className="bg-gray-900 border-4 border-yellow-300 p-10 mb-10 scroll-mt-24">
             <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; SPONSORED LISTINGS
+              &#9632; FEATURED LISTINGS
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                Some listings are <strong className="text-white">Sponsored</strong>. A sponsored listing
-                is a <strong className="text-white">paid placement</strong>: an agency pays to be boosted
-                to the top of the directory, with a richer profile, and the card carries a visible{' '}
-                <span className="inline-block bg-yellow-300 text-black px-2 py-0.5 text-xs font-black uppercase">Sponsored</span>{' '}
+                Some listings are <strong className="text-white">Featured</strong>. A featured listing
+                is a <strong className="text-white">paid placement</strong>: an agency pays to be shown
+                at the top of the directory, with a richer profile, and it carries a visible{' '}
+                <span className="inline-block bg-yellow-300 text-black px-2 py-0.5 text-xs font-black uppercase">Featured</span>{' '}
                 label wherever it appears.
               </p>
-              <p className="text-white font-bold">What a sponsored placement does not buy:</p>
+              <p className="text-white font-bold">What a featured placement does not buy:</p>
               <ul className="space-y-2 ml-1">
-                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not buy a recommendation, ranking, score, &quot;Top Pick&quot;, or any editorial endorsement. Sponsored means paid, not best.</span></li>
+                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not buy a recommendation, ranking, score, &quot;Top Pick&quot;, or any editorial endorsement. Featured means a labelled placement, not best.</span></li>
                 <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change how any <em>other</em> agency is listed, described, or ordered. The rest of the directory stays neutral.</span></li>
-                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change our assessment or the facts on the sponsor&apos;s own profile, which are verified the same way as everyone else&apos;s.</span></li>
+                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change our assessment or the facts on the featured agency&apos;s own profile, which are verified the same way as everyone else&apos;s.</span></li>
               </ul>
               <p>
-                Sponsorship is the only paid placement on the site, and it is always labelled. Everything
-                outside the Sponsored label is editorial and is not for sale. To ask about a sponsored
-                placement, email{' '}
+                A featured placement is the only paid position on the site, and it is always labelled.
+                Everything outside the Featured label is editorial and is not for sale. To ask about a
+                featured placement, email{' '}
                 <a href="mailto:robbie@contentvisit.com" className="text-white underline hover:text-gray-300">
                   robbie@contentvisit.com
                 </a>.
