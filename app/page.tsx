@@ -6,11 +6,11 @@ import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import Link from 'next/link';
-import { getAllAgencies } from '@/lib/agencies';
+import { getAllAgenciesSponsoredFirst } from '@/lib/agencies';
 import { faqSchema } from '@/lib/seo';
 
 export default function Home() {
-  const allAgencies = getAllAgencies();
+  const allAgencies = getAllAgenciesSponsoredFirst();
 
   const allServices = Array.from(
     new Set(allAgencies.flatMap(a => a.services))

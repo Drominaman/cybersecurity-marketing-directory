@@ -32,7 +32,16 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
   const logoUrl = getAgencyLogoUrl(agency.website);
 
   return (
-    <div className="bg-gray-900 border-4 border-white p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative">
+    <div className={`bg-gray-900 border-4 ${agency.sponsored ? 'border-yellow-300' : 'border-white'} p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative`}>
+      {agency.sponsored && (
+        <Link
+          href="/methodology#sponsored"
+          title="Paid placement (disclosed). What this means."
+          className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider mb-3 hover:bg-yellow-200 transition-colors no-underline"
+        >
+          ■ Sponsored
+        </Link>
+      )}
       {logoUrl && (
         <div className="mb-3 flex items-center gap-3">
           <Image
@@ -85,6 +94,20 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
             <span>{agency.teamSize}</span>
           </div>
         )}
+
+        {agency.yearFounded && (
+          <div className="flex items-center gap-2 text-gray-300">
+            <span>■</span>
+            <span>Founded {agency.yearFounded}</span>
+          </div>
+        )}
+
+        {agency.minBudget && (
+          <div className="flex items-center gap-2 text-gray-300">
+            <span>■</span>
+            <span>Min budget {agency.minBudget}</span>
+          </div>
+        )}
       </div>
 
       <div className="mb-4">
@@ -122,7 +145,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
           href={`/agency/${agency.id}`}
           className="block w-full text-center bg-white border-4 border-white text-black px-3 py-3.5 font-black hover:bg-gray-200 transition-colors uppercase text-xs sm:text-sm tracking-wide"
         >
-          ■ INFO
+          ■ VIEW PROFILE
         </Link>
         <Link
           href={agency.website}
@@ -130,7 +153,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
           rel="noopener noreferrer"
           className="block w-full text-center bg-transparent border-4 border-white text-white px-3 py-3.5 font-black hover:bg-white hover:text-black transition-colors uppercase text-xs sm:text-sm tracking-wide"
         >
-          ■ VISIT
+          ■ VISIT WEBSITE
         </Link>
       </div>
     </div>

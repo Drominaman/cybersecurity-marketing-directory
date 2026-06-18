@@ -9,6 +9,10 @@ export interface Agency {
   editorsPick?: boolean;
   editorBadges?: string[];
   editorNotes?: string;
+  // Disclosed PAID placement. Distinct from the retired editorial flags above
+  // (we don't crown picks). A sponsored agency is boosted to the top of the
+  // listing and labelled "Sponsored"; it is never presented as a recommendation.
+  sponsored?: boolean;
   services: string[];
   specialties: string[];
   location: string;

@@ -2,6 +2,7 @@
 
 import { useState, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import AgencyCard from '@/components/AgencyCard';
 import { Agency } from '@/types/agency';
 
@@ -149,6 +150,14 @@ function AgencySearchInner({ agencies, allServices }: AgencySearchProps) {
           </div>
         )}
       </div>
+
+      {/* Sponsored disclosure (only when a sponsored listing is in view) */}
+      {filteredAgencies.some(a => a.sponsored) && (
+        <p className="text-gray-400 font-mono text-xs mb-4 uppercase tracking-wider">
+          ■ Sponsored listings are a paid placement, labelled and shown first.{' '}
+          <Link href="/methodology#sponsored" className="underline hover:text-white">What this means</Link>.
+        </p>
+      )}
 
       {/* Agency Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
