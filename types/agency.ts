@@ -20,6 +20,8 @@ export interface Agency {
   teamSize?: string;
   minBudget?: string;
   caseStudies?: CaseStudy[];
+  reviews?: Review[];
+  reviewRating?: number; // aggregate star rating from the cited source
   rating?: number;
   clientTypes?: string[];
   awards?: Award[]; // Industry awards and nominations
@@ -48,6 +50,13 @@ export interface CaseStudy {
   client: string;
   results: string;
   description: string;
+}
+
+export interface Review {
+  quote: string;
+  role: string;
+  company?: string;
+  source?: string; // e.g. "Clutch" - the platform the review is cited from
 }
 
 export type FilterOptions = {

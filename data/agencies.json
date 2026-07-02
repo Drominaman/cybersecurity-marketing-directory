@@ -54,6 +54,21 @@
     "clutchUrl": "https://clutch.co/profile/content-visit",
     "designRushUrl": "https://www.designrush.com/agency/profile/content-visit",
     "minBudget": "$3,000/month",
+    "reviewRating": 5.0,
+    "reviews": [
+      {
+        "quote": "They took the time to understand our business, our goals, and the areas where SEO could make a long-term impact.",
+        "role": "Director of Growth Marketing",
+        "company": "Cybersecurity company",
+        "source": "Clutch"
+      },
+      {
+        "quote": "They are easy and pleasant to work with.",
+        "role": "Marketing Director",
+        "company": "PCA Cyber Security",
+        "source": "Clutch"
+      }
+    ],
     "caseStudies": [
       {
         "client": "IBM Security",

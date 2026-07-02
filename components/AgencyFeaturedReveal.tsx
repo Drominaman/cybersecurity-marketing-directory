@@ -21,7 +21,7 @@ export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
             type="button"
             onClick={() => setOpen(false)}
             aria-expanded={true}
-            className="w-full mt-2 border-2 border-yellow-300 text-yellow-300 px-3 py-2 font-mono font-bold text-xs uppercase tracking-wider hover:bg-yellow-300 hover:text-black transition-colors"
+            className="w-full mt-2 border-2 border-yellow-300 text-white px-3 py-2 font-mono font-bold text-xs uppercase tracking-wider hover:bg-yellow-300 hover:text-black transition-colors"
           >
             ■ Read less ▲
           </button>
@@ -31,12 +31,12 @@ export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
           <h2 className="text-white font-black uppercase text-lg mb-2">
             {agency.name}: Our Featured Cybersecurity Marketing Agency
           </h2>
-          <p className="text-gray-300 text-sm mb-3">{agency.shortDescription}</p>
+          <p className="text-white text-sm mb-3">{agency.shortDescription}</p>
           <button
             type="button"
             onClick={() => setOpen(true)}
             aria-expanded={false}
-            className="border-2 border-yellow-300 text-yellow-300 px-4 py-2 font-mono font-bold text-xs uppercase tracking-wider hover:bg-yellow-300 hover:text-black transition-colors"
+            className="border-2 border-yellow-300 text-white px-4 py-2 font-mono font-bold text-xs uppercase tracking-wider hover:bg-yellow-300 hover:text-black transition-colors"
           >
             ■ Read more ▼
           </button>
