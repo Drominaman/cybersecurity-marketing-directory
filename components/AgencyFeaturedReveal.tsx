@@ -29,8 +29,9 @@ export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
       ) : (
         <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-5 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]">
           <div className="flex flex-wrap items-center gap-3 mb-2">
-            <span className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider">■ Featured</span>
+            <span className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider">■ Featured Partner</span>
             <span className="text-white font-black uppercase text-lg">{agency.name}</span>
+            <span className="text-gray-500 text-xs font-mono uppercase">Paid placement · not a recommendation</span>
           </div>
           <p className="text-gray-300 text-sm mb-3">{agency.shortDescription}</p>
           <button

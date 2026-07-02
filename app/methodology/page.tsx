@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import AuthorByline from '@/components/AuthorByline';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -89,7 +88,7 @@ export default function MethodologyPage() {
               in, how we assess them, how often data is re-verified, who runs this site, and what
               money does and does not buy here.
             </p>
-            <AuthorByline variant="full" lastUpdated="June 2026" />
+            <p className="mt-4 text-gray-500 text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
           </div>
 
           <TldrSummary
@@ -238,7 +237,7 @@ export default function MethodologyPage() {
                 Some listings are <strong className="text-white">Featured</strong>. A featured listing
                 is a <strong className="text-white">paid placement</strong>: an agency pays to be shown
                 at the top of the directory, with a richer profile, and it carries a visible{' '}
-                <span className="inline-block bg-yellow-300 text-black px-2 py-0.5 text-xs font-black uppercase">Featured</span>{' '}
+                <span className="inline-block bg-yellow-300 text-black px-2 py-0.5 text-xs font-black uppercase">Featured Partner</span>{' '}
                 label wherever it appears.
               </p>
               <p className="text-white font-bold">What a featured placement does not buy:</p>

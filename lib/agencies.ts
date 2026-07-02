@@ -7,22 +7,15 @@ export function getAllAgencies(): Agency[] {
   return agenciesData;
 }
 
-// Sponsored (paid) agencies first, in their existing order; the rest follow in
-// their existing neutral order. Used for the directory listing. Sponsorship is a
-// disclosed paid boost, not a ranking — organic order is otherwise unchanged.
-export function getAllAgenciesSponsoredFirst(): Agency[] {
+// Featured Partners (disclosed paid placements) first, in their existing order;
+// the rest follow in their existing neutral order. Used for directory listings.
+// A featured placement is a labelled paid boost, not a ranking or a
+// recommendation - organic order is otherwise unchanged.
+export function getAllAgenciesFeaturedFirst(): Agency[] {
   return [
-    ...agenciesData.filter(a => a.sponsored),
-    ...agenciesData.filter(a => !a.sponsored),
+    ...agenciesData.filter(a => a.featured),
+    ...agenciesData.filter(a => !a.featured),
   ];
-}
-
-export function getFeaturedAgency(): Agency | undefined {
-  return agenciesData.find(agency => agency.featured && agency.editorsPick);
-}
-
-export function getOtherAgencies(): Agency[] {
-  return agenciesData.filter(agency => !agency.featured || !agency.editorsPick);
 }
 
 export function getAgencyById(id: string): Agency | undefined {

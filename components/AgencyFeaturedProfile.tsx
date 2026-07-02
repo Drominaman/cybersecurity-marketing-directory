@@ -30,8 +30,9 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
 
   return (
     <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-6 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]">
-      <div className="mb-4">
-        <span className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider">■ Featured</span>
+      <div className="mb-4 flex flex-wrap items-center gap-3">
+        <span className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider">■ Featured Partner</span>
+        <span className="text-gray-500 text-xs font-mono uppercase">Paid placement · not a recommendation</span>
       </div>
 
       <div className="flex items-start gap-4">

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
 import { getAgencyLogoUrl } from '@/lib/utils';
-import AuthorByline from '@/components/AuthorByline';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -158,10 +157,10 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
 
             <div className="flex items-start justify-between">
               <div>
-                {agency.featured && agency.editorsPick && (
-                  <div className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold mb-4 uppercase border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="text-2xl">★</span>
-                    RECOMMENDED PARTNER
+                {agency.featured && (
+                  <div className="mb-4 flex flex-wrap items-center gap-3">
+                    <span className="inline-block bg-yellow-300 text-black border-2 border-black px-3 py-1.5 text-sm font-black uppercase tracking-wider">■ Featured Partner</span>
+                    <span className="text-gray-500 text-xs font-mono uppercase">Paid placement · not a recommendation</span>
                   </div>
                 )}
                 <div className="flex items-center gap-4 mb-4">
@@ -182,7 +181,6 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 <p className="text-gray-300 font-mono text-lg">
                   ■ CYBERSECURITY MARKETING AGENCY
                 </p>
-                <AuthorByline variant="reviewed-by" />
               </div>
 
               {agency.rating && (

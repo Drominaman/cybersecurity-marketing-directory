@@ -1,18 +1,17 @@
 import AgencySearch from '@/components/AgencySearch';
 import AgencyFeaturedReveal from '@/components/AgencyFeaturedReveal';
-import AuthorByline from '@/components/AuthorByline';
 import ComparisonTable from '@/components/ComparisonTable';
 import FAQ, { homepageFaqs } from '@/components/FAQ';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import Link from 'next/link';
-import { getAllAgenciesSponsoredFirst } from '@/lib/agencies';
+import { getAllAgenciesFeaturedFirst } from '@/lib/agencies';
 import { faqSchema } from '@/lib/seo';
 
 export default function Home() {
-  const allAgencies = getAllAgenciesSponsoredFirst();
-  const featuredAgency = allAgencies.find(a => a.sponsored);
+  const allAgencies = getAllAgenciesFeaturedFirst();
+  const featuredAgency = allAgencies.find(a => a.featured);
 
   const allServices = Array.from(
     new Set(allAgencies.flatMap(a => a.services))
@@ -86,7 +85,7 @@ export default function Home() {
                 &#9632; Find an agency &rarr;
               </a>
             </div>
-            <AuthorByline variant="full" lastUpdated="April 2026" />
+            <p className="mt-8 text-gray-500 text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
           </div>
         </header>
 
@@ -97,7 +96,7 @@ export default function Home() {
           `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
-          'We do not crown a winner or single out any agency. We list agencies neutrally so you can compare them on documented results.',
+          'We do not rank or recommend agencies. Featured Partners are paid placements, always labelled; all other agencies are listed neutrally.',
         ]} />
 
         {/* Featured agency: Read more drops the full profile down inline */}

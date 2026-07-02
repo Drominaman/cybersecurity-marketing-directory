@@ -206,7 +206,7 @@ export const siteConfig: SiteConfig = {
       "cybersecurity content marketing",
       "security marketing agency",
     ],
-    author: "Laura Martisiute",
+    author: "Cybersecurity Marketing Agencies",
     twitterHandle: undefined,
     googleVerification: undefined,
   },

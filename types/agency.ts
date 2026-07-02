@@ -5,13 +5,13 @@ export interface Agency {
   description: string;
   shortDescription: string;
   logo?: string;
+  // Featured Partner: a disclosed PAID placement (the "Featured" listing tier).
+  // Featured agencies surface first in listings and always carry a visible
+  // "Featured Partner" label; it is never presented as a recommendation.
   featured: boolean;
   editorsPick?: boolean;
   editorBadges?: string[];
   editorNotes?: string;
-  // Disclosed PAID placement. Distinct from the retired editorial flags above
-  // (we don't crown picks). A sponsored agency is boosted to the top of the
-  // listing and labelled "Sponsored"; it is never presented as a recommendation.
   sponsored?: boolean;
   services: string[];
   specialties: string[];

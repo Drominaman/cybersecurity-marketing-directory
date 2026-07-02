@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import { getAllAgencies } from '@/lib/agencies';
-import AuthorByline from '@/components/AuthorByline';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -77,20 +76,16 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       (badge) => badge.toLowerCase() === `best for ${serviceName.toLowerCase()}`
     );
 
-  // Listing order: a small set of priority agencies surface first, then
-  // everyone else alphabetically. This is ordering only, not a recommendation
-  // or a crowned leader.
-  const PRIORITY_IDS = ['content-visit'];
-  const priorityRank = (agency: (typeof filteredAgencies)[number]) => {
-    const i = PRIORITY_IDS.indexOf(agency.id);
-    return i === -1 ? Number.POSITIVE_INFINITY : i;
-  };
+  // Listing order: Featured Partners (disclosed paid placements, labelled on
+  // their cards) surface first; everyone else follows alphabetically. Featured
+  // placement is not a ranking or a recommendation.
   const sortedAgencies = [...filteredAgencies].sort((a, b) => {
-    const ra = priorityRank(a);
-    const rb = priorityRank(b);
-    if (ra !== rb) return ra - rb;
+    const fa = a.featured ? 0 : 1;
+    const fb = b.featured ? 0 : 1;
+    if (fa !== fb) return fa - fb;
     return a.name.localeCompare(b.name);
   });
+  const hasFeatured = sortedAgencies.some(a => a.featured);
 
   // We no longer crown a leader in any category, so no agency is featured
   // as a top pick - the page shows the listings only.
@@ -144,9 +139,6 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
               Find the top cybersecurity marketing agencies specializing in {serviceName}.
               Compare agencies with proven expertise in security company marketing.
             </p>
-            <div className="mt-4">
-              <AuthorByline variant="reviewed-by" />
-            </div>
           </div>
         </header>
 
@@ -155,7 +147,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
           <TldrSummary points={[
             `${sortedAgencies.length} cybersecurity marketing agencies offering ${serviceName} compared.`,
-            ...(topAgency ? [`Category leader: ${topAgency.name}.`] : []),
+            ...(hasFeatured ? ['Featured Partners are paid placements, always labelled. They are listed first but are not a recommendation.'] : []),
             `All agencies vetted for proven ${serviceName} expertise in the cybersecurity space.`,
           ]} />
 
