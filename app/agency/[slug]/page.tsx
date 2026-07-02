@@ -406,6 +406,37 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
             </div>
           )}
 
+          {/* Client Reviews */}
+          {agency.reviews && agency.reviews.length > 0 && (
+            <div className="bg-gray-900 border-4 border-white p-10 mb-12">
+              <h2 className="text-3xl font-black text-white mb-4 uppercase tracking-wider">
+                ■ CLIENT REVIEWS
+              </h2>
+              {(agency.clutchUrl || agency.designRushUrl || agency.g2Url) && (
+                <p className="text-gray-300 text-sm mb-6">
+                  Verified reviews on{' '}
+                  {[
+                    agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Clutch</a>,
+                    agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">DesignRush</a>,
+                    agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">G2</a>,
+                  ].filter(Boolean).map((el, i) => (
+                    <span key={i}>{i > 0 && ' · '}{el}</span>
+                  ))}.
+                </p>
+              )}
+              <div className="grid md:grid-cols-2 gap-6">
+                {agency.reviews.map((review, index) => (
+                  <figure key={index} className="bg-black border-4 border-white p-6">
+                    <blockquote className="text-white leading-relaxed">&ldquo;{review.quote}&rdquo;</blockquote>
+                    <figcaption className="text-gray-300 text-sm font-mono mt-4">
+                      {review.role}{review.company ? `, ${review.company}` : ''}{review.source ? ` · via ${review.source}` : ''}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Client Types */}
           {agency.clientTypes && agency.clientTypes.length > 0 && (
             <div className="bg-gray-900 border-4 border-white p-10 mb-12">

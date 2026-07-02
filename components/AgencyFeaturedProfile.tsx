@@ -148,16 +148,16 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
         {reviews.length > 0 && (
           <div>
             {sectionHeading(`Client reviews`)}
-            {agency.reviewRating && (
+            {(agency.clutchUrl || agency.designRushUrl || agency.g2Url) && (
               <p className="text-white text-sm mb-3">
-                <span className="font-black">{agency.reviewRating.toFixed(1)} / 5</span>
-                {' '}from {reviews.length} verified {reviews.length === 1 ? 'review' : 'reviews'}
-                {agency.clutchUrl ? (
-                  <>
-                    {' '}on{' '}
-                    <a href={agency.clutchUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">Clutch</a>
-                  </>
-                ) : null}
+                Verified reviews on{' '}
+                {[
+                  agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">Clutch</a>,
+                  agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">DesignRush</a>,
+                  agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">G2</a>,
+                ].filter(Boolean).map((el, i, arr) => (
+                  <span key={i}>{i > 0 && ' · '}{el}</span>
+                ))}.
               </p>
             )}
             <div className="space-y-2">

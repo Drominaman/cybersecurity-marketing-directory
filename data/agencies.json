@@ -52,9 +52,9 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/content-visit/",
     "clutchUrl": "https://clutch.co/profile/content-visit",
+    "g2Url": "https://www.g2.com/products/content-visit/reviews",
     "designRushUrl": "https://www.designrush.com/agency/profile/content-visit",
     "minBudget": "$3,000/month",
-    "reviewRating": 5.0,
     "reviews": [
       {
         "quote": "They took the time to understand our business, our goals, and the areas where SEO could make a long-term impact.",
@@ -67,6 +67,12 @@
         "role": "Marketing Director",
         "company": "PCA Cyber Security",
         "source": "Clutch"
+      },
+      {
+        "quote": "The Content Visit team took a humanized approach to develop a large amount of content while maintaining excellent quality.",
+        "role": "Jordan Choo, Managing Partner",
+        "company": "Kogneta",
+        "source": "DesignRush"
       }
     ],
     "caseStudies": [
