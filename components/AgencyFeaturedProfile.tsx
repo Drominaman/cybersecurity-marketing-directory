@@ -234,15 +234,39 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
         )}
 
         {/* Why featured */}
-        <div className="border-2 border-yellow-300/40 p-4">
-          {sectionHeading(`Why ${agency.name} is our featured agency`)}
+        <div>
+          {sectionHeading(`Why ${agency.name} is our Featured Cybersecurity Marketing Agency`)}
           <p className="text-gray-300 text-sm leading-relaxed">
-            The featured slot is a sponsored placement, always labelled, and it does not change how we
-            describe this or any other agency. {agency.name} currently holds it. Like every listing, the
-            facts above - services, clients, case studies, and awards - passed the same verification as
-            the rest of the directory, and you can check them independently via the links below.{' '}
-            <Link href="/methodology#featured" className="text-white underline hover:text-gray-300">How featured listings work</Link>.
+            {agency.name} holds the featured placement with a listing that stands on documented work
+            {clients.length > 0 ? `: ${(agency.caseStudies || []).length} published case studies with named clients including ${clients.slice(0, 3).join(', ')}` : ''}
+            {(agency.awards || []).length > 0 ? `, plus industry recognition (${(agency.awards || []).map((a) => `${a.name} ${a.year}`).join('; ')})` : ''}
+            . Every claim above passed the same five-dimension assessment and quarterly re-verification we
+            apply to the whole directory, and you can check it independently via the profile links below.{' '}
+            <Link href="/methodology#featured" className="text-gray-400 underline hover:text-gray-300">How featured listings work</Link>.
           </p>
+        </div>
+
+        {/* Seal */}
+        <div className="border-2 border-yellow-300/40 p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-yellow-300 text-xl">★</span>
+            <span className="text-sm font-black text-white uppercase tracking-wider">Verified Listing Seal</span>
+          </div>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            We believe partnering with an agency that publishes named, verifiable client results makes a
+            real difference to how safely you can shortlist. This listing&apos;s data - services, clients,
+            case studies, and awards - carries our verification seal and a last-verified date.
+          </p>
+        </div>
+
+        {/* How to move forward */}
+        <div>
+          {sectionHeading('Our tips on how to move forward')}
+          <ol className="space-y-2 text-gray-300 text-sm leading-relaxed list-none">
+            <li className="flex gap-2"><span className="text-yellow-300 font-black flex-shrink-0">1.</span><span>Shortlist two or three agencies active in your primary channel and compare their documented results side by side.</span></li>
+            <li className="flex gap-2"><span className="text-yellow-300 font-black flex-shrink-0">2.</span><span>Ask each for a case study at your company stage, with named clients and concrete metrics - not &quot;significant growth&quot;.</span></li>
+            <li className="flex gap-2"><span className="text-yellow-300 font-black flex-shrink-0">3.</span><span>Verify independently on Clutch, G2, and LinkedIn before you sign. Every profile here links out for exactly that reason.</span></li>
+          </ol>
         </div>
 
         {(agency.linkedinUrl || agency.clutchUrl || agency.designRushUrl) && (
