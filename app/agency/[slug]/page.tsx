@@ -161,10 +161,10 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   <div className="mb-4">
                     <Link
                       href="/methodology#featured"
-                      className="text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5 hover:text-yellow-300 hover:border-yellow-300/70 transition-colors"
+                      className="text-[10px] font-mono uppercase tracking-wider text-gray-500 hover:text-gray-300 transition-colors"
                       title="Sponsored placement. See our methodology for how featured listings work."
                     >
-                      ★ Featured
+                      Sponsored
                     </Link>
                   </div>
                 )}

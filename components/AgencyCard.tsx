@@ -35,10 +35,10 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
     <div className="bg-gray-900 border-4 border-white p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative">
       {agency.featured && (
         <span
-          className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
+          className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-gray-500"
           title="Sponsored placement. See our methodology for how featured listings work."
         >
-          ★ Featured
+          Sponsored
         </span>
       )}
       {logoUrl && (

@@ -30,12 +30,15 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
 
   return (
     <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-6 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]">
-      <div className="mb-4">
+      <div className="mb-4 flex items-center justify-between gap-3">
+        <span className="text-xs font-mono uppercase tracking-wider text-yellow-300/80">
+          ■ Our Featured Cybersecurity Marketing Agency
+        </span>
         <span
-          className="text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
+          className="text-[10px] font-mono uppercase tracking-wider text-gray-500"
           title="Sponsored placement. See our methodology for how featured listings work."
         >
-          ★ Featured
+          Sponsored
         </span>
       </div>
 

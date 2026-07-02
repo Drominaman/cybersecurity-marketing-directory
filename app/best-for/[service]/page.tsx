@@ -85,7 +85,6 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     if (fa !== fb) return fa - fb;
     return a.name.localeCompare(b.name);
   });
-  const hasFeatured = sortedAgencies.some(a => a.featured);
 
   // We no longer crown a leader in any category, so no agency is featured
   // as a top pick - the page shows the listings only.
@@ -138,6 +137,10 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             <p className="text-gray-300 text-lg max-w-3xl">
               Find the top cybersecurity marketing agencies specializing in {serviceName}.
               Compare agencies with proven expertise in security company marketing.
+            </p>
+            <p className="mt-4 text-gray-500 text-xs">
+              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.{' '}
+              <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
             </p>
           </div>
         </header>
@@ -234,10 +237,10 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                   >
                     {agency.featured && (
                       <span
-                        className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
+                        className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-gray-500"
                         title="Sponsored placement. See our methodology for how featured listings work."
                       >
-                        ★ Featured
+                        Sponsored
                       </span>
                     )}
 
@@ -305,12 +308,6 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                   ◀ BACK TO ALL AGENCIES
                 </Link>
               </div>
-            )}
-            {hasFeatured && (
-              <p className="mt-6 text-gray-600 text-xs font-mono">
-                ★ Featured = sponsored placement.{' '}
-                <Link href="/methodology#featured" className="underline hover:text-gray-400">How listings work</Link>
-              </p>
             )}
           </div>
 

@@ -86,6 +86,10 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-8 text-gray-500 text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
+            <p className="mt-2 text-gray-500 text-xs">
+              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.{' '}
+              <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
+            </p>
           </div>
         </header>
 
@@ -105,12 +109,6 @@ export default function Home() {
         {/* Client Island: Search/Filter + Agency Grid */}
         <section id="agency-search">
           <AgencySearch agencies={allAgencies} allServices={allServices} />
-          {featuredAgency && (
-            <p className="mt-4 text-gray-600 text-xs font-mono">
-              ★ Featured = sponsored placement.{' '}
-              <Link href="/methodology#featured" className="underline hover:text-gray-400">How listings work</Link>
-            </p>
-          )}
         </section>
 
         {/* Best Agency CTA */}

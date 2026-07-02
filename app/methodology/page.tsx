@@ -237,7 +237,7 @@ export default function MethodologyPage() {
                 Some listings are <strong className="text-white">Featured</strong>. A featured listing
                 is a <strong className="text-white">paid placement</strong>: an agency pays to be shown
                 at the top of the directory, with a richer profile, and it carries a{' '}
-                <span className="inline-block text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5">★ Featured</span>{' '}
+                <span className="inline-block text-[10px] font-mono uppercase tracking-wider text-gray-400">Sponsored</span>{' '}
                 label wherever it appears.
               </p>
               <p className="text-white font-bold">What a featured placement does not buy:</p>

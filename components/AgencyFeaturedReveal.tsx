@@ -27,16 +27,16 @@ export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
           </button>
         </>
       ) : (
-        <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-5 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]">
-          <div className="flex flex-wrap items-center gap-3 mb-2">
-            <span className="text-white font-black uppercase text-lg">{agency.name}</span>
-            <span
-              className="text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
-              title="Sponsored placement. See our methodology for how featured listings work."
-            >
-              ★ Featured
-            </span>
-          </div>
+        <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-5 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)] relative">
+          <span
+            className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-gray-500"
+            title="Sponsored placement. See our methodology for how featured listings work."
+          >
+            Sponsored
+          </span>
+          <h2 className="text-white font-black uppercase text-lg mb-2">
+            {agency.name}: Our Featured Cybersecurity Marketing Agency
+          </h2>
           <p className="text-gray-300 text-sm mb-3">{agency.shortDescription}</p>
           <button
             type="button"
