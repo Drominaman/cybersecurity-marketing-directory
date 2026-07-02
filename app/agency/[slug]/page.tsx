@@ -425,14 +425,20 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 </p>
               )}
               <div className="grid md:grid-cols-2 gap-6">
-                {agency.reviews.map((review, index) => (
+                {agency.reviews.slice(0, 4).map((review, index) => (
                   <figure key={index} className="bg-black border-4 border-white p-6">
+                    {review.title && <h3 className="text-white font-black mb-2">{review.title}</h3>}
                     <blockquote className="text-white leading-relaxed">&ldquo;{review.quote}&rdquo;</blockquote>
                     <figcaption className="text-gray-300 text-sm font-mono mt-4">
                       {review.role}{review.company ? `, ${review.company}` : ''}{review.source ? ` · via ${review.source}` : ''}
                     </figcaption>
                   </figure>
                 ))}
+              </div>
+              <div className="mt-6">
+                <Link href={`/agency/${slug}/reviews`} className="text-white font-bold underline hover:text-gray-300 uppercase text-sm">
+                  Read all {agency.name} reviews →
+                </Link>
               </div>
             </div>
           )}

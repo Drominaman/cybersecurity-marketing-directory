@@ -57,6 +57,10 @@ export interface Review {
   role: string;
   company?: string;
   source?: string; // e.g. "Clutch" - the platform the review is cited from
+  title?: string; // review headline, where the source provides one
+  date?: string; // ISO date the review was published, if known
+  rating?: number; // individual star rating out of 5 (defaults to 5)
+  sourceUrl?: string; // direct link to the review on its source platform
 }
 
 export type FilterOptions = {
