@@ -32,12 +32,14 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
   const logoUrl = getAgencyLogoUrl(agency.website);
 
   return (
-    <div className={`bg-gray-900 border-4 p-4 sm:p-6 transition-all relative ${agency.featured ? 'border-yellow-300 hover:shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]' : 'border-white hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]'}`}>
+    <div className="bg-gray-900 border-4 border-white p-4 sm:p-6 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] transition-all relative">
       {agency.featured && (
-        <div className="mb-3 flex flex-wrap items-center gap-2">
-          <span className="inline-block bg-yellow-300 text-black border-2 border-black px-2 py-1 text-xs font-black uppercase tracking-wider">■ Featured Partner</span>
-          <span className="text-gray-500 text-[10px] font-mono uppercase">Paid placement</span>
-        </div>
+        <span
+          className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
+          title="Sponsored placement. See our methodology for how featured listings work."
+        >
+          ★ Featured
+        </span>
       )}
       {logoUrl && (
         <div className="mb-3 flex items-center gap-3">

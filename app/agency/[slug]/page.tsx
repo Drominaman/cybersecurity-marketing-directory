@@ -158,9 +158,14 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
             <div className="flex items-start justify-between">
               <div>
                 {agency.featured && (
-                  <div className="mb-4 flex flex-wrap items-center gap-3">
-                    <span className="inline-block bg-yellow-300 text-black border-2 border-black px-3 py-1.5 text-sm font-black uppercase tracking-wider">■ Featured Partner</span>
-                    <span className="text-gray-500 text-xs font-mono uppercase">Paid placement · not a recommendation</span>
+                  <div className="mb-4">
+                    <Link
+                      href="/methodology#featured"
+                      className="text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5 hover:text-yellow-300 hover:border-yellow-300/70 transition-colors"
+                      title="Sponsored placement. See our methodology for how featured listings work."
+                    >
+                      ★ Featured
+                    </Link>
                   </div>
                 )}
                 <div className="flex items-center gap-4 mb-4">

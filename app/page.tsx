@@ -96,7 +96,7 @@ export default function Home() {
           `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
-          'We do not rank or recommend agencies. Featured Partners are paid placements, always labelled; all other agencies are listed neutrally.',
+          'We do not rank or recommend agencies. Compare on documented results and verified profiles.',
         ]} />
 
         {/* Featured agency: Read more drops the full profile down inline */}
@@ -105,6 +105,12 @@ export default function Home() {
         {/* Client Island: Search/Filter + Agency Grid */}
         <section id="agency-search">
           <AgencySearch agencies={allAgencies} allServices={allServices} />
+          {featuredAgency && (
+            <p className="mt-4 text-gray-600 text-xs font-mono">
+              ★ Featured = sponsored placement.{' '}
+              <Link href="/methodology#featured" className="underline hover:text-gray-400">How listings work</Link>
+            </p>
+          )}
         </section>
 
         {/* Best Agency CTA */}

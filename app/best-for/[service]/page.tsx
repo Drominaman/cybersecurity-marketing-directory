@@ -147,7 +147,6 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
           <TldrSummary points={[
             `${sortedAgencies.length} cybersecurity marketing agencies offering ${serviceName} compared.`,
-            ...(hasFeatured ? ['Featured Partners are paid placements, always labelled. They are listed first but are not a recommendation.'] : []),
             `All agencies vetted for proven ${serviceName} expertise in the cybersecurity space.`,
           ]} />
 
@@ -233,10 +232,13 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                     key={agency.id}
                     className="bg-black border-4 border-white p-8 hover:border-gray-400 hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] transition-all group relative"
                   >
-                    {agency.recommended && (
-                      <div className="absolute -top-3 -right-3 bg-white text-black px-3 py-1 font-black text-sm border-2 border-black uppercase">
-                        RECOMMENDED
-                      </div>
+                    {agency.featured && (
+                      <span
+                        className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-yellow-300/80 border border-yellow-300/40 px-1.5 py-0.5"
+                        title="Sponsored placement. See our methodology for how featured listings work."
+                      >
+                        ★ Featured
+                      </span>
                     )}
 
                     <div className="flex items-start justify-between mb-4">
@@ -303,6 +305,12 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                   ◀ BACK TO ALL AGENCIES
                 </Link>
               </div>
+            )}
+            {hasFeatured && (
+              <p className="mt-6 text-gray-600 text-xs font-mono">
+                ★ Featured = sponsored placement.{' '}
+                <Link href="/methodology#featured" className="underline hover:text-gray-400">How listings work</Link>
+              </p>
             )}
           </div>
 
