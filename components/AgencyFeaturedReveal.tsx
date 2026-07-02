@@ -27,13 +27,7 @@ export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
           </button>
         </>
       ) : (
-        <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-5 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)] relative">
-          <span
-            className="absolute top-3 right-3 text-[10px] font-mono uppercase tracking-wider text-gray-500"
-            title="Sponsored placement. See our methodology for how featured listings work."
-          >
-            Sponsored
-          </span>
+        <div className="bg-gray-900 border-4 border-yellow-300 p-4 sm:p-5 shadow-[8px_8px_0px_0px_rgba(253,224,71,0.3)]">
           <h2 className="text-white font-black uppercase text-lg mb-2">
             {agency.name}: Our Featured Cybersecurity Marketing Agency
           </h2>
