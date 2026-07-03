@@ -383,6 +383,22 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           </div>
 
           {/* Case Studies */}
+          {/* Notable Clients (shown when the agency lists clients but no full case studies) */}
+          {agency.notableClients && agency.notableClients.length > 0 && !(agency.caseStudies && agency.caseStudies.length > 0) && (
+            <div className="bg-gray-900 border-4 border-white p-10 mb-12">
+              <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">
+                ■ NOTABLE CLIENTS
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                {agency.notableClients.map((client) => (
+                  <span key={client} className="bg-black border-2 border-white px-4 py-2 text-white font-bold">
+                    {client}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           {agency.caseStudies && agency.caseStudies.length > 0 && (
             <div className="bg-gray-900 border-4 border-white p-10 mb-12">
               <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-wider">

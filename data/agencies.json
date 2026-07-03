@@ -105,7 +105,13 @@
         "description": "B2B content and SEO/GEO strategy for fraud prevention and authentication platform, including LATAM regional expansion with bilingual content marketing. Content programme directly supported path to pilot with two regional banks."
       }
     ],
-    "lastVerified": "2026-06-11"
+    "lastVerified": "2026-06-11",
+    "notableClients": [
+      "IBM Security",
+      "SenseOn",
+      "Morphisec",
+      "IronVest"
+    ]
   },
   {
     "id": "codeless",
@@ -137,7 +143,10 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/codeless-io/",
     "clutchUrl": "https://clutch.co/profile/codeless",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "Monday.com"
+    ]
   },
   {
     "id": "ronin",
@@ -202,7 +211,12 @@
       "Established track record in cybersecurity content creation"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/bora-design/",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "Cisco",
+      "Thales",
+      "(ISC)²"
+    ]
   },
   {
     "id": "bluetext",
@@ -298,7 +312,10 @@
       "Strong social media expertise alongside video production"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/cyberwhyze-cybersecurity-marketing",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "SANS Institute"
+    ]
   },
   {
     "id": "team-lewis",
@@ -329,7 +346,12 @@
       "Strong PR and analytics capabilities for enterprise-scale campaigns"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/teamlewis/",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "CrowdStrike",
+      "McAfee",
+      "BlackBerry"
+    ]
   },
   {
     "id": "top-agency",
@@ -363,7 +385,11 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/topworldwide",
     "clutchUrl": "https://clutch.co/profile/top-agency",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "Check Point",
+      "Lookout"
+    ]
   },
   {
     "id": "hop-online-hop-ai",
@@ -399,7 +425,13 @@
     "linkedinUrl": "https://www.linkedin.com/company/hoponline",
     "clutchUrl": "https://clutch.co/profile/hop-ai",
     "g2Url": "https://www.g2.com/products/hop-online/reviews",
-    "lastVerified": "2026-05-02"
+    "lastVerified": "2026-05-02",
+    "notableClients": [
+      "Rapid7",
+      "SecurityScorecard",
+      "Group-IB",
+      "Immersive Labs"
+    ]
   },
   {
     "id": "everclear-marketing",

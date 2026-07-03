@@ -100,14 +100,16 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
             <span>Founded {agency.yearFounded}</span>
           </div>
         )}
-
-        {agency.minBudget && (
-          <div className="flex items-center gap-2 text-gray-300">
-            <span>■</span>
-            <span>Min budget {agency.minBudget}</span>
-          </div>
-        )}
       </div>
+
+      {agency.notableClients && agency.notableClients.length > 0 && (
+        <div className="mb-4">
+          <div className="text-xs font-bold text-white mb-2 uppercase tracking-wider">■ Clients</div>
+          <p className="text-gray-300 text-xs font-mono leading-relaxed">
+            {agency.notableClients.join(', ')}
+          </p>
+        </div>
+      )}
 
       <div className="mb-4">
         <div className="text-xs font-bold text-white mb-2 uppercase tracking-wider">■ SERVICES</div>

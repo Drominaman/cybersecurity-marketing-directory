@@ -19,6 +19,7 @@ export interface Agency {
   yearFounded?: number;
   teamSize?: string;
   minBudget?: string;
+  notableClients?: string[]; // named clients publicly associated with the agency
   caseStudies?: CaseStudy[];
   reviews?: Review[];
   reviewRating?: number; // aggregate star rating from the cited source
