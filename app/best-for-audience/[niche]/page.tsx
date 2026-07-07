@@ -70,17 +70,12 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
   const allAgencies = getAllAgencies();
   const filteredAgencies = allAgencies.filter(nicheData.filter);
 
-  // Sort by recommended first, then by rating
-  const sortedAgencies = [...filteredAgencies].sort((a, b) => {
-    if (a.recommended && !b.recommended) return -1;
-    if (!a.recommended && b.recommended) return 1;
-    if (a.rating && b.rating) return b.rating - a.rating;
-    if (a.rating) return -1;
-    if (b.rating) return 1;
-    return 0;
-  });
+  // Alphabetical - we do not rank agencies, and no agency benefits from
+  // raw data-file order.
+  const sortedAgencies = [...filteredAgencies].sort((a, b) => a.name.localeCompare(b.name));
 
-  const topAgency = sortedAgencies.find((a) => a.recommended || a.rating === 5.0);
+  // We no longer crown a top pick on audience pages.
+  const topAgency = undefined as (typeof sortedAgencies)[number] | undefined;
 
   const breadcrumbData = breadcrumbSchema([
     { label: 'Home', url: '/' },

@@ -2,7 +2,7 @@ import { getAllAgencies } from '@/lib/agencies';
 import { getAllPosts } from '@/lib/blog';
 
 export async function GET() {
-  const agencies = getAllAgencies();
+  const agencies = [...getAllAgencies()].sort((a, b) => a.name.localeCompare(b.name));
   const posts = getAllPosts();
   const baseUrl = 'https://cybersecuritymarketingagencies.com';
 

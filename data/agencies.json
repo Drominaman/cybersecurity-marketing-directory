@@ -5,7 +5,7 @@
     "website": "https://www.contentvisit.com",
     "description": "Content Visit is a boutique cybersecurity content marketing agency based in Waterford, Ireland. 100% of their work is with cybersecurity and security-adjacent technology companies. They deliver SEO-driven content, AI visibility (GEO), digital PR, thought leadership, and lead generation programmes. Their team includes senior strategists with 5+ years of dedicated cybersecurity marketing experience and backgrounds in journalism and science communication. They work with clients ranging from funded startups to enterprise security vendors across fraud prevention, offensive security, endpoint security, and compliance. Winner of Best Cybersecurity Marketing Agency at the 2025 and 2026 Cybersecurity Excellence Awards.",
     "shortDescription": "Specialized cybersecurity content marketing agency with proven SEO, GEO, AI visibility, and lead generation results.",
-    "featured": true,
+    "featured": false,
     "services": [
       "SEO",
       "AI Visibility",

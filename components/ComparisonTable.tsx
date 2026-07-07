@@ -7,11 +7,6 @@ interface ComparisonTableProps {
   agencies: Agency[];
 }
 
-function getBadges(agency: Agency): string[] {
-  if (agency.editorBadges && agency.editorBadges.length > 0) return agency.editorBadges;
-  return [];
-}
-
 function SectionHeader({ label, colSpan }: { label: string; colSpan: number }) {
   return (
     <tr className="bg-black border-t-2 border-white">
@@ -101,41 +96,9 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
               </td>
               {agencies.map((agency) => (
                 <td key={agency.id} className="px-6 py-4 text-sm text-center">
-                  {agency.minBudget ? (
-                    <span className="font-mono text-white">{agency.minBudget}</span>
-                  ) : (
-                    <span className="text-gray-300">-</span>
-                  )}
+                  <span className="font-mono text-white">{agency.minBudget || 'Contact for quote'}</span>
                 </td>
               ))}
-            </tr>
-
-            {/* Editor Badges */}
-            <tr className="hover:bg-gray-800">
-              <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">
-                Editor Badges
-              </td>
-              {agencies.map((agency) => {
-                const badges = getBadges(agency);
-                return (
-                  <td key={agency.id} className="px-6 py-4 text-sm text-gray-300 text-center">
-                    {badges.length > 0 ? (
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        {badges.map((badge) => (
-                          <span
-                            key={badge}
-                            className="bg-white text-black px-2 py-1 text-xs font-black uppercase"
-                          >
-                            {badge}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      '-'
-                    )}
-                  </td>
-                );
-              })}
             </tr>
 
             {/* Pros */}

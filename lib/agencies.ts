@@ -7,14 +7,15 @@ export function getAllAgencies(): Agency[] {
   return agenciesData;
 }
 
-// Featured Partners (disclosed paid placements) first, in their existing order;
-// the rest follow in their existing neutral order. Used for directory listings.
-// A featured placement is a labelled paid boost, not a ranking or a
-// recommendation - organic order is otherwise unchanged.
+// Featured Partners (disclosed paid placements) first, then everyone else -
+// each group alphabetical so no agency benefits from raw data-file order.
+// With no featured agencies this is a plain alphabetical listing. A featured
+// placement is a labelled paid boost, not a ranking or a recommendation.
 export function getAllAgenciesFeaturedFirst(): Agency[] {
+  const byName = (a: Agency, b: Agency) => a.name.localeCompare(b.name);
   return [
-    ...agenciesData.filter(a => a.featured),
-    ...agenciesData.filter(a => !a.featured),
+    ...agenciesData.filter(a => a.featured).sort(byName),
+    ...agenciesData.filter(a => !a.featured).sort(byName),
   ];
 }
 

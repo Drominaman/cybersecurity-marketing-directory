@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default function ComparePage() {
-  const agencies = getAllAgencies();
+  const agencies = [...getAllAgencies()].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen bg-black">

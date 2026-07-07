@@ -234,7 +234,7 @@ export default function CompareClient({ agencies }: CompareClientProps) {
                       key={agency.id}
                       className="px-6 py-4 text-sm text-gray-300 text-center font-mono"
                     >
-                      {agency.minBudget || '-'}
+                      {agency.minBudget || 'Contact for quote'}
                     </td>
                   ))}
                 </tr>

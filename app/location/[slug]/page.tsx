@@ -57,18 +57,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  // Get local agencies, recommended and highest-rated first
+  // Get local agencies, alphabetical - no agency benefits from data-file order
   const localAgencies = getAllAgencies()
     .filter(agency =>
       location.keywords.some(keyword =>
         agency.location.toLowerCase().includes(keyword.toLowerCase())
       )
     )
-    .sort(
-      (a, b) =>
-        (b.recommended ? 1 : 0) - (a.recommended ? 1 : 0) ||
-        (b.rating ?? 0) - (a.rating ?? 0)
-    );
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   // Get global/recommended agencies that serve all regions,
   // excluding any already shown in the local list
