@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Which agency is best for cybersecurity PPC advertising?",
-    answer: "We do not crown a single leader. Agencies with documented cybersecurity PPC and paid-performance work include Hop AI (proprietary GEO Forge tooling, clients like Rapid7 and SecurityScorecard), alongside Bluetext and Top Agency, which run paid media as part of broader full-service programmes. If paid acquisition is your primary growth channel, compare their documented results and tooling for your stage."
+    answer: "We do not crown a single leader. Agencies with documented cybersecurity PPC and paid-performance work include Hop AI (proprietary GEO Forge tooling, clients like Rapid7 and SecurityScorecard), alongside Bluetext, which runs paid media as part of a broader full-service programme. If paid acquisition is your primary growth channel, compare their documented results and tooling for your stage."
   },
   {
     question: "Which agency is best for cybersecurity PR and analyst relations?",
@@ -294,7 +294,7 @@ export default function BestCybersecurityMarketingAgency() {
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">PPC &amp; Paid</td>
-                    <td className="px-3 py-3">Hop AI, Bluetext, Top Agency</td>
+                    <td className="px-3 py-3">Hop AI, Bluetext</td>
                     <td className="px-3 py-3">Paid performance, GEO Forge tooling, named clients</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
@@ -321,11 +321,6 @@ export default function BestCybersecurityMarketingAgency() {
                     <td className="px-3 py-3 font-black">Brand Strategy</td>
                     <td className="px-3 py-3">Ronin</td>
                     <td className="px-3 py-3">In-house cyber creative</td>
-                  </tr>
-                  <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-black">Marketing Analytics</td>
-                    <td className="px-3 py-3">Top Agency</td>
-                    <td className="px-3 py-3">Data-driven</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Video</td>
@@ -544,7 +539,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ TECHNICAL UNDERSTANDING:</strong> The agency should understand your technology well enough to discuss it intelligently with CISOs, security engineers, and enterprise buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, compare firms like Hop AI, Bluetext, and Top Agency; for global enterprise PR, Team Lewis and Bluetext; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit, Codeless, and others. Compare the listings yourself.
+                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, compare firms like Hop AI and Bluetext; for global enterprise PR, Team Lewis and Bluetext; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit, Codeless, and others. Compare the listings yourself.
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;

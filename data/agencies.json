@@ -354,44 +354,6 @@
     ]
   },
   {
-    "id": "top-agency",
-    "name": "Top Agency",
-    "website": "https://topagency.com",
-    "description": "Data-driven digital marketing (SEO, PPC, content marketing, PR, influencer campaigns). Notable clients include RedMarlin, Check Point, and Lookout.",
-    "shortDescription": "Data-driven digital marketing for cybersecurity and technology brands",
-    "featured": false,
-    "services": [
-      "SEO",
-      "Content Marketing",
-      "PPC",
-      "PR & Media Relations",
-      "Digital Marketing",
-      "Marketing Analytics"
-    ],
-    "specialties": [
-      "Performance Marketing",
-      "Influencer Marketing",
-      "Data-Driven Digital"
-    ],
-    "location": "Austin, TX, USA",
-    "geography": "Regional - USA",
-    "clientTypes": [
-      "Cybersecurity Companies"
-    ],
-    "pros": [
-      "Data-driven approach with strong analytics foundation",
-      "Broad service range including SEO, PPC, PR, and influencer campaigns",
-      "Notable security clients (Check Point, Lookout, RedMarlin)"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/topworldwide",
-    "clutchUrl": "https://clutch.co/profile/top-agency",
-    "lastVerified": "2026-05-02",
-    "notableClients": [
-      "Check Point",
-      "Lookout"
-    ]
-  },
-  {
     "id": "hop-online-hop-ai",
     "name": "Hop AI (Hop Online)",
     "website": "https://hoponline.ai",
