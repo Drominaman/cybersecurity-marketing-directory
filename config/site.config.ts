@@ -199,13 +199,7 @@ export const siteConfig: SiteConfig = {
 
   // SEO
   seo: {
-    keywords: [
-      "cybersecurity marketing agencies",
-      "cybersecurity SEO",
-      "AI visibility marketing",
-      "cybersecurity content marketing",
-      "security marketing agency",
-    ],
+    keywords: [],
     author: "Cybersecurity Marketing Agencies",
     twitterHandle: undefined,
     googleVerification: undefined,

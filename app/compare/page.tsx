@@ -10,13 +10,6 @@ export const metadata: Metadata = {
   title: 'Compare Cybersecurity Marketing Agencies Side-by-Side',
   description:
     'Compare cybersecurity marketing agencies side-by-side. Select up to 3 agencies to compare services, ratings, location, specialties, and budgets.',
-  keywords: [
-    'compare cybersecurity marketing agencies',
-    'cybersecurity agency comparison',
-    'marketing agency comparison tool',
-    'cybersecurity marketing',
-    'security marketing agencies',
-  ],
   openGraph: {
     title: 'Compare Cybersecurity Marketing Agencies Side-by-Side',
     description:

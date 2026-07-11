@@ -24,14 +24,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${agency.name} - Cybersecurity Marketing Agency${badgeText}`,
     description: `${agency.name} is a specialized cybersecurity marketing agency${badgeText}. ${agency.shortDescription} Compare with other cybersecurity marketing agencies.`,
-    keywords: [
-      'cybersecurity marketing agencies',
-      agency.name,
-      'cybersecurity marketing',
-      'security marketing agency',
-      ...agency.services,
-      ...badges
-    ],
     openGraph: {
       title: `${agency.name} - Cybersecurity Marketing Agency`,
       description: `${agency.shortDescription} Part of the cybersecurity marketing agencies directory.`,

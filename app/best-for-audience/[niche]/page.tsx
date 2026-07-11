@@ -39,13 +39,6 @@ export async function generateMetadata({ params }: { params: Promise<{ niche: st
   return {
     title: `Best Cybersecurity Marketing Agencies for ${nicheData.name} | Top Rated Agencies`,
     description: nicheData.description,
-    keywords: [
-      `cybersecurity marketing agencies for ${nicheData.name.toLowerCase()}`,
-      `${nicheData.name.toLowerCase()} marketing`,
-      `cybersecurity ${niche} marketing`,
-      'cybersecurity marketing agencies',
-      'security marketing',
-    ],
     openGraph: {
       title: `Best Cybersecurity Marketing Agencies for ${nicheData.name}`,
       description: nicheData.description,

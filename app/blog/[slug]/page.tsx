@@ -34,7 +34,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Cybersecurity Marketing Tips`,
     description: post.metaDescription,
-    keywords: post.keywords,
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,

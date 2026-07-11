@@ -36,13 +36,6 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
   return {
     title: `Best Cybersecurity Marketing Agency for ${serviceName} | Top Rated Agencies`,
     description: `Find the best cybersecurity marketing agencies specializing in ${serviceName}. Compare top-rated agencies with proven expertise in security company marketing.`,
-    keywords: [
-      `cybersecurity marketing agencies`,
-      `${serviceName} for cybersecurity`,
-      `security marketing ${serviceName}`,
-      `best cybersecurity ${serviceName}`,
-      'cybersecurity marketing',
-    ],
     openGraph: {
       title: `Best Cybersecurity Marketing Agency for ${serviceName}`,
       description: `Top-rated cybersecurity marketing agencies specializing in ${serviceName}. Compare and find the perfect agency for your security company.`,

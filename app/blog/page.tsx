@@ -10,14 +10,6 @@ import SiteFooter from '@/components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Cybersecurity Marketing Tips & Insights | Blog',
   description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights. Learn how to market your security company effectively.',
-  keywords: [
-    'cybersecurity marketing tips',
-    'security company marketing',
-    'cybersecurity SEO',
-    'AI visibility marketing',
-    'B2B security marketing',
-    'cybersecurity content marketing',
-  ],
   openGraph: {
     title: 'Cybersecurity Marketing Tips & Insights | Blog',
     description: 'Expert cybersecurity marketing tips, SEO strategies, AI visibility guides, and industry insights.',

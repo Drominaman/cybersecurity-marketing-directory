@@ -8,14 +8,6 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Best Cybersecurity Marketing Agency 2026: How to Compare and Choose',
   description: 'There is no single best cybersecurity marketing agency - the right one depends on your channel, stage, and budget. We do not crown a winner: we list agencies neutrally across SEO, PPC, enterprise PR, positioning, and thought leadership, assessed against a published methodology, so you can compare them on their merits.',
-  keywords: [
-    'best cybersecurity marketing agency',
-    'cybersecurity marketing agency',
-    'cybersecurity marketing agency rankings',
-    'AI visibility cybersecurity',
-    'cybersecurity SEO agency',
-    'cybersecurity content marketing',
-  ],
   alternates: {
     canonical: 'https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency',
   },
