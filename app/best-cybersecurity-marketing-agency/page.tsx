@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI and others on PPC and paid performance; Team Lewis and specialist firms on enterprise PR; Everclear on positioning; Bora on thought leadership; Envy on demand generation; Content Visit, Codeless, and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI and others on PPC and paid performance; Team Lewis and specialist firms on enterprise PR; Everclear on positioning; Merritt Group and Highwire on thought leadership; Envy on demand generation; Content Visit, Codeless, and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
   },
   {
     question: "How do I choose the right cybersecurity marketing agency?",
@@ -145,7 +145,7 @@ export default function BestCybersecurityMarketingAgency() {
           <TldrSummary points={[
             'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
             'We do not crown a single best agency or category leader. We list agencies neutrally and let you compare them on documented results.',
-            'Different agencies focus on different channels: PPC (Hop AI and others), enterprise PR (Team Lewis and specialist firms), positioning (Everclear), thought leadership (Bora), demand generation (Envy), SEO and AI visibility (Content Visit, Codeless and others).',
+            'Different agencies focus on different channels: PPC (Hop AI and others), enterprise PR (Team Lewis and specialist firms), positioning (Everclear), thought leadership (Merritt Group and Highwire), demand generation (Envy), SEO and AI visibility (Content Visit, Codeless and others).',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
             'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
           ]} />
@@ -167,7 +167,7 @@ export default function BestCybersecurityMarketingAgency() {
                 <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and list them neutrally instead of crowning a winner.
               </p>
               <p>
-                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> and others on PPC and paid performance, <strong className="text-white">Team Lewis</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Bora</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong>, <strong className="text-white">Codeless</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
+                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> and others on PPC and paid performance, <strong className="text-white">Team Lewis</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Merritt Group</strong> and <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong>, <strong className="text-white">Codeless</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
               </p>
               <p>
                 This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
@@ -301,8 +301,8 @@ export default function BestCybersecurityMarketingAgency() {
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Thought Leadership</td>
-                    <td className="px-3 py-3">Bora</td>
-                    <td className="px-3 py-3">Cisco/Thales/ISC2 content</td>
+                    <td className="px-3 py-3">Merritt Group, Highwire</td>
+                    <td className="px-3 py-3">Analyst relations, security media</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Demand Generation</td>
@@ -419,11 +419,11 @@ export default function BestCybersecurityMarketingAgency() {
 
               <div className="bg-black border-4 border-white p-6">
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ Thought Leadership</p>
-                <h3 className="text-xl font-black text-white mb-2 uppercase">Bora</h3>
+                <h3 className="text-xl font-black text-white mb-2 uppercase">Merritt Group</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Enterprise content marketing and thought leadership at scale, with a client roster that includes Cisco, Thales, and (ISC)2. A strong fit for security vendors that need credible, technically accurate long-form content.
+                  Strategic communications since 1996 with a dedicated security practice and strong analyst and influencer relations, serving vendors selling into enterprise and federal markets. A fit for security vendors that need credible, technically accurate long-form content and analyst engagement.
                 </p>
-                <Link href="/agency/bora" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Bora profile →</Link>
+                <Link href="/agency/merritt-group" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Merritt Group profile →</Link>
               </div>
 
               <div className="bg-black border-4 border-white p-6">

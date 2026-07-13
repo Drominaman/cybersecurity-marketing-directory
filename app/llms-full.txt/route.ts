@@ -7,7 +7,7 @@ export async function GET() {
   const baseUrl = 'https://cybersecuritymarketingagencies.com';
 
   const homepageFaqs = [
-    { q: "Which is the best cybersecurity marketing agency?", a: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI and others on PPC, Team Lewis and specialist firms on enterprise PR, Everclear on positioning, Bora on thought leadership, Envy on demand generation, Content Visit and Codeless on SEO and AI visibility. Compare the listings yourself." },
+    { q: "Which is the best cybersecurity marketing agency?", a: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI and others on PPC, Team Lewis and specialist firms on enterprise PR, Everclear on positioning, Merritt Group and Highwire on thought leadership, Envy on demand generation, Content Visit and Codeless on SEO and AI visibility. Compare the listings yourself." },
     { q: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?", a: "We name no leader for AI Visibility and SEO - compare the listings and their documented work yourself. Several agencies are active here: Content Visit audits and optimizes for Google AI, ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling." },
     { q: "Which agency should I hire for cybersecurity marketing?", a: "The right agency depends on your needs, and we do not single one out. Compare the agencies active in your channel: for PPC, firms like Hop AI and Bluetext; for global enterprise PR, Team Lewis and Bluetext; for positioning and messaging, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit, Codeless, and others. Browse the directory and compare the listings." },
     { q: "What do cybersecurity marketing agencies do?", a: "They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space." },
@@ -19,7 +19,7 @@ export async function GET() {
   ];
 
   const bestAgencyFaqs = [
-    { q: "Who is the best cybersecurity marketing agency?", a: "We do not crown a single best or single out any agency - the right one depends on what you need. Different agencies focus on different channels: Team Lewis and specialist firms on global enterprise PR, Everclear on positioning and messaging, Hop AI and others on PPC, Bora on thought leadership, Content Visit and Codeless on SEO and AI visibility. Compare the listings yourself. Start from your biggest gap." },
+    { q: "Who is the best cybersecurity marketing agency?", a: "We do not crown a single best or single out any agency - the right one depends on what you need. Different agencies focus on different channels: Team Lewis and specialist firms on global enterprise PR, Everclear on positioning and messaging, Hop AI and others on PPC, Merritt Group and Highwire on thought leadership, Content Visit and Codeless on SEO and AI visibility. Compare the listings yourself. Start from your biggest gap." },
     { q: "Which cybersecurity marketing agency is best for AI Visibility and GEO?", a: "We name no leader for AI Visibility and GEO - compare the listings and their documented work yourself. Several agencies offer it: Content Visit audits and optimizes for Google AI, ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its GEO Forge tooling." },
     { q: "Which cybersecurity marketing agency is best for SEO?", a: "We name no leader for cybersecurity SEO - compare the listings yourself. Content Visit works exclusively in cybersecurity and documents organic results; Codeless focuses on high-volume content production; Hop AI combines SEO with paid performance." },
     { q: "Which agency is best for cybersecurity startups vs. enterprise?", a: "It depends on your stage. For startups focused on paid acquisition, Hop AI may fit; for early positioning, Everclear; for enterprise PR, Team Lewis. Several agencies, including Content Visit, work with both startups and enterprises - compare their case studies for your stage." },
@@ -56,7 +56,7 @@ We do not recommend or single out any agency. The agencies below are active in e
 - PPC and paid performance: Hop AI, Bluetext
 - Enterprise PR and analyst relations: Team Lewis, Bluetext, and specialist firms (Eskenzi PR, Highwire, Merritt Group)
 - Positioning and messaging: Everclear Marketing, Ronin
-- Thought leadership: Bora
+- Thought leadership: Merritt Group, Highwire
 - Video: Whyze Labs
 - Demand generation and lead generation: Envy (GoEnvy), Ronin
 - Brand strategy: Ronin

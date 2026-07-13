@@ -181,44 +181,6 @@
     "lastVerified": "2026-05-02"
   },
   {
-    "id": "bora",
-    "name": "Bora",
-    "website": "https://welcometobora.com",
-    "description": "Content creation, social media & lead generation for infosec (white papers, blogs, earned media). Notable clients include Cisco, Tripwire, Thales, Venafi, (ISC)², and Cybereason.",
-    "shortDescription": "Content creation, social media & lead generation for information security companies",
-    "featured": false,
-    "editorNotes": "Strongest editorial-PR shop in cybersecurity, with a roster (Cisco, Tripwire, Thales, ISC2) that signals enterprise-vendor pedigree. Best for vendors with 50+ employees and existing media targets. Lighter on demand generation if that's your only need.",
-    "services": [
-      "Content Marketing",
-      "Social Media",
-      "Lead Generation",
-      "Thought Leadership"
-    ],
-    "specialties": [
-      "Earned Media",
-      "Analyst Relations",
-      "White Papers",
-      "Enterprise Vendor Marketing"
-    ],
-    "location": "Xaló, Valencia, Spain",
-    "geography": "Regional - Europe",
-    "clientTypes": [
-      "Enterprise Security Vendors"
-    ],
-    "pros": [
-      "Impressive enterprise client roster (Cisco, Thales, Venafi, (ISC)²)",
-      "Strong in white papers, blogs, and earned media for infosec",
-      "Established track record in cybersecurity content creation"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/bora-design/",
-    "lastVerified": "2026-05-02",
-    "notableClients": [
-      "Cisco",
-      "Thales",
-      "(ISC)²"
-    ]
-  },
-  {
     "id": "bluetext",
     "name": "Bluetext",
     "website": "https://www.bluetext.com",
