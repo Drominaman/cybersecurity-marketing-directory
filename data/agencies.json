@@ -114,41 +114,6 @@
     ]
   },
   {
-    "id": "codeless",
-    "name": "Codeless",
-    "website": "https://codeless.io",
-    "description": "High-volume content production agency with strong SEO focus. Notable clients include Monday.com (1000% traffic growth case study). Produces long-form, search-optimised content at scale for SaaS and B2B technology companies.",
-    "shortDescription": "High-volume content production with strong SEO focus",
-    "featured": false,
-    "editorNotes": "High-volume content engine with proven SEO methodology, but their headline case study is non-security (Monday.com, a project-management SaaS). Cybersecurity track record is thinner than the brand suggests - verify case studies in your specific sub-vertical before committing.",
-    "services": [
-      "SEO",
-      "Content Marketing",
-      "PR & Media Relations"
-    ],
-    "specialties": [
-      "SEO Content",
-      "High-Volume Publishing",
-      "Editorial Operations"
-    ],
-    "location": "Irvine, CA, USA",
-    "geography": "Regional - USA",
-    "clientTypes": [
-      "Cybersecurity Companies"
-    ],
-    "pros": [
-      "High-volume content production at scale",
-      "Strong SEO methodology with proven traffic results",
-      "Notable case study with Monday.com (1000% traffic growth)"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/codeless-io/",
-    "clutchUrl": "https://clutch.co/profile/codeless",
-    "lastVerified": "2026-05-02",
-    "notableClients": [
-      "Monday.com"
-    ]
-  },
-  {
     "id": "ronin",
     "name": "Ronin",
     "website": "https://www.deployronin.com",
