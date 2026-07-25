@@ -23,6 +23,13 @@ const nextConfig: NextConfig = {
         destination: 'https://cybersecuritymarketingagencies.com/:path*',
         permanent: true,
       },
+      // Retired: replaced by two focused, accurate roundups (the old post
+      // named a favourite and recommended agencies outside the directory).
+      {
+        source: '/blog/best-cybersecurity-aeo-geo-agencies-2026',
+        destination: '/blog/cybersecurity-aeo-agency-roundup-2026',
+        permanent: true,
+      },
     ];
   },
   images: {

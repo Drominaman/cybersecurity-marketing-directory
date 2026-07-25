@@ -38,6 +38,7 @@ export interface Agency {
   clutchUrl?: string;
   g2Url?: string;
   designRushUrl?: string;
+  reviewsPageUrl?: string; // agency's own reviews/testimonials page, if published
 }
 
 export interface Award {

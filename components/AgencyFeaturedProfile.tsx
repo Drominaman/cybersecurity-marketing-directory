@@ -148,7 +148,7 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
         {reviews.length > 0 && (
           <div>
             {sectionHeading(`Client reviews`)}
-            {(agency.clutchUrl || agency.designRushUrl || agency.g2Url) && (
+            {(agency.clutchUrl || agency.designRushUrl || agency.g2Url || agency.reviewsPageUrl) && (
               <p className="text-white text-sm mb-3">
                 Verified reviews on{' '}
                 {[
@@ -158,6 +158,12 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
                 ].filter(Boolean).map((el, i, arr) => (
                   <span key={i}>{i > 0 && ' · '}{el}</span>
                 ))}.
+                {agency.reviewsPageUrl && (
+                  <>
+                    {' '}See the full collection on{' '}
+                    <a href={agency.reviewsPageUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
+                  </>
+                )}
               </p>
             )}
             <div className="space-y-2">

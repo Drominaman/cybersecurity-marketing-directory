@@ -420,7 +420,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               <h2 className="text-3xl font-black text-white mb-4 uppercase tracking-wider">
                 ■ CLIENT REVIEWS
               </h2>
-              {(agency.clutchUrl || agency.designRushUrl || agency.g2Url) && (
+              {(agency.clutchUrl || agency.designRushUrl || agency.g2Url || agency.reviewsPageUrl) && (
                 <p className="text-gray-300 text-sm mb-6">
                   Verified reviews on{' '}
                   {[
@@ -430,6 +430,12 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   ].filter(Boolean).map((el, i) => (
                     <span key={i}>{i > 0 && ' · '}{el}</span>
                   ))}.
+                  {agency.reviewsPageUrl && (
+                    <>
+                      {' '}See the full collection on{' '}
+                      <a href={agency.reviewsPageUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
+                    </>
+                  )}
                 </p>
               )}
               <div className="grid md:grid-cols-2 gap-6">

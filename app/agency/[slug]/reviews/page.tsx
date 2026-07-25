@@ -56,6 +56,7 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
     ['Clutch', agency.clutchUrl],
     ['DesignRush', agency.designRushUrl],
     ['G2', agency.g2Url],
+    [`${agency.name}'s own reviews page`, agency.reviewsPageUrl],
   ] as const).filter(([, url]) => !!url) as [string, string][];
 
   const reviewSchema = {
