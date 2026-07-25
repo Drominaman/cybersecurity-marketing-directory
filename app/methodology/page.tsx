@@ -196,10 +196,10 @@ export default function MethodologyPage() {
                 <li className="flex gap-3"><span className="text-white">&#9632;</span><span><strong className="text-white">Continuously:</strong> corrections reported by agencies or readers are verified and applied, and material changes are recorded in the public changelog</span></li>
               </ul>
               <p>
-                Profiles carry a last-verified date. If you spot something wrong, email{' '}
-                <a href="mailto:robbie@contentvisit.com" className="text-white underline hover:text-gray-300">
-                  robbie@contentvisit.com
-                </a>{' '}
+                Profiles carry a last-verified date. If you spot something wrong,{' '}
+                <Link href="/contact?reason=correction" className="text-white underline hover:text-gray-300">
+                  contact us
+                </Link>{' '}
                 and we will check it.
               </p>
             </div>
@@ -249,10 +249,10 @@ export default function MethodologyPage() {
               <p>
                 A featured placement is the only paid position on the site, and it is always labelled.
                 Everything outside the Featured label is editorial and is not for sale. To ask about a
-                featured placement, email{' '}
-                <a href="mailto:robbie@contentvisit.com" className="text-white underline hover:text-gray-300">
-                  robbie@contentvisit.com
-                </a>.
+                featured placement,{' '}
+                <Link href="/contact?reason=featured-listing" className="text-white underline hover:text-gray-300">
+                  contact us
+                </Link>.
               </p>
             </div>
           </section>

@@ -17,8 +17,6 @@ const SERVICES = [
   'Digital Marketing',
 ];
 
-const SUBMISSIONS_EMAIL = 'robbie@contentvisit.com';
-
 export default function SubmitAgencyPage() {
   const [agencyName, setAgencyName] = useState('');
   const [websiteUrl, setWebsiteUrl] = useState('');
@@ -109,7 +107,7 @@ export default function SubmitAgencyPage() {
             'Two tiers: Verified ($499/year) and Featured ($1,499/year). The fee covers our evaluation work, not the outcome.',
             'We do not rank or recommend agencies. Paid tiers buy a listing and placement, never a recommendation.',
             'Rejected submissions receive a full refund. See our methodology for how evaluation works.',
-            'Submit below or email robbie@contentvisit.com to discuss. Approval takes 5 to 7 business days.',
+            'Submit below or use our contact form to discuss. Approval takes 5 to 7 business days.',
           ]} />
 
           {/* Pricing Tiers */}
@@ -186,12 +184,12 @@ export default function SubmitAgencyPage() {
                     <span className="text-gray-500">Not included in roundup posts</span>
                   </li>
                 </ul>
-                <a
-                  href={`mailto:${SUBMISSIONS_EMAIL}?subject=Verified%20Listing%20Inquiry`}
+                <Link
+                  href="/contact?reason=verified-listing"
                   className="mt-auto bg-white text-black px-6 py-3 font-black uppercase tracking-wide text-sm text-center hover:bg-gray-200 transition-colors border-4 border-white"
                 >
-                  EMAIL TO DISCUSS
-                </a>
+                  CONTACT US
+                </Link>
               </div>
 
               {/* Featured */}
@@ -229,12 +227,12 @@ export default function SubmitAgencyPage() {
                     <span className="text-gray-500">No recommendation or ranking (we do not rank agencies)</span>
                   </li>
                 </ul>
-                <a
-                  href={`mailto:${SUBMISSIONS_EMAIL}?subject=Featured%20Listing%20Inquiry`}
+                <Link
+                  href="/contact?reason=featured-listing"
                   className="mt-auto bg-yellow-400 text-black px-6 py-3 font-black uppercase tracking-wide text-sm text-center hover:bg-yellow-300 transition-colors border-4 border-yellow-400"
                 >
-                  EMAIL TO DISCUSS
-                </a>
+                  CONTACT US
+                </Link>
               </div>
             </div>
           </div>
@@ -263,7 +261,7 @@ export default function SubmitAgencyPage() {
               &#9632; SUBMIT YOUR DETAILS
             </h2>
             <p className="text-gray-400 text-sm mb-6">
-              Fill out the form below and we will follow up with next steps. Or email <a href={`mailto:${SUBMISSIONS_EMAIL}`} className="text-white underline hover:text-gray-300">{SUBMISSIONS_EMAIL}</a> directly.
+              Fill out the form below and we will follow up with next steps. Or use our <Link href="/contact" className="text-white underline hover:text-gray-300">contact form</Link> directly.
             </p>
           </div>
 
@@ -475,7 +473,7 @@ export default function SubmitAgencyPage() {
               <div>
                 <h3 className="text-lg font-black text-white mb-2">Do you offer custom packages or sponsorship?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Yes, for a clearly disclosed sponsor slot on a category page or content partnerships. Sponsorship is labelled advertising and does not change how any agency is listed or compared, because we do not rank or recommend agencies. Email <a href={`mailto:${SUBMISSIONS_EMAIL}`} className="text-white underline hover:text-gray-300">{SUBMISSIONS_EMAIL}</a> to discuss.
+                  Yes, for a clearly disclosed sponsor slot on a category page or content partnerships. Sponsorship is labelled advertising and does not change how any agency is listed or compared, because we do not rank or recommend agencies. <Link href="/contact?reason=sponsorship" className="text-white underline hover:text-gray-300">Contact us</Link> to discuss.
                 </p>
               </div>
             </div>
