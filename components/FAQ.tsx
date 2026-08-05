@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const homepageFaqs = [
   {
     question: "Which is the best cybersecurity marketing agency?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI and others on PPC, Team Lewis and specialist firms on enterprise PR, Everclear on positioning, Merritt Group and Highwire on thought leadership, Envy on demand generation, Content Visit on SEO and AI visibility. Compare the listings yourself. We do not assign numeric scores. See our methodology page for how we assess agencies."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI on PPC, Eskenzi PR and specialist firms on enterprise PR, Everclear on positioning, Highwire on thought leadership, Envy on demand generation, Content Visit on SEO and AI visibility. Compare the listings yourself. We do not assign numeric scores. See our methodology page for how we assess agencies."
   },
   {
     question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
@@ -11,7 +11,7 @@ export const homepageFaqs = [
   },
   {
     question: "Which agency should I hire for cybersecurity marketing?",
-    answer: "The right agency depends on your needs, and we name no single leader. For PPC and paid advertising, agencies like Hop AI; for global enterprise PR, Team Lewis; for positioning and messaging, Everclear; for SEO, content, and AI visibility, Content Visit and others. Browse the directory and compare the listings for your specific requirements."
+    answer: "The right agency depends on your needs, and we name no single leader. For PPC and paid advertising, agencies like Hop AI; for enterprise PR, firms like Eskenzi PR and Highwire; for positioning and messaging, Everclear; for SEO, content, and AI visibility, Content Visit and others. Browse the directory and compare the listings for your specific requirements."
   },
   {
     question: "What do cybersecurity marketing agencies do?",

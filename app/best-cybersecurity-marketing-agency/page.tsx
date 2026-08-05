@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI and others on PPC and paid performance; Team Lewis and specialist firms on enterprise PR; Everclear on positioning; Merritt Group and Highwire on thought leadership; Envy on demand generation; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI on PPC and paid performance; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Envy on demand generation; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
   },
   {
     question: "How do I choose the right cybersecurity marketing agency?",
@@ -44,15 +44,15 @@ const faqs = [
   },
   {
     question: "Which agency is best for cybersecurity PPC advertising?",
-    answer: "We do not crown a single leader. Agencies with documented cybersecurity PPC and paid-performance work include Hop AI (proprietary GEO Forge tooling, clients like Rapid7 and SecurityScorecard), alongside Bluetext, which runs paid media as part of a broader full-service programme. If paid acquisition is your primary growth channel, compare their documented results and tooling for your stage."
+    answer: "We do not crown a single leader. Hop AI has documented cybersecurity PPC and paid-performance work, with proprietary GEO Forge tooling and clients like Rapid7 and SecurityScorecard. If paid acquisition is your primary growth channel, compare their documented results and tooling against the other agencies active in the channel."
   },
   {
     question: "Which agency is best for cybersecurity PR and analyst relations?",
-    answer: "We do not crown a single leader. Agencies active in enterprise cybersecurity PR include Team Lewis (27 global offices, clients including CrowdStrike, McAfee, and BlackBerry). For UK and European B2B PR, The Rubicon Agency; for federal and late-stage enterprise, Bluetext; and for specialist cybersecurity PR firms, our directory also lists Eskenzi PR, Highwire, Merritt Group, and others. Compare their coverage and documented work in our cybersecurity PR agency guide."
+    answer: "We do not crown a single leader. Agencies active in enterprise cybersecurity PR include Eskenzi PR (founded 1995, clients including Nozomi Networks, Cato Networks, and KnowBe4), Highwire (dedicated cybersecurity practice, clients including CrowdStrike and Splunk), and Touchdown PR (transatlantic, offices across the UK, US, and Europe). For UK and European B2B PR, The Rubicon Agency is also worth comparing. Compare their coverage and documented work in our cybersecurity PR agency guide."
   },
   {
     question: "Which agency is best for cybersecurity startups vs enterprise?",
-    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Hop AI), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, global PR (Team Lewis), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
+    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Hop AI), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, multi-region PR (firms like Eskenzi PR and Touchdown PR), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
   },
   {
     question: "How should I evaluate an agency's documented results?",
@@ -145,7 +145,7 @@ export default function BestCybersecurityMarketingAgency() {
           <TldrSummary points={[
             'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
             'We do not crown a single best agency or category leader. We list agencies neutrally and let you compare them on documented results.',
-            'Different agencies focus on different channels: PPC (Hop AI and others), enterprise PR (Team Lewis and specialist firms), positioning (Everclear), thought leadership (Merritt Group and Highwire), demand generation (Envy), SEO and AI visibility (Content Visit and others).',
+            'Different agencies focus on different channels: PPC (Hop AI), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), demand generation (Envy), SEO and AI visibility (Content Visit and others).',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
             'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
           ]} />
@@ -167,7 +167,7 @@ export default function BestCybersecurityMarketingAgency() {
                 <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and list them neutrally instead of crowning a winner.
               </p>
               <p>
-                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> and others on PPC and paid performance, <strong className="text-white">Team Lewis</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Merritt Group</strong> and <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
+                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> on PPC and paid performance, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
               </p>
               <p>
                 This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
@@ -286,13 +286,13 @@ export default function BestCybersecurityMarketingAgency() {
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">PPC &amp; Paid</td>
-                    <td className="px-3 py-3">Hop AI, Bluetext</td>
+                    <td className="px-3 py-3">Hop AI</td>
                     <td className="px-3 py-3">Paid performance, GEO Forge tooling, named clients</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Enterprise PR</td>
-                    <td className="px-3 py-3">Team Lewis, Bluetext</td>
-                    <td className="px-3 py-3">Global reach, CrowdStrike/McAfee/BlackBerry</td>
+                    <td className="px-3 py-3">Eskenzi PR, Highwire</td>
+                    <td className="px-3 py-3">Analyst relations, security-specific media relationships</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Positioning &amp; Messaging</td>
@@ -301,7 +301,7 @@ export default function BestCybersecurityMarketingAgency() {
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Thought Leadership</td>
-                    <td className="px-3 py-3">Merritt Group, Highwire</td>
+                    <td className="px-3 py-3">Highwire</td>
                     <td className="px-3 py-3">Analyst relations, security media</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
@@ -335,20 +335,20 @@ export default function BestCybersecurityMarketingAgency() {
               ■ AGENCIES WITH DISTINCT STRENGTHS
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              We do not crown a winner. Different agencies are built for different channels. Here are three with distinct, well-documented strengths - global enterprise PR, positioning, and paid performance - alongside the considerations to weigh.
+              We do not crown a winner. Different agencies are built for different channels. Here are three with distinct, well-documented strengths - specialist cybersecurity PR, positioning, and paid performance - alongside the considerations to weigh.
             </p>
 
             <div className="space-y-8">
               <div className="bg-black border-4 border-white p-8">
-                <h3 className="text-2xl font-black text-white mb-3 uppercase">TEAM LEWIS - GLOBAL ENTERPRISE PR</h3>
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">ESKENZI PR - SPECIALIST CYBERSECURITY PR</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Team Lewis is built for global PR infrastructure with local teams in every major market. With offices worldwide and marquee cybersecurity clients including CrowdStrike, McAfee, and BlackBerry, they offer a scale of media relations that boutique agencies cannot match. Their analytics capabilities are also strong, which suits enterprise security vendors with complex, multi-market campaigns.
+                  Eskenzi PR is one of the longest-established dedicated cybersecurity PR agencies in the world, founded in London in 1995. They run the European Cybersecurity Blogger Awards and the IT Security Analyst & CISO Forum, and credit their work with supporting 15 client IPOs and 20 acquisitions. Clients include Nozomi Networks, Cato Networks, Huntress, KnowBe4, and Varonis.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  <strong className="text-white">Considerations:</strong> No dedicated SEO or content marketing services, and as a large agency serving many verticals, your account may not get the cybersecurity-specific focus that smaller specialists provide.
+                  <strong className="text-white">Considerations:</strong> UK-headquartered with a European centre of gravity, so US-only companies should confirm time zone and analyst-relations coverage for their specific market before committing.
                 </p>
                 <div className="mt-4">
-                  <Link href="/agency/team-lewis" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Team Lewis Profile →</Link>
+                  <Link href="/agency/eskenzi-pr" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Eskenzi PR Profile →</Link>
                 </div>
               </div>
 
@@ -410,27 +410,27 @@ export default function BestCybersecurityMarketingAgency() {
 
               <div className="bg-black border-4 border-white p-6">
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ Enterprise PR</p>
-                <h3 className="text-xl font-black text-white mb-2 uppercase">Team Lewis</h3>
+                <h3 className="text-xl font-black text-white mb-2 uppercase">Eskenzi PR</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Global PR infrastructure with local teams in every major market. Marquee cybersecurity clients include CrowdStrike, McAfee, and BlackBerry. Built for enterprise security vendors running multi-region PR campaigns.
+                  One of the longest-established dedicated cybersecurity PR agencies in the world, founded in 1995, with clients including Nozomi Networks, Cato Networks, and KnowBe4. Built for security vendors that want a specialist rather than a generalist tech PR shop.
                 </p>
                 <Link href="/blog/cybersecurity-pr-agency" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">Read the cybersecurity PR guide →</Link>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ Thought Leadership</p>
-                <h3 className="text-xl font-black text-white mb-2 uppercase">Merritt Group</h3>
+                <h3 className="text-xl font-black text-white mb-2 uppercase">Highwire</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Strategic communications since 1996 with a dedicated security practice and strong analyst and influencer relations, serving vendors selling into enterprise and federal markets. A fit for security vendors that need credible, technically accurate long-form content and analyst engagement.
+                  A dedicated cybersecurity practice (HWCyberSquad) covering incident response communications, RSAC presence, and deep security media relationships, with clients including CrowdStrike, Barracuda, SolarWinds, Splunk, Rapid7, and Illumio.
                 </p>
-                <Link href="/agency/merritt-group" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Merritt Group profile →</Link>
+                <Link href="/agency/highwire" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Highwire profile →</Link>
               </div>
 
               <div className="bg-black border-4 border-white p-6">
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ Enterprise</p>
-                <h3 className="text-xl font-black text-white mb-2 uppercase">Team Lewis</h3>
+                <h3 className="text-xl font-black text-white mb-2 uppercase">Touchdown PR</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Global scale, multi-region campaigns, and long-standing relationships with tier-1 security publications and analysts. Higher minimum budgets but the right fit for $1B+ security vendors with complex media needs.
+                  Transatlantic enterprise technology PR, part of Ruder Finn, with offices across the UK, US, Germany, Netherlands, France, and Israel, and strong analyst relations across Gartner, Forrester, and 451 Research. Built for multi-region security vendors with complex media needs.
                 </p>
                 <Link href="/blog/best-cybersecurity-marketing-agency-startups-vs-enterprise" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">Enterprise vs startups guide →</Link>
               </div>
@@ -531,7 +531,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ TECHNICAL UNDERSTANDING:</strong> The agency should understand your technology well enough to discuss it intelligently with CISOs, security engineers, and enterprise buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, compare firms like Hop AI and Bluetext; for global enterprise PR, Team Lewis and Bluetext; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
+                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Hop AI; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;
@@ -572,7 +572,7 @@ export default function BestCybersecurityMarketingAgency() {
             </div>
             <p className="text-sm text-gray-400 mt-6">
               Or jump to:{' '}
-              <Link href="/agency/team-lewis" className="text-white underline hover:text-gray-300 font-bold">Team Lewis</Link>{' · '}
+              <Link href="/agency/eskenzi-pr" className="text-white underline hover:text-gray-300 font-bold">Eskenzi PR</Link>{' · '}
               <Link href="/agency/everclear-marketing" className="text-white underline hover:text-gray-300 font-bold">Everclear</Link>{' · '}
               <Link href="/agency/hop-online-hop-ai" className="text-white underline hover:text-gray-300 font-bold">Hop AI</Link>
             </p>

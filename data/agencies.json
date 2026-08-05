@@ -147,41 +147,6 @@
     "lastVerified": "2026-05-02"
   },
   {
-    "id": "bluetext",
-    "name": "Bluetext",
-    "website": "https://www.bluetext.com",
-    "description": "Full-service digital marketing agency (branding, web design, SEO, PPC, social, PR). Notable clients include Varonis, SecurityScorecard, Intel, and Cisco. 97+ companies have achieved successful transactions within 24 months of working with Bluetext.",
-    "shortDescription": "Full-service digital marketing for technology and cybersecurity brands",
-    "featured": false,
-    "editorNotes": "DC-corridor specialist that excels with federal-adjacent buyers. Best for vendors selling to government agencies, defence contractors, or large enterprise. Premium pricing - not a fit for early-stage.",
-    "services": [
-      "SEO",
-      "PPC",
-      "PR & Media Relations",
-      "Brand Strategy",
-      "Website Development",
-      "Digital Marketing"
-    ],
-    "specialties": [
-      "DC/Federal Marketing",
-      "Strategic Branding",
-      "Demand Generation"
-    ],
-    "location": "Washington, D.C., USA",
-    "geography": "Regional - USA",
-    "clientTypes": [
-      "Enterprise Security Vendors"
-    ],
-    "pros": [
-      "True full-service agency - branding, web, SEO, PPC, and PR under one roof",
-      "D.C. location gives proximity to federal and government security buyers",
-      "High-profile client portfolio including Intel and Cisco"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/bluetext/",
-    "clutchUrl": "https://clutch.co/profile/bluetext",
-    "lastVerified": "2026-05-02"
-  },
-  {
     "id": "the-rubicon-agency",
     "name": "The Rubicon Agency",
     "website": "https://therubiconagency.com",
@@ -243,42 +208,6 @@
     "lastVerified": "2026-05-02",
     "notableClients": [
       "SANS Institute"
-    ]
-  },
-  {
-    "id": "team-lewis",
-    "name": "Team Lewis",
-    "website": "https://www.teamlewis.com",
-    "description": "Global marketing & PR (public relations, digital marketing, analytics, creative services). Notable clients include BlackBerry, CrowdStrike, and McAfee.",
-    "shortDescription": "Global marketing & PR agency with strong cybersecurity practice",
-    "featured": false,
-    "editorNotes": "Global PR firm with enterprise client base. Strong for multi-region campaigns, but pricing reflects the global reach - overkill for vendors that only need US or UK media.",
-    "services": [
-      "PR & Media Relations",
-      "Digital Marketing",
-      "Marketing Analytics"
-    ],
-    "specialties": [
-      "Global PR",
-      "Enterprise Marketing",
-      "Earned Media"
-    ],
-    "location": "San Diego, CA, USA (global)",
-    "geography": "Global - HQ in USA with offices worldwide",
-    "clientTypes": [
-      "Enterprise Security Vendors"
-    ],
-    "pros": [
-      "Truly global operation with offices worldwide",
-      "Marquee cybersecurity clients (CrowdStrike, McAfee, BlackBerry)",
-      "Strong PR and analytics capabilities for enterprise-scale campaigns"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/teamlewis/",
-    "lastVerified": "2026-05-02",
-    "notableClients": [
-      "CrowdStrike",
-      "McAfee",
-      "BlackBerry"
     ]
   },
   {
@@ -425,41 +354,6 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/nola-marketing-llc",
     "lastVerified": "2026-05-02"
-  },
-  {
-    "id": "merritt-group",
-    "name": "Merritt Group",
-    "website": "https://www.merrittgrp.com",
-    "description": "Strategic communications agency founded in 1996, running PR, content, and digital marketing programmes for cybersecurity, govtech, and B2B technology companies. A dedicated security practice serves vendors selling into enterprise and federal markets, with strong analyst and influencer relations. Notable security clients include Telos, Checkmarx, BlueVoyant, and ISC2.",
-    "shortDescription": "Strategic communications for cybersecurity and govtech vendors selling into enterprise and federal markets.",
-    "featured": false,
-    "services": [
-      "PR & Media Relations",
-      "Content Marketing",
-      "Digital Marketing",
-      "Brand Strategy",
-      "Thought Leadership"
-    ],
-    "specialties": [
-      "B2B Cybersecurity",
-      "Government Technology",
-      "Analyst Relations"
-    ],
-    "location": "McLean, VA, USA",
-    "yearFounded": 1996,
-    "geography": "Regional - USA",
-    "clientTypes": [
-      "Enterprise Security Vendors",
-      "Government Technology Companies"
-    ],
-    "pros": [
-      "Dedicated security practice with deep federal and enterprise buyer understanding",
-      "Strong analyst and influencer relations for security vendors",
-      "Named cybersecurity clients including Telos, Checkmarx, BlueVoyant, and ISC2",
-      "Nearly three decades of B2B technology communications experience"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/merritt-group",
-    "lastVerified": "2026-06-11"
   },
   {
     "id": "w2-communications",
