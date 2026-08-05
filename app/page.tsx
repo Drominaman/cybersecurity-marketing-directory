@@ -104,6 +104,7 @@ export default function Home() {
 
         <TldrSummary points={[
           `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
+          `Agencies listed alphabetically (not ranked): ${allAgencies.map(a => a.name).join(', ')}.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
           'We do not rank or recommend agencies. Compare on documented results and verified profiles.',

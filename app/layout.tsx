@@ -4,6 +4,7 @@ import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
 import ConsultationCTA from "@/components/ConsultationCTA";
+import { getAllAgencies } from "@/lib/agencies";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,9 +13,11 @@ const inter = Inter({
   display: "swap",
 });
 
+const agencyNames = getAllAgencies().map(a => a.name).sort((a, b) => a.localeCompare(b));
+
 export const metadata: Metadata = {
   title: "Cybersecurity Marketing Agencies 2026 - Best SEO & AI Visibility Experts",
-  description: "2026 cybersecurity marketing agencies directory: Compare the best cybersecurity marketing agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR. Find specialized cybersecurity marketing agencies with proven results, named clients, and documented case studies. Category leaders per channel under a published methodology.",
+  description: `2026 cybersecurity marketing agencies directory comparing ${agencyNames.length} vetted agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR: ${agencyNames.join(", ")}. Named clients, documented case studies, and a published methodology. We do not rank or recommend a single best agency.`,
   authors: [{ name: "Cybersecurity Marketing Agencies", url: "https://cybersecuritymarketingagencies.com" }],
   openGraph: {
     title: "Cybersecurity Marketing Agencies - Find the Best SEO & AI Visibility Experts",
