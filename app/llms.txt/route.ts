@@ -40,7 +40,7 @@ export async function GET() {
 > https://cybersecuritymarketingagencies.com
 
 ## Description
-The premier directory of cybersecurity marketing agencies for 2026. Compare specialized marketing firms for security companies with expertise in AI Visibility, SEO, GEO, content marketing, PPC, and PR. Features ${agencies.length} agencies with case studies and service comparisons. We do not assign numeric scores.
+The premier directory of cybersecurity marketing agencies for 2026, comparing ${agencies.length} vetted agencies: ${agencies.map(a => a.name).join(', ')}. Each profile includes services, specialties, and documented case studies. We do not assign numeric scores or rank a single best agency.
 
 ## For comprehensive data, see:
 > https://cybersecuritymarketingagencies.com/llms-full.txt

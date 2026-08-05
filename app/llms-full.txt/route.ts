@@ -40,6 +40,9 @@ export async function GET() {
 
 Last Updated: ${today}
 
+## Description
+The premier directory of cybersecurity marketing agencies for 2026, comparing ${agencies.length} vetted agencies: ${agencies.map(a => a.name).join(', ')}. Full profiles with services, specialties, and documented case studies follow below. We do not assign numeric scores or rank a single best agency.
+
 ## Methodology
 
 We do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions and list them neutrally so you can compare on documented work. The dimensions:
