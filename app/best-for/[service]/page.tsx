@@ -79,8 +79,8 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     return a.name.localeCompare(b.name);
   });
 
-  // We no longer crown a leader in any category, so no agency is featured
-  // as a top pick - the page shows the listings only.
+  // No agency currently holds a category badge, so this stays unset - Featured
+  // placement (sort order + Sponsored label) is separate and not a category pick.
   const topAgency = sortedAgencies.find(hasCategoryBadge);
 
   const breadcrumbData = breadcrumbSchema([

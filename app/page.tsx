@@ -87,7 +87,8 @@ export default function Home() {
             </div>
             <p className="mt-8 text-white text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
             <p className="mt-2 text-white text-xs">
-              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.
+              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.{' '}
+              <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
             </p>
 
             {/* Featured agency: Read more drops the full profile down inline */}
