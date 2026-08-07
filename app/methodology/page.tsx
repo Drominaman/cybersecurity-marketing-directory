@@ -2,17 +2,44 @@ import Link from 'next/link';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
-import { SCORING_DIMENSIONS } from '@/lib/scoring';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Methodology - How We Score and Rank Cybersecurity Marketing Agencies',
+  title: 'Methodology - How We Assess and List Cybersecurity Marketing Agencies',
   description:
-    'How our agency rankings work: a published five-dimension rubric with exact weights and scoring bands, per-channel leaders, quarterly verification, and a strict rule that paid placement never affects scores or rankings.',
+    'How agencies earn a place in our directory: how we assess agencies across five dimensions, the difference between reviewed and listed agencies, verification cadence, paid evaluation, and our independence.',
   alternates: {
     canonical: 'https://cybersecuritymarketingagencies.com/methodology',
   },
 };
+
+const criteria = [
+  {
+    name: 'Cybersecurity expertise',
+    detail:
+      'How much of the agency’s work is cybersecurity. Exclusive focus weighs most; a general B2B agency with one security client weighs least. We check client rosters, case studies, team backgrounds, and published content for technical depth.',
+  },
+  {
+    name: 'Documented results',
+    detail:
+      'Named clients with concrete metrics beat anonymised claims. We weight results that can be cross-checked: public case studies, client references, third-party reviews. “We drove growth for a leading security vendor” counts for little.',
+  },
+  {
+    name: 'Service breadth and integration',
+    detail:
+      'Whether the agency delivers its listed services in-house and how well they integrate. A focused specialist can weigh well here; a long service list with shallow delivery cannot.',
+  },
+  {
+    name: 'AI visibility and GEO capability',
+    detail:
+      'Whether the agency understands optimisation for AI-driven discovery (ChatGPT, Perplexity, Claude, Google AI Overviews) and can demonstrate it, starting with their own visibility.',
+  },
+  {
+    name: 'Client portfolio quality',
+    detail:
+      'The calibre and relevance of the agency’s cybersecurity client base, and signals like client tenure, repeat engagements, and industry awards.',
+  },
+];
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -54,89 +81,26 @@ export default function MethodologyPage() {
 
           <div className="mb-10">
             <h1 className="text-4xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-              HOW WE SCORE AND RANK AGENCIES
+              HOW WE ASSESS AND LIST AGENCIES
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl">
-              A ranking is only worth trusting if you can check the working. This page publishes our
-              full scoring rubric: the five dimensions, their exact weights, and the band an agency
-              must hit for each score. Every rating on this site can be audited against the evidence
-              on the agency&apos;s own profile.
+              A directory is only useful if you know how it works. This page explains how agencies get
+              in, how we assess them, how often data is re-verified, who runs this site, and what
+              money does and does not buy here.
             </p>
-            <p className="mt-4 text-gray-500 text-xs font-mono uppercase tracking-wider">Last updated: August 2026</p>
+            <p className="mt-4 text-gray-500 text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
           </div>
 
           <TldrSummary
             points={[
-              'Every reviewed agency gets a score out of 5.0 from five weighted dimensions: verified client feedback (30%), documented results (25%), cybersecurity focus (20%), service breadth (15%), and market presence (10%).',
-              'The highest-scoring agency offering a service is named our pick for that channel. There is no single Best Overall: leaders are per channel.',
-              'Scores are earned from documented, checkable evidence. They cannot be bought: paid placement never affects a score, badge, or ranking.',
-              'Every profile shows its score breakdown, so you can audit each rating against the evidence.',
+              'Two listing types: Reviewed (fully assessed across five dimensions) and Listed (verified basics).',
+              'We do not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
+              'We are independent: every agency is held to the same criteria and none receives a recommendation.',
+              'Featured listings are a paid, clearly-labelled placement: shown at the top, but never a recommendation and never changing how other agencies are listed.',
               'New submissions pay an evaluation fee that covers our research time, not the outcome. Rejected agencies are refunded.',
             ]}
           />
-
-          {/* Scoring rubric */}
-          <section className="bg-gray-900 border-4 border-white p-10 mb-10">
-            <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; THE SCORING RUBRIC
-            </h2>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              Each reviewed agency is scored 1 to 5 on five dimensions. The overall rating is the
-              weighted average, shown to one decimal place. The weights and bands below are the
-              whole system: there is no hidden adjustment, and an agency can raise its score only by
-              documenting more, never by paying.
-            </p>
-            <div className="space-y-8">
-              {SCORING_DIMENSIONS.map((d) => (
-                <div key={d.key} className="border-l-4 border-white pl-5">
-                  <div className="flex items-baseline gap-3 mb-1">
-                    <h3 className="text-lg font-black text-white uppercase">{d.name}</h3>
-                    <span className="font-mono text-sm text-gray-400">{Math.round(d.weight * 100)}%</span>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed text-sm mb-3">{d.scoredFrom}</p>
-                  <ul className="space-y-1">
-                    {d.bands.map((b) => (
-                      <li key={b.score} className="flex gap-3 text-sm text-gray-400">
-                        <span className="font-mono text-white shrink-0">{b.score} =</span>
-                        <span>{b.means}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <p className="text-gray-300 leading-relaxed mt-6">
-              Scores rest on evidence we can verify: published case studies, named clients, reviews
-              on independent platforms, and public records. Where an agency has not documented
-              something, the score reflects that absence. That is deliberate. It is the same
-              standard for everyone, and any agency can improve its score by publishing verifiable
-              evidence and telling us.
-            </p>
-          </section>
-
-          {/* Per-channel leaders */}
-          <section className="bg-gray-900 border-4 border-white p-10 mb-10">
-            <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; PER-CHANNEL LEADERS, NOT ONE CROWN
-            </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
-              <p>
-                We do not name a single Best Overall agency, because the right agency depends on the
-                channel you need. Instead, for each service channel (SEO, AI visibility, content
-                marketing, PPC, PR, lead generation), the highest-scoring agency that delivers that
-                service as a core offering is named our pick for the channel and carries a
-                &quot;Best for&quot; badge. Core offering means the channel is one of the agency&apos;s
-                three primary services: an agency does not win a channel it only offers at the margin
-                of its practice, however high its overall score.
-              </p>
-              <p>
-                Channel picks are recomputed whenever scores change: after quarterly re-verification,
-                or when an agency documents new evidence. A pick is a conclusion from the rubric
-                above, never a purchase.
-              </p>
-            </div>
-          </section>
 
           {/* Reviewed vs Listed */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-10">
@@ -145,16 +109,53 @@ export default function MethodologyPage() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Reviewed agencies</strong> have been through the full
-                scoring rubric above and carry a rating with a published breakdown.
+                <strong className="text-white">Reviewed agencies</strong> have been through a full
+                editorial assessment across the five dimensions below. No numeric score is assigned, and
+                no agency is crowned: the assessment informs our neutral profile notes, not a ranking.
               </p>
               <p>
                 <strong className="text-white">Listed agencies</strong> have passed verification, which
-                means we have confirmed they are a real, active agency with demonstrable cybersecurity
-                work, a working website, and accurate company information, but have not yet been fully
-                scored. A listing is a verified record; a rating is an assessment.
+                means we have confirmed they are a real, active agency with demonstrable cybersecurity work,
+                a working website, and accurate company information. A listing is not
+                an endorsement; it is a verified record.
+              </p>
+              <p>
+                We do not assign numeric scores, name a single best, or crown category leaders, because a
+                precise number or a crown implies a certainty our assessment does not have. We would rather
+                show you each agency&apos;s documented strengths and let you compare for your own needs.
               </p>
             </div>
+          </section>
+
+          {/* Assessment dimensions */}
+          <section className="bg-gray-900 border-4 border-white p-10 mb-10">
+            <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
+              &#9632; HOW WE ASSESS AGENCIES
+            </h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              We assess agencies across the five dimensions below to write accurate, neutral profiles. We
+              do not turn this into a ranking or crown a leader. Assessments are reviewed quarterly and
+              revised when an agency&apos;s circumstances materially change (acquisitions, rebrands, major
+              client wins or losses).
+            </p>
+            <div className="space-y-5">
+              {criteria.map((c) => (
+                <div key={c.name} className="border-l-4 border-white pl-5">
+                  <div className="flex items-baseline gap-3 mb-1">
+                    <h3 className="text-lg font-black text-white uppercase">{c.name}</h3>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed text-sm">{c.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-300 leading-relaxed mt-6">
+              This assessment informs our neutral profile notes only. We do not name a single best agency,
+              crown category leaders, or publish &quot;Top Pick&quot; labels for anyone. Our assessment and
+              editorial profiles are not for sale. The one paid option is a clearly-labelled{' '}
+              <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
+              placement, which buys position and a richer profile, never a recommendation or any change to
+              how we assess an agency.
+            </p>
           </section>
 
           {/* Listing criteria */}
@@ -191,7 +192,7 @@ export default function MethodologyPage() {
               </p>
               <ul className="space-y-2 ml-1">
                 <li className="flex gap-3"><span className="text-white">&#9632;</span><span><strong className="text-white">On intake:</strong> website, LinkedIn, location, founding year, services, and client claims are verified against primary sources before a profile goes live</span></li>
-                <li className="flex gap-3"><span className="text-white">&#9632;</span><span><strong className="text-white">Quarterly:</strong> every profile is re-checked for dead links, moved offices, rebrands, and acquisitions, and scores are re-run where the evidence has changed</span></li>
+                <li className="flex gap-3"><span className="text-white">&#9632;</span><span><strong className="text-white">Quarterly:</strong> every profile is re-checked for dead links, moved offices, rebrands, and acquisitions</span></li>
                 <li className="flex gap-3"><span className="text-white">&#9632;</span><span><strong className="text-white">Continuously:</strong> corrections reported by agencies or readers are verified and applied, and material changes are recorded in the public changelog</span></li>
               </ul>
               <p>
@@ -204,24 +205,24 @@ export default function MethodologyPage() {
             </div>
           </section>
 
-          {/* Rankings integrity */}
+          {/* Independence */}
           <section className="bg-gray-950 border-4 border-white p-10 mb-10">
             <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
-              &#9632; RANKINGS INTEGRITY
+              &#9632; INDEPENDENCE
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                Scores, badges, and channel picks are editorial conclusions from the published rubric
-                and are not for sale at any price. Every agency is scored against the same bands from
-                the same kinds of evidence. The one paid option, a{' '}
+                We do not recommend, rank, or crown any agency. Every agency is assessed against the same
+                five dimensions and listed neutrally, and the comparison is left to you. There is no Best
+                Overall, no category leader, and no &quot;Top Pick&quot; to buy or to earn. The one paid
+                option, a{' '}
                 <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
-                placement, is always labelled and buys position only: it never affects a score, a badge,
-                a channel pick, or how any other agency is presented.
+                placement, is always labelled and boosts position only: it is not a recommendation and does
+                not change how any other agency is listed.
               </p>
               <p>
-                Verify our work independently: every reviewed agency profile links to third-party
-                platforms like Clutch, G2, and LinkedIn, and shows the score breakdown behind its
-                rating, precisely so you can check each number against the evidence.
+                Verify our claims independently: every reviewed agency profile links to third-party
+                platforms like Clutch, G2, and LinkedIn precisely so you can check our work.
               </p>
             </div>
           </section>
@@ -241,9 +242,9 @@ export default function MethodologyPage() {
               </p>
               <p className="text-white font-bold">What a featured placement does not buy:</p>
               <ul className="space-y-2 ml-1">
-                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not buy a score, a badge, a channel pick, or any editorial endorsement. Featured means a labelled placement, not best.</span></li>
-                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change how any <em>other</em> agency is scored, described, or ranked.</span></li>
-                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change our assessment or the facts on the featured agency&apos;s own profile, which are verified and scored the same way as everyone else&apos;s.</span></li>
+                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not buy a recommendation, ranking, score, &quot;Top Pick&quot;, or any editorial endorsement. Featured means a labelled placement, not best.</span></li>
+                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change how any <em>other</em> agency is listed, described, or ordered. The rest of the directory stays neutral.</span></li>
+                <li className="flex gap-3"><span className="text-yellow-300">&#9632;</span><span>It does not change our assessment or the facts on the featured agency&apos;s own profile, which are verified the same way as everyone else&apos;s.</span></li>
               </ul>
               <p>
                 A featured placement is the only paid position on the site, and it is always labelled.
@@ -268,15 +269,15 @@ export default function MethodologyPage() {
                   submit for evaluation
                 </Link>
                 . Submissions carry a fee because evaluation is real work: researching your client base,
-                verifying your claims and profiles, scoring you against the rubric above, and
+                verifying your claims and profiles, assessing you across the dimensions above, and
                 maintaining your data quarterly after you are live.
               </p>
               <p>
                 <strong className="text-white">The fee buys the evaluation, not the outcome.</strong>{' '}
-                Paying does not guarantee a listing, does not influence your score, and does not buy a
-                badge, a channel pick, or favourable editorial language. Rankings are earned under the
-                published rubric, never sold. Agencies we decline receive a full refund and a short
-                explanation of why.
+                Paying does not guarantee a listing, does not influence your assessment, and does not buy a
+                recommendation, ranking, or favourable editorial language, because we do not rank or
+                recommend agencies. Agencies we decline receive a full refund and a short explanation of
+                why.
               </p>
               <p>
                 See current tiers and what each includes on the{' '}

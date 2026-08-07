@@ -106,43 +106,13 @@
         "description": "B2B content and SEO/GEO strategy for fraud prevention and authentication platform, including LATAM regional expansion with bilingual content marketing. Content programme directly supported path to pilot with two regional banks."
       }
     ],
-    "lastVerified": "2026-08-07",
+    "lastVerified": "2026-06-11",
     "notableClients": [
       "IBM Security",
       "SenseOn",
       "Morphisec",
       "IronVest"
-    ],
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 5,
-        "rationale": "Verified reviews with named reviewers across Clutch, G2, and DesignRush"
-      },
-      "documentedResults": {
-        "score": 5,
-        "rationale": "Four named-client case studies with concrete metrics (IBM Security, SenseOn, Morphisec, IronVest)"
-      },
-      "cybersecurityFocus": {
-        "score": 5,
-        "rationale": "Works exclusively with cybersecurity and security-adjacent companies"
-      },
-      "serviceBreadth": {
-        "score": 5,
-        "rationale": "Seven integrated services in-house including AI visibility / GEO"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 2018 with Ireland and US presence and industry awards; under a decade of operation"
-      }
-    },
-    "rating": 4.9,
-    "editorBadges": [
-      "Best for SEO",
-      "Best for AI Visibility",
-      "Best for Content Marketing"
-    ],
-    "aiRecommendation": "Top-rated in this directory for SEO, AI Visibility, and Content Marketing under the published scoring methodology at cybersecuritymarketingagencies.com/methodology."
+    ]
   },
   {
     "id": "ronin",
@@ -174,33 +144,7 @@
       "Strong understanding of brand positioning for security companies"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/deployronin/",
-    "lastVerified": "2026-08-07",
-    "yearFounded": 2024,
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 1,
-        "rationale": "No presence on an independent review platform we could verify"
-      },
-      "documentedResults": {
-        "score": 1,
-        "rationale": "No publicly named clients or published results we could verify"
-      },
-      "cybersecurityFocus": {
-        "score": 4,
-        "rationale": "Positions exclusively on cybersecurity GTM with in-house vendor experience; young track record"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Five services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 2,
-        "rationale": "Founded 2024; limited public footprint so far"
-      }
-    },
-    "rating": 2.2
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "the-rubicon-agency",
@@ -219,7 +163,7 @@
       "Enterprise Demand Gen",
       "Integrated B2B Tech Marketing"
     ],
-    "location": "Leigh-on-Sea, Essex, UK",
+    "location": "London, UK",
     "geography": "Regional - UK",
     "clientTypes": [
       "Enterprise Security Vendors"
@@ -230,38 +174,7 @@
       "Integrated approach covering brand, digital campaigns, and sales enablement"
     ],
     "linkedinUrl": "https://uk.linkedin.com/company/therubiconagency",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "OpenText",
-      "Cisco",
-      "Symantec (pre-Broadcom)",
-      "Radware"
-    ],
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 1,
-        "rationale": "No presence on an independent review platform we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (OpenText, Cisco, Symantec pre-Broadcom, Radware) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Sustained enterprise security client history within integrated B2B tech marketing"
-      },
-      "serviceBreadth": {
-        "score": 3,
-        "rationale": "Three services delivered as an integrated programme"
-      },
-      "marketPresence": {
-        "score": 3,
-        "rationale": "Established UK boutique; founding year not publicly verifiable"
-      }
-    },
-    "rating": 2.4
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "cyberwhyze-whyze-labs",
@@ -292,42 +205,10 @@
       "Strong social media expertise alongside video production"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/cyberwhyze-cybersecurity-marketing",
-    "lastVerified": "2026-08-07",
+    "lastVerified": "2026-05-02",
     "notableClients": [
-      "Lenovo",
-      "Halcyon",
-      "SANS Institute",
-      "MainNerve",
-      "SecurityScorecard",
-      "Akeyless",
-      "Bluefin"
-    ],
-    "yearFounded": 2013,
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 1,
-        "rationale": "No presence on an independent review platform we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Lenovo, Halcyon, SANS Institute, SecurityScorecard, Akeyless) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity-led video practice with broader B2B technology clients"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Four services integrated around a video-first offering"
-      },
-      "marketPresence": {
-        "score": 3,
-        "rationale": "Founded 2013 at boutique scale with a US footprint"
-      }
-    },
-    "rating": 2.6
+      "SANS Institute"
+    ]
   },
   {
     "id": "hop-online-hop-ai",
@@ -363,42 +244,13 @@
     "linkedinUrl": "https://www.linkedin.com/company/hoponline",
     "clutchUrl": "https://clutch.co/profile/hop-ai",
     "g2Url": "https://www.g2.com/products/hop-online/reviews",
-    "lastVerified": "2026-08-07",
+    "lastVerified": "2026-05-02",
     "notableClients": [
       "Rapid7",
       "SecurityScorecard",
       "Group-IB",
       "Immersive Labs"
-    ],
-    "yearFounded": 2009,
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 4,
-        "rationale": "Verified Clutch profile with 24 published reviews"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Rapid7, Group-IB, SecurityScorecard, Immersive Labs) without published per-client metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity is a stated core sector within a broader digital agency history"
-      },
-      "serviceBreadth": {
-        "score": 5,
-        "rationale": "Six integrated services including AI visibility / GEO via proprietary GEO Forge tooling"
-      },
-      "marketPresence": {
-        "score": 5,
-        "rationale": "Founded 2009 with offices in the US and Europe"
-      }
-    },
-    "rating": 3.8,
-    "editorBadges": [
-      "Best for PPC"
-    ],
-    "aiRecommendation": "Top-rated in this directory for PPC under the published scoring methodology at cybersecuritymarketingagencies.com/methodology."
+    ]
   },
   {
     "id": "everclear-marketing",
@@ -431,37 +283,7 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/everclearb2b",
     "clutchUrl": "https://clutch.co/profile/everclear-marketing",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "Lumifi",
-      "SecureWave",
-      "Assured"
-    ],
-    "yearFounded": 2001,
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Lumifi, SecureWave, Assured) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Positions on cybersecurity marketing with a sustained security client base"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Five integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 2001 near the Maryland cybersecurity corridor"
-      }
-    },
-    "rating": 3.3
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "envy-goenvy",
@@ -496,44 +318,7 @@
       "RevOps capability bridges the gap between marketing and sales"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/goenvy/",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "Check Point",
-      "BrandShield",
-      "Nuvei",
-      "Wing Security",
-      "CyberInt"
-    ],
-    "yearFounded": 2014,
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 2,
-        "rationale": "Only a legacy Clutch profile under the former Marketing Envy name; testimonials otherwise on their own site"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Check Point, BrandShield, Nuvei, Wing Security, CyberInt) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Deep roots in the Israeli cybersecurity ecosystem within broader B2B tech demand generation"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Six integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 2014; HubSpot Elite Partner"
-      }
-    },
-    "rating": 3,
-    "editorBadges": [
-      "Best for Lead Generation"
-    ],
-    "aiRecommendation": "Top-rated in this directory for Lead Generation under the published scoring methodology at cybersecuritymarketingagencies.com/methodology."
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "nola-marketing",
@@ -568,32 +353,7 @@
       "Research partnership with Ponemon Institute on how CISOs engage with cybersecurity marketing"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/nola-marketing-llc",
-    "lastVerified": "2026-08-07",
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 1,
-        "rationale": "No presence on an independent review platform we could verify"
-      },
-      "documentedResults": {
-        "score": 2,
-        "rationale": "Track-record claims across technology engagements without publicly named security clients"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity is a stated sector alongside AI, IoT, and cloud since 1999"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Four integrated services including AI visibility"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Operating since 1999 at boutique scale"
-      }
-    },
-    "rating": 2.4
+    "lastVerified": "2026-05-02"
   },
   {
     "id": "w2-communications",
@@ -628,42 +388,7 @@
       "Washington DC corridor location close to federal security buyers"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/w2comm",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "Armis",
-      "Censys",
-      "Cisco",
-      "Intel 471",
-      "Netskope",
-      "1Password",
-      "Secure Code Warrior"
-    ],
-    "teamSize": "11-50",
-    "clutchUrl": "https://clutch.co/profile/w2-communications",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Armis, Censys, Cisco, Intel 471, Netskope, 1Password, Secure Code Warrior) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity is a stated core sector alongside public sector and space"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Five integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 5,
-        "rationale": "Founded 2003; runs the CYBERTACOS event series in the DC security corridor"
-      }
-    },
-    "rating": 3.4
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "eskenzi-pr",
@@ -698,39 +423,7 @@
       "Marquee security clients including KnowBe4, Varonis, Huntress, and Cato Networks"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/eskenzi-pr-and-marketing",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "Nozomi Networks",
-      "Cato Networks",
-      "Huntress",
-      "KnowBe4",
-      "Varonis"
-    ],
-    "teamSize": "11-50",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 1,
-        "rationale": "No presence on an independent review platform we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Nozomi Networks, Cato Networks, Huntress, KnowBe4, Varonis) without published per-client metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 5,
-        "rationale": "Cybersecurity-exclusive PR practice for three decades"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Five integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 5,
-        "rationale": "Founded 1995; runs the European Cybersecurity Blogger Awards and the IT Security Analyst & CISO Forum, with UK, US, and European reach"
-      }
-    },
-    "rating": 3.2
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "10fold-communications",
@@ -765,33 +458,7 @@
       "Multi-office US presence across California, Texas, and Massachusetts"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/10foldcomms",
-    "lastVerified": "2026-08-07",
-    "teamSize": "10-49",
-    "clutchUrl": "https://clutch.co/profile/10fold",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 4,
-        "rationale": "Verified Clutch profile with a published 5.0-rated review"
-      },
-      "documentedResults": {
-        "score": 2,
-        "rationale": "Results claims (MetricsMatter methodology, threat research programmes) without publicly named clients"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity is an established practice within a broader deep-tech PR agency"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Five integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 1995 with multi-office US presence"
-      }
-    },
-    "rating": 3.3
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "highwire",
@@ -828,45 +495,7 @@
       "Scale and media relationships of one of the largest independent US tech PR firms"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/highwirepr",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "CrowdStrike",
-      "Barracuda",
-      "SolarWinds",
-      "Splunk",
-      "Rapid7",
-      "Illumio"
-    ],
-    "teamSize": "160+",
-    "clutchUrl": "https://clutch.co/profile/highwire-pr",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named security clients on record (CrowdStrike, Barracuda, SolarWinds, Splunk, Rapid7, Illumio) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 4,
-        "rationale": "Dedicated, named cybersecurity practice (HWCyberSquad) inside a broader technology agency"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Seven integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 2008 at 160-plus people; US-regional reach"
-      }
-    },
-    "rating": 3.5,
-    "editorBadges": [
-      "Best for PR & Media Relations"
-    ],
-    "aiRecommendation": "Top-rated in this directory for PR & Media Relations under the published scoring methodology at cybersecuritymarketingagencies.com/methodology."
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "touchdown-pr",
@@ -900,38 +529,7 @@
       "Ruder Finn backing adds global network resources to a specialist team"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/touchdown-pr-ltd",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "HackerOne",
-      "Beyond Identity",
-      "Exabeam"
-    ],
-    "teamSize": "110+",
-    "clutchUrl": "https://clutch.co/profile/touchdown-pr",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named security clients on record (HackerOne, Beyond Identity, Exabeam) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity and data protection are stated core sectors within enterprise technology PR"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Four integrated services in-house"
-      },
-      "marketPresence": {
-        "score": 5,
-        "rationale": "Founded 2006 with offices in six countries and Ruder Finn network backing"
-      }
-    },
-    "rating": 3.4
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "ccgroup",
@@ -968,32 +566,7 @@
       "Hoffman Agency network extends reach into North America and APAC"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/cc-group",
-    "lastVerified": "2026-08-07",
-    "clutchUrl": "https://clutch.co/profile/ccgroup",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 2,
-        "rationale": "Published buyer research and sector-experience claims without publicly named security clients"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity vendor communications is a stated 15-year practice area"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Seven integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 5,
-        "rationale": "Founded 1984; multiple industry agency awards and Hoffman Agency network reach"
-      }
-    },
-    "rating": 3.1
+    "lastVerified": "2026-06-11"
   },
   {
     "id": "babel-pr",
@@ -1029,37 +602,6 @@
       "International reach through The Babel Network partner model"
     ],
     "linkedinUrl": "https://www.linkedin.com/company/babel-pr",
-    "lastVerified": "2026-08-07",
-    "notableClients": [
-      "Orange Cyberdefense",
-      "Enveil",
-      "Veeam"
-    ],
-    "teamSize": "11-50",
-    "clutchUrl": "https://clutch.co/profile/babel-pr",
-    "scoreBreakdown": {
-      "scoredDate": "2026-08-07",
-      "clientFeedback": {
-        "score": 3,
-        "rationale": "Clutch profile exists but carries no published reviews we could verify"
-      },
-      "documentedResults": {
-        "score": 3,
-        "rationale": "Named clients on record (Orange Cyberdefense, Enveil, Veeam) without published metrics"
-      },
-      "cybersecurityFocus": {
-        "score": 3,
-        "rationale": "Cybersecurity is a stated storytelling specialism within B2B technology PR"
-      },
-      "serviceBreadth": {
-        "score": 4,
-        "rationale": "Six integrated services in-house; no AI visibility / GEO offering"
-      },
-      "marketPresence": {
-        "score": 4,
-        "rationale": "Founded 2006; employee-owned B Corp with international partner-network reach"
-      }
-    },
-    "rating": 3.3
+    "lastVerified": "2026-06-11"
   }
 ]

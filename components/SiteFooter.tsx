@@ -39,15 +39,9 @@ export default function SiteFooter() {
           <p className="text-gray-500 font-mono text-sm mb-2">
             ■ CYBERSEC.DIR ■
           </p>
-          <p className="text-gray-600 text-xs uppercase tracking-wider font-bold mb-2">
+          <p className="text-gray-600 text-xs uppercase tracking-wider font-bold">
             &copy; {new Date().getFullYear()} Cybersecurity Marketing Agencies Directory
           </p>
-          <Link
-            href="/disclosure"
-            className="text-gray-600 hover:text-gray-400 transition-colors text-xs font-mono"
-          >
-            Ownership and disclosure
-          </Link>
         </div>
       </div>
     </footer>

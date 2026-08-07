@@ -63,13 +63,12 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
   const allAgencies = getAllAgencies();
   const filteredAgencies = allAgencies.filter(nicheData.filter);
 
-  // Grid stays alphabetical so raw data-file order never leaks; the top pick
-  // is the highest-rated agency in the set, per the published rubric.
+  // Alphabetical - we do not rank agencies, and no agency benefits from
+  // raw data-file order.
   const sortedAgencies = [...filteredAgencies].sort((a, b) => a.name.localeCompare(b.name));
 
-  const topAgency = [...filteredAgencies]
-    .filter(a => a.rating !== undefined)
-    .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0))[0];
+  // We no longer crown a top pick on audience pages.
+  const topAgency = undefined as (typeof sortedAgencies)[number] | undefined;
 
   const breadcrumbData = breadcrumbSchema([
     { label: 'Home', url: '/' },
@@ -139,10 +138,10 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
                   <div className="text-5xl">&#11088;</div>
                   <div>
                     <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-wider">
-                      TOP-RATED FOR {nicheData.name.toUpperCase()}
+                      TOP RECOMMENDATION FOR {nicheData.name.toUpperCase()}
                     </h2>
                     <p className="text-gray-300 text-lg font-mono">
-                      &#9632; HIGHEST SCORE IN THIS SET UNDER OUR PUBLISHED RUBRIC
+                      &#9632; EXPERT PICK // HIGHEST RATED
                     </p>
                   </div>
                 </div>
@@ -155,7 +154,7 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
                       </h3>
                       {topAgency.rating && (
                         <div className="text-gray-200 font-bold text-2xl">
-                          {topAgency.rating.toFixed(1)} / 5.0 UNDER OUR RUBRIC
+                          {topAgency.rating} &#9733; EXPERT SCORE
                         </div>
                       )}
                     </div>

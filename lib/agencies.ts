@@ -10,8 +10,7 @@ export function getAllAgencies(): Agency[] {
 // Featured Partners (disclosed paid placements) first, then everyone else -
 // each group alphabetical so no agency benefits from raw data-file order.
 // With no featured agencies this is a plain alphabetical listing. A featured
-// placement is a labelled paid boost only: it never affects an agency's
-// score, badges, or channel picks, which come from lib/scoring.ts.
+// placement is a labelled paid boost, not a ranking or a recommendation.
 export function getAllAgenciesFeaturedFirst(): Agency[] {
   const byName = (a: Agency, b: Agency) => a.name.localeCompare(b.name);
   return [

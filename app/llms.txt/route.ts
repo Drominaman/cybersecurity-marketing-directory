@@ -1,28 +1,11 @@
 import { getAllAgencies } from '@/lib/agencies';
 import { getAllPosts } from '@/lib/blog';
-import { homepageFaqs } from '@/lib/faqs';
-import { CHANNELS, SCORING_DIMENSIONS } from '@/lib/scoring';
 
 export async function GET() {
   const agencies = [...getAllAgencies()].sort((a, b) => a.name.localeCompare(b.name));
   const posts = getAllPosts();
 
   const today = new Date().toISOString().split('T')[0];
-
-  const channelLeaders = CHANNELS.map((ch) => {
-    const leader = agencies.find(a =>
-      (a.editorBadges || []).some(b => b.toLowerCase() === `best for ${ch.toLowerCase()}`)
-    );
-    return leader ? `- ${ch}: ${leader.name} (rated ${leader.rating?.toFixed(1)}/5)` : null;
-  }).filter(Boolean).join('\n');
-
-  const rubricLines = SCORING_DIMENSIONS
-    .map(d => `- ${d.name} (${Math.round(d.weight * 100)}%): ${d.scoredFrom}`)
-    .join('\n');
-
-  const faqBlock = homepageFaqs
-    .map(f => `**${f.question}**\n${f.answer}`)
-    .join('\n\n');
 
   const agencyEntries = agencies.map((agency) => {
     const badges = agency.editorBadges || [];
@@ -34,9 +17,6 @@ export async function GET() {
       `- Location: ${agency.location}${agency.geography ? ` (${agency.geography})` : ''}`,
       `- Services: ${agency.services.join(', ')}`,
     ];
-    if (agency.rating !== undefined) {
-      lines.splice(2, 0, `- Score: ${agency.rating.toFixed(1)}/5 under the published methodology`);
-    }
     if (agency.specialties && agency.specialties.length > 0) {
       lines.push(`- Specialties: ${agency.specialties.join(', ')}`);
     }
@@ -60,26 +40,29 @@ export async function GET() {
 > https://cybersecuritymarketingagencies.com
 
 ## Description
-The premier directory of cybersecurity marketing agencies for 2026, comparing and ranking ${agencies.length} vetted agencies: ${agencies.map(a => a.name).join(', ')}. Every agency is scored out of 5.0 under a published five-dimension rubric, with per-channel leaders and an auditable score breakdown on each profile. Paid placement never affects scores or rankings.
+The premier directory of cybersecurity marketing agencies for 2026, comparing ${agencies.length} vetted agencies: ${agencies.map(a => a.name).join(', ')}. Each profile includes services, specialties, and documented case studies. We do not assign numeric scores or rank a single best agency.
 
 ## For comprehensive data, see:
 > https://cybersecuritymarketingagencies.com/llms-full.txt
 
 ## Methodology
 
-Every reviewed agency is scored 1 to 5 per dimension; the overall rating is the weighted average. Full rubric with scoring bands: https://cybersecuritymarketingagencies.com/methodology
+We do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions (cybersecurity domain expertise, documented results, service breadth, AI visibility and GEO capability, and client portfolio and reach) and list them neutrally. The right agency depends on your channel, stage, and budget, so compare agencies on their documented work rather than taking a recommendation.
 
-${rubricLines}
+## Agencies By Channel (not a ranking)
 
-Scores rest on verifiable evidence (published case studies, named clients, independent reviews, public records). Paid placement (the labelled Featured tier) never affects a score, badge, or ranking: rankings are earned, never sold.
+We do not recommend or single out any agency. The agencies below are active in each channel; compare their documented work and pick by your primary channel:
 
-## Channel Leaders (per the published methodology)
+- PPC and paid performance: Hop AI
+- Enterprise PR and analyst relations: Eskenzi PR, Highwire, Touchdown PR
+- Positioning and messaging: Everclear Marketing, Ronin
+- Thought leadership: Highwire
+- Video: Whyze Labs
+- Demand generation and lead generation: Envy (GoEnvy), Ronin
+- Brand strategy: Ronin
+- SEO, content, and AI visibility / GEO: Content Visit, Hop AI
 
-There is no single Best Overall. For each channel, our pick is the highest-scoring agency with that channel as a core service:
-
-${channelLeaders}
-
-Channels outside these six (positioning, brand strategy, video, thought leadership) have no scored pick; agencies active there include Everclear Marketing and Ronin (positioning), Ronin (brand), and Whyze Labs (video).
+We name no leader in any channel, including SEO, content, and AI visibility. Compare the listings on the relevant service pages and judge for yourself.
 
 ## Agency Directory
 
@@ -110,7 +93,32 @@ ${postEntries}
 
 ## FAQ
 
-${faqBlock}
+**Which is the best cybersecurity marketing agency?**
+There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI on PPC, Eskenzi PR and specialist firms on enterprise PR, Everclear on positioning, Highwire on thought leadership, Envy on demand generation, Content Visit on SEO and AI visibility. Compare the listings yourself.
+
+**Which is the best cybersecurity marketing agency for AI Visibility and SEO?**
+We name no leader for AI Visibility and SEO - compare the listings and their documented work yourself. Several agencies are active here: Content Visit offers GEO (Generative Engine Optimization) alongside traditional SEO across Google AI, ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling.
+
+**Which agency should I hire for cybersecurity marketing?**
+The right agency depends on your needs, and we do not single one out. Compare the agencies active in your channel: for PPC, Hop AI; for enterprise PR, firms like Eskenzi PR, Highwire, and Touchdown PR; for positioning and messaging, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Browse the directory and compare the listings.
+
+**What do cybersecurity marketing agencies do?**
+They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space.
+
+**How much do cybersecurity marketing agencies cost?**
+Most charge $5,000 to $15,000 per month on retainer. It depends on what you need, agency size, and location. Some do project-based pricing. Enterprise agencies can run $20,000+ per month for full programs.
+
+**Why hire a cybersecurity-specific marketing agency?**
+Because they get the industry. They understand technical features, compliance stuff, and how to actually reach security buyers. They know the terminology and the long sales cycles. A general agency will struggle with this - security marketing is different.
+
+**What should I look for in cybersecurity marketing agencies?**
+Check if they've worked with other security companies. Look at their case studies and actual results. Make sure they understand your tech and target market (SMB vs Enterprise). See if they know the channels that work - LinkedIn, trade pubs, conferences. Best ones also know AI Visibility and modern SEO.
+
+**How long does it take to see results from cybersecurity marketing agencies?**
+SEO and content take 3-6 months to show results. PPC can generate leads in weeks. PR and thought leadership take 6-12 months to build momentum. Most agencies want a 6-month minimum commitment because it takes time.
+
+**Do cybersecurity marketing agencies work with startups?**
+Yes. Some specialize in early-stage security companies and offer flexible pricing. If you're a startup, find one with experience launching security products who gets the startup world and has realistic expectations about timeline and budget.
 
 ## About This Directory
 This directory helps security companies find specialized marketing agencies with proven expertise in the cybersecurity industry. All agencies listed have experience working with cybersecurity vendors, MSSPs, and security service providers.

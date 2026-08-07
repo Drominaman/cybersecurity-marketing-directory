@@ -103,11 +103,11 @@ export default function Home() {
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <TldrSummary points={[
-          `${allAgencies.length} vetted cybersecurity marketing agencies scored and ranked for 2026 under a published methodology.`,
-          'Current channel picks: Content Visit for SEO, AI Visibility, and Content Marketing (4.9/5); Hop AI for PPC (3.8/5); Highwire for PR and Media Relations (3.5/5); Envy for Lead Generation (3.0/5).',
-          `All agencies, alphabetically: ${allAgencies.map(a => a.name).join(', ')}.`,
+          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
+          `Agencies listed alphabetically (not ranked): ${allAgencies.map(a => a.name).join(', ')}.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
-          'Every score has an auditable breakdown on the agency profile. Paid placement never affects scores or rankings.',
+          'Every agency reviewed on domain expertise, documented results, and service breadth.',
+          'We do not rank or recommend agencies. Compare on documented results and verified profiles.',
         ]} />
 
         {/* Client Island: Search/Filter + Agency Grid */}

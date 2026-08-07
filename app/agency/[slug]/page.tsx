@@ -182,16 +182,11 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
 
               {agency.rating && (
                 <div className="border-4 border-white bg-black px-8 py-4 text-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
-                  <div className="text-4xl font-black text-white">{agency.rating.toFixed(1)}</div>
-                  <div className="text-xs text-gray-300 uppercase tracking-wider font-bold">SCORE / 5.0</div>
+                  <div className="text-4xl font-black text-white">{agency.rating}</div>
+                  <div className="text-xs text-gray-300 uppercase tracking-wider font-bold">RATING</div>
                 </div>
               )}
             </div>
-            {agency.lastVerified && (
-              <p className="mt-4 text-gray-500 text-xs font-mono uppercase tracking-wider">
-                Last verified: {agency.lastVerified}
-              </p>
-            )}
           </div>
         </header>
 
@@ -243,7 +238,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     Editor&apos;s Choice
                   </h2>
                   <p className="text-white text-lg mb-4">
-                    Under our <Link href="/methodology" className="underline hover:text-gray-300">published scoring methodology</Link>, {agency.name} is our current pick for:
+                    We picked {agency.name} as best for:
                   </p>
                   <ul className="space-y-2 text-white text-base">
                     {badges.map(badge => (
@@ -254,38 +249,6 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     ))}
                   </ul>
                 </div>
-              </div>
-            </div>
-          )}
-
-          {/* Score breakdown - the working behind the rating */}
-          {agency.scoreBreakdown && (
-            <div className="bg-gray-900 border-2 border-white p-8 mb-12">
-              <h2 className="text-2xl font-black text-white mb-2 uppercase tracking-wider">
-                ■ Score Breakdown
-              </h2>
-              <p className="text-gray-400 text-sm mb-6">
-                Scored {agency.scoreBreakdown.scoredDate} against our{' '}
-                <Link href="/methodology" className="underline hover:text-gray-300">published rubric</Link>.
-                Paid placement never affects any score.
-              </p>
-              <div className="space-y-4">
-                {([
-                  ['Verified client feedback', '30%', agency.scoreBreakdown.clientFeedback],
-                  ['Documented results', '25%', agency.scoreBreakdown.documentedResults],
-                  ['Cybersecurity focus', '20%', agency.scoreBreakdown.cybersecurityFocus],
-                  ['Service breadth and delivery', '15%', agency.scoreBreakdown.serviceBreadth],
-                  ['Market presence and longevity', '10%', agency.scoreBreakdown.marketPresence],
-                ] as const).map(([name, weight, dim]) => (
-                  <div key={name} className="border-l-4 border-white pl-4">
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-white font-black uppercase text-sm">{name}</span>
-                      <span className="text-gray-500 font-mono text-xs">{weight}</span>
-                      <span className="text-white font-mono font-black ml-auto">{dim.score}/5</span>
-                    </div>
-                    <p className="text-gray-300 text-sm mt-1">{dim.rationale}</p>
-                  </div>
-                ))}
               </div>
             </div>
           )}

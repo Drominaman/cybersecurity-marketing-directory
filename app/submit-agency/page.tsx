@@ -99,13 +99,13 @@ export default function SubmitAgencyPage() {
               LIST YOUR CYBERSECURITY MARKETING AGENCY
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl mb-2">
-              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Submissions are paid because evaluation is real work: we research your client base, verify your claims and profiles, and maintain your data after you are live. The fee buys the evaluation, never the outcome - see <Link href="/methodology" className="text-white underline hover:text-gray-300">our methodology</Link> for exactly how scoring and listing decisions are made. Rankings are earned under our published rubric, never sold.
+              We are a curated directory of cybersecurity marketing agencies, used by founders, CMOs and security buyers researching specialist partners. Submissions are paid because evaluation is real work: we research your client base, verify your claims and profiles, and maintain your data after you are live. The fee buys the evaluation, never the outcome - see <Link href="/methodology" className="text-white underline hover:text-gray-300">our methodology</Link> for exactly how listing decisions are made. We do not rank or recommend agencies.
             </p>
           </div>
 
           <TldrSummary points={[
             'Two tiers: Verified ($499/year) and Featured ($1,499/year). The fee covers our evaluation work, not the outcome.',
-            'Scores, badges, and channel picks are earned under our published methodology and cannot be bought. Paid tiers buy a listing and labelled placement only.',
+            'We do not rank or recommend agencies. Paid tiers buy a listing and placement, never a recommendation.',
             'Rejected submissions receive a full refund. See our methodology for how evaluation works.',
             'Submit below or use our contact form to discuss. Approval takes 5 to 7 business days.',
           ]} />
@@ -141,7 +141,7 @@ export default function SubmitAgencyPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-white">&#9632;</span>
-                    <span>Scored under the same published rubric as every other agency</span>
+                    <span>Listed neutrally, the same as any other agency</span>
                   </li>
                 </ul>
                 <div className="mt-auto text-xs font-mono text-gray-500 uppercase tracking-wider">
@@ -224,7 +224,7 @@ export default function SubmitAgencyPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-gray-500">&#9633;</span>
-                    <span className="text-gray-500">No score, badge, or channel pick included (those are earned, never sold)</span>
+                    <span className="text-gray-500">No recommendation or ranking (we do not rank agencies)</span>
                   </li>
                 </ul>
                 <Link
@@ -244,14 +244,13 @@ export default function SubmitAgencyPage() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Listings are paid. Rankings are not.</strong> Verified and Featured tiers buy you a place in the directory and labelled placement. Scores, &quot;Best for&quot; badges, and channel picks come only from our{' '}
-                <Link href="/methodology" className="text-white underline hover:text-gray-300">published scoring rubric</Link>, applied identically to every agency. There is no way to buy one, at any price.
+                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> Verified and Featured tiers buy you a place in the directory and neutral placement. We do not rank or recommend agencies at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy or to earn. Every agency is listed neutrally and compared by the reader.
               </p>
               <p>
-                <strong className="text-white">What this means for buyers:</strong> when you see a score or a &quot;Best for&quot; badge, it is an editorial conclusion you can audit against the rubric and the evidence on the agency&apos;s profile. When you see a Sponsored label, that is a paid placement, disclosed accordingly.
+                <strong className="text-white">What this means for buyers:</strong> you will not see us crown a winner or tag an agency as a pick. When you see an agency in the directory or a roundup post, that is a listing, disclosed accordingly, not a recommendation from us.
               </p>
               <p>
-                <strong className="text-white">What this means for agencies:</strong> the paid tiers fund the directory and surface you to buyers. They do not buy a score or a badge. The way to rank higher here is the same for everyone: document verifiable results and gather independent reviews, then tell us.
+                <strong className="text-white">What this means for agencies:</strong> the paid tiers exist to fund the directory and surface you to buyers in a neutral listing. They do not buy a recommendation, because we do not give one to anyone.
               </p>
             </div>
           </div>
@@ -462,7 +461,7 @@ export default function SubmitAgencyPage() {
               <div>
                 <h3 className="text-lg font-black text-white mb-2">Can I buy a recommendation or a top ranking?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  No. You can earn one, but you cannot buy one. Scores and &quot;Best for&quot; badges come only from our <Link href="/methodology" className="text-white underline hover:text-gray-300">published scoring rubric</Link>: verified reviews, documented results, cybersecurity focus, service breadth, and market presence. Paid tiers buy a listing and labelled placement, never a score. The way to rank higher is to document verifiable results and gather independent reviews. That is the only way the directory stays useful to buyers.
+                  No, and you cannot earn one either, because we do not rank or recommend agencies. There is no Best for SEO designation, no &quot;Top Pick&quot; label, and no editor&apos;s badge for sale or for award. The directory lists every agency neutrally; paid tiers buy a listing and placement, never a recommendation. That is the only way the directory stays useful to buyers.
                 </p>
               </div>
               <div>
@@ -474,7 +473,7 @@ export default function SubmitAgencyPage() {
               <div>
                 <h3 className="text-lg font-black text-white mb-2">Do you offer custom packages or sponsorship?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Yes, for a clearly disclosed sponsor slot on a category page or content partnerships. Sponsorship is labelled advertising and never changes any agency&apos;s score, badges, or position in our rankings. <Link href="/contact?reason=sponsorship" className="text-white underline hover:text-gray-300">Contact us</Link> to discuss.
+                  Yes, for a clearly disclosed sponsor slot on a category page or content partnerships. Sponsorship is labelled advertising and does not change how any agency is listed or compared, because we do not rank or recommend agencies. <Link href="/contact?reason=sponsorship" className="text-white underline hover:text-gray-300">Contact us</Link> to discuss.
                 </p>
               </div>
             </div>
