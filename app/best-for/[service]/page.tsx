@@ -79,8 +79,8 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     return a.name.localeCompare(b.name);
   });
 
-  // We no longer crown a leader in any category, so no agency is featured
-  // as a top pick - the page shows the listings only.
+  // The channel pick is the top-rated agency holding the matching editor
+  // badge, assigned per the published rubric in lib/scoring.ts.
   const topAgency = sortedAgencies.find(hasCategoryBadge);
 
   const breadcrumbData = breadcrumbSchema([
@@ -155,10 +155,10 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                   <div className="text-5xl">⭐</div>
                   <div>
                     <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-wider">
-                      TOP RECOMMENDATION FOR {serviceName.toUpperCase()}
+                      OUR PICK FOR {serviceName.toUpperCase()}
                     </h2>
                     <p className="text-gray-300 text-lg font-mono">
-                      ■ EXPERT PICK // HIGHEST RATED
+                      ■ HIGHEST-SCORING AGENCY WITH {serviceName.toUpperCase()} AS A CORE SERVICE
                     </p>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                       </h3>
                       {topAgency.rating && (
                         <div className="text-gray-200 font-bold text-2xl">
-                          {topAgency.rating} ★ EXPERT SCORE
+                          {topAgency.rating.toFixed(1)} / 5.0 UNDER OUR RUBRIC
                         </div>
                       )}
                     </div>
@@ -211,6 +211,11 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                     </Link>
                   </div>
                 </div>
+                <p className="mt-4 text-gray-500 text-xs">
+                  This pick is an editorial conclusion from our{' '}
+                  <Link href="/methodology" className="underline hover:text-gray-300">published scoring methodology</Link>.
+                  Paid placement never affects scores, badges, or picks.
+                </p>
               </div>
             </div>
           )}

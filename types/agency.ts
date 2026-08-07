@@ -23,7 +23,8 @@ export interface Agency {
   caseStudies?: CaseStudy[];
   reviews?: Review[];
   reviewRating?: number; // aggregate star rating from the cited source
-  rating?: number;
+  rating?: number; // overall score out of 5, computed from scoreBreakdown per lib/scoring.ts
+  scoreBreakdown?: ScoreBreakdown;
   clientTypes?: string[];
   awards?: Award[]; // Industry awards and nominations
   lastVerified?: string; // ISO date string indicating when the entry was last fact-checked
@@ -39,6 +40,17 @@ export interface Agency {
   g2Url?: string;
   designRushUrl?: string;
   reviewsPageUrl?: string; // agency's own reviews/testimonials page, if published
+}
+
+// Per-dimension scores (1-5) under the published rubric in lib/scoring.ts,
+// each with a one-line rationale naming the evidence it rests on.
+export interface ScoreBreakdown {
+  clientFeedback: { score: number; rationale: string };
+  documentedResults: { score: number; rationale: string };
+  cybersecurityFocus: { score: number; rationale: string };
+  serviceBreadth: { score: number; rationale: string };
+  marketPresence: { score: number; rationale: string };
+  scoredDate: string; // ISO date of the assessment
 }
 
 export interface Award {

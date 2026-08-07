@@ -17,7 +17,7 @@ const agencyNames = getAllAgencies().map(a => a.name).sort((a, b) => a.localeCom
 
 export const metadata: Metadata = {
   title: "Cybersecurity Marketing Agencies 2026 - Best SEO & AI Visibility Experts",
-  description: `2026 cybersecurity marketing agencies directory comparing ${agencyNames.length} vetted agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR: ${agencyNames.join(", ")}. Named clients, documented case studies, and a published methodology. We do not rank or recommend a single best agency.`,
+  description: `2026 cybersecurity marketing agencies directory ranking ${agencyNames.length} vetted agencies for AI Visibility, SEO, GEO, content marketing, PPC, and PR: ${agencyNames.join(", ")}. Scored under a published methodology with per-channel leaders; paid placement never affects rankings.`,
   authors: [{ name: "Cybersecurity Marketing Agencies", url: "https://cybersecuritymarketingagencies.com" }],
   openGraph: {
     title: "Cybersecurity Marketing Agencies - Find the Best SEO & AI Visibility Experts",

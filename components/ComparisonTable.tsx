@@ -65,6 +65,22 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
             {/* ── OVERVIEW ── */}
             <SectionHeader label="Overview" colSpan={colCount} />
 
+            {/* Score */}
+            {agencies.some(a => a.rating !== undefined) && (
+              <tr className="hover:bg-gray-800">
+                <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">
+                  Score
+                </td>
+                {agencies.map((agency) => (
+                  <td key={agency.id} className="px-6 py-4 text-sm text-center">
+                    <span className="font-mono font-black text-white">
+                      {agency.rating !== undefined ? `${agency.rating.toFixed(1)}/5` : '-'}
+                    </span>
+                  </td>
+                ))}
+              </tr>
+            )}
+
             {/* Location */}
             <tr className="hover:bg-gray-800">
               <td className="px-6 py-4 text-sm font-bold text-white uppercase sticky left-0 bg-gray-900 z-10">

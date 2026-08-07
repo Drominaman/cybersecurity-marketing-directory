@@ -1,72 +1,20 @@
 import Link from 'next/link';
 import { getAllAgencies } from '@/lib/agencies';
+import { bestAgencyFaqs } from '@/lib/faqs';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best Cybersecurity Marketing Agency 2026: How to Compare and Choose',
-  description: 'There is no single best cybersecurity marketing agency - the right one depends on your channel, stage, and budget. We do not crown a winner: we list agencies neutrally across SEO, PPC, enterprise PR, positioning, and thought leadership, assessed against a published methodology, so you can compare them on their merits.',
+  title: 'Best Cybersecurity Marketing Agency 2026: Ranked by Channel',
+  description: 'The best cybersecurity marketing agency by channel, ranked under a published scoring methodology: Content Visit for SEO, AI visibility, and content (4.9/5); Hop AI for PPC (3.8/5); Highwire for PR (3.5/5); Envy for lead generation. Every score has an auditable breakdown, and paid placement never affects rankings.',
   alternates: {
     canonical: 'https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency',
   },
 };
 
-const faqs = [
-  {
-    question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI on PPC and paid performance; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Envy on demand generation; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
-  },
-  {
-    question: "How do I choose the right cybersecurity marketing agency?",
-    answer: "Start with your biggest gap, not an overall ranking. Identify your primary channel (organic search, paid media, PR, positioning, demand generation), then shortlist the agencies active in that channel and compare two or three. Weigh stage and budget next: seed-stage companies need compounding organic value or fast paid pipeline on a small retainer, while enterprises need analyst relations and global reach. Finally, verify each agency's cybersecurity-specific case studies with named clients and concrete metrics. See our neutral selection framework at /blog/choosing-cybersecurity-marketing-agency."
-  },
-  {
-    question: "What makes a cybersecurity marketing agency different from a general B2B agency?",
-    answer: "Specialised cybersecurity marketing agencies understand security technology, threat landscapes, compliance frameworks (GDPR, NIS2, SOC 2, ISO 27001, HIPAA), and how to reach CISOs, security engineers, and technical buyers. They write accurate content about zero-trust, EDR, SIEM, SASE, and threat intelligence without needing translation. They understand enterprise security sales cycles (often 9-18 months), the analyst ecosystem (Gartner Magic Quadrant, Forrester Wave), and which publications and conferences actually reach security buyers. General B2B agencies typically produce generic content that fails technical review, miss the right personas, and struggle with the extended sales cycles typical in security procurement. For more detail, see our guide on why specialised cybersecurity marketing agencies outperform generalists."
-  },
-  {
-    question: "How much do cybersecurity marketing agencies cost?",
-    answer: "Most specialised cybersecurity marketing agencies charge between $5,000 and $15,000 per month on retainer, with enterprise programmes running $20,000+ per month. A few boutique programmes start lower, around $3,000 per month. Many agencies quote on request rather than publishing rates. Project-based pricing is available for specific deliverables like brand positioning, GEO audits, or content sprints. Pricing varies with scope, number of channels, and whether you need multi-region coverage (UK, US, DACH). For a full breakdown see our guide at /blog/how-much-do-cybersecurity-marketing-agencies-cost."
-  },
-  {
-    question: "How long does cybersecurity marketing take to show results?",
-    answer: "It depends on the channel mix. Paid media (PPC, LinkedIn, paid search) can produce MQLs within 4-8 weeks. SEO and organic content typically need 3-6 months to move rankings and 6-12 months for compounding traffic gains. PR and analyst relations build reputation over 6-12 months. AI Visibility (GEO) citations in ChatGPT, Claude, and Perplexity can appear within 4-12 weeks once entity structure and citations are in place. Integrated programmes deliver the strongest compounding effect because earned media, organic rankings, and AI citations reinforce each other."
-  },
-  {
-    question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
-    answer: "We do not crown a category leader for AI Visibility and GEO (Generative Engine Optimisation) - we leave it to you to compare. Several agencies offer GEO: Content Visit audits and optimises for Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini, covering citation tracking, entity building, structured data, and placement on AI-referenced publications; Hop AI offers GEO through its proprietary GEO Forge technology, particularly alongside paid media. Compare the AI visibility listings and their documented work yourself."
-  },
-  {
-    question: "Which cybersecurity marketing agency is best for SEO?",
-    answer: "We do not crown a category leader for cybersecurity SEO - compare the listings yourself. Several agencies are active here: Content Visit works exclusively in cybersecurity and documents organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search; Hop AI combines SEO with paid performance. The right pick depends on whether you need depth and technical accuracy or an integrated paid and organic programme."
-  },
-  {
-    question: "Which agency is best for cybersecurity PPC advertising?",
-    answer: "We do not crown a single leader. Hop AI has documented cybersecurity PPC and paid-performance work, with proprietary GEO Forge tooling and clients like Rapid7 and SecurityScorecard. If paid acquisition is your primary growth channel, compare their documented results and tooling against the other agencies active in the channel."
-  },
-  {
-    question: "Which agency is best for cybersecurity PR and analyst relations?",
-    answer: "We do not crown a single leader. Agencies active in enterprise cybersecurity PR include Eskenzi PR (founded 1995, clients including Nozomi Networks, Cato Networks, and KnowBe4), Highwire (dedicated cybersecurity practice, clients including CrowdStrike and Splunk), and Touchdown PR (transatlantic, offices across the UK, US, and Europe). For UK and European B2B PR, The Rubicon Agency is also worth comparing. Compare their coverage and documented work in our cybersecurity PR agency guide."
-  },
-  {
-    question: "Which agency is best for cybersecurity startups vs enterprise?",
-    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Hop AI), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, multi-region PR (firms like Eskenzi PR and Touchdown PR), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
-  },
-  {
-    question: "How should I evaluate an agency's documented results?",
-    answer: "Weigh specificity and verifiability over volume. Named clients with concrete metrics - traffic growth percentages, cost per MQL, pipeline contribution, media placements - tell you far more than vague claims like 'significant growth' or 'industry-leading results'. Ask for cybersecurity-specific case studies, then verify them through references, Clutch reviews, and LinkedIn. An agency that cannot name clients or quantify outcomes is selling a promise, not a track record."
-  },
-  {
-    question: "What services do cybersecurity marketing agencies offer?",
-    answer: "The strongest agencies offer integrated programmes rather than isolated tactics. Common services include SEO, content marketing, PR and media relations, lead and demand generation, PPC, brand strategy, and increasingly AI Visibility (GEO). No single agency leads every service, and we do not crown one: our directory lists each agency's services and documented work so you can match capability to your priorities and budget."
-  },
-  {
-    question: "Why hire a specialised cybersecurity marketing agency instead of a general agency?",
-    answer: "Specialised agencies understand security technology, compliance requirements (GDPR, NIS2, SOC 2), threat landscapes, and how to reach CISOs and security decision-makers. General agencies typically struggle with technical accuracy, reaching the right buyer personas, and understanding long enterprise security sales cycles. Specialised agencies also have existing relationships with security journalists, understand industry conferences, and know which channels actually convert for security lead generation."
-  }
-];
+const faqs = bestAgencyFaqs;
 
 export default function BestCybersecurityMarketingAgency() {
   const agencies = getAllAgencies();
@@ -130,11 +78,12 @@ export default function BestCybersecurityMarketingAgency() {
               BEST CYBERSECURITY MARKETING AGENCY
             </h1>
             <p className="text-gray-400 font-mono text-xl">
-              ■ THERE IS NO SINGLE BEST - COMPARE AGENCIES ON THEIR MERITS
+              ■ RANKED BY CHANNEL UNDER A PUBLISHED SCORING METHODOLOGY
             </p>
             <p className="text-gray-500 text-sm font-mono mt-4">
-              Agencies are assessed against our{' '}
+              Every score is auditable against our{' '}
               <Link href="/methodology" className="text-white underline hover:text-gray-300">published methodology</Link>.
+              Paid placement never affects rankings.
             </p>
           </div>
         </header>
@@ -143,11 +92,11 @@ export default function BestCybersecurityMarketingAgency() {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
           <TldrSummary points={[
-            'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
-            'We do not crown a single best agency or category leader. We list agencies neutrally and let you compare them on documented results.',
-            'Different agencies focus on different channels: PPC (Hop AI), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), demand generation (Envy), SEO and AI visibility (Content Visit and others).',
+            'There is no single best overall: we rank per channel under a published scoring methodology, and every score has an auditable breakdown.',
+            'Current channel picks: Content Visit for SEO, AI Visibility, and Content Marketing (4.9/5); Hop AI for PPC (3.8/5); Highwire for PR and Media Relations (3.5/5); Envy for Lead Generation (3.0/5).',
+            'Scores weigh verified client feedback (30%), documented results (25%), cybersecurity focus (20%), service breadth (15%), and market presence (10%). Paid placement never affects a score or a pick.',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
-            'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
+            'Use the channel table below to find the pick for your primary channel, then compare it against the other agencies active there.',
           ]} />
 
           {/* Quick Answer */}
@@ -158,24 +107,24 @@ export default function BestCybersecurityMarketingAgency() {
                 <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-wider">
                   QUICK ANSWER
                 </h2>
-                <p className="text-gray-400 font-mono">■ THE HONEST ANSWER: IT DEPENDS ON YOUR NEED</p>
-                <p className="text-gray-500 text-xs mt-1">We do not rank or recommend any agency. See our <Link href="/methodology" className="underline hover:text-gray-300">methodology</Link>.</p>
+                <p className="text-gray-400 font-mono">■ THE HONEST ANSWER: IT DEPENDS ON YOUR CHANNEL, AND WE RANK EACH ONE</p>
+                <p className="text-gray-500 text-xs mt-1">Rankings follow our <Link href="/methodology" className="underline hover:text-gray-300">published methodology</Link>. Paid placement never affects them.</p>
               </div>
             </div>
             <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
               <p>
-                <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and list them neutrally instead of crowning a winner.
+                <strong className="text-white">There is no single best cybersecurity marketing agency overall, but there is a best for your channel.</strong> Under our published five-dimension scoring rubric, the current picks are: <strong className="text-white">Content Visit</strong> for SEO, AI visibility, and content marketing (rated 4.9/5); <strong className="text-white">Hop AI</strong> for PPC and paid performance (3.8/5); <strong className="text-white">Highwire</strong> for PR and media relations (3.5/5), with Touchdown PR, W2 Communications, and Eskenzi PR close behind; and <strong className="text-white">Envy</strong> for lead generation (3.0/5).
               </p>
               <p>
-                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> on PPC and paid performance, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
+                Each pick is the highest-scoring agency with that channel as a core service, and each score has a published breakdown on the agency&apos;s profile: verified client feedback, documented results, cybersecurity focus, service breadth, and market presence, with exact weights on our <Link href="/methodology" className="text-white underline hover:text-gray-300">methodology page</Link>. Agencies without a pick are not also-rans - Everclear leads on positioning and messaging, Whyze Labs on video, Ronin on brand - those channels sit outside our six scored pick categories.
               </p>
               <p>
-                This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
+                This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in August 2026.
               </p>
               <p>
-                Start with the category that matches your biggest gap, then use the category-leaders table below. For a wider market view, browse our ranked roundup of the{' '}
+                Start with the channel that matches your biggest gap, then use the channel table below. For a wider market view, browse our ranked roundup of the{' '}
                 <Link href="/blog/best-cybersecurity-marketing-agencies-2026" className="text-white underline hover:text-gray-300">best cybersecurity marketing agencies of 2026</Link>
-                {' '}or the neutral framework in our guide to{' '}
+                {' '}or the framework in our guide to{' '}
                 <Link href="/blog/choosing-cybersecurity-marketing-agency" className="text-white underline hover:text-gray-300">choosing a cybersecurity marketing agency</Link>.
               </p>
             </div>
@@ -259,63 +208,68 @@ export default function BestCybersecurityMarketingAgency() {
           {/* Comparison Table */}
           <section className="bg-gray-900 border-4 border-white p-10 mb-12">
             <h2 className="text-3xl font-black text-white mb-4 uppercase tracking-wider">
-              ■ AGENCIES BY CHANNEL
+              ■ RANKINGS BY CHANNEL
             </h2>
             <p className="text-gray-300 text-base leading-relaxed mb-8">
-              This is a quick map of which agencies are active in each channel, not a ranking. We do not crown a leader or single out any agency: compare the listed agencies on their documented work and pick by your primary channel.
+              Our pick for each channel is the highest-scoring agency with that channel as a core service, under the{' '}
+              <Link href="/methodology" className="text-white underline hover:text-gray-300">published rubric</Link>. Channels outside our six scored pick categories show the agencies active there instead.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b-4 border-white">
                     <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Channel</th>
-                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Agencies active here</th>
+                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Our pick</th>
+                    <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">Also active here</th>
                     <th className="px-3 py-3 text-left text-white font-black uppercase text-sm">What to look at</th>
                   </tr>
                 </thead>
                 <tbody className="text-white">
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">SEO &amp; Content</td>
-                    <td className="px-3 py-3">Content Visit, Hop AI</td>
+                    <td className="px-3 py-3 font-black">Content Visit (4.9)</td>
+                    <td className="px-3 py-3">Hop AI, NOLA Marketing</td>
                     <td className="px-3 py-3">Documented organic results, high-volume content - compare the <Link href="/best-for/seo" className="underline hover:text-gray-300">SEO listings</Link></td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">AI Visibility &amp; GEO</td>
-                    <td className="px-3 py-3">Content Visit, Hop AI</td>
+                    <td className="px-3 py-3 font-black">Content Visit (4.9)</td>
+                    <td className="px-3 py-3">Hop AI, NOLA Marketing</td>
                     <td className="px-3 py-3">GEO across ChatGPT, Claude, Perplexity, Gemini - compare the <Link href="/best-for/ai-visibility" className="underline hover:text-gray-300">AI visibility listings</Link></td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">PPC &amp; Paid</td>
-                    <td className="px-3 py-3">Hop AI</td>
+                    <td className="px-3 py-3 font-black">Hop AI (3.8)</td>
+                    <td className="px-3 py-3">Envy</td>
                     <td className="px-3 py-3">Paid performance, GEO Forge tooling, named clients</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-black">Enterprise PR</td>
-                    <td className="px-3 py-3">Eskenzi PR, Highwire</td>
+                    <td className="px-3 py-3 font-black">PR &amp; Media Relations</td>
+                    <td className="px-3 py-3 font-black">Highwire (3.5)</td>
+                    <td className="px-3 py-3">Touchdown PR, W2 Communications, Eskenzi PR, 10Fold, CCGroup, Babel PR</td>
                     <td className="px-3 py-3">Analyst relations, security-specific media relationships</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
+                    <td className="px-3 py-3 font-black">Lead Generation</td>
+                    <td className="px-3 py-3 font-black">Envy (3.0)</td>
+                    <td className="px-3 py-3">Content Visit, Everclear</td>
+                    <td className="px-3 py-3">GTM, RevOps, pipeline attribution</td>
+                  </tr>
+                  <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Positioning &amp; Messaging</td>
+                    <td className="px-3 py-3 text-gray-400">No scored pick</td>
                     <td className="px-3 py-3">Everclear, Ronin</td>
                     <td className="px-3 py-3">DC-corridor brand strategy</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-black">Thought Leadership</td>
-                    <td className="px-3 py-3">Highwire</td>
-                    <td className="px-3 py-3">Analyst relations, security media</td>
-                  </tr>
-                  <tr className="border-b-2 border-white/10">
-                    <td className="px-3 py-3 font-black">Demand Generation</td>
-                    <td className="px-3 py-3">Envy, Ronin</td>
-                    <td className="px-3 py-3">GTM and RevOps</td>
-                  </tr>
-                  <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Brand Strategy</td>
-                    <td className="px-3 py-3">Ronin</td>
+                    <td className="px-3 py-3 text-gray-400">No scored pick</td>
+                    <td className="px-3 py-3">Ronin, Eskenzi PR</td>
                     <td className="px-3 py-3">In-house cyber creative</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Video</td>
+                    <td className="px-3 py-3 text-gray-400">No scored pick</td>
                     <td className="px-3 py-3">Whyze Labs</td>
                     <td className="px-3 py-3">LinkedIn video</td>
                   </tr>
@@ -335,7 +289,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ AGENCIES WITH DISTINCT STRENGTHS
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              We do not crown a winner. Different agencies are built for different channels. Here are three with distinct, well-documented strengths - specialist cybersecurity PR, positioning, and paid performance - alongside the considerations to weigh.
+              Beyond the channel picks, several agencies carry distinct, well-documented strengths worth weighing on their own terms. Here are three - specialist cybersecurity PR, positioning, and paid performance - alongside the considerations to weigh.
             </p>
 
             <div className="space-y-8">
@@ -386,7 +340,7 @@ export default function BestCybersecurityMarketingAgency() {
               ■ CHANNEL SNAPSHOTS
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              The right agency depends on which channel drives your pipeline. These are snapshots of agencies active in each channel, not a ranking, with deeper comparisons in our specialist guides. We name no leader in any channel - compare the <Link href="/best-for/seo" className="text-white underline hover:text-gray-300">SEO</Link> and <Link href="/best-for/ai-visibility" className="text-white underline hover:text-gray-300">AI visibility</Link> listings, and the rest of the directory, yourself.
+              The right agency depends on which channel drives your pipeline. These snapshots cover the agencies leading or active in each channel, with deeper comparisons in our specialist guides and the <Link href="/best-for/seo" className="text-white underline hover:text-gray-300">SEO</Link> and <Link href="/best-for/ai-visibility" className="text-white underline hover:text-gray-300">AI visibility</Link> listings.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -531,7 +485,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ TECHNICAL UNDERSTANDING:</strong> The agency should understand your technology well enough to discuss it intelligently with CISOs, security engineers, and enterprise buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Hop AI; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
+                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, starting from our channel picks: Hop AI for PPC; Highwire for PR, with Eskenzi PR and Touchdown PR close behind; Everclear and Ronin for positioning; Content Visit for SEO, content, and AI visibility. Then compare each pick against the other agencies active in the channel.
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;

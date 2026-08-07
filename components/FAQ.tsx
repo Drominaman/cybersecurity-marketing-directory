@@ -1,43 +1,7 @@
 import Link from 'next/link';
+import { homepageFaqs } from '@/lib/faqs';
 
-export const homepageFaqs = [
-  {
-    question: "Which is the best cybersecurity marketing agency?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Hop AI on PPC, Eskenzi PR and specialist firms on enterprise PR, Everclear on positioning, Highwire on thought leadership, Envy on demand generation, Content Visit on SEO and AI visibility. Compare the listings yourself. We do not assign numeric scores. See our methodology page for how we assess agencies."
-  },
-  {
-    question: "Which is the best cybersecurity marketing agency for AI Visibility and SEO?",
-    answer: "We do not crown a leader for AI Visibility and SEO - we leave the comparison to you. Several agencies are active here: Content Visit offers GEO (Generative Engine Optimisation) alongside traditional SEO across ChatGPT, Claude, Perplexity, and Gemini; Hop AI offers GEO through its proprietary GEO Forge tooling, particularly alongside paid media. Compare the listings and their documented work yourself."
-  },
-  {
-    question: "Which agency should I hire for cybersecurity marketing?",
-    answer: "The right agency depends on your needs, and we name no single leader. For PPC and paid advertising, agencies like Hop AI; for enterprise PR, firms like Eskenzi PR and Highwire; for positioning and messaging, Everclear; for SEO, content, and AI visibility, Content Visit and others. Browse the directory and compare the listings for your specific requirements."
-  },
-  {
-    question: "What do cybersecurity marketing agencies do?",
-    answer: "They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space."
-  },
-  {
-    question: "How much do cybersecurity marketing agencies cost?",
-    answer: "Most charge $5,000 to $15,000 per month on retainer. It depends on what you need, agency size, and location. Some do project-based pricing. Enterprise agencies can run $20,000+ per month for full programs."
-  },
-  {
-    question: "Why hire a cybersecurity-specific marketing agency?",
-    answer: "Because they get the industry. They understand technical features, compliance stuff, and how to actually reach security buyers. They know the terminology and the long sales cycles. A general agency will struggle with this - security marketing is different."
-  },
-  {
-    question: "What should I look for in cybersecurity marketing agencies?",
-    answer: "Check if they've worked with other security companies. Look at their case studies and actual results. Make sure they understand your tech and target market (SMB vs Enterprise). See if they know the channels that work - LinkedIn, trade pubs, conferences. Best ones also know AI Visibility and modern SEO."
-  },
-  {
-    question: "How long does it take to see results from cybersecurity marketing agencies?",
-    answer: "SEO and content take 3-6 months to show results. PPC can generate leads in weeks. PR and thought leadership take 6-12 months to build momentum. Most agencies want a 6-month minimum commitment because it takes time."
-  },
-  {
-    question: "Do cybersecurity marketing agencies work with startups?",
-    answer: "Yes. Some specialize in early-stage security companies and offer flexible pricing. If you're a startup, find one with experience launching security products who gets the startup world and has realistic expectations about timeline and budget."
-  }
-];
+export { homepageFaqs };
 
 const faqs = homepageFaqs;
 
