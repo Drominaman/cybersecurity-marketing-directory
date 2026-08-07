@@ -211,48 +211,6 @@
     ]
   },
   {
-    "id": "hop-online-hop-ai",
-    "name": "Hop AI (Hop Online)",
-    "website": "https://hoponline.ai",
-    "description": "AI-first cybersecurity marketing agency specializing in PPC, SEO, GEO (Generative Engine Optimization), content marketing, and paid social. Their proprietary GEO Forge technology makes brands discoverable by both search engines and LLMs. Notable clients include Rapid7, Group-IB, SecurityScorecard, and Immersive Labs.",
-    "shortDescription": "AI-first performance marketing & growth for cybersecurity companies",
-    "featured": false,
-    "editorNotes": "One of the few agencies with genuine GEO/AEO capability for AI search visibility. Best fit for vendors who need to be cited by ChatGPT/Perplexity. Smaller team, so not a fit for very large multi-channel programmes.",
-    "services": [
-      "SEO",
-      "Content Marketing",
-      "PPC",
-      "AI Visibility",
-      "Paid Social",
-      "AI Consultancy"
-    ],
-    "specialties": [
-      "GEO/AEO",
-      "AI Search Optimization",
-      "Performance Marketing"
-    ],
-    "location": "New Orleans, LA, USA & Sofia, Bulgaria",
-    "geography": "Global - USA & Europe",
-    "clientTypes": [
-      "Cybersecurity Companies"
-    ],
-    "pros": [
-      "AI-first approach with proprietary GEO Forge technology",
-      "Strong PPC and paid media expertise for security companies",
-      "Impressive client roster (Rapid7, Group-IB, SecurityScorecard)"
-    ],
-    "linkedinUrl": "https://www.linkedin.com/company/hoponline",
-    "clutchUrl": "https://clutch.co/profile/hop-ai",
-    "g2Url": "https://www.g2.com/products/hop-online/reviews",
-    "lastVerified": "2026-05-02",
-    "notableClients": [
-      "Rapid7",
-      "SecurityScorecard",
-      "Group-IB",
-      "Immersive Labs"
-    ]
-  },
-  {
     "id": "everclear-marketing",
     "name": "Everclear Marketing",
     "website": "https://www.everclearmarketing.com",

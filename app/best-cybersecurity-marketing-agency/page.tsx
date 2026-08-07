@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Hop AI on PPC and paid performance; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Envy on demand generation; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Envy on PPC and demand generation; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
   },
   {
     question: "How do I choose the right cybersecurity marketing agency?",
@@ -36,15 +36,15 @@ const faqs = [
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
-    answer: "We do not crown a category leader for AI Visibility and GEO (Generative Engine Optimisation) - we leave it to you to compare. Several agencies offer GEO: Content Visit audits and optimises for Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini, covering citation tracking, entity building, structured data, and placement on AI-referenced publications; Hop AI offers GEO through its proprietary GEO Forge technology, particularly alongside paid media. Compare the AI visibility listings and their documented work yourself."
+    answer: "Content Visit is currently the only agency in our directory with a dedicated GEO (Generative Engine Optimisation) practice, auditing and optimising for Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini, covering citation tracking, entity building, structured data, and placement on AI-referenced publications. We do not crown a category leader; compare the documented work yourself."
   },
   {
     question: "Which cybersecurity marketing agency is best for SEO?",
-    answer: "We do not crown a category leader for cybersecurity SEO - compare the listings yourself. Several agencies are active here: Content Visit works exclusively in cybersecurity and documents organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search; Hop AI combines SEO with paid performance. The right pick depends on whether you need depth and technical accuracy or an integrated paid and organic programme."
+    answer: "We do not crown a category leader for cybersecurity SEO - compare the listings yourself. Content Visit works exclusively in cybersecurity and documents organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search."
   },
   {
     question: "Which agency is best for cybersecurity PPC advertising?",
-    answer: "We do not crown a single leader. Hop AI has documented cybersecurity PPC and paid-performance work, with proprietary GEO Forge tooling and clients like Rapid7 and SecurityScorecard. If paid acquisition is your primary growth channel, compare their documented results and tooling against the other agencies active in the channel."
+    answer: "We do not crown a single leader. Envy (GoEnvy) has documented cybersecurity PPC work as part of its wider demand generation and go-to-market practice, with named clients including Check Point and Nuvei. If paid acquisition is your primary growth channel, compare their documented results against the other agencies active in the channel."
   },
   {
     question: "Which agency is best for cybersecurity PR and analyst relations?",
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Which agency is best for cybersecurity startups vs enterprise?",
-    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Hop AI), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, multi-region PR (firms like Eskenzi PR and Touchdown PR), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
+    answer: "It depends on your stage. Seed and Series A startups usually need either compounding organic value on a small retainer (SEO and content specialists) or fast paid pipeline (PPC specialists like Envy), plus positioning help from a firm like Everclear if the product story is not yet clear. Growth-stage companies move to integrated multi-channel programmes. Enterprises prioritise analyst relations, multi-region PR (firms like Eskenzi PR and Touchdown PR), and brand defence. Match the agency to the problems your stage actually faces, not just the budget."
   },
   {
     question: "How should I evaluate an agency's documented results?",
@@ -145,7 +145,7 @@ export default function BestCybersecurityMarketingAgency() {
           <TldrSummary points={[
             'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
             'We do not crown a single best agency or category leader. We list agencies neutrally and let you compare them on documented results.',
-            'Different agencies focus on different channels: PPC (Hop AI), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), demand generation (Envy), SEO and AI visibility (Content Visit and others).',
+            'Different agencies focus on different channels: PPC and demand generation (Envy), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), SEO and AI visibility (Content Visit and others).',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
             'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
           ]} />
@@ -167,7 +167,7 @@ export default function BestCybersecurityMarketingAgency() {
                 <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and list them neutrally instead of crowning a winner.
               </p>
               <p>
-                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Hop AI</strong> on PPC and paid performance, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, <strong className="text-white">Envy</strong> on demand generation, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
+                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Envy</strong> on PPC and demand generation, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
               </p>
               <p>
                 This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
@@ -276,18 +276,18 @@ export default function BestCybersecurityMarketingAgency() {
                 <tbody className="text-white">
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">SEO &amp; Content</td>
-                    <td className="px-3 py-3">Content Visit, Hop AI</td>
+                    <td className="px-3 py-3">Content Visit</td>
                     <td className="px-3 py-3">Documented organic results, high-volume content - compare the <Link href="/best-for/seo" className="underline hover:text-gray-300">SEO listings</Link></td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">AI Visibility &amp; GEO</td>
-                    <td className="px-3 py-3">Content Visit, Hop AI</td>
+                    <td className="px-3 py-3">Content Visit</td>
                     <td className="px-3 py-3">GEO across ChatGPT, Claude, Perplexity, Gemini - compare the <Link href="/best-for/ai-visibility" className="underline hover:text-gray-300">AI visibility listings</Link></td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">PPC &amp; Paid</td>
-                    <td className="px-3 py-3">Hop AI</td>
-                    <td className="px-3 py-3">Paid performance, GEO Forge tooling, named clients</td>
+                    <td className="px-3 py-3">Envy</td>
+                    <td className="px-3 py-3">PPC within a wider demand-gen and GTM practice, HubSpot Elite Partner, named clients</td>
                   </tr>
                   <tr className="border-b-2 border-white/10">
                     <td className="px-3 py-3 font-black">Enterprise PR</td>
@@ -366,15 +366,15 @@ export default function BestCybersecurityMarketingAgency() {
               </div>
 
               <div className="bg-black border-4 border-white p-8">
-                <h3 className="text-2xl font-black text-white mb-3 uppercase">HOP AI (HOP ONLINE) - PPC & PAID PERFORMANCE</h3>
+                <h3 className="text-2xl font-black text-white mb-3 uppercase">ENVY (GOENVY) - PPC & DEMAND GENERATION</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Hop AI focuses on paid acquisition and performance marketing. With clients including Rapid7, Group-IB, SecurityScorecard, and Immersive Labs, they have deep experience running paid campaigns for security companies. Their proprietary GEO Forge technology is an interesting differentiator for AI visibility, and their AI-first approach aligns well with companies looking for data-driven growth.
+                  Envy runs PPC as part of a broader go-to-market and demand generation practice, with deep roots in the Israeli cybersecurity ecosystem. Named clients include Check Point, BrandShield, Nuvei, Wing Security, and CyberInt, and they hold HubSpot Elite Partner status, a verifiable credential in marketing automation and lead routing.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  <strong className="text-white">Considerations:</strong> Based in Bulgaria (potential timezone considerations), not cybersecurity-exclusive, and proprietary tools mean less transparency into methodology compared to agencies with open processes.
+                  <strong className="text-white">Considerations:</strong> Based in Ramat Gan, Israel, with a startup-focused client base tied to that ecosystem - a strong fit for Series A/B security startups with Israel ties, less suited for later-stage or unrelated enterprise buyers.
                 </p>
                 <div className="mt-4">
-                  <Link href="/agency/hop-online-hop-ai" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Hop AI Profile →</Link>
+                  <Link href="/agency/envy-goenvy" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">View Envy Profile →</Link>
                 </div>
               </div>
             </div>
@@ -401,9 +401,9 @@ export default function BestCybersecurityMarketingAgency() {
 
               <div className="bg-black border-4 border-white p-6">
                 <p className="text-gray-400 font-mono text-xs uppercase mb-2">■ PPC</p>
-                <h3 className="text-xl font-black text-white mb-2 uppercase">Hop AI (Hop Online)</h3>
+                <h3 className="text-xl font-black text-white mb-2 uppercase">Envy (GoEnvy)</h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  Deep cybersecurity paid-media experience with Rapid7, Group-IB, SecurityScorecard, and Immersive Labs. Proprietary GEO Forge tooling and an AI-first performance methodology.
+                  PPC within a wider demand generation and go-to-market practice, HubSpot Elite Partner, with named clients including Check Point and Nuvei.
                 </p>
                 <Link href="/blog/best-cybersecurity-ppc-agency" className="text-white font-bold underline hover:text-gray-300 text-sm uppercase">Read the cybersecurity PPC guide →</Link>
               </div>
@@ -531,7 +531,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ TECHNICAL UNDERSTANDING:</strong> The agency should understand your technology well enough to discuss it intelligently with CISOs, security engineers, and enterprise buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Hop AI; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
+                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Envy; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;
@@ -574,7 +574,7 @@ export default function BestCybersecurityMarketingAgency() {
               Or jump to:{' '}
               <Link href="/agency/eskenzi-pr" className="text-white underline hover:text-gray-300 font-bold">Eskenzi PR</Link>{' · '}
               <Link href="/agency/everclear-marketing" className="text-white underline hover:text-gray-300 font-bold">Everclear</Link>{' · '}
-              <Link href="/agency/hop-online-hop-ai" className="text-white underline hover:text-gray-300 font-bold">Hop AI</Link>
+              <Link href="/agency/envy-goenvy" className="text-white underline hover:text-gray-300 font-bold">Envy</Link>
             </p>
           </section>
 
