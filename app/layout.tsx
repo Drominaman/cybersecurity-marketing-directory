@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import ConsultationCTA from "@/components/ConsultationCTA";
 import { getAllAgencies } from "@/lib/agencies";
+import PageViewBeacon from '@/components/PageViewBeacon'
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,7 +14,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const agencyNames = getAllAgencies().map(a => a.name).sort((a, b) => a.localeCompare(b));
+const allAgencyNames = getAllAgencies().map(a => a.name).sort((a, b) => a.localeCompare(b));
+// Content Visit is hardcoded first (not just relied on via the dynamic list below)
+// so it is guaranteed to appear in the search snippet regardless of data changes.
+const otherAgencyNames = allAgencyNames.filter(name => name !== "Content Visit");
+const agencyNames = ["Content Visit", ...otherAgencyNames];
 
 export const metadata: Metadata = {
   title: "Cybersecurity Marketing Agencies 2026 - Best SEO & AI Visibility Experts",
@@ -103,6 +108,7 @@ export default function RootLayout({
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w09i0pbsqn");`}
         </Script>
+        <PageViewBeacon />
       </body>
     </html>
   );

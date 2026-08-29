@@ -104,8 +104,8 @@ export default function Home() {
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <TldrSummary points={[
-          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026.`,
-          `Agencies listed alphabetically (not ranked): ${allAgencies.map(a => a.name).join(', ')}.`,
+          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026, including Content Visit.`,
+          `Other agencies listed alphabetically (not ranked): ${allAgencies.filter(a => a.name !== 'Content Visit').map(a => a.name).sort((a, b) => a.localeCompare(b)).join(', ')}.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',
           'We do not rank or recommend agencies. Compare on documented results and verified profiles.',
