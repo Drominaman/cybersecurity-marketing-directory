@@ -150,9 +150,9 @@ function AgencySearchInner({ agencies, allServices }: AgencySearchProps) {
         )}
       </div>
 
-      {/* Agency Grid (featured agency shown above, excluded here) */}
+      {/* Agency Grid (also includes the featured agency, in its normal alphabetical spot, tagged Sponsored) */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredAgencies.filter(a => !a.featured).map((agency) => (
+        {filteredAgencies.map((agency) => (
           <AgencyCard key={agency.id} agency={agency} />
         ))}
       </div>

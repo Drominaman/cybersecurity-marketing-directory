@@ -7,7 +7,9 @@ import AgencyFeaturedProfile from './AgencyFeaturedProfile';
 /**
  * Featured agency teaser with a single "Read more" that drops the full profile
  * down inline (same mechanism as cybersectool's featured listing). The featured
- * agency is shown here and excluded from the alphabetical grid below.
+ * agency also appears in its normal alphabetical spot in the grid below,
+ * tagged "Sponsored" there - this teaser is an additional, disclosed placement,
+ * not a substitute for its regular listing.
  */
 export default function AgencyFeaturedReveal({ agency }: { agency: Agency }) {
   const [open, setOpen] = useState(false);
