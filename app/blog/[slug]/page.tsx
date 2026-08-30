@@ -1,3 +1,4 @@
+import { Children, isValidElement } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -64,6 +65,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function mdxImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <figure className="my-8">
+      <img
+        className="w-full border-2 border-white/20 shadow-lg"
+        loading="lazy"
+        {...props}
+      />
+      {props.alt && (
+        <figcaption className="text-center text-sm text-gray-500 mt-2 italic">
+          {props.alt}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className="text-3xl md:text-4xl font-black text-white mb-6 mt-10 uppercase" {...props} />
@@ -74,9 +92,22 @@ const mdxComponents = {
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3 className="text-xl font-black text-gray-200 mb-3 mt-6 uppercase" {...props} />
   ),
-  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-gray-300 mb-4 leading-relaxed" {...props} />
-  ),
+  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => {
+    // Markdown compiles a standalone `![alt](url)` line into a paragraph
+    // whose only child is our custom img component (which renders a
+    // <figure>). <figure> cannot legally sit inside a <p>, which caused a
+    // hydration mismatch - so skip the <p> wrapper for image-only paragraphs.
+    const children = Children.toArray(props.children).filter(
+      (child) => typeof child !== 'string' || child.trim() !== ''
+    );
+    const onlyChild = children.length === 1 ? children[0] : null;
+    const isImageOnly =
+      isValidElement(onlyChild) && (onlyChild.type === mdxImage || onlyChild.type === 'img');
+    if (isImageOnly) {
+      return <>{onlyChild}</>;
+    }
+    return <p className="text-gray-300 mb-4 leading-relaxed" {...props} />;
+  },
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className="list-none space-y-2 mb-6 ml-4" {...props} />
   ),
@@ -127,20 +158,7 @@ const mdxComponents = {
   td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
     <td className="px-4 py-3 text-black border border-gray-300" {...props} />
   ),
-  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    <figure className="my-8">
-      <img
-        className="w-full border-2 border-white/20 shadow-lg"
-        loading="lazy"
-        {...props}
-      />
-      {props.alt && (
-        <figcaption className="text-center text-sm text-gray-500 mt-2 italic">
-          {props.alt}
-        </figcaption>
-      )}
-    </figure>
-  ),
+  img: mdxImage,
 };
 
 export default async function BlogPostPage({ params }: Props) {
