@@ -1,21 +1,37 @@
 import AgencySearch from '@/components/AgencySearch';
 import AgencyFeaturedReveal from '@/components/AgencyFeaturedReveal';
 import ComparisonTable from '@/components/ComparisonTable';
+import TrendingSection from '@/components/TrendingSection';
 import FAQ, { homepageFaqs } from '@/components/FAQ';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import Link from 'next/link';
 import { getAllAgenciesFeaturedFirst } from '@/lib/agencies';
+import { getAllPosts } from '@/lib/blog';
 import { faqSchema } from '@/lib/seo';
 
 export default function Home() {
   const allAgencies = getAllAgenciesFeaturedFirst();
   const featuredAgency = allAgencies.find(a => a.featured);
+  const posts = getAllPosts();
 
   const allServices = Array.from(
     new Set(allAgencies.flatMap(a => a.services))
   ).sort();
+
+  const agencyNamesById = Object.fromEntries(allAgencies.map(a => [a.id, a.name]));
+  const postTitlesBySlug = Object.fromEntries(posts.map(p => [p.slug, p.title]));
+
+  const recentlyVerified = [...allAgencies]
+    .filter(a => a.lastVerified)
+    .sort((a, b) => (b.lastVerified! > a.lastVerified! ? 1 : -1))
+    .slice(0, 6);
+
+  const serviceCounts = allServices.map(service => ({
+    service,
+    count: allAgencies.filter(a => a.services.includes(service)).length,
+  }));
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -111,6 +127,21 @@ export default function Home() {
           'We do not rank or recommend agencies. Compare on documented results and verified profiles.',
         ]} />
 
+        {/* Stats Bar */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
+          {[
+            { label: 'Agencies', value: allAgencies.length },
+            { label: 'Services', value: allServices.length },
+            { label: 'Guides', value: posts.length },
+            { label: 'Regions', value: 3 },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-gray-900 border-4 border-white p-4 text-center">
+              <div className="text-3xl sm:text-4xl font-black text-white">{value}</div>
+              <div className="text-gray-400 text-xs font-mono uppercase tracking-wider mt-1">{label}</div>
+            </div>
+          ))}
+        </div>
+
         {/* Client Island: Search/Filter + Agency Grid */}
         <section id="agency-search">
           <AgencySearch agencies={allAgencies} allServices={allServices} />
@@ -135,6 +166,33 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* Trending Now (live, from this site's own page-view beacon) */}
+        <TrendingSection agencyNamesById={agencyNamesById} postTitlesBySlug={postTitlesBySlug} />
+
+        {/* Recently Verified */}
+        {recentlyVerified.length > 0 && (
+          <div className="bg-gray-900 border-4 border-white p-10 mt-20">
+            <h2 className="text-3xl font-black text-white mb-2 uppercase tracking-wider">
+              &#9632; Recently Verified
+            </h2>
+            <p className="text-gray-300 mb-8">
+              The most recently fact-checked profiles in the directory. See our <Link href="/methodology" className="underline hover:text-gray-300">methodology</Link> for how verification works.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {recentlyVerified.map((agency) => (
+                <Link
+                  key={agency.id}
+                  href={`/agency/${agency.id}`}
+                  className="flex items-center justify-between gap-3 bg-black border-2 border-white/20 px-4 py-3 hover:bg-gray-800 transition-colors group"
+                >
+                  <span className="text-white text-sm font-bold group-hover:text-gray-300 truncate">{agency.name}</span>
+                  <span className="text-gray-400 text-xs font-mono whitespace-nowrap">{agency.lastVerified}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Introduction Section - Keyword Rich */}
         <div className="mb-12 bg-gray-900 border-4 border-white p-8">
@@ -242,65 +300,31 @@ export default function Home() {
             Find the best cybersecurity marketing agency for your specific needs.
           </p>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link
-              href="/best-for/seo"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR SEO
-              </div>
-              <div className="text-gray-400 text-sm mt-1">Search engine optimization experts</div>
-            </Link>
-
-            <Link
-              href="/best-for/ai-visibility"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR AI VISIBILITY
-              </div>
-              <div className="text-gray-400 text-sm mt-1">AI search and GEO specialists</div>
-            </Link>
-
-            <Link
-              href="/best-for/content-marketing"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR CONTENT
-              </div>
-              <div className="text-gray-400 text-sm mt-1">Content marketing specialists</div>
-            </Link>
-
-            <Link
-              href="/best-for/pr-media-relations"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR PR
-              </div>
-              <div className="text-gray-400 text-sm mt-1">Media relations and PR experts</div>
-            </Link>
-
-            <Link
-              href="/best-for/lead-generation"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR LEAD GEN
-              </div>
-              <div className="text-gray-400 text-sm mt-1">Demand generation specialists</div>
-            </Link>
-
-            <Link
-              href="/best-for/ppc"
-              className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
-            >
-              <div className="text-white font-black text-lg group-hover:text-gray-300">
-                &#9632; BEST FOR PPC
-              </div>
-              <div className="text-gray-400 text-sm mt-1">Paid advertising experts</div>
-            </Link>
+            {[
+              { href: '/best-for/seo', label: 'BEST FOR SEO', desc: 'Search engine optimization experts', service: 'SEO' },
+              { href: '/best-for/ai-visibility', label: 'BEST FOR AI VISIBILITY', desc: 'AI search and GEO specialists', service: 'AI Visibility' },
+              { href: '/best-for/content-marketing', label: 'BEST FOR CONTENT', desc: 'Content marketing specialists', service: 'Content Marketing' },
+              { href: '/best-for/pr-media-relations', label: 'BEST FOR PR', desc: 'Media relations and PR experts', service: 'PR & Media Relations' },
+              { href: '/best-for/lead-generation', label: 'BEST FOR LEAD GEN', desc: 'Demand generation specialists', service: 'Lead Generation' },
+              { href: '/best-for/ppc', label: 'BEST FOR PPC', desc: 'Paid advertising experts', service: 'PPC' },
+            ].map(({ href, label, desc, service }) => {
+              const count = serviceCounts.find(s => s.service === service)?.count ?? 0;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className="bg-black border-2 border-white/20 p-4 hover:bg-gray-800 transition-all hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] group"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="text-white font-black text-lg group-hover:text-gray-300">
+                      &#9632; {label}
+                    </div>
+                    <div className="text-gray-500 text-xs font-mono whitespace-nowrap">{count} agencies</div>
+                  </div>
+                  <div className="text-gray-400 text-sm mt-1">{desc}</div>
+                </Link>
+              );
+            })}
           </div>
         </div>
 
