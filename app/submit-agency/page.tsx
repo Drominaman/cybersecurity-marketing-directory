@@ -5,6 +5,9 @@ import Link from 'next/link';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { getAllAgencies } from '@/lib/agencies';
+
+const agencyCount = getAllAgencies().length;
 
 const SERVICES = [
   'SEO',
@@ -104,8 +107,8 @@ export default function SubmitAgencyPage() {
           </div>
 
           <TldrSummary points={[
-            'Two tiers: Verified ($499/year) and Featured ($1,499/year). The fee covers our evaluation work, not the outcome.',
-            'We do not rank or recommend agencies. Paid tiers buy a listing and placement, never a recommendation.',
+            'One paid tier: Featured ($1,499/year). Editorial listings are free, by invitation only. The fee covers our evaluation work, not the outcome.',
+            'We do not rank or recommend agencies. The paid tier buys a listing and placement, never a recommendation.',
             'Rejected submissions receive a full refund. See our methodology for how evaluation works.',
             'Submit below or use our contact form to discuss. Approval takes 5 to 7 business days.',
           ]} />
@@ -116,7 +119,7 @@ export default function SubmitAgencyPage() {
               &#9632; LISTING TIERS
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
               {/* Editorial */}
               <div className="bg-gray-900 border-4 border-gray-600 p-8 flex flex-col">
                 <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">
@@ -149,53 +152,10 @@ export default function SubmitAgencyPage() {
                 </div>
               </div>
 
-              {/* Verified */}
-              <div className="bg-gray-900 border-4 border-white p-8 flex flex-col shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]">
-                <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">
-                  TIER 2
-                </div>
-                <h3 className="text-2xl font-black uppercase mb-2">Verified</h3>
-                <div className="text-3xl font-black text-white mb-1">$499<span className="text-base text-gray-400 font-normal">/year</span></div>
-                <div className="text-xs font-mono text-gray-400 uppercase mb-6">
-                  Annual renewal
-                </div>
-                <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                  A complete profile in the directory, surfaced when buyers filter by your services and location.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                  <li className="flex gap-2">
-                    <span className="text-white">&#9632;</span>
-                    <span>Full agency profile page</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-white">&#9632;</span>
-                    <span>Listed by service category and location</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-white">&#9632;</span>
-                    <span>Strengths, services, client types, links</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-white">&#9632;</span>
-                    <span>Logo, LinkedIn, Clutch, G2 links</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-gray-500">&#9633;</span>
-                    <span className="text-gray-500">Not included in roundup posts</span>
-                  </li>
-                </ul>
-                <Link
-                  href="/contact?reason=verified-listing"
-                  className="mt-auto bg-white text-black px-6 py-3 font-black uppercase tracking-wide text-sm text-center hover:bg-gray-200 transition-colors border-4 border-white"
-                >
-                  CONTACT US
-                </Link>
-              </div>
-
               {/* Featured */}
               <div className="bg-gray-900 border-4 border-yellow-400 p-8 flex flex-col shadow-[6px_6px_0px_0px_rgba(250,204,21,0.3)]">
                 <div className="text-xs font-mono text-yellow-400 uppercase tracking-wider mb-2">
-                  TIER 3: MOST VISIBILITY
+                  TIER 2: MOST VISIBILITY
                 </div>
                 <h3 className="text-2xl font-black uppercase mb-2">Featured</h3>
                 <div className="text-3xl font-black text-white mb-1">$1,499<span className="text-base text-gray-400 font-normal">/year</span></div>
@@ -203,12 +163,24 @@ export default function SubmitAgencyPage() {
                   Annual renewal
                 </div>
                 <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                  Everything in Verified, plus inclusion in our roundup posts and a dedicated agency Q&amp;A. Placement, not a recommendation.
+                  A complete profile in the directory, plus inclusion in our roundup posts and a dedicated agency Q&amp;A. Placement, not a recommendation.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300 mb-6">
                   <li className="flex gap-2">
                     <span className="text-yellow-400">&#9632;</span>
-                    <span>Everything in Verified</span>
+                    <span>Full agency profile page</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-yellow-400">&#9632;</span>
+                    <span>Listed by service category and location</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-yellow-400">&#9632;</span>
+                    <span>Strengths, services, client types, links</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-yellow-400">&#9632;</span>
+                    <span>Logo, LinkedIn, Clutch, G2 links</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-yellow-400">&#9632;</span>
@@ -244,13 +216,13 @@ export default function SubmitAgencyPage() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> Verified and Featured tiers buy you a place in the directory and neutral placement. We do not rank or recommend agencies at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy or to earn. Every agency is listed neutrally and compared by the reader.
+                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> The Featured tier buys you a labelled, boosted placement, shown first in listings and tagged Sponsored wherever it appears. That is placement, not a recommendation: we do not rank or recommend agencies at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy or to earn. Every agency, featured or not, is compared on its own merits by the reader.
               </p>
               <p>
                 <strong className="text-white">What this means for buyers:</strong> you will not see us crown a winner or tag an agency as a pick. When you see an agency in the directory or a roundup post, that is a listing, disclosed accordingly, not a recommendation from us.
               </p>
               <p>
-                <strong className="text-white">What this means for agencies:</strong> the paid tiers exist to fund the directory and surface you to buyers in a neutral listing. They do not buy a recommendation, because we do not give one to anyone.
+                <strong className="text-white">What this means for agencies:</strong> the paid tier exists to fund the directory and surface you to buyers in a neutral listing. It does not buy a recommendation, because we do not give one to anyone.
               </p>
             </div>
           </div>
@@ -401,7 +373,7 @@ export default function SubmitAgencyPage() {
                   rows={5}
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="Tell us about your agency, specializations, notable clients, and what sets you apart in the cybersecurity marketing space. Mention which tier (Verified or Featured) you are interested in."
+                  placeholder="Tell us about your agency, specializations, notable clients, and what sets you apart in the cybersecurity marketing space. Let us know if you are interested in the Featured tier."
                   className="w-full px-4 py-3 border-4 border-white focus:border-gray-400 outline-none bg-black text-white font-mono placeholder-gray-600 resize-vertical"
                 />
               </div>
@@ -453,21 +425,15 @@ export default function SubmitAgencyPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-black text-white mb-2">Can I switch tiers later?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Yes. Upgrade from Verified to Featured at any time and we credit the unused portion of your Verified term to the new subscription.
-                </p>
-              </div>
-              <div>
                 <h3 className="text-lg font-black text-white mb-2">Can I buy a recommendation or a top ranking?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  No, and you cannot earn one either, because we do not rank or recommend agencies. There is no Best for SEO designation, no &quot;Top Pick&quot; label, and no editor&apos;s badge for sale or for award. The directory lists every agency neutrally; paid tiers buy a listing and placement, never a recommendation. That is the only way the directory stays useful to buyers.
+                  No, and you cannot earn one either, because we do not rank or recommend agencies. There is no Best for SEO designation, no &quot;Top Pick&quot; label, and no editor&apos;s badge for sale or for award. The Featured tier buys a labelled, boosted placement, never a recommendation. That is the only way the directory stays useful to buyers.
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-black text-white mb-2">Are existing listings paid?</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  No. The thirteen agencies listed before this pricing went live are editorial. New submissions follow the tiered model.
+                  No. The {agencyCount} agencies currently in the directory are editorial, researched and added by us at no charge. New submissions follow the Featured tier.
                 </p>
               </div>
               <div>

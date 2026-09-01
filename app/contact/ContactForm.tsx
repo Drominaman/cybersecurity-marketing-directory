@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 const REASONS: [string, string][] = [
   ['general', 'General question'],
   ['correction', 'Report a data correction'],
-  ['verified-listing', 'Verified listing inquiry ($499/year)'],
   ['featured-listing', 'Featured listing inquiry ($1,499/year)'],
   ['sponsorship', 'Sponsorship & partnerships'],
 ];

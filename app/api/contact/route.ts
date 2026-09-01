@@ -7,7 +7,6 @@ const RATE_LIMIT_WINDOW_HOURS = 1;
 
 const REASON_LABELS: Record<string, string> = {
   correction: "Data correction",
-  "verified-listing": "Verified listing inquiry",
   "featured-listing": "Featured listing inquiry",
   sponsorship: "Sponsorship & partnerships",
   general: "General question",
