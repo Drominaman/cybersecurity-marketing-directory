@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     question: "Which agency is best for cybersecurity PR and analyst relations?",
-    answer: "We do not crown a single leader. Agencies active in enterprise cybersecurity PR include Eskenzi PR (founded 1995, clients including Nozomi Networks, Cato Networks, and KnowBe4), Highwire (dedicated cybersecurity practice, clients including CrowdStrike and Splunk), and Touchdown PR (transatlantic, offices across the UK, US, and Europe). For UK and European B2B PR, The Rubicon Agency is also worth comparing. Compare their coverage and documented work in our cybersecurity PR agency guide."
+    answer: "We do not crown a single leader. Agencies active in enterprise cybersecurity PR include Eskenzi PR (founded 1995, clients including Nozomi Networks, Cato Networks, and KnowBe4), Highwire (dedicated cybersecurity practice, clients including CrowdStrike and Splunk), and Touchdown PR (transatlantic, offices across the UK, US, and Europe). Compare their coverage and documented work in our cybersecurity PR agency guide."
   },
   {
     question: "Which agency is best for cybersecurity startups vs enterprise?",

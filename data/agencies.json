@@ -147,36 +147,6 @@
     "lastVerified": "2026-05-02"
   },
   {
-    "id": "the-rubicon-agency",
-    "name": "The Rubicon Agency",
-    "website": "https://therubiconagency.com",
-    "description": "Integrated B2B tech marketing (brand strategy, digital campaigns, content marketing, web & sales enablement). Notable clients include OpenText, Cisco, Symantec (legacy / pre-Broadcom), and Radware.",
-    "shortDescription": "Integrated B2B tech marketing for cybersecurity and technology companies",
-    "featured": false,
-    "services": [
-      "Content Marketing",
-      "Brand Strategy",
-      "Digital Marketing"
-    ],
-    "specialties": [
-      "Channel Marketing",
-      "Enterprise Demand Gen",
-      "Integrated B2B Tech Marketing"
-    ],
-    "location": "London, UK",
-    "geography": "Regional - UK",
-    "clientTypes": [
-      "Enterprise Security Vendors"
-    ],
-    "pros": [
-      "Strong enterprise client list (OpenText, Cisco, Radware, Symantec pre-Broadcom era)",
-      "London base is ideal for UK and European security markets",
-      "Integrated approach covering brand, digital campaigns, and sales enablement"
-    ],
-    "linkedinUrl": "https://uk.linkedin.com/company/therubiconagency",
-    "lastVerified": "2026-05-02"
-  },
-  {
     "id": "cyberwhyze-whyze-labs",
     "name": "Whyze Labs",
     "website": "https://www.whyzelabs.com",
@@ -561,5 +531,47 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/company/babel-pr",
     "lastVerified": "2026-06-11"
+  },
+  {
+    "id": "obility",
+    "name": "Obility",
+    "website": "https://www.obilityb2b.com",
+    "description": "Obility is a B2B digital marketing agency headquartered in Portland, Oregon, founded in 2011. They offer paid search, SEO, paid social, and Generative Engine Optimisation (GEO) for AI search visibility, with cybersecurity and IT named as one of their specialised industry verticals alongside SaaS, DevOps, and healthtech. Clients publicly associated with the agency include Cloudflare and ScienceLogic.",
+    "shortDescription": "B2B digital marketing agency offering paid search, SEO, and GEO, with cybersecurity and IT as a specialised vertical.",
+    "featured": false,
+    "services": [
+      "SEO",
+      "AI Visibility",
+      "PPC",
+      "Digital Marketing"
+    ],
+    "specialties": [
+      "B2B Technology Marketing",
+      "Cybersecurity & IT",
+      "Generative Engine Optimization (GEO)"
+    ],
+    "location": "Portland, OR, USA",
+    "yearFounded": 2011,
+    "teamSize": "10-49 employees",
+    "geography": "Regional - USA",
+    "clientTypes": [
+      "Enterprise Security Vendors",
+      "B2B Technology Companies"
+    ],
+    "notableClients": [
+      "Cloudflare",
+      "ScienceLogic"
+    ],
+    "reviews": [
+      {
+        "quote": "I appreciate their unique understanding and advanced knowledge.",
+        "role": "Digital Marketing Lead",
+        "company": "Cloudflare",
+        "source": "Clutch"
+      }
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/obilityb2b",
+    "clutchUrl": "https://clutch.co/profile/obility",
+    "lastVerified": "2026-08-30"
   }
 ]
