@@ -34,9 +34,26 @@ type Rollup = {
   bot: number
   paths: Record<string, number>
   referrers: Record<string, number>
+  // Where each page's referred visits came from. Every raw hit already
+  // carries both its path and its referrer host, so this is the same data
+  // cross-tabulated rather than anything new being collected.
+  pathReferrers: Record<string, Record<string, number>>
 }
 
-const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {} })
+const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {}, pathReferrers: {} })
+
+// The cross-tab is the one part that could grow with the square of the site,
+// so it is bounded on both axes.
+const PATHS_WITH_REFS = 60
+const REFS_PER_PATH = 12
+
+function trimNested(m: Record<string, Record<string, number>>): Record<string, Record<string, number>> {
+  const ranked = Object.entries(m)
+    .map(([path, refs]) => ({ path, refs, total: Object.values(refs).reduce((a, b) => a + b, 0) }))
+    .sort((a, b) => b.total - a.total)
+    .slice(0, PATHS_WITH_REFS)
+  return Object.fromEntries(ranked.map(({ path, refs }) => [path, trim(refs, REFS_PER_PATH)]))
+}
 
 function trim(counts: Record<string, number>, keep = KEEP): Record<string, number> {
   const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, keep)
@@ -48,6 +65,11 @@ function merge(into: Rollup, from: Rollup): void {
   into.bot += from.bot
   for (const [k, v] of Object.entries(from.paths)) into.paths[k] = (into.paths[k] ?? 0) + v
   for (const [k, v] of Object.entries(from.referrers)) into.referrers[k] = (into.referrers[k] ?? 0) + v
+  // Guarded: rollups cached before this field existed have no pathReferrers.
+  for (const [path, refs] of Object.entries(from.pathReferrers ?? {})) {
+    const target = (into.pathReferrers[path] ??= {})
+    for (const [k, v] of Object.entries(refs)) target[k] = (target[k] ?? 0) + v
+  }
 }
 
 async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise<Rollup> {
@@ -73,7 +95,11 @@ async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise
       out.human++
       const path = v.p || '/'
       out.paths[path] = (out.paths[path] ?? 0) + 1
-      if (v.r) out.referrers[v.r] = (out.referrers[v.r] ?? 0) + 1
+      if (v.r) {
+        out.referrers[v.r] = (out.referrers[v.r] ?? 0) + 1
+        const perPath = (out.pathReferrers[path] ??= {})
+        perPath[v.r] = (perPath[v.r] ?? 0) + 1
+      }
     }
   }
 
@@ -87,15 +113,19 @@ async function dayRollup(
 ): Promise<Rollup> {
   if (day >= today) return readRaw(store, day)
 
-  const cached = (await store.get(`rollup/${day}`, { type: 'json' }).catch(() => null)) as Rollup | null
+  // rollup2: the v1 key holds rollups written before pathReferrers existed.
+  // Raw hit blobs are never deleted, so bumping the key backfills history
+  // instead of leaving older days permanently without the cross-tab.
+  const cached = (await store.get(`rollup2/${day}`, { type: 'json' }).catch(() => null)) as Rollup | null
   if (cached && typeof cached.human === 'number') return cached
 
   const fresh = await readRaw(store, day)
   fresh.paths = trim(fresh.paths)
   fresh.referrers = trim(fresh.referrers)
+  fresh.pathReferrers = trimNested(fresh.pathReferrers)
 
   // A failed cache write must not fail the read.
-  await store.setJSON(`rollup/${day}`, fresh).catch(() => {})
+  await store.setJSON(`rollup2/${day}`, fresh).catch(() => {})
   return fresh
 }
 
@@ -131,6 +161,7 @@ export default async (req: Request) => {
         days: byDay,
         paths: trim(total.paths, 100),
         referrers: trim(total.referrers, 100),
+        pathReferrers: trimNested(total.pathReferrers),
         human: total.human,
         bot: total.bot,
       }, null, 2),
