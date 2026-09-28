@@ -8,6 +8,7 @@ import SiteFooter from '@/components/SiteFooter';
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/seo';
 import type { Metadata } from 'next';
 import type { Agency } from '@/types/agency';
+import { externalRel } from '@/lib/external-rel';
 
 // Niche/audience mapping with filters
 const NICHE_MAP: { [key: string]: { name: string; description: string; filter: (agency: Agency) => boolean } } = {
@@ -187,7 +188,7 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
                     <Link
                       href={topAgency.website}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={externalRel(topAgency.website)}
                       className="bg-white text-black px-8 py-4 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]"
                     >
                       &#9632; VISIT WEBSITE
@@ -260,7 +261,7 @@ export default async function NichePage({ params }: { params: Promise<{ niche: s
                       <Link
                         href={agency.website}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={externalRel(agency.website)}
                         className="bg-white text-black px-6 py-3 font-black hover:bg-gray-200 transition-all text-center uppercase text-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]"
                       >
                         &#9632; WEBSITE

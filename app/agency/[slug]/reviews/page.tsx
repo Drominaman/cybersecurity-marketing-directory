@@ -4,6 +4,7 @@ import { getAllAgencies } from '@/lib/agencies';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
+import { externalRel } from '@/lib/external-rel';
 
 const BASE = 'https://cybersecuritymarketingagencies.com';
 
@@ -124,7 +125,7 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
                 {sourceLinks.map(([name, url], i) => (
                   <span key={name}>
                     {i > 0 && ' · '}
-                    <a href={url} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">{name}</a>
+                    <a href={url} target="_blank" rel={externalRel(url)} className="text-white underline hover:text-gray-300">{name}</a>
                   </span>
                 ))}
                 . Each review is verified on its source platform.
@@ -151,7 +152,7 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
                       <>
                         {' · '}
                         {srcUrl ? (
-                          <a href={srcUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">via {r.source}</a>
+                          <a href={srcUrl} target="_blank" rel={externalRel(srcUrl)} className="text-white underline hover:text-gray-300">via {r.source}</a>
                         ) : (
                           <span>via {r.source}</span>
                         )}
@@ -168,7 +169,7 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
             <Link href={`/agency/${slug}`} className="bg-white text-black px-6 py-3 font-black uppercase text-sm border-4 border-white hover:bg-gray-200 transition-colors">
               ■ View {agency.name} profile
             </Link>
-            <Link href={agency.website} target="_blank" rel="noopener noreferrer" className="bg-transparent text-white px-6 py-3 font-black uppercase text-sm border-4 border-white hover:bg-white hover:text-black transition-colors">
+            <Link href={agency.website} target="_blank" rel={externalRel(agency.website)} className="bg-transparent text-white px-6 py-3 font-black uppercase text-sm border-4 border-white hover:bg-white hover:text-black transition-colors">
               ■ Visit website
             </Link>
           </div>

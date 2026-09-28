@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Agency } from '@/types/agency';
 import { getAgencyLogoUrl } from '@/lib/utils';
+import { externalRel } from '@/lib/external-rel';
 
 /**
  * Full "Featured" profile for a featured agency, shown expanded (DesignRush-style
@@ -88,7 +89,7 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
 
   const ctaRow = (
     <div className="grid grid-cols-2 gap-2 sm:gap-3">
-      <Link href={agency.website} target="_blank" rel="noopener noreferrer" className="block text-center bg-white border-4 border-white text-black px-3 py-3 font-black hover:bg-gray-200 transition-colors uppercase text-xs sm:text-sm tracking-wide">
+      <Link href={agency.website} target="_blank" rel={externalRel(agency.website)} className="block text-center bg-white border-4 border-white text-black px-3 py-3 font-black hover:bg-gray-200 transition-colors uppercase text-xs sm:text-sm tracking-wide">
         ■ Visit website
       </Link>
       <Link href={`/agency/${agency.id}`} className="block text-center bg-transparent border-4 border-white text-white px-3 py-3 font-black hover:bg-white hover:text-black transition-colors uppercase text-xs sm:text-sm tracking-wide">
@@ -152,16 +153,16 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
               <p className="text-white text-sm mb-3">
                 Verified reviews on{' '}
                 {[
-                  agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">Clutch</a>,
-                  agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">DesignRush</a>,
-                  agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">G2</a>,
+                  agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel={externalRel(agency.clutchUrl)} className="text-white underline hover:text-gray-300">Clutch</a>,
+                  agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel={externalRel(agency.designRushUrl)} className="text-white underline hover:text-gray-300">DesignRush</a>,
+                  agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel={externalRel(agency.g2Url)} className="text-white underline hover:text-gray-300">G2</a>,
                 ].filter(Boolean).map((el, i, arr) => (
                   <span key={i}>{i > 0 && ' · '}{el}</span>
                 ))}.
                 {agency.reviewsPageUrl && (
                   <>
                     {' '}See the full collection on{' '}
-                    <a href={agency.reviewsPageUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
+                    <a href={agency.reviewsPageUrl} target="_blank" rel={externalRel(agency.reviewsPageUrl)} className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
                   </>
                 )}
               </p>
@@ -300,9 +301,9 @@ export default function AgencyFeaturedProfile({ agency }: { agency: Agency }) {
 
         {(agency.linkedinUrl || agency.clutchUrl || agency.designRushUrl) && (
           <div className="flex flex-wrap gap-4 text-xs font-mono">
-            {agency.linkedinUrl && <a href={agency.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">LinkedIn</a>}
-            {agency.clutchUrl && <a href={agency.clutchUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">Clutch profile</a>}
-            {agency.designRushUrl && <a href={agency.designRushUrl} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-gray-300">DesignRush profile</a>}
+            {agency.linkedinUrl && <a href={agency.linkedinUrl} target="_blank" rel={externalRel(agency.linkedinUrl)} className="text-white underline hover:text-gray-300">LinkedIn</a>}
+            {agency.clutchUrl && <a href={agency.clutchUrl} target="_blank" rel={externalRel(agency.clutchUrl)} className="text-white underline hover:text-gray-300">Clutch profile</a>}
+            {agency.designRushUrl && <a href={agency.designRushUrl} target="_blank" rel={externalRel(agency.designRushUrl)} className="text-white underline hover:text-gray-300">DesignRush profile</a>}
           </div>
         )}
 

@@ -2,6 +2,7 @@ import { Agency } from '@/types/agency';
 import { getAgencyLogoUrl } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { externalRel } from '@/lib/external-rel';
 
 const SERVICE_SLUGS: Record<string, string> = {
   'SEO': 'seo',
@@ -151,7 +152,7 @@ export default function AgencyCard({ agency }: AgencyCardProps) {
         <Link
           href={agency.website}
           target="_blank"
-          rel="noopener noreferrer"
+          rel={externalRel(agency.website)}
           className="block w-full text-center bg-transparent border-4 border-white text-white px-3 py-3.5 font-black hover:bg-white hover:text-black transition-colors uppercase text-xs sm:text-sm tracking-wide"
         >
           ■ VISIT WEBSITE

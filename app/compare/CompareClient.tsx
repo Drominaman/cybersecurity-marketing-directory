@@ -4,6 +4,7 @@ import { Agency } from '@/types/agency';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useCallback, useMemo, useState } from 'react';
+import { externalRel } from '@/lib/external-rel';
 
 interface CompareClientProps {
   agencies: Agency[];
@@ -361,7 +362,7 @@ export default function CompareClient({ agencies }: CompareClientProps) {
                         <Link
                           href={agency.website}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel={externalRel(agency.website)}
                           className="text-gray-400 hover:text-white text-xs font-mono underline transition-colors"
                         >
                           {agency.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}

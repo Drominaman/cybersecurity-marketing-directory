@@ -4,6 +4,7 @@ import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
+import { externalRel } from '@/lib/external-rel';
 
 export const metadata: Metadata = {
   title: 'Best Cybersecurity Marketing Agency 2026: How to Compare and Choose',
@@ -203,9 +204,9 @@ export default function BestCybersecurityMarketingAgency() {
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Our editorial team assesses each cybersecurity marketing agency across five dimensions. Assessments are based on publicly available information, documented case studies, service offerings, and client portfolio analysis. Methodology informed by{' '}
-              <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Gartner marketing research</a>,{' '}
-              <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Forrester analyst frameworks</a>, and{' '}
-              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Clutch agency reviews</a>.
+              <a href="https://www.gartner.com/en/marketing" target="_blank" rel={externalRel("https://www.gartner.com/en/marketing")} className="text-white underline hover:text-gray-300">Gartner marketing research</a>,{' '}
+              <a href="https://www.forrester.com/research/" target="_blank" rel={externalRel("https://www.forrester.com/research/")} className="text-white underline hover:text-gray-300">Forrester analyst frameworks</a>, and{' '}
+              <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel={externalRel("https://clutch.co/agencies/digital-marketing/cybersecurity")} className="text-white underline hover:text-gray-300">Clutch agency reviews</a>.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -458,31 +459,31 @@ export default function BestCybersecurityMarketingAgency() {
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://www.gartner.com/en/marketing" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Gartner Marketing Research</a> - Industry benchmarks and marketing technology trends
+                  <a href="https://www.gartner.com/en/marketing" target="_blank" rel={externalRel("https://www.gartner.com/en/marketing")} className="text-white underline hover:text-gray-300 font-bold">Gartner Marketing Research</a> - Industry benchmarks and marketing technology trends
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://cybersecurityventures.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Ventures</a> - Market sizing and cybersecurity industry reports
+                  <a href="https://cybersecurityventures.com/" target="_blank" rel={externalRel("https://cybersecurityventures.com/")} className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Ventures</a> - Market sizing and cybersecurity industry reports
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Clutch.co</a> - Verified client reviews and agency ratings
+                  <a href="https://clutch.co/agencies/digital-marketing/cybersecurity" target="_blank" rel={externalRel("https://clutch.co/agencies/digital-marketing/cybersecurity")} className="text-white underline hover:text-gray-300 font-bold">Clutch.co</a> - Verified client reviews and agency ratings
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://www.forrester.com/research/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Forrester Research</a> - B2B marketing analyst frameworks
+                  <a href="https://www.forrester.com/research/" target="_blank" rel={externalRel("https://www.forrester.com/research/")} className="text-white underline hover:text-gray-300 font-bold">Forrester Research</a> - B2B marketing analyst frameworks
                 </span>
               </li>
               <li className="text-gray-300 flex items-start gap-3">
                 <span className="text-white mt-0.5">■</span>
                 <span>
-                  <a href="https://cybersecurity-excellence-awards.com/" target="_blank" rel="noopener" className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Excellence Awards</a> - Industry award nominations and winners
+                  <a href="https://cybersecurity-excellence-awards.com/" target="_blank" rel={externalRel("https://cybersecurity-excellence-awards.com/")} className="text-white underline hover:text-gray-300 font-bold">Cybersecurity Excellence Awards</a> - Industry award nominations and winners
                 </span>
               </li>
             </ul>

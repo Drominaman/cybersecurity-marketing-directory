@@ -2,6 +2,7 @@ import { Agency } from '@/types/agency';
 import { getAgencyLogoUrl } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { externalRel } from '@/lib/external-rel';
 
 interface ComparisonTableProps {
   agencies: Agency[];
@@ -238,7 +239,7 @@ export default function ComparisonTable({ agencies }: ComparisonTableProps) {
                   <Link
                     href={agency.website}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel={externalRel(agency.website)}
                     className="inline-block bg-white text-black px-6 py-2 text-sm font-black hover:bg-gray-200 transition-colors uppercase border-2 border-white"
                   >
                     Visit Website

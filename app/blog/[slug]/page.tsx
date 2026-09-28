@@ -9,6 +9,7 @@ import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import { articleSchema as buildArticleSchema, breadcrumbSchema as buildBreadcrumbSchema } from '@/lib/seo';
+import { externalRel } from '@/lib/external-rel';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -121,7 +122,11 @@ const mdxComponents = {
     </li>
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a className="text-white hover:text-gray-300 underline transition-colors" {...props} />
+    <a
+      className="text-white hover:text-gray-300 underline transition-colors"
+      {...props}
+      rel={props.href && /^https?:\/\//.test(props.href) ? externalRel(props.href) : props.rel}
+    />
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote className="border-l-4 border-white pl-4 my-6 italic text-gray-400" {...props} />

@@ -7,6 +7,7 @@ import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
+import { externalRel } from '@/lib/external-rel';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -287,7 +288,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                           {award.status === 'finalist' && <span className="ml-2 bg-gray-800 border border-white px-2 py-0.5 text-xs font-bold uppercase">Finalist</span>}
                           {award.status === 'won' && <span className="ml-2 bg-white text-black px-2 py-0.5 text-xs font-bold uppercase">Winner</span>}
                           {award.url && (
-                            <a href={award.url} target="_blank" rel="noopener noreferrer" className="ml-2 text-gray-400 hover:text-white text-sm underline">
+                            <a href={award.url} target="_blank" rel={externalRel(award.url)} className="ml-2 text-gray-400 hover:text-white text-sm underline">
                               View
                             </a>
                           )}
@@ -424,16 +425,16 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                 <p className="text-gray-300 text-sm mb-6">
                   Verified reviews on{' '}
                   {[
-                    agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">Clutch</a>,
-                    agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">DesignRush</a>,
-                    agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">G2</a>,
+                    agency.clutchUrl && <a key="c" href={agency.clutchUrl} target="_blank" rel={externalRel(agency.clutchUrl)} className="text-white underline hover:text-gray-300">Clutch</a>,
+                    agency.designRushUrl && <a key="d" href={agency.designRushUrl} target="_blank" rel={externalRel(agency.designRushUrl)} className="text-white underline hover:text-gray-300">DesignRush</a>,
+                    agency.g2Url && <a key="g" href={agency.g2Url} target="_blank" rel={externalRel(agency.g2Url)} className="text-white underline hover:text-gray-300">G2</a>,
                   ].filter(Boolean).map((el, i) => (
                     <span key={i}>{i > 0 && ' · '}{el}</span>
                   ))}.
                   {agency.reviewsPageUrl && (
                     <>
                       {' '}See the full collection on{' '}
-                      <a href={agency.reviewsPageUrl} target="_blank" rel="noopener" className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
+                      <a href={agency.reviewsPageUrl} target="_blank" rel={externalRel(agency.reviewsPageUrl)} className="text-white underline hover:text-gray-300">{agency.name}&apos;s own reviews page</a>.
                     </>
                   )}
                 </p>
@@ -484,7 +485,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={agency.linkedinUrl}
                     target="_blank"
-                    rel="noopener"
+                    rel={externalRel(agency.linkedinUrl)}
                     className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
                   >
                     LinkedIn →
@@ -494,7 +495,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={agency.clutchUrl}
                     target="_blank"
-                    rel="noopener"
+                    rel={externalRel(agency.clutchUrl)}
                     className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
                   >
                     Clutch →
@@ -504,7 +505,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={agency.g2Url}
                     target="_blank"
-                    rel="noopener"
+                    rel={externalRel(agency.g2Url)}
                     className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
                   >
                     G2 Reviews →
@@ -514,7 +515,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={agency.designRushUrl}
                     target="_blank"
-                    rel="noopener"
+                    rel={externalRel(agency.designRushUrl)}
                     className="bg-black border-2 border-white px-6 py-3 text-white font-bold hover:bg-gray-800 transition-colors text-sm uppercase"
                   >
                     DesignRush →
@@ -536,7 +537,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               <Link
                 href={agency.website}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={externalRel(agency.website)}
                 className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
               >
                 ■ VISIT WEBSITE
