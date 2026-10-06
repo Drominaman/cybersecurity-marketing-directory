@@ -155,6 +155,12 @@ export default async (req: Request) => {
     merge(total, rollups[i])
   })
 
+  // One page's own daily series, asked for with ?path= (repeatable, up to ten)
+  // by the sponsor hub's drill-down pages. Read from the day rollups already
+  // fetched above, so it costs nothing extra. A past day's rollup keeps its
+  // top KEEP paths, so a page outside that on a given day reads as zero.
+  const focus = url.searchParams.getAll('path').filter(Boolean).slice(0, 10)
+
   if (url.searchParams.get('format') === 'json') {
     return new Response(
       JSON.stringify({
@@ -164,6 +170,10 @@ export default async (req: Request) => {
         pathReferrers: trimNested(total.pathReferrers),
         human: total.human,
         bot: total.bot,
+        ...(focus.length ? {
+          pathDays: Object.fromEntries(focus.map((p) => [p, Object.fromEntries(wanted.map((d, i) => [d, rollups[i].paths[p] ?? 0]))])),
+          pathRefs: Object.fromEntries(focus.map((p) => [p, trim(total.pathReferrers[p] ?? {}, 25)])),
+        } : {}),
       }, null, 2),
       { headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } },
     )
