@@ -44,6 +44,12 @@ type Rollup = {
   visits?: number
   v2?: number
   visitsTracked?: boolean
+  // Verified visits: human views that arrived from another site, excluding the
+  // crawler fleets the counters have caught (see verifiedOf). Direct and
+  // no-referrer views cannot be told apart from crawlers, so they are left out
+  // rather than guessed at. verifiedReferrers is where those visits came from.
+  verified?: number
+  verifiedReferrers?: Record<string, number>
   // Views moved from human to bot because one visitor hash passed
   // MAX_VIEWS_PER_VISITOR_DAY that day. Zero on days before hashes existed
   // (2026-10-21), which therefore still include crawlers posing as browsers.
@@ -56,7 +62,36 @@ type Rollup = {
 // sites in a day; a crawl always does.
 const MAX_VIEWS_PER_VISITOR_DAY = 6
 
-const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {}, pathReferrers: {}, visits: 0, v2: 0, capped: 0 })
+const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {}, pathReferrers: {}, visits: 0, v2: 0, capped: 0, verified: 0, verifiedReferrers: {} })
+
+type Hit = { p?: string; r?: string; b?: boolean; v?: number; e?: number; h?: string; u?: string } | null
+
+// Which of a day's human views count as verified visits. The same rules run on
+// every counter in the estate (and on Cyber Vendor Guide's own), so figures
+// compare:
+//   - it arrived from another site (r is set only for external referrers);
+//   - not a Chrome build more than 12 versions behind the day's most common
+//     one among Windows and Mac arrivals (real Chrome updates itself; crawler
+//     fleets ship years-old builds), judged only when 5+ arrivals show it;
+//   - not Linux desktop Chrome claiming Google: a fleet of these sent tens of
+//     thousands of one-page "Google" visits across the estate in 2026, far
+//     beyond what Linux desktops could account for.
+// Hits from before 2026-10-21 carry no browser label, so only the first rule
+// applies to them; the dashboard also caps burst days.
+function verifiedOf(hits: Exclude<Hit, null>[]): Exclude<Hit, null>[] {
+  const arrivals = hits.filter((v) => v.r)
+  const majors = arrivals.map((v) => v.u || '').filter((u) => /^(chrome|edge)\/\d+;(win|mac)$/.test(u)).map((u) => Number(u.split('/')[1].split(';')[0]))
+  const counts: Record<number, number> = {}
+  for (const m of majors) counts[m] = (counts[m] ?? 0) + 1
+  const mode = majors.length >= 5 ? Number(Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0]) : null
+  return arrivals.filter((v) => {
+    const u = v.u || ''
+    const m = u.match(/^(chrome|edge)\/(\d+);(\w+)$/)
+    if (m && mode !== null && Number(m[2]) < mode - 12) return false
+    if (m && m[3] === 'linux' && /(^|\.)google\./.test(v.r || '')) return false
+    return true
+  })
+}
 
 // The cross-tab is the one part that could grow with the square of the site,
 // so it is bounded on both axes.
@@ -80,6 +115,8 @@ function merge(into: Rollup, from: Rollup): void {
   into.human += from.human
   into.bot += from.bot
   into.capped = (into.capped ?? 0) + (from.capped ?? 0)
+  into.verified = (into.verified ?? 0) + (from.verified ?? 0)
+  for (const [k, v] of Object.entries(from.verifiedReferrers ?? {})) (into.verifiedReferrers ??= {})[k] = ((into.verifiedReferrers ??= {})[k] ?? 0) + v
   for (const [k, v] of Object.entries(from.paths)) into.paths[k] = (into.paths[k] ?? 0) + v
   for (const [k, v] of Object.entries(from.referrers)) into.referrers[k] = (into.referrers[k] ?? 0) + v
   // Guarded: rollups cached before this field existed have no pathReferrers.
@@ -92,7 +129,7 @@ function merge(into: Rollup, from: Rollup): void {
 async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise<Rollup> {
   const out = empty()
   const { blobs } = await store.list({ prefix: `${day}/` })
-  const hits: ({ p?: string; r?: string; b?: boolean; v?: number; e?: number; h?: string } | null)[] = []
+  const hits: Hit[] = []
 
   // Fetched in batches: a day with thousands of views would otherwise open
   // thousands of sockets at once and the function would fall over.
@@ -102,7 +139,7 @@ async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise
     const values = await Promise.all(
       slice.map((b) =>
         store.get(b.key, { type: 'json' }).catch(() => null) as Promise<
-          { p?: string; r?: string; b?: boolean; v?: number; e?: number; h?: string } | null
+          Hit
         >,
       ),
     )
@@ -129,6 +166,13 @@ async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise
     }
   }
 
+  const humans: Exclude<Hit, null>[] = hits.filter((v): v is Exclude<Hit, null> => !!v && !v.b && !(v.h && perVisitor[v.h] > MAX_VIEWS_PER_VISITOR_DAY))
+  for (const v of verifiedOf(humans)) {
+    out.verified = (out.verified ?? 0) + 1
+    const vr = (out.verifiedReferrers ??= {})
+    vr[v.r as string] = (vr[v.r as string] ?? 0) + 1
+  }
+
   // A day counts for visits only once v2 clients sent at least 95% of its
   // views. The day of a deploy, and any day old tabs were still open, falls
   // short and is left out rather than counted low.
@@ -143,10 +187,12 @@ async function dayRollup(
 ): Promise<Rollup> {
   if (day >= today) return readRaw(store, day)
 
+  // rollup3 (2026-10-21) adds verified visits; rollup2 held rollups from before
+  // they existed. Raw hits are never deleted, so the new key recounts history.
   // rollup2: the v1 key holds rollups written before pathReferrers existed.
   // Raw hit blobs are never deleted, so bumping the key backfills history
   // instead of leaving older days permanently without the cross-tab.
-  const cached = (await store.get(`rollup2/${day}`, { type: 'json' }).catch(() => null)) as Rollup | null
+  const cached = (await store.get(`rollup3/${day}`, { type: 'json' }).catch(() => null)) as Rollup | null
   if (cached && typeof cached.human === 'number') return cached
 
   const fresh = await readRaw(store, day)
@@ -155,7 +201,8 @@ async function dayRollup(
   fresh.pathReferrers = trimNested(fresh.pathReferrers)
 
   // A failed cache write must not fail the read.
-  await store.setJSON(`rollup2/${day}`, fresh).catch(() => {})
+  fresh.verifiedReferrers = trim(fresh.verifiedReferrers ?? {})
+  await store.setJSON(`rollup3/${day}`, fresh).catch(() => {})
   // The day is over and counted: its salt goes, so its visitor hashes can
   // never be recomputed from an IP address.
   await store.delete(`salt/${day}`).catch(() => {})
@@ -180,13 +227,13 @@ export default async (req: Request) => {
 
   const rollups = await Promise.all(wanted.map((day) => dayRollup(store, day, today)))
 
-  const byDay: Record<string, { human: number; bot: number }> = {}
+  const byDay: Record<string, { human: number; bot: number; verified: number }> = {}
   const total = empty()
   let visits = 0
   let visitDays = 0
 
   wanted.forEach((day, i) => {
-    byDay[day] = { human: rollups[i].human, bot: rollups[i].bot }
+    byDay[day] = { human: rollups[i].human, bot: rollups[i].bot, verified: rollups[i].verified ?? 0 }
     merge(total, rollups[i])
     if (rollups[i].visitsTracked) {
       visits += rollups[i].visits ?? 0
@@ -211,6 +258,10 @@ export default async (req: Request) => {
         bot: total.bot,
         // Of bot, the views reclassified by the per-visitor cap.
         capped: total.capped ?? 0,
+        // Verified visits over the range and where they came from; the
+        // per-day figure is in days[date].verified.
+        verified: total.verified ?? 0,
+        verifiedReferrers: trim(total.verifiedReferrers ?? {}, 100),
         // Visits over the days that tracked them, and how many days that was.
         // Compare visitDays with the length of the range before quoting it.
         visits,

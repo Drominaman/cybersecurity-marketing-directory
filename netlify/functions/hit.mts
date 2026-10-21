@@ -32,6 +32,18 @@ import { createHash, randomBytes } from 'node:crypto'
 // what they are; the visitor cap in stats.mts catches the ones that do not.
 const BOT = /bot|crawler|spider|crawling|slurp|bingpreview|headless|phantomjs|puppeteer|playwright|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|scrapy|curl|wget|python-requests|node-fetch|axios|go-http-client|java\/|okhttp|libwww|httpclient|facebookexternalhit|whatsapp|telegram|slackbot|discord|preview|embedly|quora link preview|vercelbot|feedfetcher|semrush|ahrefs|mj12|dotbot|petal|yandex|baidu|sogou|exabot|dataforseo|serpstat|screaming frog|gptbot|oai-searchbot|chatgpt-user|claudebot|claude-web|perplexitybot|anthropic-ai|cohere-ai|ccbot|bytespider|amazonbot|applebot|google-extended|meta-externalagent/i
 
+// A coarse browser label, family/major;os (for example "chrome/155;win"):
+// nothing that identifies anyone, enough for stats.mts to spot crawler fleets
+// by their browser (years-old Chrome builds, Linux Chrome claiming Google).
+export function uaClass(ua: string): string {
+  const os = /android/i.test(ua) ? 'android' : /iphone|ipad|ipod/i.test(ua) ? 'ios' : /windows/i.test(ua) ? 'win'
+    : /mac os/i.test(ua) ? 'mac' : /x11|linux/i.test(ua) ? 'linux' : 'other'
+  const chrome = ua.match(/(?:Chrome|CriOS)\/(\d+)/)
+  const fam = /edg(e|a|ios)?\//i.test(ua) ? 'edge' : /firefox|fxios/i.test(ua) ? 'firefox' : chrome ? 'chrome' : /safari/i.test(ua) ? 'safari' : 'other'
+  const major = chrome ? chrome[1] : (ua.match(/(?:Firefox|FxiOS|Version)\/(\d+)/)?.[1] ?? '')
+  return `${fam}/${major};${os}`
+}
+
 // Today's salt for the visitor hash: random, kept in the store, and written
 // only by the first instance to ask so every instance hashes alike. stats.mts
 // deletes it when the day is rolled up.
@@ -129,6 +141,7 @@ export default async (req: Request, context?: { ip?: string }) => {
       v,
       e,
       h,
+      u: uaClass(ua),
     })
 
     return new Response(null, { status: 204, headers: cors })
