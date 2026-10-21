@@ -38,9 +38,25 @@ type Rollup = {
   // carries both its path and its referrer host, so this is the same data
   // cross-tabulated rather than anything new being collected.
   pathReferrers: Record<string, Record<string, number>>
+  // Visits: human views a v2 client marked as the first of a visit. Only
+  // meaningful on a day where v2 clients sent (nearly) every view, which
+  // visitsTracked records; a day cached before this field existed has neither.
+  visits?: number
+  v2?: number
+  visitsTracked?: boolean
+  // Views moved from human to bot because one visitor hash passed
+  // MAX_VIEWS_PER_VISITOR_DAY that day. Zero on days before hashes existed
+  // (2026-10-21), which therefore still include crawlers posing as browsers.
+  capped?: number
 }
 
-const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {}, pathReferrers: {} })
+// A single visitor contributing more than this many views in a day is treated
+// as a crawler with a browser user agent. Cyber Vendor Guide's counter uses
+// the same figure: a person rarely reads more than six pages of one of these
+// sites in a day; a crawl always does.
+const MAX_VIEWS_PER_VISITOR_DAY = 6
+
+const empty = (): Rollup => ({ human: 0, bot: 0, paths: {}, referrers: {}, pathReferrers: {}, visits: 0, v2: 0, capped: 0 })
 
 // The cross-tab is the one part that could grow with the square of the site,
 // so it is bounded on both axes.
@@ -63,6 +79,7 @@ function trim(counts: Record<string, number>, keep = KEEP): Record<string, numbe
 function merge(into: Rollup, from: Rollup): void {
   into.human += from.human
   into.bot += from.bot
+  into.capped = (into.capped ?? 0) + (from.capped ?? 0)
   for (const [k, v] of Object.entries(from.paths)) into.paths[k] = (into.paths[k] ?? 0) + v
   for (const [k, v] of Object.entries(from.referrers)) into.referrers[k] = (into.referrers[k] ?? 0) + v
   // Guarded: rollups cached before this field existed have no pathReferrers.
@@ -75,6 +92,7 @@ function merge(into: Rollup, from: Rollup): void {
 async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise<Rollup> {
   const out = empty()
   const { blobs } = await store.list({ prefix: `${day}/` })
+  const hits: ({ p?: string; r?: string; b?: boolean; v?: number; e?: number; h?: string } | null)[] = []
 
   // Fetched in batches: a day with thousands of views would otherwise open
   // thousands of sockets at once and the function would fall over.
@@ -84,25 +102,37 @@ async function readRaw(store: ReturnType<typeof getStore>, day: string): Promise
     const values = await Promise.all(
       slice.map((b) =>
         store.get(b.key, { type: 'json' }).catch(() => null) as Promise<
-          { p?: string; r?: string; b?: boolean } | null
+          { p?: string; r?: string; b?: boolean; v?: number; e?: number; h?: string } | null
         >,
       ),
     )
+    hits.push(...values)
+  }
 
-    for (const v of values) {
-      if (!v) continue
-      if (v.b) { out.bot++; continue }
-      out.human++
-      const path = v.p || '/'
-      out.paths[path] = (out.paths[path] ?? 0) + 1
-      if (v.r) {
-        out.referrers[v.r] = (out.referrers[v.r] ?? 0) + 1
-        const perPath = (out.pathReferrers[path] ??= {})
-        perPath[v.r] = (perPath[v.r] ?? 0) + 1
-      }
+  // Views per visitor hash, to find the ones past the daily cap.
+  const perVisitor: Record<string, number> = {}
+  for (const v of hits) if (v && !v.b && v.h) perVisitor[v.h] = (perVisitor[v.h] ?? 0) + 1
+
+  for (const v of hits) {
+    if (!v) continue
+    if (v.b) { out.bot++; continue }
+    if (v.h && perVisitor[v.h] > MAX_VIEWS_PER_VISITOR_DAY) { out.bot++; out.capped = (out.capped ?? 0) + 1; continue }
+    out.human++
+    if (v.v === 2) out.v2 = (out.v2 ?? 0) + 1
+    if (v.e) out.visits = (out.visits ?? 0) + 1
+    const path = v.p || '/'
+    out.paths[path] = (out.paths[path] ?? 0) + 1
+    if (v.r) {
+      out.referrers[v.r] = (out.referrers[v.r] ?? 0) + 1
+      const perPath = (out.pathReferrers[path] ??= {})
+      perPath[v.r] = (perPath[v.r] ?? 0) + 1
     }
   }
 
+  // A day counts for visits only once v2 clients sent at least 95% of its
+  // views. The day of a deploy, and any day old tabs were still open, falls
+  // short and is left out rather than counted low.
+  out.visitsTracked = out.human > 0 && (out.v2 ?? 0) >= out.human * 0.95
   return out
 }
 
@@ -126,6 +156,9 @@ async function dayRollup(
 
   // A failed cache write must not fail the read.
   await store.setJSON(`rollup2/${day}`, fresh).catch(() => {})
+  // The day is over and counted: its salt goes, so its visitor hashes can
+  // never be recomputed from an IP address.
+  await store.delete(`salt/${day}`).catch(() => {})
   return fresh
 }
 
@@ -149,10 +182,16 @@ export default async (req: Request) => {
 
   const byDay: Record<string, { human: number; bot: number }> = {}
   const total = empty()
+  let visits = 0
+  let visitDays = 0
 
   wanted.forEach((day, i) => {
     byDay[day] = { human: rollups[i].human, bot: rollups[i].bot }
     merge(total, rollups[i])
+    if (rollups[i].visitsTracked) {
+      visits += rollups[i].visits ?? 0
+      visitDays++
+    }
   })
 
   // One page's own daily series, asked for with ?path= (repeatable, up to ten)
@@ -170,6 +209,12 @@ export default async (req: Request) => {
         pathReferrers: trimNested(total.pathReferrers),
         human: total.human,
         bot: total.bot,
+        // Of bot, the views reclassified by the per-visitor cap.
+        capped: total.capped ?? 0,
+        // Visits over the days that tracked them, and how many days that was.
+        // Compare visitDays with the length of the range before quoting it.
+        visits,
+        visitDays,
         ...(focus.length ? {
           pathDays: Object.fromEntries(focus.map((p) => [p, Object.fromEntries(wanted.map((d, i) => [d, rollups[i].paths[p] ?? 0]))])),
           pathRefs: Object.fromEntries(focus.map((p) => [p, trim(total.pathReferrers[p] ?? {}, 25)])),
