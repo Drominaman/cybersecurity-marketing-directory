@@ -32,6 +32,14 @@
   status = 301
   force = true
 
+# 2026-10-27: the "what is" PR post and the PR agency guide swapped places
+# on every PR keyword (Semrush). The agency guide keeps the definition.
+[[redirects]]
+  from = "/blog/what-is-cybersecurity-pr"
+  to = "/blog/cybersecurity-pr-agency"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/agency/magnetude-consulting"
   to = "/location/usa"
