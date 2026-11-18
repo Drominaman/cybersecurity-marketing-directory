@@ -234,7 +234,7 @@ export default function MethodologyPage() {
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                Some listings are <strong className="text-white">Featured</strong>. A featured listing
+                A listing can be <strong className="text-white">Featured</strong>. A featured listing
                 is a <strong className="text-white">paid placement</strong>: an agency pays to be shown
                 at the top of the directory, with a richer profile, and it carries a{' '}
                 <span className="inline-block text-[10px] font-mono uppercase tracking-wider text-gray-400">Sponsored</span>{' '}

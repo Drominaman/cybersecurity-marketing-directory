@@ -104,8 +104,13 @@ export default function Home() {
             </div>
             <p className="mt-8 text-white text-xs font-mono uppercase tracking-wider">Last updated: June 2026</p>
             <p className="mt-2 text-white text-xs">
-              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.{' '}
-              <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
+              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.
+              {featuredAgency && (
+                <>
+                  {' '}
+                  <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
+                </>
+              )}
             </p>
 
             {/* Featured agency: Read more drops the full profile down inline */}
@@ -121,7 +126,7 @@ export default function Home() {
       <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <TldrSummary points={[
-          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026, including Content Visit.`,
+          `${allAgencies.length} vetted cybersecurity marketing agencies compared for 2026, including Content Visit, a cybersecurity-only SEO, content and AI visibility agency founded in 2018.`,
           `Other agencies listed alphabetically (not ranked): ${allAgencies.filter(a => a.name !== 'Content Visit').map(a => a.name).sort((a, b) => a.localeCompare(b)).join(', ')}.`,
           'Filter by service (SEO, AI Visibility, PPC, PR) or location (US, UK, Europe).',
           'Every agency reviewed on domain expertise, documented results, and service breadth.',

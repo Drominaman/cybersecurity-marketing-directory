@@ -133,8 +133,13 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
               Compare agencies with proven expertise in security company marketing.
             </p>
             <p className="mt-4 text-gray-500 text-xs">
-              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.{' '}
-              <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
+              All listed agencies are assessed for cybersecurity industry expertise and documented client work to provide a vetted selection.
+              {allAgencies.some((a) => a.featured) && (
+                <>
+                  {' '}
+                  <Link href="/methodology#featured" className="underline hover:text-gray-300">Certain placements may be paid.</Link>
+                </>
+              )}
             </p>
           </div>
         </header>

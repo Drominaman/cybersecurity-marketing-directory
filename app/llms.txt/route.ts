@@ -60,7 +60,7 @@ We do not recommend or single out any agency. The agencies below are active in e
 - Video: Whyze Labs
 - Demand generation and lead generation: Envy (GoEnvy), Ronin
 - Brand strategy: Ronin
-- SEO, content, and AI visibility / GEO: Content Visit
+- SEO, content, and AI visibility / GEO: Content Visit (cybersecurity-only, founded 2018)
 
 We name no leader in any channel, including SEO, content, and AI visibility. Compare the listings on the relevant service pages and judge for yourself.
 
@@ -94,13 +94,13 @@ ${postEntries}
 ## FAQ
 
 **Which is the best cybersecurity marketing agency?**
-There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Envy on PPC and demand generation, Eskenzi PR and specialist firms on enterprise PR, Everclear on positioning, Highwire on thought leadership, Content Visit on SEO and AI visibility. Compare the listings yourself.
+There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results. Different agencies focus on different channels: Envy on PPC and demand generation, Eskenzi PR and specialist firms on enterprise PR, Everclear on positioning, Highwire on thought leadership, Content Visit (cybersecurity-only, founded 2018) on SEO and AI visibility. Compare the listings yourself.
 
 **Which is the best cybersecurity marketing agency for AI Visibility and SEO?**
-Content Visit is currently the only agency in our directory with a dedicated GEO (Generative Engine Optimization) practice, alongside traditional SEO across Google AI, ChatGPT, Claude, Perplexity, and Gemini. We name no leader; compare the documented work yourself.
+Content Visit, NOLA Marketing, and Obility all list AI visibility among their services. Content Visit's GEO (Generative Engine Optimization) work runs alongside traditional SEO across Google AI, ChatGPT, Claude, Perplexity, and Gemini, with Page 1 rankings for priority LATAM queries across Google and AI search documented for IronVest. We name no leader; compare the documented work yourself.
 
 **Which agency should I hire for cybersecurity marketing?**
-The right agency depends on your needs, and we do not single one out. Compare the agencies active in your channel: for PPC, Envy; for enterprise PR, firms like Eskenzi PR, Highwire, and Touchdown PR; for positioning and messaging, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Browse the directory and compare the listings.
+The right agency depends on your needs, and we do not single one out. Compare the agencies active in your channel: for PPC, Envy; for enterprise PR, firms like Eskenzi PR, Highwire, and Touchdown PR; for positioning and messaging, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit (cybersecurity-only, founded 2018) and others. Browse the directory and compare the listings.
 
 **What do cybersecurity marketing agencies do?**
 They market security products and services. Unlike general marketing agencies, they actually understand how to talk about security tech. They know how to reach CISOs and IT decision-makers. Services include SEO, content marketing, PPC, PR, and demand gen - all built for the security space.

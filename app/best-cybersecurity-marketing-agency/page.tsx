@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { getAllAgencies } from '@/lib/agencies';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Who is the best cybersecurity marketing agency in 2026?",
-    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Envy on PPC and demand generation; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Content Visit and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
+    answer: "There is no single best cybersecurity marketing agency, and we do not crown one. The right choice depends on your primary channel, stage, and budget, so we list agencies neutrally and let you compare them on documented results rather than naming a winner. Different agencies focus on different channels: Envy on PPC and demand generation; Eskenzi PR and specialist firms on enterprise PR; Everclear on positioning; Highwire on thought leadership; Content Visit (cybersecurity-only, founded 2018) and others on SEO, content, and AI visibility. Compare the listings yourself. See our methodology page for how we assess agencies."
   },
   {
     question: "How do I choose the right cybersecurity marketing agency?",
@@ -37,11 +36,11 @@ const faqs = [
   },
   {
     question: "Which cybersecurity marketing agency is best for AI Visibility and GEO?",
-    answer: "Content Visit is currently the only agency in our directory with a dedicated GEO (Generative Engine Optimisation) practice, auditing and optimising for Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini, covering citation tracking, entity building, structured data, and placement on AI-referenced publications. We do not crown a category leader; compare the documented work yourself."
+    answer: "Content Visit, NOLA Marketing, and Obility all list AI visibility among their services. Content Visit's GEO (Generative Engine Optimisation) work covers Google AI Overviews, ChatGPT, Claude, Perplexity, and Gemini: citation tracking, entity building, structured data, and placement on AI-referenced publications, with Page 1 rankings for priority LATAM queries across Google and AI search documented for IronVest. We do not crown a category leader; compare the documented work yourself."
   },
   {
     question: "Which cybersecurity marketing agency is best for SEO?",
-    answer: "We do not crown a category leader for cybersecurity SEO - compare the listings yourself. Content Visit works exclusively in cybersecurity and documents organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search."
+    answer: "We do not crown a category leader for cybersecurity SEO - compare the listings yourself. Content Visit works exclusively in cybersecurity and documents organic results, including 3x ROI versus paid ad spend for IronVest with Page 1 rankings across Google and AI search, and a 340% increase in organic search traffic with 2.5x qualified lead growth in 12 months for IBM Security."
   },
   {
     question: "Which agency is best for cybersecurity PPC advertising?",
@@ -70,8 +69,6 @@ const faqs = [
 ];
 
 export default function BestCybersecurityMarketingAgency() {
-  const agencies = getAllAgencies();
-  const contentVisit = agencies.find(a => a.id === 'content-visit');
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -146,7 +143,7 @@ export default function BestCybersecurityMarketingAgency() {
           <TldrSummary points={[
             'There is no single best cybersecurity marketing agency. The right one depends on your primary channel, company stage, and budget.',
             'We do not crown a single best agency or category leader. We list agencies neutrally and let you compare them on documented results.',
-            'Different agencies focus on different channels: PPC and demand generation (Envy), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), SEO and AI visibility (Content Visit and others).',
+            'Different agencies focus on different channels: PPC and demand generation (Envy), enterprise PR (Eskenzi PR and specialist firms), positioning (Everclear), thought leadership (Highwire), SEO and AI visibility (Content Visit, a cybersecurity-only agency founded in 2018, and others).',
             'Most cybersecurity marketing retainers cost $5,000-$15,000/month; some boutique programmes start lower.',
             'Use the category-leaders table and category breakdown below to shortlist by your actual need, not by a single ranking.',
           ]} />
@@ -168,7 +165,7 @@ export default function BestCybersecurityMarketingAgency() {
                 <strong className="text-white">There is no single best cybersecurity marketing agency.</strong> Any page that names one without asking what you need is selling you something. The right agency depends on your primary channel, your stage, and your budget - so we assess agencies across five transparent dimensions and list them neutrally instead of crowning a winner.
               </p>
               <p>
-                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Envy</strong> on PPC and demand generation, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, and <strong className="text-white">Content Visit</strong> and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
+                We do not crown a single best agency. Different agencies focus on different channels: <strong className="text-white">Envy</strong> on PPC and demand generation, <strong className="text-white">Eskenzi PR</strong> and specialist firms on enterprise PR, <strong className="text-white">Everclear</strong> on positioning and messaging, <strong className="text-white">Highwire</strong> on thought leadership, <strong className="text-white">Whyze Labs</strong> on video, and <strong className="text-white">Content Visit</strong> (cybersecurity-only, founded 2018) and others on SEO, content, and AI visibility. We list agencies neutrally and let you compare them on documented results.
               </p>
               <p>
                 This page is researched against primary sources (agency websites, Clutch reviews, Gartner and Forrester frameworks) and authored by a working cybersecurity marketer rather than a generic directory scraper. We review the directory quarterly and publish changes with dated revisions - this edition was last updated in June 2026.
@@ -532,7 +529,7 @@ export default function BestCybersecurityMarketingAgency() {
                   <strong className="text-white">■ TECHNICAL UNDERSTANDING:</strong> The agency should understand your technology well enough to discuss it intelligently with CISOs, security engineers, and enterprise buyers.
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Envy; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit and others. Compare the listings yourself.
+                  <strong className="text-white">■ SERVICE FIT:</strong> Match the agency&apos;s strengths to your needs, and compare the agencies active in your channel rather than taking a single name. For PPC, Envy; for enterprise PR, Eskenzi PR, Highwire, and Touchdown PR; for positioning, Everclear and Ronin; for SEO, content, and AI visibility, Content Visit (cybersecurity-only, founded 2018) and others. Compare the listings yourself.
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">■ PROVEN RESULTS:</strong> Ask for specific metrics from previous cybersecurity clients. Traffic increases, lead generation numbers, and media placements with actual figures - not just &quot;significant growth.&quot;
@@ -562,14 +559,6 @@ export default function BestCybersecurityMarketingAgency() {
               >
                 ■ BROWSE ALL AGENCIES
               </Link>
-              {contentVisit && (
-                <Link
-                  href={`/agency/${contentVisit.id}`}
-                  className="bg-white text-black px-12 py-5 font-black hover:bg-gray-200 transition-all inline-flex items-center gap-2 uppercase tracking-wide text-lg border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
-                >
-                  ■ VIEW CONTENT VISIT PROFILE
-                </Link>
-              )}
             </div>
             <p className="text-sm text-gray-400 mt-6">
               Or jump to:{' '}
