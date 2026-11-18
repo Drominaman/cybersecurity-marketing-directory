@@ -63,6 +63,13 @@ export interface Review {
   date?: string; // ISO date the review was published, if known
   rating?: number; // individual star rating out of 5 (defaults to 5)
   sourceUrl?: string; // direct link to the review on its source platform
+  // Full review as published on the source platform, word for word. `quote` stays
+  // the short headline excerpt used on cards; these hold the rest.
+  body?: string[]; // free-text review, one entry per paragraph
+  answers?: { question: string; answer: string[] }[]; // structured review (e.g. Clutch), one entry per question
+  project?: string; // project line as the platform shows it (services, dates, cost)
+  reviewerProfile?: string; // reviewer context as the platform shows it (industry, location, size)
+  scores?: { label: string; score: number }[]; // category ratings from the platform
 }
 
 export type FilterOptions = {

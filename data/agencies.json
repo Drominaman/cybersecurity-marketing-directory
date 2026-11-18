@@ -58,30 +58,234 @@
     "minBudget": "$3,000/month",
     "reviews": [
       {
+        "title": "SEO & Content Marketing Services for Cybersecurity Company",
         "quote": "They took the time to understand our business, our goals, and the areas where SEO could make a long-term impact.",
         "role": "Director of Growth Marketing",
         "company": "Cybersecurity company",
-        "source": "Clutch"
+        "source": "Clutch",
+        "date": "2026-06-03",
+        "rating": 5,
+        "sourceUrl": "https://clutch.co/profile/content-visit#review-461914",
+        "project": "Content marketing, search engine optimization, on-site optimization, technical SEO. March to June 2026. Project cost confidential.",
+        "reviewerProfile": "Verified reviewer. Information technology, Boston, Massachusetts, 11-50 employees.",
+        "scores": [
+          {
+            "label": "Quality",
+            "score": 5
+          },
+          {
+            "label": "Schedule",
+            "score": 5
+          },
+          {
+            "label": "Cost",
+            "score": 5
+          },
+          {
+            "label": "Willing to refer",
+            "score": 5
+          }
+        ],
+        "answers": [
+          {
+            "question": "What specific goals or objectives did you hire Content Visit to accomplish?",
+            "answer": [
+              "Raise our visibility in organic search for high-intent keywords",
+              "Build visibility in AI-driven search",
+              "Establish a consistent SEO content engine"
+            ]
+          },
+          {
+            "question": "How did you find Content Visit?",
+            "answer": [
+              "Referral"
+            ]
+          },
+          {
+            "question": "Why did you select Content Visit over others?",
+            "answer": [
+              "Great culture fit",
+              "Good value for cost",
+              "Company values aligned"
+            ]
+          },
+          {
+            "question": "How many teammates from Content Visit were assigned to this project?",
+            "answer": [
+              "2-5 Employees"
+            ]
+          },
+          {
+            "question": "Describe the scope of work in detail. Please include a summary of key deliverables.",
+            "answer": [
+              "Content Visit ran a three-month SEO and AI-visibility pilot for us. The engagement included:",
+              "SEO and AI-visibility strategy: keyword and prompt research, a visibility audit with baseline metrics, competitor gap analysis, and a 3-month action plan",
+              "4 content assets per month (landing pages, comparison articles, and industry guides) with keyword research and on-page SEO, published to WordPress website",
+              "Bi-weekly strategy calls and monthly performance reports"
+            ]
+          },
+          {
+            "question": "What were the measurable outcomes from the project that demonstrate progress or success?",
+            "answer": [
+              "First-page Google rankings for high-intent commercial terms — terms where we had no visibility before",
+              "Appearances in Google AI Overviews and AI Mode results for several of these terms",
+              "Outranked an established, well-funded competitor for a core category search term",
+              "Generated qualified inbound leads directly attributed to published content"
+            ]
+          },
+          {
+            "question": "Describe their project management. Did they deliver items on time? How did they respond to your needs?",
+            "answer": [
+              "The team is incredibly easy to work with and felt like a true extension of our marketing team. They stayed on top of every deliverable — content was scoped, drafted, and published on schedule each month, and bi-weekly calls kept us aligned without adding overhead. They were extremely communicative, responsive to feedback, and developed a strong handle on our business and technical subject matter quickly."
+            ]
+          },
+          {
+            "question": "What was your primary form of communication with Content Visit?",
+            "answer": [
+              "Virtual Meeting",
+              "Email or Messaging App"
+            ]
+          },
+          {
+            "question": "What did you find most impressive or unique about this company?",
+            "answer": [
+              "They took the time to understand our business, our goals, and the areas where SEO could make a long-term impact — then built the strategy around that, rather than a generic playbook. They're easy to work with, communicative, and receptive to feedback. Most impressive was the content itself: well researched, carefully thought through, and written in a way that genuinely resonates with a cybersecurity audience"
+            ]
+          },
+          {
+            "question": "Are there any areas for improvement or something Content Visit could have done differently?",
+            "answer": [
+              "N/A"
+            ]
+          }
+        ]
       },
       {
+        "title": "GEO Audit for Cybersecurity Firm",
         "quote": "They are easy and pleasant to work with.",
         "role": "Marketing Director",
         "company": "PCA Cyber Security",
-        "source": "Clutch"
+        "source": "Clutch",
+        "date": "2026-05-15",
+        "rating": 5,
+        "sourceUrl": "https://clutch.co/profile/content-visit#review-457402",
+        "project": "AI consulting, search engine optimization, generative engine optimization. April 2026 to ongoing. Project cost confidential.",
+        "reviewerProfile": "Verified reviewer. Information technology, Hungary, 11-50 employees.",
+        "scores": [
+          {
+            "label": "Quality",
+            "score": 5
+          },
+          {
+            "label": "Schedule",
+            "score": 5
+          },
+          {
+            "label": "Cost",
+            "score": 5
+          },
+          {
+            "label": "Willing to refer",
+            "score": 5
+          }
+        ],
+        "answers": [
+          {
+            "question": "What specific goals or objectives did you hire Content Visit to accomplish?",
+            "answer": [
+              "GEO audit",
+              "GEO growth plan"
+            ]
+          },
+          {
+            "question": "How did you find Content Visit?",
+            "answer": [
+              "Online Search"
+            ]
+          },
+          {
+            "question": "Why did you select Content Visit over others?",
+            "answer": [
+              "Pricing fit our budget",
+              "Great culture fit",
+              "Good value for cost",
+              "Company values aligned",
+              "Experience with cybersecurity companies"
+            ]
+          },
+          {
+            "question": "How many teammates from Content Visit were assigned to this project?",
+            "answer": [
+              "2-5 Employees"
+            ]
+          },
+          {
+            "question": "Describe the scope of work in detail. Please include a summary of key deliverables.",
+            "answer": [
+              "We contracted for GEO audit - as a starting point of our cooperation, we wanted to clearly see where we are at the beginning of the project in terms of LLM visibility, citations and recommendations.",
+              "After the audit we started to work on a GEO growth plan to increase the AI visibility of our company in the target areas and increase the number of relevant citations and recommendations."
+            ]
+          },
+          {
+            "question": "What were the measurable outcomes from the project that demonstrate progress or success?",
+            "answer": [
+              "The project is still ongoing, but we already see the change in visibility and received 2 MQLs via LLMs within a month"
+            ]
+          },
+          {
+            "question": "Describe their project management. Did they deliver items on time? How did they respond to your needs?",
+            "answer": [
+              "They clearly communicate what the plans are, what they are working on and they communicate what they require from us to support their work being able to deliver the results. They react quickly and efficiently to any questions asked via Slack. They are open to new ideas and always try to get the best out of those to serve our company's interests."
+            ]
+          },
+          {
+            "question": "What was your primary form of communication with Content Visit?",
+            "answer": [
+              "Virtual Meeting",
+              "Email or Messaging App"
+            ]
+          },
+          {
+            "question": "What did you find most impressive or unique about this company?",
+            "answer": [
+              "Their technical experience on this relatively new field, understanding cybersecurity, openness about their experience, willingness to try new things with careful thinking and analyzing the situation. They are easy and pleasant to work with."
+            ]
+          },
+          {
+            "question": "Are there any areas for improvement or something Content Visit could have done differently?",
+            "answer": [
+              "Not yet"
+            ]
+          }
+        ]
       },
       {
         "quote": "The Content Visit team took a humanized approach to develop a large amount of content while maintaining excellent quality.",
         "role": "Jordan Choo, Managing Partner",
         "company": "Kogneta",
-        "source": "DesignRush"
+        "source": "DesignRush",
+        "title": "Demand Gen Content",
+        "date": "2025-07-03",
+        "rating": 5,
+        "sourceUrl": "https://www.designrush.com/agency/profile/content-visit",
+        "body": [
+          "I had the opportunity to work with the Content Visit team for a privacy protection solution where planned and scaled the demand gen content.",
+          "Throughout the entire process the Content Visit team took a humanized approach to develop a large amount of content while maintaining excellent quality. The content that they created generated thousands of visitors and subscribers on a monthly basis.",
+          "If you're looking for an agency that knows the ins and outs of demand gen content and cybersecurity then look no further, I cannot recommend Content Visit enough."
+        ]
       },
       {
         "title": "You'll come for the content-writing, you'll stay for the content-being.",
-        "quote": "What I like the most about Content Visit is their proactivity, availability and attention to detail.",
+        "quote": "What I like the most about ContentVisit is their proactivity, availability and attention to detail.",
         "role": "Rodrigo M., Brand Narrative Strategist",
         "company": "Small business",
         "source": "G2",
-        "date": "2026-06-30"
+        "date": "2026-06-30",
+        "rating": 5,
+        "sourceUrl": "https://www.g2.com/products/content-visit/reviews",
+        "body": [
+          "What I like the most about ContentVisit is their proactivity, availability and attention to detail. Nothing to dislike about them, they are awesome. Give them some room to grow and propose ideas of their own. Treat them like part of your team giving them insight about your challenge, rather than asking for the solution straight away. ContentVisit is helping us with content strategy and creation aimed towards getting our brand noticed, positioned as experts in our field and considered as a strategic cybersecurity partner."
+        ]
       }
     ],
     "caseStudies": [

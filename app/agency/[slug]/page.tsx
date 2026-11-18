@@ -445,7 +445,23 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
                     {review.title && <h3 className="text-white font-black mb-2">{review.title}</h3>}
                     <blockquote className="text-white leading-relaxed">&ldquo;{review.quote}&rdquo;</blockquote>
                     <figcaption className="text-gray-300 text-sm font-mono mt-4">
-                      {review.role}{review.company ? `, ${review.company}` : ''}{review.source ? ` · via ${review.source}` : ''}
+                      {review.role}{review.company ? `, ${review.company}` : ''}
+                      {review.source && (
+                        <>
+                          {' · '}
+                          {review.sourceUrl ? (
+                            <a href={review.sourceUrl} target="_blank" rel={externalRel(review.sourceUrl)} className="text-white underline hover:text-gray-300">via {review.source}</a>
+                          ) : (
+                            <span>via {review.source}</span>
+                          )}
+                        </>
+                      )}
+                      {((review.body && review.body.length > 0) || (review.answers && review.answers.length > 0)) && (
+                        <>
+                          {' · '}
+                          <Link href={`/agency/${slug}/reviews#review-${index + 1}`} className="text-white underline hover:text-gray-300">full review</Link>
+                        </>
+                      )}
                     </figcaption>
                   </figure>
                 ))}

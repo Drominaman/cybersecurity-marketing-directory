@@ -5,6 +5,7 @@ import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import type { Metadata } from 'next';
 import { externalRel } from '@/lib/external-rel';
+import type { Review } from '@/types/agency';
 
 const BASE = 'https://cybersecuritymarketingagencies.com';
 
@@ -19,6 +20,35 @@ function aggregate(reviews: NonNullable<ReturnType<typeof agencyWithReviews>>['r
   const ratings = list.map((r) => r.rating ?? 5);
   const avg = ratings.reduce((a, b) => a + b, 0) / ratings.length;
   return { avg: Math.round(avg * 10) / 10, count: list.length };
+}
+
+// Review text for structured data: the full free-text review, or for structured
+// (Clutch-style) reviews the narrative answers, falling back to the short excerpt.
+function fullText(r: Review): string {
+  const sentence = (t: string) => (/[.!?]$/.test(t) ? t : `${t}.`);
+  if (r.body && r.body.length > 0) return r.body.join(' ');
+  if (r.answers && r.answers.length > 0) {
+    const narrative = r.answers.filter((a) => /measurable outcomes|project management|most impressive/i.test(a.question));
+    if (narrative.length > 0) return narrative.map((a) => sentence(a.answer.join('; '))).join(' ');
+  }
+  return r.quote;
+}
+
+// One answer in a structured review: short lists as bullets, an intro line ending
+// in a colon followed by bullets, otherwise paragraphs.
+function ReviewAnswer({ lines }: { lines: string[] }) {
+  const bullets = (items: string[]) => (
+    <ul className="space-y-1 mt-1">
+      {items.map((line, i) => (
+        <li key={i} className="text-gray-300 leading-relaxed flex gap-2"><span className="text-white">&#9632;</span><span>{line}</span></li>
+      ))}
+    </ul>
+  );
+  if (lines.length > 1 && lines[0].endsWith(':')) {
+    return (<><p className="text-gray-300 leading-relaxed mt-1">{lines[0]}</p>{bullets(lines.slice(1))}</>);
+  }
+  if (lines.length > 1 && lines.every((l) => l.length < 120)) return bullets(lines);
+  return (<>{lines.map((line, i) => (<p key={i} className="text-gray-300 leading-relaxed mt-1">{line}</p>))}</>);
 }
 
 const SOURCE_URL: Record<string, (a: ReturnType<typeof getAllAgencies>[number]) => string | undefined> = {
@@ -77,7 +107,7 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
       reviewRating: { '@type': 'Rating', ratingValue: String(r.rating ?? 5), bestRating: '5', worstRating: '1' },
       author: { '@type': 'Person', name: r.role },
       ...(r.title ? { name: r.title } : {}),
-      reviewBody: r.quote,
+      reviewBody: fullText(r),
       ...(r.date ? { datePublished: r.date } : {}),
       ...(r.source ? { publisher: { '@type': 'Organization', name: r.source } } : {}),
     })),
@@ -138,13 +168,43 @@ export default async function AgencyReviewsPage({ params }: { params: Promise<{ 
             {reviews.map((r, i) => {
               const srcUrl = r.sourceUrl || (r.source ? SOURCE_URL[r.source]?.(agency) : undefined);
               return (
-                <figure key={i} className="bg-gray-900 border-4 border-white p-8">
+                <figure key={i} id={`review-${i + 1}`} className="bg-gray-900 border-4 border-white p-8 scroll-mt-24">
                   <div className="flex items-center gap-2 mb-3 font-mono text-sm">
                     <span className="text-white font-black">{(r.rating ?? 5).toFixed(1)} / 5</span>
                     <span className="text-white">{'★'.repeat(Math.round(r.rating ?? 5))}</span>
                   </div>
                   {r.title && <h2 className="text-xl font-black text-white mb-2">{r.title}</h2>}
                   <blockquote className="text-white leading-relaxed">&ldquo;{r.quote}&rdquo;</blockquote>
+                  {r.project && (
+                    <p className="text-gray-400 text-xs font-mono mt-4"><span className="text-gray-500 uppercase">Project:</span> {r.project}</p>
+                  )}
+                  {r.reviewerProfile && (
+                    <p className="text-gray-400 text-xs font-mono mt-1"><span className="text-gray-500 uppercase">Reviewer:</span> {r.reviewerProfile}</p>
+                  )}
+                  {r.scores && r.scores.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {r.scores.map((sc) => (
+                        <span key={sc.label} className="bg-black border-2 border-white/40 text-white px-2 py-1 text-xs font-mono">{sc.label} {sc.score.toFixed(1)}</span>
+                      ))}
+                    </div>
+                  )}
+                  {r.body && r.body.length > 0 && (
+                    <div className="mt-5 space-y-3 border-t-2 border-white/20 pt-5">
+                      {r.body.map((para, pi) => (
+                        <p key={pi} className="text-gray-300 leading-relaxed">{para}</p>
+                      ))}
+                    </div>
+                  )}
+                  {r.answers && r.answers.length > 0 && (
+                    <dl className="mt-5 space-y-4 border-t-2 border-white/20 pt-5">
+                      {r.answers.map((a, ai) => (
+                        <div key={ai}>
+                          <dt className="text-gray-400 text-xs font-mono">{a.question}</dt>
+                          <dd><ReviewAnswer lines={a.answer} /></dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                   <figcaption className="text-white text-sm font-mono mt-4">
                     {r.role}{r.company ? `, ${r.company}` : ''}
                     {r.date ? ` · ${r.date}` : ''}
