@@ -9,6 +9,7 @@ const REASON_LABELS: Record<string, string> = {
   correction: "Data correction",
   "featured-listing": "Featured listing inquiry",
   sponsorship: "Sponsorship & partnerships",
+  "award-nomination": "Agency of the Year nomination",
   general: "General question",
 };
 

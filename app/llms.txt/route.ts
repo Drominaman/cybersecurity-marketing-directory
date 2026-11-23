@@ -1,5 +1,6 @@
 import { getAllAgencies } from '@/lib/agencies';
 import { getAllPosts } from '@/lib/blog';
+import { awardSummaryText } from '@/lib/awards';
 
 export async function GET() {
   const agencies = [...getAllAgencies()].sort((a, b) => a.name.localeCompare(b.name));
@@ -47,7 +48,11 @@ The premier directory of cybersecurity marketing agencies for 2026, comparing ${
 
 ## Methodology
 
-We do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions (cybersecurity domain expertise, documented results, service breadth, AI visibility and GEO capability, and client portfolio and reach) and list them neutrally. The right agency depends on your channel, stage, and budget, so compare agencies on their documented work rather than taking a recommendation.
+In the directory we do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions (cybersecurity domain expertise, documented results, service breadth, AI visibility and GEO capability, and client portfolio and reach) and list them neutrally. The right agency depends on your channel, stage, and budget, so compare agencies on their documented work rather than taking a recommendation.
+
+## Agency of the Year Award
+
+${awardSummaryText()}
 
 ## Agencies By Channel (not a ranking)
 
@@ -87,6 +92,7 @@ ${agencyEntries}
 - Home / Directory: https://cybersecuritymarketingagencies.com
 - Best Cybersecurity Marketing Agency: https://cybersecuritymarketingagencies.com/best-cybersecurity-marketing-agency
 - Blog: https://cybersecuritymarketingagencies.com/blog
+- Agency of the Year 2026: https://cybersecuritymarketingagencies.com/awards/2026
 
 ## Blog Posts
 ${postEntries}

@@ -216,10 +216,10 @@ export default function SubmitAgencyPage() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> The Featured tier buys you a labelled, boosted placement, shown first in listings and tagged Sponsored wherever it appears. That is placement, not a recommendation: we do not rank or recommend agencies at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy or to earn. Every agency, featured or not, is compared on its own merits by the reader.
+                <strong className="text-white">Listings are paid. Recommendations do not exist here.</strong> The Featured tier buys you a labelled, boosted placement, shown first in listings and tagged Sponsored wherever it appears. That is placement, not a recommendation: we do not rank or recommend agencies in the directory at all, so there is no Best Overall, no Best for SEO designation, no top ranking, and no &quot;Top Pick&quot; label to buy. Every agency, featured or not, is compared on its own merits by the reader. The only title that can be won is the annual Cybersecurity Marketing Agency of the Year award, which is free to enter, judged by an outside panel and kept apart from the listings.
               </p>
               <p>
-                <strong className="text-white">What this means for buyers:</strong> you will not see us crown a winner or tag an agency as a pick. When you see an agency in the directory or a roundup post, that is a listing, disclosed accordingly, not a recommendation from us.
+                <strong className="text-white">What this means for buyers:</strong> you will not see us crown a winner or tag an agency as a pick in the directory or its roundups. When you see an agency there, that is a listing, disclosed accordingly, not a recommendation from us. The <Link href="/awards/2026" className="text-white underline hover:text-gray-300">annual award</Link> is separate and does not affect listings.
               </p>
               <p>
                 <strong className="text-white">What this means for agencies:</strong> the paid tier exists to fund the directory and surface you to buyers in a neutral listing. It does not buy a recommendation, because we do not give one to anyone.

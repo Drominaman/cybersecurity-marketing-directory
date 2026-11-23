@@ -8,6 +8,7 @@ const REASONS: [string, string][] = [
   ['correction', 'Report a data correction'],
   ['featured-listing', 'Featured listing inquiry ($1,499/year)'],
   ['sponsorship', 'Sponsorship & partnerships'],
+  ['award-nomination', 'Agency of the Year nomination (free)'],
 ];
 
 const VALID_REASONS = new Set(REASONS.map(([value]) => value));

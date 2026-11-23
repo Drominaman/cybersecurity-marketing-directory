@@ -57,6 +57,7 @@ const KEY_PAGES: [string, string][] = [
   ['/blog', 'Blog'],
   ['/compare', 'Compare Agencies'],
   ['/methodology', 'Methodology'],
+  ['/awards/2026', 'Cybersecurity Marketing Agency of the Year 2026'],
   ['/submit-agency', 'Submit Your Agency'],
 ];
 

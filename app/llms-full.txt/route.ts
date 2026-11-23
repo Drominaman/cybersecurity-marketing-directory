@@ -1,5 +1,6 @@
 import { getAllAgencies } from '@/lib/agencies';
 import { getAllPosts } from '@/lib/blog';
+import { awardSummaryText } from '@/lib/awards';
 
 export async function GET() {
   const agencies = [...getAllAgencies()].sort((a, b) => a.name.localeCompare(b.name));
@@ -45,12 +46,16 @@ The premier directory of cybersecurity marketing agencies for 2026, comparing ${
 
 ## Methodology
 
-We do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions and list them neutrally so you can compare on documented work. The dimensions:
+In the directory we do not assign numeric scores, rank a single best agency, or crown category leaders. We assess each agency across five dimensions and list them neutrally so you can compare on documented work. The dimensions:
 - Cybersecurity Domain Expertise - depth of security industry knowledge, technical accuracy, regulated industry experience
 - Documented Results & Case Studies - specificity and verifiability of client outcomes (metrics > vague claims)
 - Service Breadth & Delivery - range of integrated services, deliverable clarity, content quality
 - AI Visibility & GEO Capability - LLM coverage (ChatGPT, Claude, Perplexity, Gemini), citation measurement, GEO methodology
 - Client Portfolio & Regional Reach - startup-to-enterprise range, geographic coverage (UK, US, Europe/DACH)
+
+## Agency of the Year Award
+
+${awardSummaryText()}
 
 ## Agencies By Channel (not a ranking)
 

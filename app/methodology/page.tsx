@@ -2,6 +2,8 @@ import Link from 'next/link';
 import TldrSummary from '@/components/TldrSummary';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { assessmentCriteria } from '@/lib/criteria';
+import { agencyOfTheYear } from '@/lib/awards';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,34 +14,6 @@ export const metadata: Metadata = {
     canonical: 'https://cybersecuritymarketingagencies.com/methodology',
   },
 };
-
-const criteria = [
-  {
-    name: 'Cybersecurity expertise',
-    detail:
-      'How much of the agency’s work is cybersecurity. Exclusive focus weighs most; a general B2B agency with one security client weighs least. We check client rosters, case studies, team backgrounds, and published content for technical depth.',
-  },
-  {
-    name: 'Documented results',
-    detail:
-      'Named clients with concrete metrics beat anonymised claims. We weight results that can be cross-checked: public case studies, client references, third-party reviews. “We drove growth for a leading security vendor” counts for little.',
-  },
-  {
-    name: 'Service breadth and integration',
-    detail:
-      'Whether the agency delivers its listed services in-house and how well they integrate. A focused specialist can weigh well here; a long service list with shallow delivery cannot.',
-  },
-  {
-    name: 'AI visibility and GEO capability',
-    detail:
-      'Whether the agency understands optimisation for AI-driven discovery (ChatGPT, Perplexity, Claude, Google AI Overviews) and can demonstrate it, starting with their own visibility.',
-  },
-  {
-    name: 'Client portfolio quality',
-    detail:
-      'The calibre and relevance of the agency’s cybersecurity client base, and signals like client tenure, repeat engagements, and industry awards.',
-  },
-];
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -94,7 +68,8 @@ export default function MethodologyPage() {
           <TldrSummary
             points={[
               'Two listing types: Reviewed (fully assessed across five dimensions) and Listed (verified basics).',
-              'We do not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
+              'The directory does not rank agencies, name a single best, or crown category leaders. We list every agency neutrally and let you compare on documented results.',
+              'A separate annual award, Cybersecurity Marketing Agency of the Year, is free to enter and judged by an outside panel. It does not change how any agency is listed.',
               'Every profile is re-verified quarterly and carries a last-verified date.',
               'We are independent: every agency is held to the same criteria and none receives a recommendation.',
               'Featured listings are a paid, clearly-labelled placement: shown at the top, but never a recommendation and never changing how other agencies are listed.',
@@ -120,8 +95,8 @@ export default function MethodologyPage() {
                 an endorsement; it is a verified record.
               </p>
               <p>
-                We do not assign numeric scores, name a single best, or crown category leaders, because a
-                precise number or a crown implies a certainty our assessment does not have. We would rather
+                In the directory we do not assign numeric scores, name a single best, or crown category leaders,
+                because a precise number or a crown implies a certainty our assessment does not have. We would rather
                 show you each agency&apos;s documented strengths and let you compare for your own needs.
               </p>
             </div>
@@ -139,7 +114,7 @@ export default function MethodologyPage() {
               client wins or losses).
             </p>
             <div className="space-y-5">
-              {criteria.map((c) => (
+              {assessmentCriteria.map((c) => (
                 <div key={c.name} className="border-l-4 border-white pl-5">
                   <div className="flex items-baseline gap-3 mb-1">
                     <h3 className="text-lg font-black text-white uppercase">{c.name}</h3>
@@ -149,8 +124,8 @@ export default function MethodologyPage() {
               ))}
             </div>
             <p className="text-gray-300 leading-relaxed mt-6">
-              This assessment informs our neutral profile notes only. We do not name a single best agency,
-              crown category leaders, or publish &quot;Top Pick&quot; labels for anyone. Our assessment and
+              This assessment informs our neutral profile notes only. The directory does not name a single best
+              agency, crown category leaders, or publish &quot;Top Pick&quot; labels for anyone. Our assessment and
               editorial profiles are not for sale. The one paid option is a clearly-labelled{' '}
               <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
               placement, which buys position and a richer profile, never a recommendation or any change to
@@ -212,9 +187,9 @@ export default function MethodologyPage() {
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                We do not recommend, rank, or crown any agency. Every agency is assessed against the same
-                five dimensions and listed neutrally, and the comparison is left to you. There is no Best
-                Overall, no category leader, and no &quot;Top Pick&quot; to buy or to earn. The one paid
+                The directory does not recommend, rank, or crown any agency. Every agency is assessed against
+                the same five dimensions and listed neutrally, and the comparison is left to you. There is
+                no Best Overall, no category leader, and no &quot;Top Pick&quot; in the listings. The one paid
                 option, a{' '}
                 <Link href="#featured" className="text-white underline hover:text-gray-300">Featured</Link>{' '}
                 placement, is always labelled and boosts position only: it is not a recommendation and does
@@ -283,6 +258,28 @@ export default function MethodologyPage() {
                 See current tiers and what each includes on the{' '}
                 <Link href="/submit-agency" className="text-white underline hover:text-gray-300">
                   listing page
+                </Link>
+                .
+              </p>
+            </div>
+          </section>
+
+          {/* Award */}
+          <section className="bg-gray-900 border-4 border-white p-10 mb-10">
+            <h2 className="text-2xl font-black uppercase tracking-wider mb-6">
+              &#9632; AGENCY OF THE YEAR
+            </h2>
+            <div className="text-gray-300 leading-relaxed space-y-4">
+              <p>
+                Once a year we run the {agencyOfTheYear.name} award. It is separate from the directory.
+                Entry is free, an outside panel judges it, and nothing we are paid for affects it. The
+                award does not change how any agency is listed or ordered.
+              </p>
+              <p>
+                This directory is run by the team behind Content Visit, which is eligible and is judged
+                by the same panel as everyone else. See the{' '}
+                <Link href={agencyOfTheYear.path} className="text-white underline hover:text-gray-300">
+                  award rules and dates
                 </Link>
                 .
               </p>
